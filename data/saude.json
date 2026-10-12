@@ -2,7 +2,7 @@
  "formato": "saude-portal/1",
  "portal": "Estrato",
  "url": "https://estrato.com.br",
- "gerado_em": "2026-10-12T15:45:02+00:00",
+ "gerado_em": "2026-10-12T17:19:58+00:00",
  "materias": {
   "total": 20,
   "ultimas_24h": 0,
@@ -14,7 +14,7 @@
    "url": "https://estrato.com.br/congresso/2026-10-09-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos/",
    "fonte": "Agência Câmara",
    "publicada_em": "2026-10-09T19:15:00-03:00",
-   "idade_horas": 65.5
+   "idade_horas": 67.1
   }
  },
  "feeds": {
@@ -105,20 +105,20 @@
    },
    "deputados": {
     "paginas": 541,
-    "avaliadas": 539,
+    "avaliadas": 540,
     "corte": 0.15,
-    "texto_proprio_p10": 0.281,
-    "texto_proprio_mediana": 0.355,
-    "texto_proprio_p90": 0.466,
+    "texto_proprio_p10": 0.225,
+    "texto_proprio_mediana": 0.285,
+    "texto_proprio_p90": 0.391,
     "abaixo_do_corte": 0
    },
    "senadores": {
     "paginas": 81,
-    "avaliadas": 74,
+    "avaliadas": 80,
     "corte": 0.15,
-    "texto_proprio_p10": 0.253,
-    "texto_proprio_mediana": 0.299,
-    "texto_proprio_p90": 0.348,
+    "texto_proprio_p10": 0.207,
+    "texto_proprio_mediana": 0.239,
+    "texto_proprio_p90": 0.272,
     "abaixo_do_corte": 0
    },
    "partidos": {
@@ -129,14 +129,24 @@
     "texto_proprio_mediana": 0.322,
     "texto_proprio_p90": 0.545,
     "abaixo_do_corte": 0
+   },
+   "votacoes": {
+    "paginas": 1316,
+    "avaliadas": 1316,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.157,
+    "texto_proprio_mediana": 0.221,
+    "texto_proprio_p90": 0.437,
+    "abaixo_do_corte": 105
    }
   },
-  "noindex_por_unicidade": 0,
+  "noindex_por_unicidade": 105,
   "similaridade_jaccard5": {
    "glossario": 0.035,
-   "deputados": 0.28,
-   "senadores": 0.297,
-   "partidos": 0.358
+   "deputados": 0.436,
+   "senadores": 0.379,
+   "partidos": 0.358,
+   "votacoes": 0.227
   },
   "faq_pseo": {
    "pseo_paginas": 594,
@@ -149,8 +159,8 @@
   "ondas_noindex": 0
  },
  "site": {
-  "paginas_indexaveis": 822,
-  "paginas_total": 853,
+  "paginas_indexaveis": 2042,
+  "paginas_total": 2171,
   "noindex_global": true,
   "links_internos_quebrados": 0,
   "build": "local"

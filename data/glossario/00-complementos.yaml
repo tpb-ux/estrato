@@ -162,6 +162,7 @@ complementos:
     categoria: eleitoral
     imagem: urna
     sinonimos: [segundos turnos]
+    autolink: [segundo turno das eleições, segundo turno eleitoral, segundo turno da eleição, disputa em segundo turno, eleição em dois turnos]
     contexto: |
       Em 2026, o primeiro turno foi em 4 de outubro e o segundo turno, onde houver, é em 25 de outubro, conforme o calendário do art. 77 da Constituição (primeiro e último domingo de outubro). Há segundo turno para presidente e governador quando ninguém obtém maioria absoluta dos votos válidos, e para prefeito nos municípios com mais de 200 mil eleitores.
   federacao-partidaria:

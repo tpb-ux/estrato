@@ -31,9 +31,12 @@ def build(S):
     n = _csv(out / "senadores.csv", ["codigo_senado", "nome", "partido", "uf", "url_senado"], [[x["id"], x["nome"], x["partido"], x["uf"], x.get("pagina", "")] for x in SN["senadores"]])
     sets.append(("senadores", "Senadores em exercício", "Lista dos senadores em exercício com partido e UF.", n, "Dados Abertos do Senado Federal", "https://www12.senado.leg.br/dados-abertos",
                  "Coleta diária da API oficial (senadores em exercício).", SN["coletado_em"][:10]))
+    for slug, nome, desc, n in getattr(S, "votacoes_sets", []):
+        sets.append((slug, nome, desc, n, "APIs de Dados Abertos da Câmara dos Deputados e do Senado Federal", "https://dadosabertos.camara.leg.br/",
+                     "Votações nominais de plenário desde 01/02/2023 compiladas dos arquivos oficiais (Câmara) e da API de votações (Senado); partido e UF da data da votação. Metodologia em /votacoes/metodologia/.", S.votacoes_col))
     blocos, graph = "", []
     for slug, nome, desc, n, fonte, furl, metodo, mod in sets:
-        blocos += (f'<section class="blk" id="{slug}"><h2>{E(nome)}</h2><p>{E(desc)}</p>' + S.table(["Item", "Detalhe"], [
+        blocos += (f'<section class="blk" id="{'votacoes' if slug == 'votacoes' else slug}"><h2>{E(nome)}</h2><p>{E(desc)}</p>' + S.table(["Item", "Detalhe"], [
             ["Arquivo", f'<a href="/dados/{slug}.csv">{slug}.csv</a> ({n} linhas, UTF-8)'], ["Fonte original", f'<a href="{E(furl)}" target="_blank" rel="noopener">{E(fonte)}</a>'],
             ["Método", E(metodo)], ["Licença", f'<a href="{LIC[1]}" target="_blank" rel="noopener">{LIC[0]}</a> para a compilação; cite "{E(S.CFG["site_name"])}" e a fonte original'], ["Atualizado em", data_br(mod) if mod else ""]]) + "</section>")
         graph.append({"@type": "Dataset", "name": nome, "description": f"{desc} {metodo}", "url": f"{S.BASE}/dados/#{slug}", "license": LIC[1], "isAccessibleForFree": True, "inLanguage": "pt-BR",

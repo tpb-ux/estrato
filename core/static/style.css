@@ -114,3 +114,10 @@ nav.ed a,nav.ed .dd{flex:0 0 auto}nav.ed a.xtra{display:none}
 .glbusca input{flex:1 1 16rem;max-width:28rem;min-width:0;padding:.6rem .8rem;font:inherit;border:1px solid #9aa0a6;border-radius:6px;background:#fff;color:inherit}
 .glbusca input:focus{outline:2px solid #8a4b08;outline-offset:1px}
 #gln{font-size:.9rem;color:#555}
+.vbar{margin:10px 0 6px}.vbar svg{display:block;border-radius:4px;overflow:hidden}.vleg{display:flex;flex-wrap:wrap;gap:4px 14px;list-style:none;padding:0;margin:6px 0 0;font-size:.85rem}.vleg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.mbar{display:inline-flex;width:80px;max-width:100%;height:8px;background:#e5e7eb;border-radius:4px;overflow:hidden;vertical-align:middle}.mbar i{display:block;height:100%}
+.nlist{columns:2 220px;column-gap:24px;padding-left:18px;margin:6px 0 14px}.nlist li{break-inside:avoid;margin:2px 0}.nlist small{color:var(--m)}
+.vfil{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:8px 0}.vfil label{display:flex;flex-direction:column;font-size:.85rem;font-weight:600;gap:4px;min-width:0}
+.vfil select,.vfil input{font:inherit;font-weight:400;padding:.5rem .6rem;border:1px solid #9aa0a6;border-radius:6px;background:#fff;color:inherit;min-width:0;width:100%}.vfil .vq{grid-column:1/-1}
+.vlist{list-style:none;padding:0}.vlist li{padding:8px 0;border-bottom:1px solid var(--b)}.vlist small{display:block;color:var(--m);font-size:.82rem}
+#fn{font-size:.9rem;color:var(--m)}
