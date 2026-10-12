@@ -11,7 +11,7 @@ noindex_global: true
 aviso_topo: "Versão de prévia: em revisão, não indexada."
 publisher_logo: /static/logo.png
 tema: {cor: "#8A4B08", cor2: "#6E3B05", escuro: "#1B2430"}
-modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, cotas, emendas, dados_abertos]
+modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, cotas, emendas, executivo, dados_abertos]
 qualidade:
   min_faqs: 5                 # hubs, institucionais e glossário
   min_palavras_pseo: 300
@@ -24,8 +24,9 @@ qualidade:
 #   onda 4 (+2 a 3 semanas): tirar "votacoes" da lista (páginas de cada votação e listas anuais)
 #   onda 5 (+2 a 3 semanas): tirar "cotas" da lista (cota por parlamentar, categoria e fornecedor; hub /cota/ e metodologia ficam indexáveis)
 #   onda 6 (+2 a 3 semanas): tirar "emendas" da lista (emendas por autor e por município; hubs ficam indexáveis)
+#   onda 7 (+2 a 3 semanas): tirar "executivo" da lista (viagens de ministros, órgãos, Presidência; hubs ficam indexáveis)
 indexacao:
-  familias_noindex: [deputados, senadores, votacoes, cotas, emendas]   # votacoes: páginas de cada votação e listas anuais (hub /votacoes/ e metodologia ficam indexáveis)
+  familias_noindex: [deputados, senadores, votacoes, cotas, emendas, executivo]   # votacoes: páginas de cada votação e listas anuais (hub /votacoes/ e metodologia ficam indexáveis)
   excecoes: [/deputados/, /senadores/, /deputados/cota-parlamentar/, "/deputados/uf/*"]
 # Regra anti-rede: portais da mesma empresa não se linkam no layout nem em massa.
 rede_dominios: [modalnews.com.br]
@@ -39,12 +40,12 @@ editorias:
   - {slug: regulacao, nome: Regulação e Setores, curto: Regulação, descricao: "Saúde, energia, infraestrutura, agro, tecnologia, educação, segurança pública e meio ambiente na agenda pública.", sub: [Saúde, Energia, Infraestrutura, Agro, Tecnologia e IA, Educação, Segurança pública, Meio ambiente]}
   - {slug: internacional, nome: Internacional, descricao: "Diplomacia, acordos e a atuação do Brasil no exterior.", sub: [Diplomacia, Brasil no mundo]}
 menu:
-  barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Votações, /votacoes/], [Cota, /cota/], [Emendas, /emendas/], [Glossário, /glossario/]]
+  barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Votações, /votacoes/], [Cota, /cota/], [Emendas, /emendas/], [Executivo, /executivo/], [Glossário, /glossario/]]
   rotulo_dropdown: Dados
-  referencia: [[Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Deputados por estado, /deputados/#uf], [Dados abertos, /dados/], [Buscar, /busca/]]
+  referencia: [[Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Deputados por estado, /deputados/#uf], [Dados abertos, /dados/], [Buscar, /busca/]]
 rodape:
   - {titulo: Editorias, links: [[Congresso, /congresso/], [Governo, /governo/], [Justiça, /justica/], [Eleições, /eleicoes/], [Economia e Tributos, /economia/], [Estados e Municípios, /estados/], [Regulação e Setores, /regulacao/], [Internacional, /internacional/]]}
-  - {titulo: Dados, links: [[Deputados federais, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Glossário político, /glossario/], [Placar de votações, /votacoes/], [Dados abertos (CSV), /dados/], [Buscar, /busca/]]}
+  - {titulo: Dados, links: [[Deputados federais, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Glossário político, /glossario/], [Placar de votações, /votacoes/], [Dados abertos (CSV), /dados/], [Buscar, /busca/]]}
   - {titulo: Institucional, links: [[Sobre, /sobre/], [Expediente, /expediente/], [Política editorial, /politica-editorial/], [Metodologia, /metodologia/], [Correções, /correcoes/], [Direito de resposta, /direito-de-resposta/], [Contato, /contato/], [Termos, /termos/], [Privacidade, /privacidade/], [RSS, /rss.xml]]}
 home_faqs:
   - {p: "O que é o Estrato?", r: "Um portal sobre os Três Poderes que reúne dados oficiais abertos, como os da Câmara e do Senado, e resumos de fontes públicas com link para a íntegra."}
@@ -66,4 +67,4 @@ verificacao: {google: "", bing: ""}
 indexnow_key: "c0f3a1e9b7d24e6f8a5b2c9d1e7f4a30"
 llms_intro: "Portal apartidário em português sobre os Três Poderes do Brasil. Páginas de dados usam APIs oficiais (Câmara dos Deputados, Senado Federal) com fonte e data de coleta; notícias são resumos de agências oficiais com link para a fonte e não são indexadas."
 # Autolink do glossário (core/autolink.py): 1ª ocorrência de cada termo vira link para o verbete, até `maximo` por página.
-autolink: {ativo: true, maximo: 10, familias: [artigos, glossario, deputados, senadores, partidos, analises, votacoes, cotas, emendas], editorias: true}
+autolink: {ativo: true, maximo: 10, familias: [artigos, glossario, deputados, senadores, partidos, analises, votacoes, cotas, emendas, executivo], editorias: true}

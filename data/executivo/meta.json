@@ -1,0 +1,19 @@
+{
+ "coletado_em": "2026-10-12T19:23:06+00:00",
+ "anos": [
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "cpgf_meses": [
+  "202301",
+  "202608"
+ ],
+ "viagens_autoridades": 6734,
+ "orgaos": 35,
+ "fontes": [
+  "https://portaldatransparencia.gov.br/download-de-dados/viagens/<ano>",
+  "https://portaldatransparencia.gov.br/download-de-dados/cpgf/<AAAAMM>"
+ ]
+}

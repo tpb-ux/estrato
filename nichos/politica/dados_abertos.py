@@ -40,6 +40,9 @@ def build(S):
     for slug, nome, desc, n in getattr(S, "emendas_sets", []):
         sets.append((slug, nome, desc, n, "Portal da Transparência (CGU), download de dados de emendas parlamentares", "https://portaldatransparencia.gov.br/download-de-dados/emendas-parlamentares",
                      "Emendas com ano a partir de 2023 (por autor) e pagamentos por favorecido desde 01/2023 (por município da sede do favorecido). Metodologia em /emendas/metodologia/.", S.emendas_meta))
+    for slug, nome, desc, n in getattr(S, "exec_sets", []):
+        sets.append((slug, nome, desc, n, "Portal da Transparência (CGU), downloads de viagens a serviço e do Cartão de Pagamento do Governo Federal", "https://portaldatransparencia.gov.br/download-de-dados",
+                     "Viagens de autoridades com função CNE-0001 e do vice-presidente desde 2023; CPGF somado por órgão superior e ano, sem portadores. Metodologia em /executivo/metodologia/.", S.exec_meta))
     blocos, graph = "", []
     for slug, nome, desc, n, fonte, furl, metodo, mod in sets:
         blocos += (f'<section class="blk" id="{'votacoes' if slug == 'votacoes' else ('cota' if slug == 'cota-camara' else ('emendas' if slug == 'emendas-autores' else slug))}"><h2>{E(nome)}</h2><p>{E(desc)}</p>' + S.table(["Item", "Detalhe"], [
