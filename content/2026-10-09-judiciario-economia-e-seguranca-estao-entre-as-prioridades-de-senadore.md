@@ -6,8 +6,9 @@ resumo: "A reforma do Judiciário, o impeachment de ministros do Supremo Tribuna
 imagem: "/static/img/2026-10-09-judiciario-economia-e-seguranca-estao-entre-as-prioridades-de-senadore.webp"
 imagem_w: 860
 imagem_h: 570
-imagem_credito: "Agência Senado"
+imagem_credito: "Pedro França/Agência Senado"
 imagem_origem: "https://www12.senado.leg.br/noticias/materias/2026/10/09/judiciario-economia-e-seguranca-estao-entre-as-prioridades-de-senadores-eleitos/stf_20190430_00357pf.jpg"
+imagem_licenca: "https://www12.senado.leg.br/noticias/politica-de-uso"
 fonte: "Agência Senado"
 link: "https://www12.senado.leg.br/noticias/materias/2026/10/09/judiciario-economia-e-seguranca-estao-entre-as-prioridades-de-senadores-eleitos"
 gerado_por: fetch.py

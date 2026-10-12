@@ -6,8 +6,9 @@ resumo: "Proposta está em análise na Câmara dos Deputados"
 imagem: "/static/img/2026-10-09-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos.webp"
 imagem_w: 548
 imagem_h: 324
-imagem_credito: "Agência Câmara"
+imagem_credito: "Thiago Cristino/Câmara dos Deputados"
 imagem_origem: "https://www.camara.leg.br/midias/image/2026/10/segunda-secretaria-18-548x324.jpg"
+imagem_licenca: "https://www.camara.leg.br/internet/bancoimagem/"
 fonte: "Agência Câmara"
 link: "https://www.camara.leg.br/noticias/1306357-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos"
 gerado_por: fetch.py

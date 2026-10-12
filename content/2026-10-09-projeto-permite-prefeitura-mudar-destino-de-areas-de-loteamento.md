@@ -6,8 +6,9 @@ resumo: "Texto está em análise na Câmara dos Deputados"
 imagem: "/static/img/2026-10-09-projeto-permite-prefeitura-mudar-destino-de-areas-de-loteamento.webp"
 imagem_w: 768
 imagem_h: 473
-imagem_credito: "Agência Câmara"
+imagem_credito: "Bruno Spada/Câmara dos Deputados"
 imagem_origem: "https://www.camara.leg.br/midias/image/2026/10/img20260429144514116-768x473.jpg"
+imagem_licenca: "https://www.camara.leg.br/internet/bancoimagem/"
 fonte: "Agência Câmara"
 link: "https://www.camara.leg.br/noticias/1305283-projeto-permite-prefeitura-mudar-destino-de-areas-de-loteamento"
 gerado_por: fetch.py

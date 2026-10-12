@@ -11,8 +11,21 @@ noindex_global: true
 aviso_topo: "Versão de prévia: em revisão, não indexada."
 publisher_logo: /static/logo.png
 tema: {cor: "#8A4B08", cor2: "#6E3B05", escuro: "#1B2430"}
-modulos: [core.modulos.glossario, parlamentares, partidos]
-qualidade: {min_faqs: 5, min_palavras_pseo: 300}
+modulos: [core.modulos.glossario, parlamentares, partidos, dados_abertos]
+qualidade:
+  min_faqs: 5                 # hubs, institucionais e glossário
+  min_palavras_pseo: 300
+  corte_unicidade: 0.15       # fração mínima de texto próprio (5-gramas raros na família) para uma pSEO ficar indexável
+  faq_pseo: {prefixos: [/deputados/, /senadores/], max: 3, hubs: [/deputados/uf/, /deputados/cota-parlamentar/]}   # partidos são hubs dos seus parlamentares: FAQ completo
+# Lançamento em ondas (vale quando noindex_global for desligado). Plano:
+#   onda 1 (lançamento): institucionais, editorias, glossário, partidos, hubs de deputados/senadores, deputados por UF e cota parlamentar
+#   onda 2 (+2 a 3 semanas, se o Search Console mostrar a onda 1 indexada): tirar "senadores" da lista
+#   onda 3 (+2 a 3 semanas): tirar "deputados" da lista
+indexacao:
+  familias_noindex: [deputados, senadores]
+  excecoes: [/deputados/, /senadores/, /deputados/cota-parlamentar/, "/deputados/uf/*"]
+# Regra anti-rede: portais da mesma empresa não se linkam no layout nem em massa.
+rede_dominios: [modalnews.com.br]
 editorias:
   - {slug: congresso, nome: Congresso, descricao: "Câmara, Senado, comissões, CPIs e a agenda de votações, com base nas agências oficiais das duas Casas.", sub: [Câmara, Senado, Comissões, CPIs, Agenda]}
   - {slug: governo, nome: Governo, descricao: "Presidência, ministérios, orçamento, emendas e atos do Executivo federal.", sub: [Presidência, Ministérios, Orçamento e emendas, Servidor público, Atos oficiais]}
@@ -25,10 +38,10 @@ editorias:
 menu:
   barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Glossário, /glossario/]]
   rotulo_dropdown: Dados
-  referencia: [[Cota parlamentar, /deputados/cota-parlamentar/], [Deputados por estado, /deputados/#uf], [Buscar, /busca/]]
+  referencia: [[Cota parlamentar, /deputados/cota-parlamentar/], [Deputados por estado, /deputados/#uf], [Dados abertos, /dados/], [Buscar, /busca/]]
 rodape:
   - {titulo: Editorias, links: [[Congresso, /congresso/], [Governo, /governo/], [Justiça, /justica/], [Eleições, /eleicoes/], [Economia e Tributos, /economia/], [Estados e Municípios, /estados/], [Regulação e Setores, /regulacao/], [Internacional, /internacional/]]}
-  - {titulo: Dados, links: [[Deputados federais, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Cota parlamentar, /deputados/cota-parlamentar/], [Glossário político, /glossario/], [Buscar, /busca/]]}
+  - {titulo: Dados, links: [[Deputados federais, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Cota parlamentar, /deputados/cota-parlamentar/], [Glossário político, /glossario/], [Dados abertos (CSV), /dados/], [Buscar, /busca/]]}
   - {titulo: Institucional, links: [[Sobre, /sobre/], [Expediente, /expediente/], [Política editorial, /politica-editorial/], [Metodologia, /metodologia/], [Correções, /correcoes/], [Direito de resposta, /direito-de-resposta/], [Contato, /contato/], [Termos, /termos/], [Privacidade, /privacidade/], [RSS, /rss.xml]]}
 home_faqs:
   - {p: "O que é o Estrato?", r: "Um portal sobre os Três Poderes que reúne dados oficiais abertos, como os da Câmara e do Senado, e resumos de fontes públicas com link para a íntegra."}

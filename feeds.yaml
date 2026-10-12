@@ -31,3 +31,16 @@ bloqueio_fontes: []
 restricao_editoria:
   eleicoes: {ate: "2026-10-26", exige: [tse, tre, justiça eleitoral, calendário eleitoral, urna, totalização, retotalização, diplomação, resolução, eleitorado, seção eleitoral, biometria, mesário]}
   "*": {ate: "2026-10-26", exige: [""], bloqueia: [ato pela, reeleição, comício, carreata, palanque, campanha de, campanha do, campanha da, propaganda eleitoral, apoio a lula, apoio a flávio, reunido com prefeitos, pede voto, pedido de voto]}
+# Fotos das fontes: só com licença confirmada na documentação oficial e crédito do fotógrafo encontrado na página
+# no padrão do licenciante. Demais casos (TCU, STF, Agência Brasil*, foto de outra agência): card próprio.
+# *Agência Brasil: reprodução livre com crédito, mas o banco Foto Agência restringe uso comercial e exclui fotos de
+#  parceiras ("direitos reservados"); sem licença inequívoca para um portal com publicidade -> card. (consulta 12/10/2026)
+licencas_imagem:
+  Agência Câmara:
+    padrao: 'Foto:\s*([^/<>"]{2,80}?)\s*/\s*(?:Agência Câmara|Câmara dos Deputados)'
+    credito: "{autor}/Câmara dos Deputados"
+    url: "https://www.camara.leg.br/internet/bancoimagem/"   # "licença Creative Commons BY ... créditos no formato Nome do Fotógrafo/Câmara dos Deputados"
+  Agência Senado:
+    padrao: '([A-ZÀ-Ý][A-Za-zÀ-ÿ.'' ]{2,60}?)\s*/\s*Agência Senado'
+    credito: "{autor}/Agência Senado"
+    url: "https://www12.senado.leg.br/noticias/politica-de-uso"  # "reprodução de matérias e fotografias é livre ... citação da Agência Senado e do autor"

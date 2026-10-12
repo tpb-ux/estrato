@@ -1,5 +1,5 @@
 """Deputados federais e senadores em exercício + hub de cota parlamentar (CEAP). Dados: APIs de Dados Abertos da Câmara e do Senado."""
-import statistics as st
+import json, statistics as st
 from core.site import E, slugify
 from .dados import UF, PREP, MESES, brl, brl0, num, pct, data_br, idade, load
 
@@ -11,6 +11,7 @@ def plist(S, items, kind):
     return '<ul class="plist">' + "".join(f'<li><a href="{x["url"]}">{foto(S, kind, x["id"], x["nome"], 36, 48)}<span><strong>{E(x["nome"])}</strong><small>{E(x["partido"])}-{x["uf"]}</small></span></a></li>' for x in items) + "</ul>"
 
 def build(S):
+    WD = json.loads((S.ROOT / "data/wikidata_deputados.json").read_text(encoding="utf-8"))["itens"] if (S.ROOT / "data/wikidata_deputados.json").exists() else {}
     D = load(S, "deputados.json"); SN = load(S, "senadores.json"); C = load(S, "ceap.json")
     deps = [d for d in D["deputados"]]; sens = SN["senadores"]
     col_d, col_s = D["coletado_em"][:10], SN["coletado_em"][:10]
@@ -50,6 +51,7 @@ def build(S):
                 ("E-mail oficial", E(d.get("email") or ""))]
         info = [(k, v) for k, v in info if v and v.strip(" ,()")]
         prof = f'<div class="prof">{foto(S, "dep", d["id"], d["nome"])}<div class="tw"><table><tbody>' + "".join(f"<tr><th scope=\"row\">{k}</th><td>{v}</td></tr>" for k, v in info) + "</tbody></table></div></div>"
+        if (S.ROOT / f"static/img/parl/dep-{d['id']}.webp").exists(): prof += '<p class="src">Foto oficial: Arquivo/Câmara dos Deputados (<a href="https://www.camara.leg.br/internet/bancoimagem/" target="_blank" rel="noopener">uso livre com crédito, CC BY</a>).</p>'
         body = f'<article class="post"><h1>{E(d["nome"])} ({E(d["partido"])}-{uf}): {dep_t} federal</h1>{lead}{prof}'
         if c["total"] > 0:
             cats = list(c["por_categoria"].items())
@@ -70,7 +72,7 @@ def build(S):
                 (f"Em quais comissões {d['nome']} atua?", (", ".join(E(o["sigla"] or o["nome"]) for o in d["orgaos"][:8]) + "." if d["orgaos"] else "O cadastro oficial não lista comissões ativas na data da coleta.")),
                 (f"Como entrar em contato com {d['nome']}?", (f"Pelo e-mail oficial {E(d['email'])}" if d.get("email") else "Pelos canais oficiais da Câmara") + (f" ou pelo telefone do gabinete, (61) {E(d['gabinete']['telefone'])}." if d["gabinete"].get("telefone") else "."))]
         ld = {"@type": "Person", "name": d["nome"], "jobTitle": f"{dep_t.capitalize()} federal", "affiliation": {"@type": "Organization", "name": d["partido"]}, "memberOf": {"@type": "GovernmentOrganization", "name": "Câmara dos Deputados"},
-              "url": S.BASE + d["url"], **({"image": S.BASE + f"/static/img/parl/dep-{d['id']}.webp"} if (S.ROOT / f"static/img/parl/dep-{d['id']}.webp").exists() else {}), "sameAs": [f"https://www.camara.leg.br/deputados/{d['id']}"]}
+              "url": S.BASE + d["url"], **({"image": S.BASE + f"/static/img/parl/dep-{d['id']}.webp"} if (S.ROOT / f"static/img/parl/dep-{d['id']}.webp").exists() else {}), "sameAs": [f"https://www.camara.leg.br/deputados/{d['id']}"] + ([WD[str(d['id'])]] if str(d['id']) in WD else [])}
         S.write(d["url"], S.page(f"{d['nome']} ({d['partido']}-{uf}): perfil e cota parlamentar", f"{d['nome']}, {dep_t} federal ({d['partido']}-{uf}): dados oficiais, comissões e gastos da cota parlamentar em {ano}.",
                                  d["url"], body, faqs=faqs, crumbs=[("Deputados", "/deputados/"), (UF[uf], f"/deputados/uf/{uf.lower()}/"), (d["nome"], d["url"])], jsonld=ld, og_img=S.BASE + f"/static/img/parl/dep-{d['id']}.webp"),
                 familia="deputados", lastmod=col_d, image=f"/static/img/parl/dep-{d['id']}.webp")
@@ -148,6 +150,7 @@ def build(S):
         info = [(k, v) for k, v in info if v and v.strip(" ,()a")]
         body = (f'<article class="post"><h1>{E(x["nome"])} ({E(x["partido"])}-{uf}): {sen_t}</h1>{lead}<div class="prof">{foto(S, "sen", x["id"], x["nome"])}<div class="tw"><table><tbody>'
                 + "".join(f"<tr><th scope=\"row\">{k}</th><td>{v}</td></tr>" for k, v in info) + "</tbody></table></div></div>"
+                + ('<p class="src">Foto oficial: Agência Senado (<a href="https://www12.senado.leg.br/noticias/politica-de-uso" target="_blank" rel="noopener">reprodução livre com crédito</a>).</p>' if (S.ROOT / f"static/img/parl/sen-{x['id']}.webp").exists() else "")
                 + f'<p>{UF[uf]} é representado no Senado por {len(sby[uf])} senadores em exercício. O {E(x["partido"])} tem {sp0.get(x["partido"], 0)} dos {len(sens)} senadores em exercício e {sum(1 for d in deps if d["partido"] == x["partido"])} dos {len(deps)} deputados federais, segundo as bases oficiais.</p>'
                 + "<h2>Como funciona o mandato</h2><p>O mandato de senador dura oito anos, o equivalente a duas legislaturas. O Senado é renovado de forma alternada, por um terço e dois terços das cadeiras, a cada quatro anos. Cada estado tem três senadores, e cada senador é eleito com dois suplentes.</p>"
                 + (f'<h2>Comissões e grupos ({len(x["comissoes"])})</h2>' + S.table(["Colegiado", "Sigla", "Participação"], [[E(c["nome"] or ""), E(c["sigla"] or ""), E(c["cargo"] or "")] for c in x["comissoes"]]) if x["comissoes"] else "")

@@ -4,10 +4,9 @@ data: 2026-10-09T11:31:00-03:00
 editoria: congresso
 resumo: "Nota técnica aponta divergências entre projeções do governo e do mercado financeiro"
 imagem: "/static/img/2026-10-09-consultorias-da-camara-e-do-senado-indicam-necessidade-de-ajustes-no-p.webp"
-imagem_w: 768
-imagem_h: 512
-imagem_credito: "Agência Câmara"
-imagem_origem: "https://www.camara.leg.br/midias/image/2026/10/img20230424110823717-768x512.jpg"
+imagem_w: 1200
+imagem_h: 630
+imagem_card: true
 fonte: "Agência Câmara"
 link: "https://www.camara.leg.br/noticias/1310470-consultorias-da-camara-e-do-senado-indicam-necessidade-de-ajustes-no-projeto-do-orcamento-para-2027"
 gerado_por: fetch.py

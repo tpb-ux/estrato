@@ -6,8 +6,9 @@ resumo: "Publicada no Diário Oficial da União (DOU) nesta sexta-feira (9), a M
 imagem: "/static/img/2026-10-09-medida-provisoria-libera-r-7-52-bilhoes-para-subsidiar-combustiveis.webp"
 imagem_w: 860
 imagem_h: 570
-imagem_credito: "Agência Senado"
+imagem_credito: "Edilson Rodrigues/Agência Senado"
 imagem_origem: "https://www12.senado.leg.br/noticias/materias/2026/10/09/medida-provisoria-libera-r-7-52-bilhoes-para-custear-subsidios-a-combustiveis/20220613_00476e.jpg"
+imagem_licenca: "https://www12.senado.leg.br/noticias/politica-de-uso"
 fonte: "Agência Senado"
 link: "https://www12.senado.leg.br/noticias/materias/2026/10/09/medida-provisoria-libera-r-7-52-bilhoes-para-custear-subsidios-a-combustiveis"
 gerado_por: fetch.py

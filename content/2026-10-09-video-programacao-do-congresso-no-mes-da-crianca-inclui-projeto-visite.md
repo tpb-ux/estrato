@@ -5,9 +5,8 @@ editoria: congresso
 resumo: "Em comemoração ao mês das crianças, o programa Visite o Congresso conta com uma programação especial. Ao conhecer a Câmara e o Senado, o público infantil pode acompanhar a peça \"A incrível jornada de uma lei\". Para conferir, basta agendar uma visita nos dias…"
 imagem: "/static/img/2026-10-09-video-programacao-do-congresso-no-mes-da-crianca-inclui-projeto-visite.webp"
 imagem_w: 1200
-imagem_h: 675
-imagem_credito: "Agência Senado"
-imagem_origem: "https://www12.senado.leg.br/noticias/videos/2026/10/no-mes-das-criancas-programacao-do-congresso-inclui-projeto-visite-encena/@@images/b0b50c5c-4be8-4d0b-ae94-5f0cf57d9238.jpeg"
+imagem_h: 630
+imagem_card: true
 fonte: "Agência Senado"
 link: "https://www12.senado.leg.br/noticias/videos/2026/10/no-mes-das-criancas-programacao-do-congresso-inclui-projeto-visite-encena"
 gerado_por: fetch.py

@@ -6,8 +6,9 @@ resumo: "Uma sessão solene do Congresso Nacional homenageará na terça-feira (
 imagem: "/static/img/2026-10-09-congresso-fara-sessao-solene-pelo-dia-mundial-da-alimentacao.webp"
 imagem_w: 860
 imagem_h: 570
-imagem_credito: "Agência Senado"
+imagem_credito: "Leopoldo Silva/Agência Senado"
 imagem_origem: "https://www12.senado.leg.br/noticias/materias/2026/10/09/congresso-fara-sessao-solene-pelo-dia-mundial-da-alimentacao/20211013_00663ls.jpg"
+imagem_licenca: "https://www12.senado.leg.br/noticias/politica-de-uso"
 fonte: "Agência Senado"
 link: "https://www12.senado.leg.br/noticias/materias/2026/10/09/congresso-fara-sessao-solene-pelo-dia-mundial-da-alimentacao"
 gerado_por: fetch.py

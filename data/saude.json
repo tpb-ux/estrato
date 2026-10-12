@@ -2,18 +2,19 @@
  "formato": "saude-portal/1",
  "portal": "Estrato",
  "url": "https://estrato.com.br",
- "gerado_em": "2026-10-12T10:51:18+00:00",
+ "gerado_em": "2026-10-12T11:49:03+00:00",
  "materias": {
   "total": 20,
   "ultimas_24h": 0,
   "ultimos_7d": 20,
   "com_imagem_propria_pct": 100.0,
+  "com_card_proprio_pct": 40.0,
   "mais_recente": {
    "titulo": "Projeto pune empresas que atrasarem pagamento de médicos",
    "url": "https://estrato.com.br/congresso/2026-10-09-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos/",
    "fonte": "Agência Câmara",
    "publicada_em": "2026-10-09T19:15:00-03:00",
-   "idade_horas": 60.6
+   "idade_horas": 61.6
   }
  },
  "feeds": {
@@ -91,9 +92,65 @@
    "local": "2026-10-12T10:34:55+00:00"
   }
  },
+ "qualidade": {
+  "unicidade": {
+   "glossario": {
+    "paginas": 34,
+    "avaliadas": 34,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.696,
+    "texto_proprio_mediana": 0.789,
+    "texto_proprio_p90": 0.845,
+    "abaixo_do_corte": 0
+   },
+   "deputados": {
+    "paginas": 541,
+    "avaliadas": 539,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.281,
+    "texto_proprio_mediana": 0.355,
+    "texto_proprio_p90": 0.466,
+    "abaixo_do_corte": 0
+   },
+   "senadores": {
+    "paginas": 81,
+    "avaliadas": 74,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.253,
+    "texto_proprio_mediana": 0.299,
+    "texto_proprio_p90": 0.348,
+    "abaixo_do_corte": 0
+   },
+   "partidos": {
+    "paginas": 23,
+    "avaliadas": 22,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.249,
+    "texto_proprio_mediana": 0.322,
+    "texto_proprio_p90": 0.545,
+    "abaixo_do_corte": 0
+   }
+  },
+  "noindex_por_unicidade": 0,
+  "similaridade_jaccard5": {
+   "glossario": 0.048,
+   "deputados": 0.28,
+   "senadores": 0.297,
+   "partidos": 0.358
+  },
+  "faq_pseo": {
+   "pseo_paginas": 594,
+   "pseo_faqs": 1782,
+   "pseo_removidas": 1188
+  },
+  "rede_links_pct": {
+   "modalnews.com.br": 0.0
+  },
+  "ondas_noindex": 585
+ },
  "site": {
-  "paginas_indexaveis": 696,
-  "paginas_total": 722,
+  "paginas_indexaveis": 107,
+  "paginas_total": 723,
   "noindex_global": true,
   "links_internos_quebrados": 0,
   "build": "local"

@@ -6,8 +6,9 @@ resumo: "Projeto exclui salário de Jovem Aprendiz do cálculo de renda do Bolsa
 imagem: "/static/img/2026-10-09-projeto-exclui-salario-de-jovem-aprendiz-do-calculo-de-renda-do-bolsa.webp"
 imagem_w: 768
 imagem_h: 473
-imagem_credito: "Agência Câmara"
+imagem_credito: "Vinicius Loures/Câmara dos Deputados"
 imagem_origem: "https://www.camara.leg.br/midias/image/2026/10/img20260811183410032-768x473.jpg"
+imagem_licenca: "https://www.camara.leg.br/internet/bancoimagem/"
 fonte: "Agência Câmara"
 link: "https://www.camara.leg.br/noticias/1306625-projeto-exclui-salario-de-jovem-aprendiz-do-calculo-de-renda-do-bolsa-familia"
 gerado_por: fetch.py

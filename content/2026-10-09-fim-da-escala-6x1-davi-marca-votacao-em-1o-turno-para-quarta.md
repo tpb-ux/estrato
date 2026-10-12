@@ -6,8 +6,9 @@ resumo: "O presidente do Senado, Davi Alcolumbre, marcou para a próxima quarta-
 imagem: "/static/img/2026-10-09-fim-da-escala-6x1-davi-marca-votacao-em-1o-turno-para-quarta.webp"
 imagem_w: 860
 imagem_h: 570
-imagem_credito: "Agência Senado"
+imagem_credito: "Ton Molina/Agência Senado"
 imagem_origem: "https://www12.senado.leg.br/noticias/materias/2026/10/09/fim-da-6-x-1-senado-pode-concluir-1o-turno-da-votacao-em-mais-duas-sessoes/20261006_00423t.jpg"
+imagem_licenca: "https://www12.senado.leg.br/noticias/politica-de-uso"
 fonte: "Agência Senado"
 link: "https://www12.senado.leg.br/noticias/materias/2026/10/09/fim-da-6-x-1-senado-pode-concluir-1o-turno-da-votacao-em-mais-duas-sessoes"
 gerado_por: fetch.py
