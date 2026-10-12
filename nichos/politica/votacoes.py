@@ -33,7 +33,7 @@ def carregar(S):
         base = slugify(f"{v['data']} {p.get('sigla') or ''} {p.get('numero') or ''} {p.get('ano') or ''}".strip()) or v["data"]
         v["slug"] = f"{base}-{slugify(v['id'])}"; v["url"] = f"/votacoes/{v['casa']}/{v['slug']}/"
         a = v.get("aprovacao"); ds = (v["descricao"] or "").lower()
-        if a is None: a = 1 if ds.startswith(("aprovad", "aprovação")) else (0 if ds.startswith(("rejeitad", "rejeição")) else None)
+        if a is None: a = 1 if re.match(r"^(aprovad|aprovação)", ds) else (0 if re.match(r"^(rejeitad|rejeição)", ds) else (0 if "mantido o texto" in ds[:60] else None))
         v["res"] = {1: "Aprovado", 0: "Rejeitado"}.get(a, "Ver descrição oficial")
         c = collections.Counter()
         for r in v["votos"]: c[CAT.get(r[1], "outros")] += 1
@@ -214,7 +214,7 @@ def build(S):
                           crumbs=[("Votações", "/votacoes/"), (f"{cn} {ano}", u)], jsonld=S.itemlist([(v["titulo"], v["url"]) for v in lst])), familia=fam, lastmod=lst[0]["data"])
         urls.append(u)
     # índice JSON para os filtros do hub
-    idx = [{"u": v["url"], "t": v["titulo"], "d": v["data"], "c": v["casa"], "r": v["res"], "s": v["placar"].get("sim", 0), "n": v["placar"].get("nao", 0), "g": v["gov"], "m": v["temas"][:3], "e": ((v.get("prop") or {}).get("ementa") or "")[:160]} for v in vs]
+    idx = [{"u": v["url"], "t": v["titulo"] + (" – " + v["obj"][:80] if v["obj"] else ""), "d": v["data"], "c": v["casa"], "r": v["res"], "s": v["placar"].get("sim", 0), "n": v["placar"].get("nao", 0), "g": v["gov"], "m": v["temas"][:3], "e": ((v.get("prop") or {}).get("ementa") or "")[:160]} for v in vs]
     (S.OUT / "votacoes").mkdir(parents=True, exist_ok=True)
     (S.OUT / "votacoes/indice.json").write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     temas = sorted({t for v in vs for t in v["temas"]})
@@ -226,7 +226,7 @@ def build(S):
             f'<label>Resultado<select id="fr"><option value="">Todos</option>{opt([("Aprovado", "Aprovado"), ("Rejeitado", "Rejeitado"), ("Ver descrição oficial", "Outros")])}</select></label>'
             f'<label class="vq">Buscar<input id="fq" type="search" placeholder="Ex.: PEC 45, sistema tributário, arcabouço" autocomplete="off"></label></form><p id="fn" aria-live="polite"></p><a id="vidx" href="/votacoes/indice.json" hidden>índice</a>')
     ult = vs[:40]
-    lista = '<ul class="vlist" id="vl">' + "".join(f'<li><a href="{v["url"]}">{E(v["titulo"])}</a><small>{CASA[v["casa"]][0]} · {data_br(v["data"])} · {E(v["res"])} · {v["placar"].get("sim", 0)} × {v["placar"].get("nao", 0)}</small></li>' for v in ult) + "</ul>"
+    lista = '<ul class="vlist" id="vl">' + "".join(f'<li><a href="{v["url"]}">{E(v["titulo"])}{(" – " + E(v["obj"][:80])) if v["obj"] else ""}</a><small>{CASA[v["casa"]][0]} · {data_br(v["data"])} · {E(v["res"])} · {v["placar"].get("sim", 0)} × {v["placar"].get("nao", 0)}</small></li>' for v in ult) + "</ul>"
     js = ("<script>(function(){var X=document.getElementById('vidx'),P=X.getAttribute('href').replace('/votacoes/indice.json',''),I=null,L=document.getElementById('vl'),N=document.getElementById('fn'),F=['fa','fc','ft','fr','fq'].map(function(i){return document.getElementById(i)});"
           "function n(s){return(s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'')}"
           "function e(s){return String(s).replace(/[&<>\"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]})}"
