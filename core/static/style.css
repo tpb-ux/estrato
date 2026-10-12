@@ -121,3 +121,4 @@ nav.ed a,nav.ed .dd{flex:0 0 auto}nav.ed a.xtra{display:none}
 .vfil select,.vfil input{font:inherit;font-weight:400;padding:.5rem .6rem;border:1px solid #9aa0a6;border-radius:6px;background:#fff;color:inherit;min-width:0;width:100%}.vfil .vq{grid-column:1/-1}
 .vlist{list-style:none;padding:0}.vlist li{padding:8px 0;border-bottom:1px solid var(--b)}.vlist small{display:block;color:var(--m);font-size:.82rem}
 #fn{font-size:.9rem;color:var(--m)}
+.cbar{margin:1rem 0}.cbar svg{max-height:220px;display:block}.cbar figcaption{font-size:.85rem;color:#555}
