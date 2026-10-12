@@ -66,7 +66,7 @@ def build(S):
         u = purl[n]; nome = tit(n); orgs = collections.Counter(O.get(v["org"], v["org"]) for v in vs); ks = sorted({v["org"] for v in vs})
         tot = sum(v["valor"] for v in vs); ini = min(v["ini"] for v in vs); fim = max(v["ini"] for v in vs)
         olinks = ", ".join((art(O.get(k, k)).split(" ", 1)[0] + " " + (f'<a href="{ourl[k]}">{E(O[k])}</a>' if k in ourl else E(O.get(k, k)))) for k in ks)
-        lead = (f'<p class="snippet"><strong>{E(nome)}</strong>, com Cargo de Natureza Especial (CNE-0001, nível de ministro de Estado) em {olinks}, tem <strong>{num(len(vs))} viagens a serviço realizadas</strong> registradas entre {data_br(ini)} e {data_br(fim)}, '
+        lead = (f'<p class="snippet"><strong>{E(nome)}</strong>, com Cargo de Natureza Especial (CNE-0001, nível de ministro de Estado), {olinks}, tem <strong>{num(len(vs))} viagens a serviço realizadas</strong> registradas entre {data_br(ini)} e {data_br(fim)}, '
                 f'somando {brl(tot)} em diárias, passagens e outros gastos, já descontadas devoluções.</p>')
         body = f'<article class="post"><h1>Viagens oficiais de {E(nome)} desde 2023</h1>{lead}'
         pa = collections.defaultdict(lambda: [0, 0.0, 0.0, 0.0])
@@ -132,7 +132,7 @@ def build(S):
     body = (f'<section class="blk"><h1>Executivo federal: viagens de ministros e cartão corporativo</h1><p class="snippet">Desde 2023, {num(len(pessoas))} autoridades com Cargo de Natureza Especial (nível de ministro de Estado) registraram <strong>{num(nvp)} viagens a serviço realizadas</strong>, somando {brl(tv)}, segundo o Portal da Transparência.</p>'
             f'<h2>Autoridades (ordem alfabética)</h2><ul class="nlist">{li}</ul>'
             '<h2>Órgãos (ordem alfabética)</h2>' + S.table(["Órgão", "Viagens (todos os servidores)", "Valor das viagens", "Cartão (CPGF)"], rows, "Desde 2023")
-            + (getattr(S, "exec_extra", "") or "")
+            + ('<p>Agendas oficiais do presidente e do vice-presidente estão em <a href="/executivo/presidencia/">Presidência e Vice-Presidência</a>.</p>' if (S.ROOT / "data/agenda/presidente.json.gz").exists() else "")
             + '<h2>Como ler</h2><p>Viagens individuais aparecem só para autoridades com Cargo de Natureza Especial. Viagens dos demais servidores e o uso do cartão corporativo aparecem só em totais por órgão. O Estrato não classifica autoridades.</p>'
             + f'<p>Baixe os dados em <a href="/dados/#viagens-autoridades">CSV</a> e veja a <a href="/executivo/metodologia/">metodologia</a>.</p><p class="src">Fontes: {FONTE_V}; {FONTE_C}.</p></section>')
     faqs = [("Quantas viagens os ministros fizeram desde 2023?", f"{num(nvp)} viagens a serviço realizadas por {num(len(pessoas))} autoridades com Cargo de Natureza Especial, somando {brl(tv)}."),
