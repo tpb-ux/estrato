@@ -31,10 +31,10 @@ bloqueio_fontes: []
 restricao_editoria:
   eleicoes: {ate: "2026-10-26", exige: [tse, tre, justiça eleitoral, calendário eleitoral, urna, totalização, retotalização, diplomação, resolução, eleitorado, seção eleitoral, biometria, mesário]}
   "*": {ate: "2026-10-26", exige: [""], bloqueia: [ato pela, reeleição, comício, carreata, palanque, campanha de, campanha do, campanha da, propaganda eleitoral, apoio a lula, apoio a flávio, reunido com prefeitos, pede voto, pedido de voto]}
-# Fotos das fontes: só com licença confirmada na documentação oficial e crédito do fotógrafo encontrado na página
-# no padrão do licenciante. Demais casos (TCU, STF, Agência Brasil*, foto de outra agência): card próprio.
+# Fotos das fontes: decisão editorial (12/10/2026) = foto original da fonte em WebP com crédito e link. As entradas abaixo
+# só refinam o crédito (fotógrafo no formato do licenciante) quando a licença foi confirmada; nas demais o crédito é a fonte.
 # *Agência Brasil: reprodução livre com crédito, mas o banco Foto Agência restringe uso comercial e exclui fotos de
-#  parceiras ("direitos reservados"); sem licença inequívoca para um portal com publicidade -> card. (consulta 12/10/2026)
+#  parceiras ("direitos reservados"); sem licença inequívoca para portal com publicidade (risco registrado; Tercio decidiu manter as fotos). (consulta 12/10/2026)
 licencas_imagem:
   Agência Câmara:
     padrao: 'Foto:\s*([^/<>"]{2,80}?)\s*/\s*(?:Agência Câmara|Câmara dos Deputados)'

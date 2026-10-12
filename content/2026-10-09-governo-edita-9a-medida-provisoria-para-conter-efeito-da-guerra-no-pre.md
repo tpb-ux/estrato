@@ -4,9 +4,10 @@ data: 2026-10-09T11:37:00-03:00
 editoria: congresso
 resumo: "Texto já está em vigor, mas precisa ser aprovado pela Câmara e pelo Senado para virar lei"
 imagem: "/static/img/2026-10-09-governo-edita-9a-medida-provisoria-para-conter-efeito-da-guerra-no-pre.webp"
-imagem_w: 1200
-imagem_h: 630
-imagem_card: true
+imagem_w: 768
+imagem_h: 513
+imagem_credito: "Agência Câmara"
+imagem_origem: "https://www.camara.leg.br/midias/image/2026/10/img20210705103924466-768x513.jpg"
 fonte: "Agência Câmara"
 link: "https://www.camara.leg.br/noticias/1310518-governo-edita-9a-medida-provisoria-para-conter-efeito-da-guerra-no-preco-dos-combustiveis"
 gerado_por: fetch.py

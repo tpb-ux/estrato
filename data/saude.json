@@ -2,19 +2,19 @@
  "formato": "saude-portal/1",
  "portal": "Estrato",
  "url": "https://estrato.com.br",
- "gerado_em": "2026-10-12T11:49:03+00:00",
+ "gerado_em": "2026-10-12T12:01:25+00:00",
  "materias": {
   "total": 20,
   "ultimas_24h": 0,
   "ultimos_7d": 20,
   "com_imagem_propria_pct": 100.0,
-  "com_card_proprio_pct": 40.0,
+  "com_card_proprio_pct": 0.0,
   "mais_recente": {
    "titulo": "Projeto pune empresas que atrasarem pagamento de médicos",
    "url": "https://estrato.com.br/congresso/2026-10-09-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos/",
    "fonte": "Agência Câmara",
    "publicada_em": "2026-10-09T19:15:00-03:00",
-   "idade_horas": 61.6
+   "idade_horas": 61.8
   }
  },
  "feeds": {
