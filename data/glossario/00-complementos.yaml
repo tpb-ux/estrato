@@ -4,6 +4,7 @@ complementos:
     categoria: processo-legislativo
     imagem: plenario-camara
     sinonimos: [emenda constitucional, emenda à Constituição, Proposta de Emenda Constitucional]
+    autolink: [Proposta de Emenda à Constituição, Propostas de Emenda à Constituição, Proposta de Emenda Constitucional, proposta de emenda à Constituição, propostas de emenda à Constituição]
     contexto: |
       Desde 1988, a Constituição recebeu mais de 130 emendas, o que faz da PEC um dos temas mais frequentes do noticiário do Congresso. Um exemplo de trajetória: na Câmara, a PEC passa pela CCJ (admissibilidade), pela [comissão especial](/glossario/comissao-especial/) (mérito) e por dois turnos no plenário; depois repete os dois turnos no Senado. Se o Senado mudar o mérito, a parte alterada volta à Câmara.
   medida-provisoria:
@@ -23,6 +24,7 @@ complementos:
   projeto-de-lei-complementar:
     categoria: processo-legislativo
     imagem: plenario-camara2
+    autolink: [Projeto de Lei Complementar, projeto de lei complementar, projetos de lei complementar, Projetos de Lei Complementar]
     sinonimos: [lei complementar, leis complementares]
     contexto: |
       A Constituição indica quando um tema exige lei complementar: é o caso das hipóteses de inelegibilidade (LC 64/1990), da responsabilidade fiscal (LC 101/2000) e do regime fiscal sustentável (LC 200/2023). Por precisar de 257 votos na Câmara e 41 no Senado, é mais difícil de aprovar que uma lei ordinária.
