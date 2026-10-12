@@ -1,0 +1,178 @@
+termos:
+- termo: Tribunal de Contas da União
+  slug: tcu
+  categoria: controle
+  imagem: tcu
+  sigla: TCU
+  autolink: [Tribunal de Contas da União]
+  resumo: "é o órgão que auxilia o Congresso no controle externo das contas federais, fiscalizando a aplicação de recursos da União."
+  definicao: |
+    O TCU está previsto nos arts. 70 a 75 da Constituição e regulado pela Lei nº 8.443/1992. Apesar do nome, não integra o Poder Judiciário: é órgão de auxílio ao Congresso Nacional no controle externo.
+
+    Entre suas competências estão emitir parecer prévio sobre as contas anuais do presidente da República, que são julgadas pelo Congresso; julgar as contas de administradores e responsáveis por recursos públicos federais; realizar auditorias; aplicar multas; e fixar prazo para correção de ilegalidades. Suas decisões que imputem débito ou multa têm eficácia de título executivo.
+
+    O tribunal é composto por nove ministros. Seis são escolhidos pelo Congresso e três pelo presidente da República, com aprovação do Senado, sendo dois alternadamente entre auditores e membros do Ministério Público junto ao TCU.
+  contexto: |
+    O TCU fiscaliza obras, licitações, desestatizações e programas federais. Suas deliberações, chamadas acórdãos, frequentemente orientam decisões do Executivo e debates no Congresso. Estados e municípios são fiscalizados por tribunais de contas próprios.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 70 a 75", url: "@CF"}
+    - {nome: "Lei nº 8.443/1992 (Lei Orgânica do TCU)", url: "@L8443"}
+  relacionados: [cgu, controle-externo, acordao, improbidade-administrativa]
+  faqs:
+    - {p: "O TCU faz parte do Judiciário?", r: "Não. É órgão de controle externo que auxilia o Congresso Nacional."}
+    - {p: "Quantos ministros tem o TCU?", r: "Nove, dos quais seis são escolhidos pelo Congresso e três pelo presidente, com aprovação do Senado."}
+    - {p: "O TCU julga as contas do presidente?", r: "Não. Ele emite parecer prévio, e quem julga é o Congresso Nacional."}
+    - {p: "O TCU pode aplicar punições?", r: "Sim. Pode aplicar multas, imputar débito e declarar inidoneidade de empresas para licitar, entre outras sanções previstas em lei."}
+    - {p: "O TCU fiscaliza estados e municípios?", r: "Fiscaliza recursos federais repassados a eles. As contas próprias de estados e municípios cabem aos tribunais de contas estaduais e municipais."}
+- termo: Controle externo
+  slug: controle-externo
+  categoria: controle
+  imagem: tcu
+  sinonimos: [controle interno, fiscalização contábil, financeira e orçamentária]
+  autolink: [controle externo, controle interno]
+  resumo: "é a fiscalização das contas e da gestão pública feita pelo Poder Legislativo, com auxílio dos tribunais de contas."
+  definicao: |
+    O art. 70 da Constituição determina que a fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União seja exercida pelo Congresso Nacional, mediante controle externo, e pelo sistema de controle interno de cada Poder. O controle avalia a legalidade, a legitimidade e a economicidade dos atos.
+
+    O controle externo é exercido pelo Legislativo com auxílio do Tribunal de Contas da União (art. 71). Nos estados e municípios, cabe às assembleias legislativas e câmaras municipais, com auxílio dos tribunais de contas respectivos. Além dos tribunais de contas, comissões parlamentares, como a de fiscalização e controle e as CPIs, também exercem controle.
+
+    O controle interno é feito por órgãos do próprio Poder, como a Controladoria-Geral da União no Executivo federal, que deve informar ao TCU irregularidades de que tome conhecimento (art. 74, § 1º).
+  contexto: |
+    Qualquer cidadão, partido político, associação ou sindicato pode denunciar irregularidades ao Tribunal de Contas da União, conforme o art. 74, § 2º, da Constituição.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 70 a 75", url: "@CF"}
+    - {nome: "Lei nº 8.443/1992", url: "@L8443"}
+  relacionados: [tcu, cgu, cpi, lei-de-acesso-a-informacao]
+  faqs:
+    - {p: "Quem exerce o controle externo?", r: "O Poder Legislativo, com auxílio do tribunal de contas competente."}
+    - {p: "Qual a diferença entre controle externo e interno?", r: "O externo é feito pelo Legislativo e pelos tribunais de contas. O interno, por órgãos do próprio Poder, como a CGU."}
+    - {p: "O cidadão pode denunciar irregularidades?", r: "Sim. A Constituição permite que qualquer cidadão, partido, associação ou sindicato denuncie irregularidades ao TCU."}
+    - {p: "Câmara municipal faz controle externo?", r: "Sim, com auxílio do tribunal de contas do estado ou dos municípios, conforme o art. 31 da Constituição."}
+    - {p: "CPIs são controle externo?", r: "São instrumentos de fiscalização do Legislativo, com poderes de investigação próprios de autoridades judiciais."}
+- termo: Controladoria-Geral da União
+  slug: cgu
+  categoria: controle
+  imagem: esplanada
+  sigla: CGU
+  autolink: [Controladoria-Geral da União]
+  resumo: "é o órgão do Poder Executivo federal responsável pelo controle interno, auditoria, correição, ouvidoria e prevenção da corrupção."
+  definicao: |
+    A CGU tem status de ministério e integra a estrutura da Presidência da República e dos ministérios definida pela Lei nº 14.600/2023. Ela atua como órgão central do sistema de controle interno do Executivo federal, previsto no art. 74 da Constituição.
+
+    Suas funções incluem auditorias em órgãos e programas federais, processos disciplinares contra servidores, processos administrativos de responsabilização de empresas pela Lei Anticorrupção, celebração de acordos de leniência no âmbito federal, gestão do Portal da Transparência e supervisão da Lei de Acesso à Informação, inclusive como instância recursal.
+
+    A CGU não julga contas nem aplica sanções judiciais. Suas conclusões podem ser enviadas ao TCU, ao Ministério Público e à polícia.
+  contexto: |
+    A CGU é responsável pela Plataforma Fala.BR, de ouvidoria e pedidos de acesso à informação do governo federal, e pela fiscalização de recursos repassados a estados e municípios.
+  base_legal:
+    - {nome: "Constituição Federal, art. 74", url: "@CF"}
+    - {nome: "Lei nº 14.600/2023", url: "@L14600"}
+    - {nome: "Lei nº 12.846/2013 (Lei Anticorrupção)", url: "@L12846"}
+  relacionados: [tcu, controle-externo, acordo-de-leniencia, lei-de-acesso-a-informacao]
+  faqs:
+    - {p: "A CGU é um tribunal?", r: "Não. É órgão do Poder Executivo federal, responsável pelo controle interno."}
+    - {p: "Qual a diferença entre CGU e TCU?", r: "A CGU faz controle interno no Executivo. O TCU auxilia o Congresso no controle externo e julga contas."}
+    - {p: "A CGU pode punir servidores?", r: "Sim, em processos administrativos disciplinares, conforme a legislação do serviço público federal."}
+    - {p: "Quem assina acordos de leniência no governo federal?", r: "A CGU, nos termos da Lei nº 12.846/2013, com participação da AGU."}
+    - {p: "A CGU cuida da Lei de Acesso à Informação?", r: "Sim. Monitora a aplicação da LAI no Executivo federal e julga recursos de pedidos negados."}
+- termo: Improbidade administrativa
+  slug: improbidade-administrativa
+  categoria: controle
+  imagem: justica
+  sinonimos: [ato de improbidade, ação de improbidade, improbidade]
+  autolink: [improbidade administrativa, atos de improbidade, ato de improbidade, ação de improbidade]
+  resumo: "é o ato doloso de agente público que causa enriquecimento ilícito, prejuízo ao patrimônio público ou viola princípios da administração, punido na esfera civil."
+  definicao: |
+    A Constituição prevê que atos de improbidade importam a suspensão dos direitos políticos, a perda da função pública, a indisponibilidade dos bens e o ressarcimento ao erário (art. 37, § 4º). A Lei nº 8.429/1992 define os atos em três grupos: enriquecimento ilícito (art. 9º), prejuízo ao erário (art. 10) e violação de princípios da administração (art. 11).
+
+    A Lei nº 14.230/2021 reformou a lei e passou a exigir dolo para todas as modalidades, eliminando a improbidade culposa. Também deu ao Ministério Público a legitimidade para propor a ação e fixou prescrição de oito anos, contados do fato.
+
+    A ação de improbidade tem natureza civil, não penal. Os mesmos fatos podem, porém, gerar também processos criminais e administrativos.
+  contexto: |
+    Em 2022, no Tema 1199, o STF decidiu que a exigência de dolo da nova lei não retroage para alcançar condenações transitadas em julgado, mas se aplica a processos em andamento sem condenação definitiva por ato culposo.
+  base_legal:
+    - {nome: "Constituição Federal, art. 37, § 4º", url: "@CF"}
+    - {nome: "Lei nº 8.429/1992", url: "@L8429"}
+    - {nome: "Lei nº 14.230/2021", url: "@L14230"}
+  relacionados: [ministerio-publico, ficha-limpa, nepotismo, tcu]
+  faqs:
+    - {p: "Improbidade administrativa é crime?", r: "Não. A ação de improbidade é civil, mas os mesmos fatos podem também ser investigados criminalmente."}
+    - {p: "Existe improbidade sem intenção?", r: "Não desde a Lei nº 14.230/2021, que exige dolo para todas as modalidades."}
+    - {p: "Quais são as punições?", r: "Ressarcimento, perda de bens, multa, perda da função, suspensão dos direitos políticos e proibição de contratar com o poder público, conforme o caso."}
+    - {p: "Quem pode propor a ação de improbidade?", r: "O Ministério Público, conforme a redação da Lei nº 14.230/2021, com interpretações posteriores do STF sobre a participação dos entes lesados."}
+    - {p: "Condenação por improbidade torna inelegível?", r: "Pode tornar, nas hipóteses da Lei Complementar nº 64/1990, como condenação por ato doloso que cause lesão ao patrimônio e enriquecimento ilícito."}
+- termo: Acordo de leniência
+  slug: acordo-de-leniencia
+  categoria: controle
+  imagem: esplanada
+  sinonimos: [acordos de leniência, leniência]
+  autolink: [acordo de leniência, acordos de leniência]
+  resumo: "é o acordo em que uma empresa admite participação em atos lesivos à administração pública e colabora com a investigação em troca de redução de sanções."
+  definicao: |
+    O acordo de leniência está previsto no art. 16 da Lei nº 12.846/2013, a Lei Anticorrupção. A empresa precisa ser a primeira a manifestar interesse em cooperar, cessar o envolvimento na infração, admitir sua participação e colaborar com a investigação, identificando os envolvidos e fornecendo documentos.
+
+    Em troca, pode ficar isenta de sanções como a publicação extraordinária da decisão condenatória e a proibição de receber incentivos e empréstimos públicos, e ter a multa reduzida em até dois terços. O acordo não exime a empresa de reparar integralmente o dano.
+
+    No Executivo federal, a CGU é competente para celebrar acordos de leniência. Também há leniência na área concorrencial, regulada pela lei do Cade.
+  contexto: |
+    Acordos de leniência com grandes empresas foram firmados após investigações de corrupção na última década, e alguns tiveram cláusulas renegociadas posteriormente.
+  base_legal:
+    - {nome: "Lei nº 12.846/2013, arts. 16 e 17", url: "@L12846"}
+  relacionados: [cgu, colaboracao-premiada, improbidade-administrativa, tcu]
+  faqs:
+    - {p: "Quem pode fazer acordo de leniência?", r: "Empresas, ou seja, pessoas jurídicas responsáveis por atos lesivos à administração pública."}
+    - {p: "Quais são os benefícios do acordo?", r: "Redução de até dois terços da multa e isenção de algumas sanções previstas na Lei Anticorrupção."}
+    - {p: "A empresa deixa de ressarcir o dano?", r: "Não. A lei mantém a obrigação de reparar integralmente o dano causado."}
+    - {p: "Quem assina o acordo no governo federal?", r: "A Controladoria-Geral da União, com participação da Advocacia-Geral da União."}
+    - {p: "Qual a diferença para colaboração premiada?", r: "A colaboração premiada é penal e feita por pessoas físicas. A leniência é administrativa e feita por empresas."}
+- termo: Lei de Acesso à Informação
+  slug: lei-de-acesso-a-informacao
+  categoria: controle
+  imagem: esplanada
+  sigla: LAI
+  sinonimos: [pedido de acesso à informação]
+  autolink: [Lei de Acesso à Informação, pedido de acesso à informação, pedidos de acesso à informação]
+  resumo: "é a Lei nº 12.527/2011, que garante a qualquer pessoa o direito de pedir e receber informações de órgãos públicos, sem precisar justificar."
+  definicao: |
+    A LAI regulamenta o direito previsto no art. 5º, XXXIII, da Constituição. Ela vale para os três Poderes, em todos os entes da federação, e para entidades privadas sem fins lucrativos que recebam recursos públicos. A regra é a publicidade, e o sigilo é exceção.
+
+    Qualquer pessoa pode apresentar pedido de acesso, sem necessidade de informar os motivos. O órgão deve responder em até 20 dias, prorrogáveis por mais 10 com justificativa. Em caso de negativa, cabe recurso.
+
+    Informações podem ser classificadas como ultrassecretas, secretas ou reservadas, com prazos máximos de 25, 15 e 5 anos. Informações pessoais têm proteção própria, com acesso restrito por até 100 anos, ressalvadas as hipóteses legais.
+  contexto: |
+    Pedidos via LAI são uma ferramenta comum do jornalismo para obter dados de agendas, gastos e contratos. Classificações de sigilo e negativas com base em dados pessoais costumam ser contestadas e revistas pelas instâncias recursais.
+  base_legal:
+    - {nome: "Constituição Federal, art. 5º, XXXIII", url: "@CF"}
+    - {nome: "Lei nº 12.527/2011", url: "@L12527"}
+  relacionados: [cgu, controle-externo, cota-parlamentar, decreto]
+  faqs:
+    - {p: "Qual o prazo para o órgão responder?", r: "Até 20 dias, prorrogáveis por mais 10 com justificativa expressa."}
+    - {p: "Preciso explicar por que quero a informação?", r: "Não. A LAI proíbe exigir os motivos do pedido."}
+    - {p: "Todos os órgãos estão sujeitos à LAI?", r: "Sim. Os três Poderes da União, estados, DF e municípios, além de entidades privadas sem fins lucrativos que recebem recursos públicos."}
+    - {p: "Por quanto tempo uma informação pode ficar em sigilo?", r: "Até 25 anos se ultrassecreta, 15 se secreta e 5 se reservada. Informações pessoais têm regra própria."}
+    - {p: "O que fazer se o pedido for negado?", r: "Recorrer à autoridade superior. No Executivo federal, há instâncias recursais que incluem a CGU."}
+- termo: Nepotismo
+  slug: nepotismo
+  categoria: controle
+  imagem: esplanada
+  sinonimos: [nepotismo cruzado]
+  autolink: [nepotismo, nepotismo cruzado]
+  resumo: "é a nomeação de parentes para cargos em comissão ou funções de confiança na administração pública, proibida pela Súmula Vinculante 13."
+  definicao: |
+    A Súmula Vinculante 13, aprovada pelo STF em 2008, declara que viola a Constituição a nomeação de cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o terceiro grau, da autoridade nomeante ou de servidor da mesma pessoa jurídica investido em cargo de direção, chefia ou assessoramento, para cargo em comissão ou de confiança ou função gratificada.
+
+    A súmula também proíbe o nepotismo cruzado, quando autoridades fazem nomeações recíprocas de parentes. O fundamento são os princípios da impessoalidade e da moralidade, do art. 37 da Constituição.
+
+    O STF tem entendido, em vários casos, que a súmula não alcança automaticamente cargos de natureza política, como ministros e secretários, salvo fraude ou falta de qualificação evidente.
+  contexto: |
+    Casos de nepotismo podem levar à anulação de nomeações e ser enquadrados como ato de improbidade administrativa. A Lei nº 14.230/2021 incluiu o nepotismo entre os atos que violam princípios da administração.
+  base_legal:
+    - {nome: "Constituição Federal, art. 37", url: "@CF"}
+    - {nome: "Lei nº 8.429/1992, art. 11, XI", url: "@L8429"}
+  relacionados: [sumula-vinculante, improbidade-administrativa, cnj, ministro-de-estado]
+  faqs:
+    - {p: "O que é nepotismo?", r: "É a nomeação de parentes para cargos de confiança no serviço público, proibida pela Súmula Vinculante 13."}
+    - {p: "Até que grau de parentesco vale a proibição?", r: "Até o terceiro grau, incluindo parentes por afinidade, como cunhados."}
+    - {p: "O que é nepotismo cruzado?", r: "É quando duas autoridades nomeiam parentes uma da outra para driblar a proibição."}
+    - {p: "Nomear parente para ministro é nepotismo?", r: "O STF tem decidido que cargos políticos não são alcançados automaticamente, salvo fraude ou falta evidente de qualificação."}
+    - {p: "Nepotismo é improbidade?", r: "Sim. A Lei nº 14.230/2021 incluiu a prática na lista de atos que violam os princípios da administração."}

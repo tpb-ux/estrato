@@ -1,0 +1,208 @@
+termos:
+- termo: Lei de Diretrizes Orçamentárias
+  slug: ldo
+  categoria: orcamento
+  imagem: congresso
+  sigla: LDO
+  sinonimos: [diretrizes orçamentárias]
+  autolink: [Lei de Diretrizes Orçamentárias, diretrizes orçamentárias]
+  resumo: "é a lei anual que define metas, prioridades e regras para a elaboração e a execução do orçamento do ano seguinte."
+  definicao: |
+    A LDO está prevista no art. 165, II e § 2º, da Constituição. Ela estabelece as metas e prioridades da administração, orienta a elaboração da lei orçamentária anual, dispõe sobre alterações na legislação tributária e fixa a política das agências oficiais de fomento.
+
+    A Lei de Responsabilidade Fiscal ampliou seu conteúdo: a LDO traz o Anexo de Metas Fiscais, com a meta de resultado primário, e o Anexo de Riscos Fiscais, além de critérios para limitação de empenho. O projeto é enviado pelo Executivo até 15 de abril e deve ser votado pelo Congresso antes do recesso de julho: a sessão legislativa não é interrompida sem a aprovação da LDO (art. 57, § 2º).
+
+    Na prática, nem sempre a LDO é votada até julho, e o Congresso passa a fazer o chamado recesso branco, sem sessões deliberativas formais.
+  contexto: |
+    A LDO é onde se discutem, por exemplo, a meta fiscal do ano seguinte e regras para a execução de emendas parlamentares. Mudanças na meta durante o ano exigem projeto de lei alterando a LDO.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 57, § 2º, e 165, § 2º", url: "@CF"}
+    - {nome: "ADCT, art. 35, § 2º, II", url: "@CF"}
+    - {nome: "Lei Complementar nº 101/2000, art. 4º", url: "@LRF"}
+  relacionados: [lei-orcamentaria-anual, ppa, meta-fiscal, comissao-mista-de-orcamento, recesso-parlamentar]
+  faqs:
+    - {p: "Quando a LDO é enviada ao Congresso?", r: "Até 15 de abril de cada ano, conforme o art. 35, § 2º, II, do ADCT."}
+    - {p: "O Congresso pode entrar em recesso sem votar a LDO?", r: "Não formalmente. A Constituição diz que a sessão legislativa não será interrompida sem a aprovação da LDO."}
+    - {p: "Qual a diferença entre LDO e LOA?", r: "A LDO fixa metas e regras para o orçamento. A LOA estima as receitas e fixa as despesas do ano."}
+    - {p: "A meta fiscal está na LDO?", r: "Sim. O Anexo de Metas Fiscais da LDO traz a meta de resultado primário."}
+    - {p: "Quem vota a LDO?", r: "O Congresso Nacional, em sessão conjunta, após parecer da Comissão Mista de Orçamento."}
+- termo: Plano Plurianual
+  slug: ppa
+  categoria: orcamento
+  imagem: esplanada
+  sigla: PPA
+  autolink: [Plano Plurianual]
+  resumo: "é a lei que define as diretrizes, os objetivos e as metas da administração pública federal para um período de quatro anos."
+  definicao: |
+    O PPA está previsto no art. 165, I e § 1º, da Constituição. Ele estabelece, de forma regionalizada, as diretrizes, objetivos e metas para as despesas de capital e outras delas decorrentes, e para os programas de duração continuada.
+
+    O projeto é enviado pelo presidente até 31 de agosto do primeiro ano de mandato e vigora do segundo ano desse mandato até o primeiro ano do mandato seguinte (ADCT, art. 35, § 2º, I). Isso garante continuidade no início de cada governo.
+
+    Nenhum investimento cuja execução ultrapasse um exercício financeiro pode ser iniciado sem prévia inclusão no PPA ou lei que autorize a inclusão (art. 167, § 1º).
+  contexto: |
+    O PPA, a LDO e a LOA formam o ciclo orçamentário. A LDO e a LOA devem ser compatíveis com o plano em vigor.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 165, § 1º, e 167, § 1º", url: "@CF"}
+    - {nome: "ADCT, art. 35, § 2º, I", url: "@CF"}
+  relacionados: [ldo, lei-orcamentaria-anual, comissao-mista-de-orcamento, presidente-da-republica]
+  faqs:
+    - {p: "Quanto tempo dura o PPA?", r: "Quatro anos: do segundo ano de um mandato presidencial ao primeiro ano do mandato seguinte."}
+    - {p: "Quando o PPA é enviado ao Congresso?", r: "Até 31 de agosto do primeiro ano do mandato presidencial."}
+    - {p: "Por que o PPA invade o mandato seguinte?", r: "Para garantir continuidade administrativa enquanto o novo governo elabora seu próprio plano."}
+    - {p: "Um investimento pode ser feito sem estar no PPA?", r: "Não, se durar mais de um exercício. A Constituição exige inclusão prévia no PPA ou lei que a autorize."}
+    - {p: "Estados e municípios têm PPA?", r: "Sim. O modelo de PPA, LDO e LOA vale para todos os entes da federação."}
+- termo: Emendas individuais
+  slug: emendas-individuais
+  categoria: orcamento
+  imagem: plenario-camara
+  sinonimos: [emenda individual, emendas impositivas, orçamento impositivo]
+  autolink: [emendas individuais, emenda individual, emendas impositivas, orçamento impositivo]
+  resumo: "são as emendas ao orçamento apresentadas por cada deputado e senador, com execução obrigatória até o limite de 2% da receita corrente líquida."
+  definicao: |
+    Cada parlamentar pode apresentar emendas individuais ao projeto de lei orçamentária. O art. 166, § 9º, da Constituição limita o total a 2% da receita corrente líquida do exercício anterior, com metade destinada a ações e serviços públicos de saúde. Desde a Emenda Constitucional nº 126/2022, 1,55% cabe às emendas de deputados e 0,45% às de senadores.
+
+    Essas emendas são de execução obrigatória, o chamado orçamento impositivo, criado pela Emenda Constitucional nº 86/2015. A execução só pode deixar de ocorrer em caso de impedimento de ordem técnica, e o valor pode ser reduzido na mesma proporção do contingenciamento das demais despesas discricionárias.
+
+    As emendas individuais podem ser executadas por transferência com finalidade definida ou por transferência especial, a chamada emenda Pix.
+  contexto: |
+    O valor das emendas individuais cresceu desde que se tornaram obrigatórias. A Lei Complementar nº 210/2024 e decisões do STF ampliaram as exigências de transparência e rastreabilidade.
+  base_legal:
+    - {nome: "Constituição Federal, art. 166, §§ 9º a 11", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 86/2015", url: "@EC86"}
+    - {nome: "Emenda Constitucional nº 126/2022", url: "@EC126"}
+    - {nome: "Lei Complementar nº 210/2024", url: "@LC210"}
+  relacionados: [emenda-parlamentar, emendas-pix, emendas-de-bancada, contingenciamento, lei-orcamentaria-anual]
+  faqs:
+    - {p: "Quanto do orçamento vai para emendas individuais?", r: "Até 2% da receita corrente líquida do exercício anterior: 1,55% para deputados e 0,45% para senadores."}
+    - {p: "O governo é obrigado a pagar emendas individuais?", r: "Sim, salvo impedimento de ordem técnica. Elas podem ser reduzidas na proporção do contingenciamento das demais despesas discricionárias."}
+    - {p: "Há destinação obrigatória para saúde?", r: "Sim. Metade do valor das emendas individuais deve ir para ações e serviços públicos de saúde."}
+    - {p: "Desde quando as emendas individuais são impositivas?", r: "Desde a Emenda Constitucional nº 86/2015."}
+    - {p: "Todos os parlamentares recebem o mesmo valor?", r: "Na prática, o limite de cada Casa é dividido igualmente entre seus parlamentares, conforme a LDO e as regras do Congresso para o orçamento."}
+- termo: Emendas de bancada
+  slug: emendas-de-bancada
+  categoria: orcamento
+  imagem: congresso
+  sinonimos: [emenda de bancada, emendas de bancada estadual]
+  autolink: [emendas de bancada, emenda de bancada]
+  resumo: "são emendas ao orçamento apresentadas em conjunto pelos parlamentares de cada estado, com execução obrigatória até 1% da receita corrente líquida."
+  definicao: |
+    As bancadas estaduais, formadas por deputados e senadores de cada estado e do Distrito Federal, apresentam emendas coletivas ao projeto de lei orçamentária. A Emenda Constitucional nº 100/2019 tornou obrigatória sua execução até o montante de 1% da receita corrente líquida realizada no exercício anterior (art. 166, § 12).
+
+    As emendas de bancada costumam financiar obras e projetos estruturantes de interesse do estado. Como as individuais, só deixam de ser executadas por impedimento técnico e podem sofrer redução proporcional ao contingenciamento.
+
+    Investimentos plurianuais incluídos por emenda de bancada devem ser incluídos nos orçamentos seguintes até a conclusão da obra, conforme a Constituição.
+  contexto: |
+    As regras de apresentação, como número de emendas por bancada e exigência de aprovação pela maioria dos parlamentares do estado, constam de resolução do Congresso e da LDO.
+  base_legal:
+    - {nome: "Constituição Federal, art. 166, §§ 12 a 20", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 100/2019", url: "@EC100"}
+    - {nome: "Resolução nº 1/2006 do Congresso Nacional", url: "@RCN1-2006"}
+  relacionados: [emendas-individuais, bancada, emendas-de-comissao, lei-orcamentaria-anual]
+  faqs:
+    - {p: "O que é emenda de bancada?", r: "É a emenda coletiva apresentada pelos parlamentares de um mesmo estado ou do Distrito Federal ao orçamento."}
+    - {p: "Emenda de bancada é obrigatória?", r: "Sim, até 1% da receita corrente líquida do ano anterior, desde a EC 100/2019."}
+    - {p: "Quem decide as emendas de bancada?", r: "Os parlamentares do estado, conforme regras de quórum da resolução do Congresso sobre o orçamento."}
+    - {p: "Para que costumam servir?", r: "Para obras e projetos estruturantes de interesse estadual, como rodovias, hospitais e saneamento."}
+    - {p: "Qual a diferença para emenda individual?", r: "A individual é apresentada por cada parlamentar. A de bancada é coletiva e tem limite próprio."}
+- termo: Emendas de comissão
+  slug: emendas-de-comissao
+  categoria: orcamento
+  imagem: comissao
+  sinonimos: [emenda de comissão, RP 8]
+  autolink: [emendas de comissão, emenda de comissão]
+  resumo: "são emendas ao orçamento apresentadas pelas comissões permanentes da Câmara, do Senado e do Congresso, sem execução obrigatória pela Constituição."
+  definicao: |
+    As comissões permanentes podem apresentar emendas ao projeto de lei orçamentária, relacionadas às suas áreas temáticas. Elas são identificadas no orçamento pelo indicador de resultado primário 8, o RP 8.
+
+    Diferentemente das emendas individuais e de bancada, as emendas de comissão não têm execução obrigatória prevista na Constituição: são despesas discricionárias. Depois da decisão do STF que derrubou as emendas de relator, em 2022, o valor das emendas de comissão cresceu.
+
+    A Lei Complementar nº 210/2024 trouxe regras de transparência para as emendas de comissão, como a identificação dos parlamentares que as indicaram e a publicação das atas de aprovação.
+  contexto: |
+    Decisões do STF nas ADPFs sobre emendas parlamentares exigiram rastreabilidade também das emendas de comissão, incluindo quem indicou cada destinação.
+  base_legal:
+    - {nome: "Constituição Federal, art. 166", url: "@CF"}
+    - {nome: "Lei Complementar nº 210/2024", url: "@LC210"}
+    - {nome: "Resolução nº 1/2006 do Congresso Nacional", url: "@RCN1-2006"}
+  relacionados: [emendas-de-relator, emendas-individuais, comissao-permanente, lei-orcamentaria-anual]
+  faqs:
+    - {p: "Emenda de comissão é obrigatória?", r: "Não. A Constituição garante execução obrigatória apenas a emendas individuais e de bancada."}
+    - {p: "O que é RP 8?", r: "É o identificador das emendas de comissão no orçamento federal."}
+    - {p: "Por que as emendas de comissão cresceram?", r: "Após o STF declarar inconstitucionais as emendas de relator em 2022, parte dos recursos foi direcionada às emendas de comissão."}
+    - {p: "É possível saber quem indicou uma emenda de comissão?", r: "A LC 210/2024 e decisões do STF passaram a exigir identificação dos parlamentares que fizeram as indicações."}
+    - {p: "Quais comissões podem apresentar emendas?", r: "As comissões permanentes da Câmara, do Senado e mistas do Congresso, conforme a resolução que regula o orçamento."}
+- termo: Emendas de relator
+  slug: emendas-de-relator
+  categoria: orcamento
+  imagem: plenario-congresso
+  sinonimos: [emenda de relator, RP 9, orçamento secreto]
+  autolink: [emendas de relator, emenda de relator, orçamento secreto]
+  resumo: "eram emendas ao orçamento apresentadas pelo relator-geral, usadas para distribuir recursos sem identificação dos parlamentares e declaradas inconstitucionais pelo STF em 2022."
+  definicao: |
+    O relator-geral do orçamento sempre pôde apresentar emendas para corrigir erros e omissões. A partir do orçamento de 2020, essas emendas, identificadas como RP 9, passaram a concentrar volumes elevados de recursos distribuídos por indicação de parlamentares, sem divulgação de quem indicava.
+
+    O uso ficou conhecido como orçamento secreto. Em dezembro de 2022, no julgamento das ADPFs 850, 851, 854 e 1014, o STF declarou inconstitucional esse modelo, por violar princípios como transparência, impessoalidade e publicidade.
+
+    Desde então, o STF acompanha o cumprimento da decisão e exige a identificação dos parlamentares que indicaram recursos e a rastreabilidade das demais emendas.
+  contexto: |
+    A decisão sobre as emendas de relator levou a mudanças no desenho do orçamento, com crescimento das emendas de comissão e novas regras de transparência na Lei Complementar nº 210/2024.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 37 e 166", url: "@CF"}
+    - {nome: "Lei Complementar nº 210/2024", url: "@LC210"}
+  relacionados: [emendas-de-comissao, emendas-individuais, comissao-mista-de-orcamento, adpf]
+  faqs:
+    - {p: "O que era o orçamento secreto?", r: "Era a distribuição de recursos por meio das emendas de relator, sem identificar os parlamentares que indicavam os valores."}
+    - {p: "O que decidiu o STF?", r: "Em dezembro de 2022, nas ADPFs 850, 851, 854 e 1014, o tribunal declarou inconstitucional esse modelo de execução."}
+    - {p: "O relator-geral ainda pode apresentar emendas?", r: "Sim, para corrigir erros e omissões, mas não para distribuir recursos por indicação sem transparência."}
+    - {p: "O que é RP 9?", r: "É o identificador orçamentário usado para as emendas de relator."}
+    - {p: "Para onde foram os recursos após a decisão?", r: "Parte foi para emendas individuais e de comissão, conforme os orçamentos aprovados a partir de 2023."}
+- termo: Emendas Pix
+  slug: emendas-pix
+  categoria: orcamento
+  imagem: fazenda
+  sinonimos: [transferência especial, transferências especiais, emenda Pix]
+  autolink: [emendas Pix, emenda Pix, transferência especial, transferências especiais]
+  resumo: "é o apelido das transferências especiais, que enviam emendas individuais diretamente a estados e municípios sem vinculação prévia a um projeto."
+  definicao: |
+    A Emenda Constitucional nº 105/2019 criou o art. 166-A da Constituição, que permite que emendas individuais impositivas aloquem recursos a estados, Distrito Federal e municípios por transferência especial ou por transferência com finalidade definida.
+
+    Na transferência especial, o recurso é repassado diretamente ao ente beneficiado, sem convênio e sem indicação prévia da finalidade, e passa a pertencer a ele no momento da transferência. Pelo menos 70% devem ser aplicados em despesas de capital, e é proibido usar os recursos em pessoal e dívida.
+
+    O apelido vem da rapidez do repasse, comparada ao sistema de pagamentos instantâneos.
+  contexto: |
+    Em 2024, o STF determinou que as emendas Pix tenham plano de trabalho, conta específica e prestação de contas, para garantir rastreabilidade. A Lei Complementar nº 210/2024 incorporou exigências nesse sentido.
+  base_legal:
+    - {nome: "Constituição Federal, art. 166-A", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 105/2019", url: "@EC105"}
+    - {nome: "Lei Complementar nº 210/2024", url: "@LC210"}
+  relacionados: [emendas-individuais, transferencias-voluntarias, tcu, lei-orcamentaria-anual]
+  faqs:
+    - {p: "Por que se chama emenda Pix?", r: "Por causa da rapidez do repasse: o recurso vai direto para a conta do estado ou município, sem convênio."}
+    - {p: "Onde está prevista a transferência especial?", r: "No art. 166-A da Constituição, incluído pela EC 105/2019."}
+    - {p: "Como os recursos podem ser usados?", r: "Pelo menos 70% em despesas de capital, como obras e equipamentos. É proibido pagar pessoal e dívida."}
+    - {p: "Quem fiscaliza as emendas Pix?", r: "Os tribunais de contas, a CGU e o Congresso, com regras de transparência reforçadas pelo STF e pela LC 210/2024."}
+    - {p: "Toda emenda individual é Pix?", r: "Não. O parlamentar pode optar por transferência especial ou por transferência com finalidade definida."}
+- termo: Contingenciamento
+  slug: contingenciamento
+  categoria: orcamento
+  imagem: fazenda
+  sinonimos: [bloqueio orçamentário, limitação de empenho, contingenciar]
+  autolink: [contingenciamento, contingenciamentos, limitação de empenho, bloqueio orçamentário]
+  resumo: "é a limitação temporária de despesas do orçamento quando a receita prevista não é suficiente para cumprir a meta fiscal."
+  definicao: |
+    A Lei de Responsabilidade Fiscal (art. 9º) determina que, se ao final de um bimestre a realização da receita não comportar o cumprimento das metas de resultado primário ou nominal, os Poderes e o Ministério Público promovam limitação de empenho e movimentação financeira nos 30 dias seguintes, segundo critérios da LDO.
+
+    O contingenciamento atinge despesas discricionárias. Despesas obrigatórias, como benefícios previdenciários e salários, não podem ser limitadas. Se a receita se recuperar, os valores são recompostos.
+
+    Com o arcabouço fiscal, também há o bloqueio, aplicado quando despesas obrigatórias crescem e pressionam o limite de gastos. O governo divulga esses ajustes nos relatórios bimestrais de avaliação de receitas e despesas.
+  contexto: |
+    Contingenciamentos afetam ministérios, universidades e programas, além das emendas parlamentares, que podem ser reduzidas na mesma proporção. Por isso o relatório bimestral é acompanhado de perto pelo Congresso.
+  base_legal:
+    - {nome: "Lei Complementar nº 101/2000, art. 9º", url: "@LRF"}
+    - {nome: "Lei Complementar nº 200/2023", url: "@LC200"}
+  relacionados: [meta-fiscal, arcabouco-fiscal, lei-de-responsabilidade-fiscal, emendas-individuais]
+  faqs:
+    - {p: "Qual a diferença entre contingenciamento e corte?", r: "O contingenciamento é temporário e pode ser revertido. O corte é a redução definitiva da dotação."}
+    - {p: "Quando o governo contingencia?", r: "Quando a avaliação bimestral indica que a receita não será suficiente para cumprir a meta fiscal."}
+    - {p: "Despesas obrigatórias podem ser contingenciadas?", r: "Não. A limitação atinge despesas discricionárias."}
+    - {p: "Qual a diferença entre contingenciamento e bloqueio?", r: "O contingenciamento é ligado à meta de resultado. O bloqueio, ao limite de despesas do arcabouço fiscal."}
+    - {p: "Emendas parlamentares podem ser contingenciadas?", r: "As impositivas podem ser reduzidas na mesma proporção aplicada às demais despesas discricionárias."}

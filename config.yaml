@@ -62,3 +62,5 @@ empresa:
 verificacao: {google: "", bing: ""}
 indexnow_key: "c0f3a1e9b7d24e6f8a5b2c9d1e7f4a30"
 llms_intro: "Portal apartidário em português sobre os Três Poderes do Brasil. Páginas de dados usam APIs oficiais (Câmara dos Deputados, Senado Federal) com fonte e data de coleta; notícias são resumos de agências oficiais com link para a fonte e não são indexadas."
+# Autolink do glossário (core/autolink.py): 1ª ocorrência de cada termo vira link para o verbete, até `maximo` por página.
+autolink: {ativo: true, maximo: 10, familias: [artigos, glossario, deputados, senadores, partidos, analises], editorias: true}

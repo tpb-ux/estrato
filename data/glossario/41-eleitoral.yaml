@@ -1,0 +1,204 @@
+termos:
+- termo: Prestação de contas eleitoral
+  slug: prestacao-de-contas-eleitoral
+  categoria: eleitoral
+  imagem: tse
+  sinonimos: [prestação de contas de campanha, contas de campanha]
+  autolink: [prestação de contas eleitoral, prestação de contas de campanha, contas de campanha]
+  resumo: "é a obrigação de candidatos e partidos de informar à Justiça Eleitoral todas as receitas e despesas da campanha."
+  definicao: |
+    A Lei nº 9.504/1997 obriga candidatos, partidos e federações a registrar e declarar as arrecadações e os gastos de campanha (arts. 17 a 32). Toda movimentação deve passar por conta bancária específica, e as doações recebidas precisam ser informadas à Justiça Eleitoral durante a campanha, em prazo curto, para divulgação na internet.
+
+    Pessoas físicas podem doar até 10% dos rendimentos brutos do ano anterior à eleição. Doações de empresas são proibidas desde a decisão do STF na ADI 4650, em 2015, e a lei foi alterada nesse sentido. Recursos públicos, como o Fundo Especial de Financiamento de Campanha, também precisam ser comprovados.
+
+    Após a eleição, a Justiça Eleitoral julga as contas, que podem ser aprovadas, aprovadas com ressalvas, desaprovadas ou consideradas não prestadas. Sem contas aprovadas ou com contas não prestadas, o eleito pode ter dificuldade para ser diplomado, conforme a situação.
+  contexto: |
+    As informações de receitas e despesas ficam disponíveis no sistema DivulgaCandContas, do TSE, o que permite a jornalistas e eleitores acompanhar quem financia cada campanha.
+  base_legal:
+    - {nome: "Lei nº 9.504/1997, arts. 17 a 32", url: "@L9504"}
+    - {nome: "Lei nº 9.096/1995, arts. 30 a 37 (contas partidárias)", url: "@L9096"}
+  relacionados: [fundo-eleitoral, fundo-partidario, diplomacao, tse]
+  faqs:
+    - {p: "Quem precisa prestar contas na eleição?", r: "Candidatos, partidos e federações, inclusive quem desistiu ou teve o registro negado durante a campanha."}
+    - {p: "Empresas podem doar para campanhas?", r: "Não. O STF declarou inconstitucional a doação de empresas na ADI 4650, em 2015, e a lei foi alterada."}
+    - {p: "Quanto uma pessoa pode doar?", r: "Até 10% dos rendimentos brutos declarados no ano anterior à eleição, segundo a Lei nº 9.504/1997."}
+    - {p: "Onde consultar as contas dos candidatos?", r: "No DivulgaCandContas, sistema público do TSE."}
+    - {p: "O que acontece se as contas forem desaprovadas?", r: "Pode haver devolução de recursos públicos e outras consequências. Irregularidades graves podem gerar ações por abuso de poder ou gastos ilícitos."}
+- termo: Filiação partidária
+  slug: filiacao-partidaria
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [filiado, filiação a partido]
+  autolink: [filiação partidária, filiações partidárias]
+  resumo: "é o vínculo formal de um eleitor com um partido, exigido pela Constituição para que ele possa se candidatar."
+  definicao: |
+    A filiação partidária é condição de elegibilidade (art. 14, § 3º, V, da Constituição). Não há candidaturas avulsas no Brasil: todo candidato precisa estar filiado a um partido.
+
+    Pela Lei nº 9.504/1997 (art. 9º), o candidato precisa ter a filiação deferida pelo partido pelo menos seis meses antes da eleição, mesmo prazo exigido para o domicílio eleitoral. Os partidos podem fixar prazos maiores em seus estatutos, desde que não os alterem em ano eleitoral. A Lei nº 9.096/1995 regula a filiação e o envio das listas de filiados à Justiça Eleitoral.
+
+    Quem é eleito por um partido e se desfilia sem justa causa pode perder o mandato, conforme o art. 22-A da Lei nº 9.096/1995 e a jurisprudência sobre fidelidade partidária.
+  contexto: |
+    O tempo mínimo de filiação faz com que os meses anteriores ao prazo concentrem as trocas de partido, especialmente durante a janela partidária para quem já tem mandato.
+  base_legal:
+    - {nome: "Constituição Federal, art. 14, § 3º, V", url: "@CF"}
+    - {nome: "Lei nº 9.504/1997, art. 9º", url: "@L9504"}
+    - {nome: "Lei nº 9.096/1995, arts. 16 a 22-A", url: "@L9096"}
+  relacionados: [janela-partidaria, registro-de-candidatura, cassacao-de-mandato, fundo-partidario]
+  faqs:
+    - {p: "É possível ser candidato sem partido?", r: "Não. A Constituição exige filiação partidária como condição de elegibilidade."}
+    - {p: "Com quanto tempo de antecedência é preciso estar filiado?", r: "Seis meses antes da eleição, conforme o art. 9º da Lei nº 9.504/1997, salvo prazo maior no estatuto do partido."}
+    - {p: "Posso ser filiado a dois partidos?", r: "Não. Havendo coexistência de filiações, prevalece a mais recente e a Justiça Eleitoral cancela as demais."}
+    - {p: "Eleito que troca de partido perde o mandato?", r: "Pode perder, se a troca ocorrer sem justa causa, como prevê o art. 22-A da Lei nº 9.096/1995."}
+    - {p: "Como saber se estou filiado?", r: "A Justiça Eleitoral mantém consulta pública de filiação partidária em seu portal."}
+- termo: Janela partidária
+  slug: janela-partidaria
+  categoria: eleitoral
+  imagem: plenario-camara
+  sinonimos: [janela de troca partidária]
+  autolink: [janela partidária, janela de troca]
+  resumo: "é o período de 30 dias antes do prazo de filiação em que detentores de mandato podem trocar de partido sem perder o cargo."
+  definicao: |
+    O art. 22-A da Lei nº 9.096/1995, incluído pela Lei nº 13.165/2015, considera justa causa para desfiliação a mudança de partido feita durante o período de trinta dias que antecede o prazo de filiação exigido para concorrer à eleição, ao término do mandato vigente.
+
+    Como o prazo de filiação é de seis meses antes da eleição, a janela ocorre entre o início de março e o início de abril do ano eleitoral. Ela vale para quem está no fim do mandato: por isso, em eleições gerais beneficia deputados federais, estaduais e distritais, e em eleições municipais, vereadores.
+
+    A Emenda Constitucional nº 111/2021 criou outra hipótese: perda de mandato não ocorre se o partido concordar com a saída.
+  contexto: |
+    A janela costuma mudar o tamanho das bancadas na Câmara, o que afeta cálculos de tempo de TV, liderança e distribuição de cargos em comissões. Cargos majoritários não se submetem à regra de fidelidade, segundo o STF.
+  base_legal:
+    - {nome: "Lei nº 9.096/1995, art. 22-A", url: "@L9096"}
+    - {nome: "Lei nº 13.165/2015", url: "@L13165"}
+    - {nome: "Emenda Constitucional nº 111/2021", url: "@EC111"}
+  relacionados: [filiacao-partidaria, bancada, cassacao-de-mandato, lider-partidario]
+  faqs:
+    - {p: "Quando é a janela partidária?", r: "Nos 30 dias anteriores ao prazo de filiação para a eleição, que é de seis meses antes do pleito."}
+    - {p: "Quem pode usar a janela?", r: "Detentores de mandato proporcional no último ano do mandato, como deputados em eleições gerais e vereadores em eleições municipais."}
+    - {p: "Senador precisa da janela para mudar de partido?", r: "Não. O STF entende que a perda de mandato por infidelidade não se aplica a cargos majoritários."}
+    - {p: "Há outras formas de trocar de partido sem perder o mandato?", r: "Sim: mudança substancial do programa partidário, grave discriminação pessoal e, desde a EC 111/2021, concordância do partido."}
+    - {p: "Por que a janela importa no noticiário?", r: "Porque reorganiza bancadas, o que afeta liderança, tempo de propaganda e acesso a fundos."}
+- termo: Urna eletrônica
+  slug: urna-eletronica
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [urnas eletrônicas, voto eletrônico]
+  autolink: [urna eletrônica, urnas eletrônicas, voto eletrônico]
+  resumo: "é o equipamento usado para votação e apuração nas eleições brasileiras desde 1996, desenvolvido sob responsabilidade da Justiça Eleitoral."
+  definicao: |
+    A Lei nº 9.504/1997 (art. 59) estabelece que a votação e a totalização dos votos sejam feitas por sistema eletrônico. A urna foi usada pela primeira vez em 1996, em parte dos municípios, e em todo o país a partir de 2000.
+
+    A urna não é conectada à internet. Ao fim da votação, ela imprime o boletim de urna, com o resultado daquela seção, que é afixado no local e publicado na internet, permitindo conferência independente. Antes da eleição, os programas passam por cerimônias de lacração e assinatura digital com participação de partidos e entidades fiscalizadoras.
+
+    O TSE realiza testes públicos de segurança, em que investigadores externos tentam encontrar falhas, e auditorias como o teste de integridade no dia da votação.
+  contexto: |
+    O voto impresso foi tema de propostas no Congresso. Em 2021, a Câmara rejeitou uma PEC que o instituía, e o STF já havia declarado inconstitucionais regras anteriores sobre impressão do voto.
+  base_legal:
+    - {nome: "Lei nº 9.504/1997, arts. 59 a 62", url: "@L9504"}
+  relacionados: [tse, segundo-turno, voto-branco-e-nulo, sistema-proporcional]
+  faqs:
+    - {p: "A urna eletrônica é conectada à internet?", r: "Não. A urna funciona isolada, e os resultados são transmitidos depois, a partir de mídia gravada."}
+    - {p: "Como conferir o resultado de uma seção?", r: "Pelo boletim de urna, impresso ao fim da votação e publicado pela Justiça Eleitoral na internet."}
+    - {p: "Desde quando o Brasil usa urna eletrônica?", r: "Desde 1996, em parte dos municípios. A partir de 2000, todo o eleitorado votou eletronicamente."}
+    - {p: "Quem pode fiscalizar o sistema?", r: "Partidos, OAB, Ministério Público, Polícia Federal, universidades e outras entidades indicadas pelo TSE."}
+    - {p: "O que é o teste público de segurança?", r: "É um evento em que investigadores externos tentam quebrar a segurança da urna, e as falhas encontradas são corrigidas antes da eleição."}
+- termo: Cota de gênero
+  slug: cota-de-genero
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [cota de candidaturas femininas, candidaturas laranjas]
+  autolink: [cota de gênero, cotas de gênero, candidaturas femininas, candidaturas laranjas]
+  resumo: "é a regra que obriga partidos a reservar no mínimo 30% e no máximo 70% das candidaturas proporcionais para cada sexo."
+  definicao: |
+    O art. 10, § 3º, da Lei nº 9.504/1997 determina que cada partido ou federação preencha o mínimo de 30% e o máximo de 70% para candidaturas de cada sexo nas eleições proporcionais. A regra é obrigatória e é verificada no registro das candidaturas.
+
+    A Emenda Constitucional nº 117/2022 levou à Constituição a obrigação de destinar ao menos 30% dos recursos do fundo eleitoral e do fundo partidário de campanha e do tempo de propaganda gratuita às candidaturas femininas, proporcionalmente ao número de candidatas.
+
+    A Justiça Eleitoral entende que candidaturas fictícias, lançadas só para cumprir a cota, configuram fraude, que pode levar à cassação de toda a chapa do partido.
+  contexto: |
+    Cassações de chapas inteiras por fraude à cota de gênero já mudaram a composição de câmaras municipais e assembleias. A participação feminina no Congresso, embora em crescimento, segue abaixo da proporção de mulheres no eleitorado.
+  base_legal:
+    - {nome: "Lei nº 9.504/1997, art. 10, § 3º", url: "@L9504"}
+    - {nome: "Emenda Constitucional nº 117/2022", url: "@EC117"}
+  relacionados: [registro-de-candidatura, fundo-eleitoral, sistema-proporcional, abuso-de-poder]
+  faqs:
+    - {p: "Qual a cota de gênero nas eleições?", r: "Cada partido deve ter no mínimo 30% e no máximo 70% de candidaturas de cada sexo nas eleições proporcionais."}
+    - {p: "A cota vale para eleições majoritárias?", r: "Não. A regra do art. 10, § 3º, da Lei nº 9.504/1997 é para as eleições proporcionais."}
+    - {p: "Há reserva de recursos para mulheres?", r: "Sim. A EC 117/2022 exige pelo menos 30% do fundo eleitoral e do tempo de propaganda para candidaturas femininas."}
+    - {p: "O que é candidatura laranja?", r: "É a candidatura fictícia, lançada apenas para cumprir a cota, sem campanha real. A Justiça Eleitoral a trata como fraude."}
+    - {p: "Qual a consequência da fraude à cota?", r: "A Justiça Eleitoral pode cassar todos os candidatos da chapa do partido e declarar inelegíveis os responsáveis."}
+- termo: Reeleição
+  slug: reeleicao
+  categoria: eleitoral
+  imagem: planalto
+  sinonimos: [reeleito, reeleitos, segundo mandato]
+  autolink: [reeleição, reeleições]
+  resumo: "é a possibilidade de o chefe do Executivo disputar um novo mandato consecutivo para o mesmo cargo, permitida uma única vez."
+  definicao: |
+    A Emenda Constitucional nº 16/1997 alterou o art. 14, § 5º, da Constituição para permitir que presidente, governadores e prefeitos, e quem os houver sucedido ou substituído no curso do mandato, sejam reeleitos para um único período subsequente. Antes, a reeleição consecutiva era proibida.
+
+    Para os cargos legislativos, como deputados, senadores e vereadores, não há limite de reeleições.
+
+    O chefe do Executivo que disputa a reeleição não precisa se afastar do cargo, mas fica sujeito às regras sobre condutas vedadas a agentes públicos em campanha (arts. 73 a 78 da Lei nº 9.504/1997).
+  contexto: |
+    O fim da reeleição para cargos do Executivo, combinado com mandatos mais longos, é tema recorrente de propostas no Congresso. Qualquer mudança exige emenda constitucional.
+  base_legal:
+    - {nome: "Constituição Federal, art. 14, § 5º", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 16/1997", url: "@EC16"}
+    - {nome: "Lei nº 9.504/1997, arts. 73 a 78", url: "@L9504"}
+  relacionados: [desincompatibilizacao, presidente-da-republica, pec, abuso-de-poder]
+  faqs:
+    - {p: "Quantas vezes o presidente pode ser reeleito?", r: "Uma vez para o período seguinte. Depois de dois mandatos consecutivos, precisa ficar fora pelo menos um mandato para voltar."}
+    - {p: "Desde quando existe reeleição no Brasil?", r: "Desde a Emenda Constitucional nº 16/1997. A primeira reeleição presidencial foi em 1998."}
+    - {p: "Deputado tem limite de reeleições?", r: "Não. A limitação constitucional vale apenas para chefes do Executivo."}
+    - {p: "Quem disputa a reeleição precisa deixar o cargo?", r: "Não, mas deve respeitar as condutas vedadas a agentes públicos durante a campanha."}
+    - {p: "Vice que assumiu o mandato pode se reeleger?", r: "Quem sucedeu ou substituiu o titular pode ser eleito para um único período subsequente, conforme a Constituição."}
+- termo: Voto branco e nulo
+  slug: voto-branco-e-nulo
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [voto branco, voto nulo, votos brancos, votos nulos]
+  autolink: [votos brancos e nulos, voto branco e nulo, votos válidos, voto branco, voto nulo]
+  resumo: "são votos que não são dados a nenhum candidato ou legenda e, por isso, não entram na contagem dos votos válidos."
+  definicao: |
+    O voto em branco é registrado quando o eleitor aperta a tecla BRANCO. O voto nulo ocorre quando o eleitor digita um número que não corresponde a candidato nem a partido. Desde a Lei nº 9.504/1997, ambos ficam fora dos votos válidos, que são os dados a candidatos e legendas (art. 5º para as proporcionais; art. 77, § 2º, da Constituição para presidente).
+
+    Assim, brancos e nulos não favorecem nenhum candidato e não são somados ao mais votado. Eles reduzem o total de votos válidos, o que diminui o número de votos necessários para atingir a maioria ou o quociente eleitoral.
+
+    É falsa a ideia de que mais de 50% de votos nulos anularia a eleição. O art. 224 do Código Eleitoral trata da nulidade de votos por fraude ou irregularidade decidida pela Justiça, não do voto nulo escolhido pelo eleitor.
+  contexto: |
+    A dúvida sobre brancos e nulos aparece a cada eleição. Os resultados divulgados pelo TSE apresentam votos válidos, brancos, nulos e abstenções em categorias separadas.
+  base_legal:
+    - {nome: "Constituição Federal, art. 77, § 2º", url: "@CF"}
+    - {nome: "Lei nº 9.504/1997, arts. 2º, 3º e 5º", url: "@L9504"}
+    - {nome: "Código Eleitoral, art. 224", url: "@CE"}
+  relacionados: [quociente-eleitoral, segundo-turno, urna-eletronica, voto-obrigatorio]
+  faqs:
+    - {p: "Voto branco vai para o candidato mais votado?", r: "Não. Desde a Lei nº 9.504/1997, voto branco não é contado como válido nem somado a ninguém."}
+    - {p: "Se mais da metade votar nulo, a eleição é anulada?", r: "Não. A anulação prevista no art. 224 do Código Eleitoral trata de votos anulados por fraude ou irregularidade, não de votos nulos do eleitor."}
+    - {p: "Qual a diferença entre voto branco e nulo?", r: "No branco, o eleitor aperta a tecla BRANCO. No nulo, digita um número inexistente. O efeito na contagem é o mesmo."}
+    - {p: "Brancos e nulos afetam o resultado?", r: "Indiretamente, porque reduzem o total de votos válidos, base para calcular maioria e quociente eleitoral."}
+    - {p: "Abstenção é o mesmo que voto nulo?", r: "Não. Abstenção é a ausência do eleitor. Quem se abstém sem justificar fica sujeito a multa."}
+- termo: Voto obrigatório
+  slug: voto-obrigatorio
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [obrigatoriedade do voto, justificativa eleitoral]
+  autolink: [voto obrigatório, obrigatoriedade do voto, justificativa de ausência]
+  resumo: "é a regra constitucional que torna o alistamento e o voto obrigatórios para maiores de 18 anos e facultativos para alguns grupos."
+  definicao: |
+    Pelo art. 14, § 1º, da Constituição, o alistamento eleitoral e o voto são obrigatórios para maiores de 18 anos e facultativos para analfabetos, maiores de 70 anos e jovens entre 16 e 18 anos.
+
+    O eleitor que não vota e não justifica a ausência fica sujeito a multa e, enquanto não regularizar a situação, a restrições previstas no art. 7º do Código Eleitoral, como obter passaporte, tomar posse em cargo público e obter empréstimos em bancos públicos. Quem deixa de votar em três turnos consecutivos sem justificar ou pagar a multa pode ter o título cancelado.
+
+    A justificativa pode ser feita no dia da eleição ou depois, por aplicativo ou nos cartórios eleitorais, nos prazos fixados pela Justiça Eleitoral.
+  contexto: |
+    A adoção do voto facultativo é tema de propostas no Congresso. Como a obrigatoriedade está no art. 14 da Constituição, a mudança exigiria emenda constitucional.
+  base_legal:
+    - {nome: "Constituição Federal, art. 14, § 1º", url: "@CF"}
+    - {nome: "Código Eleitoral, arts. 7º e 71", url: "@CE"}
+  relacionados: [voto-branco-e-nulo, urna-eletronica, tse, pec]
+  faqs:
+    - {p: "Quem é obrigado a votar?", r: "Brasileiros alfabetizados entre 18 e 70 anos. O voto é facultativo para analfabetos, maiores de 70 e jovens de 16 e 17 anos."}
+    - {p: "O que acontece com quem não vota?", r: "Se não justificar, paga multa e pode sofrer restrições como impedimento para tirar passaporte ou tomar posse em cargo público."}
+    - {p: "Como justificar a ausência?", r: "No dia da eleição ou depois, pelo aplicativo da Justiça Eleitoral ou no cartório, dentro do prazo fixado."}
+    - {p: "O título pode ser cancelado?", r: "Sim, se o eleitor deixar de votar em três turnos consecutivos sem justificar nem pagar multa."}
+    - {p: "Para acabar com o voto obrigatório basta uma lei?", r: "Não. A obrigatoriedade está no art. 14 da Constituição, então seria necessária uma emenda constitucional."}

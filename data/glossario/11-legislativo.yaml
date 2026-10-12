@@ -1,0 +1,265 @@
+termos:
+- termo: Sessão legislativa
+  slug: sessao-legislativa
+  categoria: processo-legislativo
+  imagem: congresso
+  sinonimos: [sessões legislativas, ano legislativo]
+  resumo: "é o período anual de funcionamento do Congresso, de 2 de fevereiro a 17 de julho e de 1º de agosto a 22 de dezembro."
+  definicao: |
+    O art. 57 da Constituição fixa a sessão legislativa ordinária em dois períodos por ano: de 2 de fevereiro a 17 de julho e de 1º de agosto a 22 de dezembro. As datas foram definidas pela Emenda Constitucional nº 50/2006, que reduziu o recesso. Quando a data cai em sábado, domingo ou feriado, a reunião passa para o primeiro dia útil seguinte.
+
+    Uma legislatura tem quatro sessões legislativas. Fora desses períodos, o Congresso só se reúne em sessão legislativa extraordinária, convocada nos casos previstos na Constituição.
+
+    A sessão legislativa não pode ser interrompida em julho sem a aprovação do projeto de lei de diretrizes orçamentárias.
+  contexto: |
+    O conceito importa para prazos. Uma proposta rejeitada, por exemplo, só pode ser reapresentada na mesma sessão legislativa se houver pedido da maioria absoluta de uma das Casas (art. 67). E a medida provisória rejeitada ou que perdeu a eficácia não pode ser reeditada na mesma sessão legislativa (art. 62, § 10).
+  base_legal:
+    - {nome: "Constituição Federal, art. 57", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 50/2006", url: "@EC50"}
+  relacionados: [legislatura, recesso-parlamentar, sessao-conjunta, ldo]
+  faqs:
+    - {p: "Quantas sessões legislativas tem uma legislatura?", r: "Quatro, uma por ano. A legislatura dura quatro anos, que correspondem ao mandato dos deputados."}
+    - {p: "O que acontece se a LDO não for aprovada até julho?", r: "Pela Constituição, a sessão legislativa não é interrompida, ou seja, o recesso de julho não começa formalmente. Na prática, o Congresso pode ter recesso informal, sem sessões deliberativas."}
+    - {p: "O que é sessão preparatória?", r: "É a reunião que antecede a primeira sessão legislativa da legislatura, a partir de 1º de fevereiro, para a posse dos eleitos e a eleição das Mesas."}
+    - {p: "Um projeto rejeitado pode voltar no mesmo ano?", r: "Só se a maioria absoluta dos membros de uma das Casas propuser, conforme o art. 67 da Constituição. Para PECs, não há essa exceção: a matéria só volta na sessão legislativa seguinte."}
+    - {p: "Sessão legislativa é o mesmo que sessão plenária?", r: "Não. A sessão legislativa é o ano de trabalho do Congresso. A sessão plenária é cada reunião do plenário, que pode ocorrer várias vezes por semana."}
+- termo: Sessão conjunta
+  slug: sessao-conjunta
+  categoria: processo-legislativo
+  imagem: sessao-conjunta
+  sinonimos: [sessões conjuntas, sessão do Congresso Nacional, sessão do Congresso]
+  resumo: "é a reunião de deputados e senadores no mesmo plenário, presidida pelo presidente do Senado, para votar vetos, o Orçamento e outras matérias do Congresso."
+  definicao: |
+    O art. 57, § 3º, da Constituição prevê que Câmara e Senado se reúnam em sessão conjunta para inaugurar a sessão legislativa, elaborar o regimento comum e regular serviços comuns, receber o compromisso do presidente e do vice-presidente da República e conhecer do veto e sobre ele deliberar. Também é em sessão conjunta que se votam os projetos do PPA, da LDO, da LOA e de créditos adicionais.
+
+    Mesmo reunidos, os votos de deputados e senadores são contados separadamente. Para derrubar um veto, por exemplo, são necessários 257 votos de deputados e 41 de senadores.
+
+    As sessões conjuntas seguem o Regimento Comum do Congresso Nacional e são dirigidas pela Mesa do Congresso.
+  contexto: |
+    A pauta das sessões do Congresso costuma reunir dezenas de vetos e projetos de crédito ao mesmo tempo. Quando o noticiário fala em "sessão do Congresso", trata-se dessa reunião conjunta, normalmente no plenário da Câmara, que é maior.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 57 (§ 3º), 66 (§ 4º) e 166", url: "@CF"}
+  relacionados: [veto, presidente-do-senado, lei-orcamentaria-anual, comissao-mista]
+  faqs:
+    - {p: "Quem preside a sessão conjunta?", r: "O presidente do Senado, que é o presidente do Congresso Nacional. Na ausência dele, os demais membros da Mesa do Congresso, na ordem prevista no Regimento Comum."}
+    - {p: "Como se conta o voto na sessão conjunta?", r: "Separadamente por Casa. A matéria só é aprovada ou o veto só é derrubado se alcançar a maioria exigida tanto entre deputados quanto entre senadores."}
+    - {p: "Onde acontecem as sessões conjuntas?", r: "Em geral no plenário da Câmara dos Deputados, que comporta os 594 parlamentares."}
+    - {p: "O Orçamento é votado em sessão conjunta?", r: "Sim. Depois do parecer da Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, o projeto da lei orçamentária é votado em sessão conjunta."}
+    - {p: "Medida provisória é votada em sessão conjunta?", r: "Não. A MP passa pela comissão mista e depois é votada separadamente nos plenários da Câmara e do Senado."}
+- termo: Turno de votação
+  slug: turno-de-votacao
+  categoria: processo-legislativo
+  imagem: plenario-camara
+  sinonimos: [dois turnos, primeiro turno de votação, segundo turno de votação, turno único]
+  autolink: [turno de votação, turnos de votação, dois turnos de votação, votação em dois turnos, primeiro turno de votação, segundo turno de votação, turno único]
+  resumo: "é cada rodada de discussão e votação de uma proposição no plenário; PECs exigem dois turnos em cada Casa."
+  definicao: |
+    A maioria das proposições é votada em turno único. A Constituição exige dois turnos para propostas de emenda à Constituição (art. 60, § 2º), com aprovação de três quintos em cada um, e para as leis orgânicas dos municípios e do Distrito Federal (arts. 29 e 32), com intervalo mínimo de dez dias.
+
+    Entre um turno e outro há um intervalo, o interstício, fixado nos regimentos. Na Câmara, o Regimento Interno prevê interstício de cinco sessões entre os turnos de uma PEC, que pode ser dispensado por requerimento aprovado pelo plenário. No segundo turno, em regra, não se admitem emendas que mudem o mérito aprovado no primeiro, apenas destaques supressivos e ajustes de redação.
+
+    O termo não se confunde com o segundo turno das eleições.
+  contexto: |
+    É comum que a Câmara vote os dois turnos de uma PEC na mesma semana, com quebra do interstício. Quando isso ocorre, o noticiário registra a aprovação "em primeiro turno" num dia e "em segundo turno" pouco depois, antes de a proposta seguir para o Senado.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 29, 32 e 60 (§ 2º)", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, art. 202", url: "@RICD"}
+  relacionados: [pec, maioria-qualificada, destaque, comissao-especial]
+  faqs:
+    - {p: "Por que a PEC tem dois turnos?", r: "Porque a Constituição exige deliberação reforçada para mudar o próprio texto constitucional: dois turnos em cada Casa, com três quintos dos votos em cada um."}
+    - {p: "O interstício entre os turnos pode ser dispensado?", r: "Sim. Na Câmara, o plenário pode aprovar requerimento de quebra de interstício, o que permite votar o segundo turno logo após o primeiro."}
+    - {p: "No segundo turno o texto pode mudar?", r: "Pouco. Em regra só cabem destaques para suprimir trechos e emendas de redação, sem inovar no mérito já aprovado."}
+    - {p: "Projeto de lei também tem dois turnos?", r: "Não. Projetos de lei e de lei complementar são votados em turno único em cada Casa. No Senado, substitutivo aprovado em comissão terminativa tem turno suplementar."}
+    - {p: "Leis municipais exigem dois turnos?", r: "A Lei Orgânica do município, sim, com intervalo mínimo de dez dias e dois terços dos vereadores. As leis municipais comuns seguem o regimento de cada Câmara Municipal."}
+- termo: Votação simbólica
+  slug: votacao-simbolica
+  categoria: processo-legislativo
+  imagem: plenario-camara2
+  sinonimos: [votações simbólicas]
+  resumo: "é a votação em que o presidente da sessão verifica o resultado pela posição dos parlamentares, sem registrar o voto de cada um no painel."
+  definicao: |
+    Na votação simbólica, o presidente pede que os favoráveis permaneçam como se encontram e proclama o resultado com base na manifestação visível do plenário ou dos líderes. Não há registro individual de votos. Pelo Regimento Interno da Câmara, é o processo usual para matérias que exigem maioria simples.
+
+    Qualquer parlamentar pode pedir verificação de votação, o que leva à votação nominal no painel, desde que o pedido seja apoiado pelo número de deputados exigido no regimento. Matérias com quórum qualificado, como PECs e leis complementares, não podem ser votadas de forma simbólica.
+
+    No Senado, a regra é semelhante: a votação simbólica é o padrão e a nominal é usada quando exigida ou requerida.
+  contexto: |
+    Muitos projetos sem polêmica são aprovados de forma simbólica, inclusive em acordo de líderes. Para o leitor, isso significa que não há lista oficial de como cada parlamentar votou naquela matéria, apenas a orientação dos partidos registrada nas notas taquigráficas.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 184 a 186", url: "@RICD"}
+    - {nome: "Regimento Interno do Senado Federal, arts. 289 a 293", url: "@RISF"}
+  relacionados: [votacao-nominal, maioria-simples, obstrucao, quorum]
+  faqs:
+    - {p: "Na votação simbólica dá para saber como cada parlamentar votou?", r: "Não. Só é registrado o resultado. Os parlamentares podem declarar o voto em plenário, mas não há lista oficial individual."}
+    - {p: "Quem pode pedir que a votação simbólica seja nominal?", r: "Os parlamentares, por pedido de verificação de votação, desde que apoiado pelo número mínimo previsto no regimento de cada Casa."}
+    - {p: "PEC pode ser aprovada em votação simbólica?", r: "Não. Matérias que exigem quórum qualificado, como PEC e lei complementar, precisam de votação nominal para comprovar os votos."}
+    - {p: "Por que tantos projetos são aprovados em votação simbólica?", r: "Porque, quando há acordo entre os líderes e o tema exige maioria simples, a votação simbólica é mais rápida e o regimento a adota como padrão."}
+    - {p: "A votação simbólica tem validade igual à nominal?", r: "Sim. Para matérias de maioria simples, o resultado proclamado na votação simbólica tem o mesmo efeito jurídico de uma votação no painel."}
+- termo: Maioria simples
+  slug: maioria-simples
+  categoria: processo-legislativo
+  imagem: plenario-camara
+  sinonimos: [maioria relativa]
+  resumo: "é a maioria dos votos dos parlamentares presentes, desde que esteja presente a maioria absoluta da Casa; é o quórum padrão para aprovar leis ordinárias."
+  definicao: |
+    A regra geral de deliberação no Congresso está no art. 47 da Constituição: salvo disposição em contrário, as deliberações de cada Casa e de suas comissões são tomadas por maioria dos votos, presente a maioria absoluta de seus membros. É essa a chamada maioria simples ou relativa.
+
+    Na prática, com a presença mínima de 257 deputados, um projeto de lei ordinária é aprovado se tiver mais votos favoráveis que contrários entre os que votaram. O número de votos necessários, portanto, varia conforme a presença: com 257 presentes, bastam 129 votos favoráveis.
+
+    A maioria simples difere da maioria absoluta, calculada sobre o total de membros, e das maiorias qualificadas, como três quintos e dois terços.
+  contexto: |
+    Projetos de lei ordinária, medidas provisórias e projetos de decreto legislativo são aprovados por maioria simples. Por isso o mesmo projeto pode passar com números muito diferentes em sessões cheias ou esvaziadas, desde que haja o quórum mínimo de presença.
+  base_legal:
+    - {nome: "Constituição Federal, art. 47", url: "@CF"}
+  relacionados: [maioria-absoluta, maioria-qualificada, quorum, projeto-de-lei]
+  faqs:
+    - {p: "Quantos votos são necessários para aprovar uma lei ordinária na Câmara?", r: "Depende de quantos votam. É preciso a presença de pelo menos 257 deputados e mais votos a favor do que contra. Com 257 votantes, bastam 129 votos favoráveis."}
+    - {p: "Abstenção conta como voto contrário na maioria simples?", r: "Não. A abstenção conta para o quórum de presença, mas não entra entre os votos favoráveis nem entre os contrários."}
+    - {p: "Qual a diferença entre maioria simples e absoluta?", r: "A simples considera os votos dos presentes. A absoluta exige mais da metade do total de membros da Casa, independentemente de quantos estejam presentes: 257 deputados e 41 senadores."}
+    - {p: "Comissões também decidem por maioria simples?", r: "Sim. O art. 47 vale para as Casas e para suas comissões, salvo quando a Constituição ou o regimento exigem outro quórum."}
+    - {p: "Medida provisória é aprovada por maioria simples?", r: "Sim. A conversão da MP em lei segue o quórum de lei ordinária. A Constituição proíbe medida provisória sobre matéria reservada a lei complementar, que exigiria maioria absoluta."}
+- termo: Maioria qualificada
+  slug: maioria-qualificada
+  categoria: processo-legislativo
+  imagem: plenario-camara
+  sinonimos: [quórum qualificado, três quintos, dois terços]
+  autolink: [maioria qualificada, maiorias qualificadas, quórum qualificado, quórum de três quintos, quórum de dois terços]
+  resumo: "é a exigência de uma fração maior que a metade dos membros, como três quintos ou dois terços, para decisões de maior peso."
+  definicao: |
+    A Constituição reserva maiorias qualificadas para decisões excepcionais. Três quintos dos membros de cada Casa, em dois turnos, são exigidos para aprovar PEC: 308 deputados e 49 senadores. Dois terços são exigidos, por exemplo, para a Câmara autorizar a instauração de processo contra o presidente da República (342 deputados) e para o Senado condená-lo por crime de responsabilidade (54 senadores).
+
+    Dois terços também aparecem em outras regras: oito dos onze ministros do STF para aprovar súmula vinculante, a mesma fração para modular os efeitos de uma declaração de inconstitucionalidade e dois terços dos membros da Câmara Municipal para aprovar a Lei Orgânica do município.
+
+    Como são calculadas sobre o total de membros, as ausências funcionam na prática como votos contrários.
+  contexto: |
+    Em votações de PEC, a conta que importa não é a diferença entre "sim" e "não", mas se o "sim" chegou a 308 na Câmara ou a 49 no Senado. Uma proposta pode ter ampla maioria entre os presentes e ainda assim ser rejeitada.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 29, 51, 52, 60, 86 e 103-A", url: "@CF"}
+    - {nome: "Lei nº 9.868/1999, art. 27", url: "@L9868"}
+  relacionados: [maioria-absoluta, maioria-simples, pec, impeachment, sumula-vinculante]
+  faqs:
+    - {p: "Quantos votos são três quintos na Câmara e no Senado?", r: "308 dos 513 deputados e 49 dos 81 senadores."}
+    - {p: "Quantos votos são dois terços na Câmara e no Senado?", r: "342 deputados e 54 senadores."}
+    - {p: "Por que a ausência pesa contra nas maiorias qualificadas?", r: "Porque a fração é calculada sobre o total de membros. Quem não vota não ajuda a alcançar o número mínimo de votos favoráveis."}
+    - {p: "O STF também usa maioria qualificada?", r: "Sim. A súmula vinculante e a modulação de efeitos em ações de controle de constitucionalidade exigem dois terços dos ministros, ou seja, oito votos."}
+    - {p: "Lei complementar exige maioria qualificada?", r: "Não. Exige maioria absoluta, que é a metade mais um do total de membros: 257 deputados e 41 senadores."}
+- termo: Tramitação
+  slug: tramitacao
+  categoria: processo-legislativo
+  imagem: plenario-camara2
+  sinonimos: [tramitar, tramita, tramitou, regime de tramitação]
+  resumo: "é o percurso de uma proposição no Legislativo, da apresentação à votação final, incluindo comissões, prazos e regimes."
+  definicao: |
+    Tramitação é o caminho percorrido por uma proposição dentro das Casas. Na Câmara, depois de apresentada, ela é numerada e despachada pelo presidente às comissões competentes, que analisam mérito, adequação orçamentária e constitucionalidade. Conforme o caso, a decisão final é da própria comissão ou do plenário.
+
+    O Regimento Interno da Câmara prevê três regimes: urgência, prioridade e ordinário, cada um com prazos próprios para as comissões. Projetos sobre o mesmo tema podem ser apensados e tramitar juntos.
+
+    Ao fim da legislatura, as proposições ainda em tramitação são arquivadas, com exceções previstas no regimento, e o autor reeleito pode pedir o desarquivamento nos primeiros 180 dias da legislatura seguinte.
+  contexto: |
+    Os portais da Câmara e do Senado mostram a tramitação de cada proposição com data, local e despacho. Expressões como "aguardando parecer", "pronto para pauta" e "remetido ao Senado" indicam a etapa em que o projeto está.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 105, 139 a 159", url: "@RICD"}
+    - {nome: "Regimento Interno do Senado Federal, art. 332", url: "@RISF"}
+  relacionados: [regime-de-urgencia, poder-conclusivo, casa-revisora, comissao-permanente]
+  faqs:
+    - {p: "O que é apensação?", r: "É a reunião de projetos que tratam de matéria igual ou semelhante para tramitarem juntos. O mais antigo costuma ser o principal, e os demais são analisados no mesmo parecer."}
+    - {p: "Projeto pode ficar parado para sempre?", r: "Não indefinidamente. Ao fim da legislatura, os projetos em tramitação são arquivados, salvo exceções regimentais, e podem ser desarquivados a pedido do autor reeleito."}
+    - {p: "Como acompanhar a tramitação de um projeto?", r: "Pela página da proposição nos portais da Câmara e do Senado, que lista cada etapa. Também é possível cadastrar-se para receber alertas."}
+    - {p: "O que significa pronto para pauta?", r: "Que o projeto concluiu a fase de comissões e pode ser incluído na ordem do dia do plenário, a critério do presidente da Casa."}
+    - {p: "Qual a diferença entre regime de prioridade e ordinário?", r: "O de prioridade tem prazos menores nas comissões e preferência na pauta. Aplica-se, por exemplo, a projetos do Executivo e do Senado, conforme o Regimento Interno da Câmara."}
+- termo: Poder conclusivo
+  slug: poder-conclusivo
+  categoria: processo-legislativo
+  imagem: comissao
+  sinonimos: [caráter conclusivo, apreciação conclusiva, decisão terminativa, caráter terminativo]
+  resumo: "é a competência das comissões para aprovar ou rejeitar projetos sem votação no plenário, salvo recurso de um décimo dos membros da Casa."
+  definicao: |
+    O art. 58, § 2º, I, da Constituição permite que as comissões discutam e votem projetos de lei dispensada a competência do plenário, na forma do regimento, salvo se houver recurso de um décimo dos membros da Casa. Na Câmara, isso se chama apreciação conclusiva; no Senado, decisão terminativa.
+
+    O Regimento Interno da Câmara exclui do poder conclusivo, entre outros, os projetos de lei complementar, de código, de iniciativa popular, de comissão, os que já foram aprovados pelo plenário do Senado e os que receberam pareceres divergentes, além dos que tramitam em urgência. Nesses casos, a decisão é do plenário.
+
+    Se não houver recurso no prazo, o projeto aprovado segue diretamente para a outra Casa ou para sanção.
+  contexto: |
+    Grande parte das leis ordinárias aprovadas na Câmara passa apenas pelas comissões. Para o leitor, isso significa que um projeto pode avançar sem votação no plenário, e a etapa decisiva é a reunião da comissão.
+  base_legal:
+    - {nome: "Constituição Federal, art. 58, § 2º, I", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, art. 24, II", url: "@RICD"}
+    - {nome: "Regimento Interno do Senado Federal, art. 91", url: "@RISF"}
+  relacionados: [comissao-permanente, tramitacao, parecer, plenario]
+  faqs:
+    - {p: "Quantos deputados precisam recorrer para levar um projeto conclusivo ao plenário?", r: "Um décimo dos membros da Câmara, ou seja, 52 deputados, no prazo fixado pelo regimento após a publicação da decisão."}
+    - {p: "Lei complementar pode ser aprovada só em comissão?", r: "Não. O Regimento Interno da Câmara exclui os projetos de lei complementar do poder conclusivo, e a Constituição exige maioria absoluta em plenário."}
+    - {p: "Qual a diferença entre conclusivo e terminativo?", r: "São nomes usados por Casas diferentes para a mesma ideia: conclusivo na Câmara e terminativo no Senado."}
+    - {p: "Se o projeto é rejeitado na comissão com poder conclusivo, ele morre?", r: "É arquivado, salvo se houver recurso ao plenário no prazo regimental, assinado por um décimo dos membros da Casa."}
+    - {p: "Como saber se um projeto tramita em caráter conclusivo?", r: "A ficha de tramitação na Câmara informa o regime e a forma de apreciação, com a expressão 'sujeita à apreciação conclusiva pelas comissões'."}
+- termo: Casa revisora
+  slug: casa-revisora
+  categoria: processo-legislativo
+  imagem: congresso2
+  sinonimos: [Casa iniciadora, casas revisoras]
+  resumo: "é a Casa do Congresso que analisa um projeto já aprovado pela outra, a Casa iniciadora, podendo aprová-lo, emendá-lo ou rejeitá-lo."
+  definicao: |
+    No sistema bicameral, um projeto de lei aprovado por uma Casa é revisto pela outra em um só turno de discussão e votação, conforme o art. 65 da Constituição. A Casa onde o projeto começou é a iniciadora; a outra é a revisora.
+
+    Se a Casa revisora aprovar sem mudanças, o projeto vai à sanção ou à promulgação. Se rejeitar, é arquivado. Se aprovar com emendas, o texto volta à Casa iniciadora, que só pode aceitar ou recusar as emendas, sem criar texto novo.
+
+    Pelo art. 64, a discussão e a votação dos projetos de iniciativa do presidente da República, do STF e dos tribunais superiores começam na Câmara. Projetos de senadores começam no Senado.
+  contexto: |
+    Como a maior parte dos projetos do Executivo começa na Câmara, o Senado costuma funcionar como Casa revisora das grandes pautas do governo. Isso dá à Câmara a última palavra quando o Senado muda o texto.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 64 e 65", url: "@CF"}
+  relacionados: [emenda, projeto-de-lei, sancao, tramitacao]
+  faqs:
+    - {p: "Se o Senado mudar um projeto da Câmara, o que acontece?", r: "O projeto volta à Câmara, que decide se aceita ou rejeita cada emenda do Senado. Depois disso, segue para sanção."}
+    - {p: "A Casa iniciadora pode fazer novas mudanças quando o projeto volta?", r: "Não. Ela só pode aceitar ou rejeitar as emendas da Casa revisora, sem acrescentar texto novo."}
+    - {p: "Por que projetos do governo começam na Câmara?", r: "Porque o art. 64 da Constituição determina que os projetos de iniciativa do presidente da República, do STF e dos tribunais superiores tenham início na Câmara."}
+    - {p: "Para PEC vale a mesma regra?", r: "Não exatamente. A PEC precisa ser aprovada nas duas Casas com o mesmo texto; se uma Casa mudar o mérito, a parte alterada volta à outra, sem a regra de última palavra da Casa iniciadora."}
+    - {p: "Quantas vezes um projeto vai e volta entre as Casas?", r: "Projeto de lei faz no máximo uma ida e uma volta: iniciadora, revisora e, se houver emendas, de novo a iniciadora."}
+- termo: Requerimento
+  slug: requerimento
+  categoria: processo-legislativo
+  imagem: plenario-camara2
+  sinonimos: [requerimentos]
+  autolink: [requerimento de informação, requerimentos de informação, requerimento de convocação, requerimento de adiamento, requerimento de retirada de pauta]
+  resumo: "é o pedido formal de um parlamentar ou de uma comissão sobre andamento dos trabalhos, informações, convocações ou outras providências."
+  definicao: |
+    Requerimento é a proposição usada para pedir algo à Mesa, ao plenário ou a uma comissão. Há requerimentos que o presidente decide sozinho, como pedidos de palavra e de retirada de proposição pelo autor, e outros que dependem de votação, como os de urgência, de adiamento e de inclusão na ordem do dia.
+
+    Uma espécie importante é o requerimento de informação a ministro de Estado, previsto no art. 50, § 2º, da Constituição. A Mesa encaminha o pedido, e a recusa, o não atendimento em 30 dias ou a prestação de informações falsas configuram crime de responsabilidade. A convocação de ministro para comparecer pessoalmente também é feita por requerimento aprovado.
+
+    Os requerimentos são também a principal ferramenta regimental da obstrução, por permitirem votações sucessivas sobre procedimentos.
+  contexto: |
+    Requerimentos de informação são um dos instrumentos de fiscalização mais usados por parlamentares de todos os partidos. As respostas dos ministérios ficam disponíveis na página de cada requerimento nos portais das Casas.
+  base_legal:
+    - {nome: "Constituição Federal, art. 50", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 114 a 117", url: "@RICD"}
+  relacionados: [regime-de-urgencia, obstrucao, comissao-permanente, crime-de-responsabilidade]
+  faqs:
+    - {p: "Ministro é obrigado a responder requerimento de informação?", r: "Sim. O art. 50, § 2º, da Constituição prevê que a recusa, o não atendimento em 30 dias ou informações falsas configuram crime de responsabilidade."}
+    - {p: "Todo requerimento é votado?", r: "Não. Alguns são decididos pelo presidente da Casa ou da comissão. Outros, como urgência e convocação de ministro, dependem de aprovação do colegiado."}
+    - {p: "Qualquer cidadão pode apresentar requerimento no Congresso?", r: "Não. Requerimentos são proposições de parlamentares e comissões. O cidadão pode apresentar sugestões legislativas e petições pelos canais de participação das Casas."}
+    - {p: "Qual a diferença entre convocar e convidar um ministro?", r: "A convocação é obrigatória e a ausência sem justificativa pode configurar crime de responsabilidade. O convite pode ser recusado."}
+    - {p: "Requerimento serve para obstruir votações?", r: "Sim. Requerimentos de adiamento, retirada de pauta e votação por partes obrigam o plenário a votar procedimentos antes do mérito, o que atrasa a decisão."}
+- termo: Trancamento de pauta
+  slug: trancamento-de-pauta
+  categoria: processo-legislativo
+  imagem: plenario-camara
+  sinonimos: [pauta trancada, trancar a pauta, tranca a pauta, sobrestamento da pauta]
+  resumo: "é a situação em que a Casa fica impedida de votar outras matérias até deliberar sobre uma proposição com prazo constitucional vencido."
+  definicao: |
+    A Constituição prevê três situações de trancamento. A medida provisória não apreciada em 45 dias da publicação entra em regime de urgência e sobrestá as demais deliberações legislativas da Casa em que estiver (art. 62, § 6º). O projeto do presidente da República com urgência constitucional sobrestá as deliberações da Casa após 45 dias (art. 64, § 2º). E o veto não deliberado em 30 dias é colocado na ordem do dia da sessão imediata, sobrestadas as demais proposições até sua votação final (art. 66, § 6º).
+
+    Em 2009, a presidência da Câmara passou a interpretar que a MP só tranca a pauta das sessões ordinárias e apenas para projetos de lei ordinária sobre temas que poderiam ser tratados por MP. O STF validou esse entendimento no MS 27931.
+
+    Assim, PECs, leis complementares e resoluções podem ser votadas em sessões extraordinárias mesmo com MPs trancando a pauta.
+  contexto: |
+    O trancamento explica por que a Câmara costuma convocar sessões extraordinárias seguidas: elas permitem votar outros temas enquanto MPs com prazo vencido aguardam deliberação.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 62 (§ 6º), 64 (§ 2º) e 66 (§ 6º)", url: "@CF"}
+  relacionados: [medida-provisoria, urgencia-constitucional, veto, plenario]
+  faqs:
+    - {p: "Quando uma medida provisória tranca a pauta?", r: "Depois de 45 dias da publicação sem votação concluída na Casa em que estiver, conforme o art. 62, § 6º, da Constituição."}
+    - {p: "Com a pauta trancada, a Câmara não vota nada?", r: "Vota. Pela interpretação adotada desde 2009 e validada pelo STF, o trancamento por MP afeta só projetos de lei ordinária em sessões ordinárias. PECs e leis complementares seguem em sessões extraordinárias."}
+    - {p: "O veto também tranca a pauta?", r: "Sim. Se não for deliberado em 30 dias, o veto passa à ordem do dia da sessão conjunta imediata, sobrestadas as demais proposições do Congresso."}
+    - {p: "Projeto com urgência do presidente tranca a pauta?", r: "Sim. Se a Casa não se manifestar em 45 dias, as demais deliberações legislativas ficam sobrestadas, salvo as que tenham prazo constitucional."}
+    - {p: "O trancamento vale durante o recesso?", r: "Os prazos das medidas provisórias e da urgência constitucional ficam suspensos durante o recesso parlamentar."}

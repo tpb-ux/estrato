@@ -1,12 +1,22 @@
-nome: Glossário político
+nome: Glossário político e jurídico
 atualizado: 2026-10-12
-descricao: "Termos do Congresso, do governo, da Justiça e das eleições explicados com base na Constituição, nos regimentos e nas leis, com links oficiais."
+descricao: "Termos do Congresso, do governo, da Justiça, das eleições, do Orçamento e do controle público explicados com base na Constituição, nas leis e nos regimentos, com links oficiais."
+categorias:
+  - {slug: processo-legislativo, nome: Processo legislativo, descricao: "Como uma proposta vira norma: tipos de proposição, comissões, votações, prazos e etapas na Câmara e no Senado."}
+  - {slug: congresso, nome: Congresso e mandato, descricao: "Organização das Casas, cargos, bancadas e as regras que valem para o exercício do mandato parlamentar."}
+  - {slug: executivo, nome: Poder Executivo, descricao: "Atribuições do presidente da República, ministérios, decretos e os instrumentos excepcionais previstos na Constituição."}
+  - {slug: judiciario, nome: Judiciário e Justiça, descricao: "Tribunais, ações constitucionais, recursos, decisões e garantias processuais citados no noticiário."}
+  - {slug: eleitoral, nome: Eleições e partidos, descricao: "Regras de candidatura, propaganda, financiamento, contagem de votos e organização partidária."}
+  - {slug: orcamento, nome: Orçamento e contas públicas, descricao: "Leis orçamentárias, emendas parlamentares, metas e regras fiscais da União."}
+  - {slug: controle, nome: Controle e transparência, descricao: "Órgãos e leis que fiscalizam o uso de recursos públicos e responsabilizam agentes públicos."}
+  - {slug: federalismo, nome: Federalismo, descricao: "Divisão de competências e de receitas entre União, estados, Distrito Federal e municípios."}
 faqs:
-  - {p: "Para que serve o glossário político do Estrato?", r: "Para explicar, em linguagem direta, os termos usados no Congresso, no governo, nos tribunais e nas eleições, sempre com a base legal e o link oficial."}
-  - {p: "Os textos do glossário são revisados?", r: "Sim. Cada termo indica a data de revisão e as normas usadas. Pedidos de correção podem ser feitos pela página de correções."}
-  - {p: "O glossário tem opinião política?", r: "Não. Os verbetes descrevem regras e procedimentos previstos em lei, sem juízo de valor sobre partidos ou pessoas."}
+  - {p: "Para que serve o glossário político e jurídico do Estrato?", r: "Para explicar, em linguagem direta, os termos usados no Congresso, no governo, nos tribunais, nas eleições e no Orçamento, sempre com a base legal e o link para o texto oficial."}
+  - {p: "Os textos do glossário são revisados?", r: "Sim. Cada verbete indica a data de revisão e as normas usadas. Pedidos de correção podem ser feitos pela página de correções."}
+  - {p: "O glossário tem opinião política?", r: "Não. Os verbetes descrevem regras e procedimentos previstos em lei, sem juízo de valor sobre partidos, governos ou pessoas."}
   - {p: "Os números de votos citados valem sempre?", r: "Os quóruns citados consideram a composição atual: 513 deputados e 81 senadores. Se a composição mudar por lei, os números mudam."}
-  - {p: "Posso citar os verbetes?", r: "Sim, com link para a página do termo. Para uso jurídico, consulte sempre o texto oficial da norma."}
+  - {p: "Posso citar os verbetes?", r: "Sim, com link para a página do termo. Para uso jurídico, consulte sempre o texto oficial da norma, que prevalece sobre qualquer resumo."}
+  - {p: "Como os termos aparecem nas outras páginas do Estrato?", r: "Quando um termo do glossário aparece numa matéria ou página de parlamentar, a primeira menção vira link para o verbete, para que o leitor confira o significado sem sair do assunto."}
 termos:
 - termo: Proposta de Emenda à Constituição
   slug: pec

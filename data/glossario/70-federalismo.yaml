@@ -1,0 +1,172 @@
+termos:
+- termo: Federalismo
+  slug: federalismo
+  categoria: federalismo
+  imagem: mapa
+  sinonimos: [pacto federativo, federação brasileira, entes federativos, ente federativo]
+  autolink: [federalismo, pacto federativo, entes federativos, ente federativo, entes da federação]
+  resumo: "é a forma de organização do Estado em que o poder é dividido entre a União, os estados, o Distrito Federal e os municípios, todos autônomos."
+  definicao: |
+    O art. 1º da Constituição define o Brasil como República Federativa formada pela união indissolúvel dos estados, municípios e do Distrito Federal. O art. 18 estabelece que a organização político-administrativa compreende União, estados, Distrito Federal e municípios, todos autônomos nos termos da Constituição.
+
+    Cada ente tem governo próprio, eleito, competências legislativas e administrativas e fontes de receita definidas pela Constituição. Os municípios são considerados entes federativos desde 1988, característica pouco comum em outras federações.
+
+    A forma federativa do Estado é cláusula pétrea: não pode ser objeto de emenda tendente a aboli-la (art. 60, § 4º, I).
+  contexto: |
+    Temas como a reforma tributária, a divisão de receitas, a dívida dos estados e a responsabilidade por políticas de saúde, educação e segurança são debatidos como questões do pacto federativo.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 1º, 18 e 60, § 4º, I", url: "@CF"}
+  relacionados: [competencia-legislativa, fundos-de-participacao, intervencao-federal, clausula-petrea]
+  faqs:
+    - {p: "Quais são os entes da federação brasileira?", r: "União, estados, Distrito Federal e municípios."}
+    - {p: "Município é ente federativo?", r: "Sim. A Constituição de 1988 incluiu os municípios entre os entes federativos autônomos."}
+    - {p: "Um estado pode se separar do Brasil?", r: "Não. A Constituição fala em união indissolúvel, e a forma federativa é cláusula pétrea."}
+    - {p: "O que é pacto federativo?", r: "É a expressão usada para o conjunto de regras que divide competências e receitas entre os entes."}
+    - {p: "O Distrito Federal é estado ou município?", r: "Nenhum dos dois. É ente com competências legislativas reservadas a estados e municípios, e não pode ser dividido em municípios."}
+- termo: Competência legislativa
+  slug: competencia-legislativa
+  categoria: federalismo
+  imagem: mapa
+  sinonimos: [competência privativa, competência concorrente, competências]
+  autolink: [competência legislativa, competências legislativas, competência privativa da União, competência concorrente]
+  resumo: "é a divisão constitucional dos assuntos sobre os quais cada ente da federação pode fazer leis."
+  definicao: |
+    A Constituição distribui competências entre os entes. O art. 22 lista as matérias de competência privativa da União, como direito civil, penal, processual, eleitoral e do trabalho. Lei complementar pode autorizar os estados a legislar sobre questões específicas dessas matérias.
+
+    O art. 24 trata da competência concorrente: União, estados e Distrito Federal legislam sobre temas como direito tributário, financeiro, orçamento, educação, saúde e meio ambiente. A União fixa normas gerais, e os estados as complementam. O art. 23 traz competências administrativas comuns, como cuidar da saúde e proteger o meio ambiente.
+
+    Aos municípios cabe legislar sobre assuntos de interesse local e suplementar a legislação federal e estadual no que couber (art. 30). Os estados têm as competências não vedadas pela Constituição (art. 25, § 1º).
+  contexto: |
+    Conflitos de competência são uma das principais causas de ações no STF, como quando uma lei estadual trata de tema reservado à União, como trânsito ou telecomunicações.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 21 a 25 e 30", url: "@CF"}
+  relacionados: [federalismo, assembleia-legislativa, camara-municipal, adi]
+  faqs:
+    - {p: "Quem legisla sobre direito penal?", r: "Privativamente a União, conforme o art. 22, I, da Constituição."}
+    - {p: "O que é competência concorrente?", r: "É a área em que União, estados e DF legislam juntos: a União define normas gerais e os estados complementam."}
+    - {p: "Município pode fazer lei sobre qualquer tema?", r: "Não. Os municípios legislam sobre assuntos de interesse local e suplementam leis federais e estaduais."}
+    - {p: "Uma lei estadual pode invadir competência da União?", r: "Se isso ocorrer, a lei pode ser declarada inconstitucional pelo STF."}
+    - {p: "O que é competência comum?", r: "É a responsabilidade administrativa compartilhada, prevista no art. 23, como saúde e proteção ambiental."}
+- termo: Fundos de participação
+  slug: fundos-de-participacao
+  categoria: federalismo
+  imagem: fazenda
+  sigla: FPM
+  sinonimos: [Fundo de Participação dos Municípios, Fundo de Participação dos Estados, FPE]
+  autolink: [Fundo de Participação dos Municípios, Fundo de Participação dos Estados, fundos de participação, FPE, FPM]
+  resumo: "são os repasses obrigatórios de parte do Imposto de Renda e do IPI da União para estados e municípios, previstos na Constituição."
+  definicao: |
+    O art. 159, I, da Constituição determina que a União entregue parte da arrecadação do Imposto de Renda e do Imposto sobre Produtos Industrializados a estados e municípios. São 21,5% para o Fundo de Participação dos Estados e do Distrito Federal (FPE) e 22,5% para o Fundo de Participação dos Municípios (FPM), além de três parcelas adicionais de 1% para o FPM, entregues em meses específicos.
+
+    Os critérios de rateio do FPE são definidos por lei complementar, conforme determinou o STF ao julgar inconstitucional o modelo antigo. O FPM é distribuído conforme faixas populacionais, com cotas distintas para capitais e municípios do interior, segundo a legislação.
+
+    Esses repasses são transferências obrigatórias, e não dependem de convênio nem de decisão política do governo federal.
+  contexto: |
+    Para muitos municípios pequenos, o FPM é a principal fonte de receita. Desonerações de IR e IPI afetam os fundos, o que faz prefeitos e governadores acompanharem de perto mudanças tributárias.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 159 a 161", url: "@CF"}
+    - {nome: "Lei Complementar nº 62/1989", url: "@LC62"}
+  relacionados: [federalismo, transferencias-voluntarias, camara-municipal, lei-orcamentaria-anual]
+  faqs:
+    - {p: "De onde vem o dinheiro do FPM e do FPE?", r: "De parcelas do Imposto de Renda e do IPI arrecadados pela União."}
+    - {p: "Qual o percentual destinado ao FPM?", r: "22,5% do IR e do IPI, mais três parcelas adicionais de 1%, conforme o art. 159, I, da Constituição."}
+    - {p: "E ao FPE?", r: "21,5% da arrecadação do IR e do IPI."}
+    - {p: "O governo pode deixar de repassar os fundos?", r: "Não. São transferências constitucionais obrigatórias."}
+    - {p: "Como o FPM é dividido entre municípios?", r: "Principalmente por faixas de população, com regras diferentes para capitais e interior."}
+- termo: Transferências voluntárias
+  slug: transferencias-voluntarias
+  categoria: federalismo
+  imagem: esplanada
+  sinonimos: [transferência voluntária, convênios]
+  autolink: [transferências voluntárias, transferência voluntária]
+  resumo: "são repasses de recursos de um ente para outro, por cooperação ou auxílio, que não decorrem de obrigação constitucional ou legal."
+  definicao: |
+    A Lei de Responsabilidade Fiscal (art. 25) define transferência voluntária como a entrega de recursos correntes ou de capital a outro ente da federação, a título de cooperação, auxílio ou assistência financeira, que não decorra de determinação constitucional, legal ou destinada ao Sistema Único de Saúde.
+
+    Para receber transferências voluntárias, o ente precisa cumprir exigências como estar em dia com tributos, empréstimos e prestação de contas, cumprir limites de gasto com pessoal e dívida e aplicar os mínimos constitucionais em saúde e educação. Os repasses costumam ocorrer por convênios e contratos de repasse.
+
+    São diferentes das transferências obrigatórias, como os fundos de participação, que independem de negociação.
+  contexto: |
+    Em ano eleitoral, a Lei nº 9.504/1997 (art. 73, VI, a) proíbe transferências voluntárias da União a estados e municípios nos três meses antes do pleito, salvo para obras já em andamento e situações de emergência.
+  base_legal:
+    - {nome: "Lei Complementar nº 101/2000, art. 25", url: "@LRF"}
+    - {nome: "Lei nº 9.504/1997, art. 73, VI, a", url: "@L9504"}
+  relacionados: [fundos-de-participacao, emendas-pix, lei-de-responsabilidade-fiscal, federalismo]
+  faqs:
+    - {p: "O que é transferência voluntária?", r: "É o repasse de recursos a outro ente por cooperação, sem obrigação constitucional ou legal."}
+    - {p: "Qual a diferença para transferência obrigatória?", r: "A obrigatória, como FPM e FPE, decorre da Constituição ou da lei. A voluntária depende de acordo entre os entes."}
+    - {p: "Há restrições em ano eleitoral?", r: "Sim. Nos três meses antes da eleição, a União não pode fazer transferências voluntárias, salvo exceções legais."}
+    - {p: "Quais requisitos o município precisa cumprir?", r: "Estar regular com tributos, dívidas e prestação de contas, respeitar limites da LRF e aplicar os mínimos em saúde e educação."}
+    - {p: "Emendas parlamentares são transferências voluntárias?", r: "Muitas emendas são executadas por convênios, mas as emendas impositivas têm regime próprio previsto na Constituição."}
+- termo: Intervenção federal
+  slug: intervencao-federal
+  categoria: federalismo
+  imagem: planalto
+  sinonimos: [intervenção nos estados]
+  autolink: [intervenção federal, intervenções federais]
+  resumo: "é a medida excepcional em que a União assume temporariamente parte das funções de um estado ou do Distrito Federal, nos casos previstos na Constituição."
+  definicao: |
+    O art. 34 da Constituição lista as hipóteses de intervenção federal, como manter a integridade nacional, repelir invasão estrangeira, pôr termo a grave comprometimento da ordem pública, garantir o livre exercício dos Poderes, reorganizar finanças e assegurar a observância de princípios constitucionais.
+
+    A intervenção é decretada pelo presidente da República. O decreto especifica a amplitude, o prazo e as condições de execução e, se for o caso, nomeia o interventor. Deve ser submetido ao Congresso Nacional em 24 horas (art. 36, § 1º). Em algumas hipóteses, depende de requisição do Judiciário ou de provimento de representação do procurador-geral da República pelo STF.
+
+    Durante a intervenção, a Constituição não pode ser emendada (art. 60, § 1º).
+  contexto: |
+    Em 2018, o governo federal decretou intervenção na área de segurança pública do Rio de Janeiro, a primeira desde 1988, aprovada pelo Congresso. Durante o período, a tramitação de PECs ficou suspensa.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 34 a 36 e 60, § 1º", url: "@CF"}
+  relacionados: [federalismo, estado-de-defesa, estado-de-sitio, pec]
+  faqs:
+    - {p: "Quem decreta a intervenção federal?", r: "O presidente da República, por decreto submetido ao Congresso em 24 horas."}
+    - {p: "Em que casos pode haver intervenção?", r: "Nas hipóteses do art. 34 da Constituição, como grave comprometimento da ordem pública e desrespeito a princípios constitucionais."}
+    - {p: "PEC pode ser votada durante intervenção?", r: "Não. A Constituição proíbe emendas durante intervenção federal, estado de defesa ou estado de sítio."}
+    - {p: "Já houve intervenção federal após 1988?", r: "Sim. Em 2018, na segurança pública do Rio de Janeiro; houve também intervenção no Distrito Federal em 2023, após os atos de 8 de janeiro."}
+    - {p: "Estados podem intervir em municípios?", r: "Sim, nas hipóteses do art. 35 da Constituição."}
+- termo: Assembleia Legislativa
+  slug: assembleia-legislativa
+  categoria: federalismo
+  imagem: plenario-camara2
+  sinonimos: [assembleias legislativas, deputado estadual, deputados estaduais]
+  autolink: [Assembleia Legislativa, Assembleias Legislativas, deputados estaduais, deputado estadual]
+  resumo: "é o Poder Legislativo de cada estado, formado por deputados estaduais eleitos para mandato de quatro anos."
+  definicao: |
+    A Assembleia Legislativa faz as leis estaduais, aprova o orçamento do estado, fiscaliza o governador com auxílio do tribunal de contas estadual e pode emendar a Constituição estadual. No Distrito Federal, o órgão equivalente é a Câmara Legislativa.
+
+    O art. 27 da Constituição define o número de deputados estaduais: o triplo da representação do estado na Câmara dos Deputados e, atingido o número de 36, acrescido de tantos quantos forem os deputados federais acima de 12. O mandato é de quatro anos, com as mesmas regras de imunidade e inviolabilidade dos deputados federais.
+
+    Também cabe às assembleias julgar o governador por crime de responsabilidade, segundo as regras da Constituição estadual e da legislação federal.
+  contexto: |
+    Deputados estaduais são eleitos nas eleições gerais, no mesmo dia que presidente, governador, senadores e deputados federais, pelo sistema proporcional.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 25 a 28", url: "@CF"}
+  relacionados: [competencia-legislativa, camara-municipal, sistema-proporcional, imunidade-parlamentar]
+  faqs:
+    - {p: "Quantos deputados estaduais tem cada estado?", r: "O triplo dos deputados federais até 36. Acima disso, soma-se um para cada deputado federal acima de 12."}
+    - {p: "Qual o mandato do deputado estadual?", r: "Quatro anos, com eleição junto com as eleições gerais."}
+    - {p: "Deputado estadual tem imunidade?", r: "Sim. A Constituição aplica a eles as regras de imunidade e inviolabilidade dos deputados federais."}
+    - {p: "Qual o órgão equivalente no Distrito Federal?", r: "A Câmara Legislativa do Distrito Federal, com deputados distritais."}
+    - {p: "A Assembleia fiscaliza o governador?", r: "Sim, com auxílio do tribunal de contas do estado, e pode processar o governador por crime de responsabilidade."}
+- termo: Câmara municipal
+  slug: camara-municipal
+  categoria: federalismo
+  imagem: camara-municipal
+  sinonimos: [câmaras municipais, vereador, vereadores]
+  autolink: [Câmara Municipal, câmaras municipais, vereadores, vereador]
+  resumo: "é o Poder Legislativo do município, formado por vereadores eleitos para mandato de quatro anos."
+  definicao: |
+    A Câmara Municipal faz as leis do município, aprova o orçamento, vota a lei orgânica e fiscaliza o prefeito, com auxílio do tribunal de contas do estado ou dos municípios, conforme o art. 31 da Constituição. O parecer prévio do tribunal sobre as contas do prefeito só deixa de prevalecer por decisão de dois terços dos vereadores.
+
+    O art. 29, IV, da Constituição fixa limites para o número de vereadores conforme a população, de no mínimo 9, em municípios de até 15 mil habitantes, a no máximo 55, nos municípios com mais de 8 milhões. Vereadores têm inviolabilidade por opiniões, palavras e votos no exercício do mandato e na circunscrição do município.
+
+    A Constituição também limita os gastos totais das câmaras e o subsídio dos vereadores, em percentuais vinculados à receita e ao subsídio dos deputados estaduais.
+  contexto: |
+    Vereadores e prefeitos são eleitos nas eleições municipais, realizadas a cada quatro anos, dois anos depois das eleições gerais.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 29, 29-A e 31", url: "@CF"}
+  relacionados: [assembleia-legislativa, competencia-legislativa, controle-externo, sistema-proporcional]
+  faqs:
+    - {p: "Quantos vereadores um município pode ter?", r: "De 9 a 55, conforme faixas de população previstas no art. 29, IV, da Constituição."}
+    - {p: "Vereador tem imunidade?", r: "Tem inviolabilidade por opiniões, palavras e votos no exercício do mandato e na circunscrição do município."}
+    - {p: "Quem julga as contas do prefeito?", r: "A Câmara Municipal, após parecer prévio do tribunal de contas, que só pode ser derrubado por dois terços dos vereadores."}
+    - {p: "Qual o mandato do vereador?", r: "Quatro anos, com eleição nas eleições municipais."}
+    - {p: "Há limite de gastos das câmaras municipais?", r: "Sim. O art. 29-A da Constituição limita a despesa total conforme a população e a receita do município."}

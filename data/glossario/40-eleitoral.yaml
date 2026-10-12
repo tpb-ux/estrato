@@ -1,0 +1,304 @@
+termos:
+- termo: Coligação partidária
+  slug: coligacao
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [coligação, coligações]
+  autolink: [coligação partidária, coligações partidárias, coligação, coligações]
+  resumo: "é a união temporária de partidos para disputar uma eleição, hoje permitida apenas nas eleições majoritárias."
+  definicao: |
+    A coligação reúne partidos que lançam candidatos em conjunto, com nome próprio, durante a eleição. Ela funciona como um só partido no relacionamento com a Justiça Eleitoral e se desfaz após o pleito.
+
+    A Emenda Constitucional nº 97/2017 proibiu coligações nas eleições proporcionais, para deputado e vereador, a partir de 2020. O art. 17, § 1º, da Constituição passou a admitir coligações apenas nas eleições majoritárias, para presidente, governador, senador e prefeito, sem obrigação de vinculação entre as candidaturas em âmbito nacional, estadual, distrital ou municipal.
+
+    A coligação é diferente da federação partidária, criada pela Lei nº 14.208/2021, em que os partidos ficam unidos por no mínimo quatro anos e atuam como uma só bancada.
+  contexto: |
+    Nas eleições para prefeito e governador, coligações ampliam o tempo de propaganda no rádio e na TV, já que o horário é dividido conforme o tamanho das bancadas dos partidos na Câmara. Nas proporcionais, a alternativa para partidos que querem atuar juntos é a federação.
+  base_legal:
+    - {nome: "Constituição Federal, art. 17, § 1º", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 97/2017", url: "@EC97"}
+    - {nome: "Lei nº 9.504/1997, art. 6º", url: "@L9504"}
+  relacionados: [federacao-partidaria, sistema-proporcional, quociente-eleitoral, horario-eleitoral-gratuito]
+  faqs:
+    - {p: "Coligação ainda é permitida?", r: "Sim, mas só nas eleições majoritárias: presidente, governador, senador e prefeito. Nas proporcionais está proibida desde 2020."}
+    - {p: "Qual a diferença entre coligação e federação?", r: "A coligação vale só para a eleição. A federação dura pelo menos quatro anos e obriga os partidos a atuar juntos no mandato."}
+    - {p: "Por que as coligações proporcionais foram proibidas?", r: "A EC 97/2017 as proibiu. Um argumento usado no debate era que o voto num partido podia ajudar a eleger candidato de outro partido da mesma coligação."}
+    - {p: "Partidos coligados para presidente precisam se coligar nos estados?", r: "Não. A Constituição dispensa a vinculação entre candidaturas nacionais, estaduais e municipais."}
+    - {p: "A coligação tem nome próprio?", r: "Sim. A Lei nº 9.504/1997 permite que a coligação adote denominação própria, que pode juntar as siglas dos partidos."}
+- termo: Inelegibilidade
+  slug: inelegibilidade
+  categoria: eleitoral
+  imagem: tse
+  sinonimos: [inelegível, inelegíveis, inelegibilidades]
+  autolink: [inelegibilidade, inelegibilidades, inelegível, inelegíveis]
+  resumo: "é o impedimento legal para que uma pessoa se candidate a cargo eletivo, por causa de sua condição ou de condutas previstas em lei."
+  definicao: |
+    A Constituição já prevê algumas inelegibilidades: são inelegíveis os inalistáveis e os analfabetos (art. 14, § 4º), e o cônjuge e parentes até o segundo grau de chefes do Executivo no território de sua jurisdição, salvo se já titulares de mandato e candidatos à reeleição (art. 14, § 7º). O § 9º do mesmo artigo determina que lei complementar estabeleça outros casos, para proteger a probidade administrativa e a moralidade para o exercício do mandato.
+
+    Essa lei complementar é a Lei Complementar nº 64/1990, alterada pela Lei Complementar nº 135/2010, a Lei da Ficha Limpa, que ampliou hipóteses como condenação por órgão colegiado por certos crimes, rejeição de contas e cassação de mandato. A Lei Complementar nº 219/2025 mudou regras sobre a contagem dos prazos de inelegibilidade.
+
+    A inelegibilidade é verificada pela Justiça Eleitoral no pedido de registro de candidatura, que pode ser impugnado por partidos, candidatos e Ministério Público.
+  contexto: |
+    Inelegibilidade não é o mesmo que perda dos direitos políticos. Uma pessoa inelegível continua votando, mas não pode ser votada no período de impedimento.
+  base_legal:
+    - {nome: "Constituição Federal, art. 14, §§ 4º a 9º", url: "@CF"}
+    - {nome: "Lei Complementar nº 64/1990", url: "@LC64"}
+    - {nome: "Lei Complementar nº 135/2010 (Ficha Limpa)", url: "@LC135"}
+    - {nome: "Lei Complementar nº 219/2025", url: "@LC219"}
+  relacionados: [ficha-limpa, registro-de-candidatura, desincompatibilizacao, abuso-de-poder]
+  faqs:
+    - {p: "Quem é inelegível pela Constituição?", r: "Inalistáveis, analfabetos e, em regra, cônjuges e parentes até segundo grau de chefes do Executivo no território de sua jurisdição."}
+    - {p: "Qual lei trata das inelegibilidades?", r: "A Lei Complementar nº 64/1990, alterada pela Lei da Ficha Limpa (LC 135/2010) e por leis complementares posteriores."}
+    - {p: "Inelegível pode votar?", r: "Sim. A inelegibilidade impede apenas que a pessoa seja candidata."}
+    - {p: "Quem decide se alguém é inelegível?", r: "A Justiça Eleitoral, ao analisar o pedido de registro de candidatura ou em ações próprias."}
+    - {p: "A inelegibilidade é permanente?", r: "Não. As hipóteses legais têm prazos, como oito anos em vários casos da Ficha Limpa, com regras de contagem definidas na lei complementar."}
+- termo: Propaganda eleitoral antecipada
+  slug: propaganda-antecipada
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [propaganda antecipada]
+  autolink: [propaganda eleitoral antecipada, propaganda antecipada]
+  resumo: "é a propaganda eleitoral feita antes de 16 de agosto do ano da eleição, data em que ela passa a ser permitida."
+  definicao: |
+    O art. 36 da Lei nº 9.504/1997 estabelece que a propaganda eleitoral só é permitida após 15 de agosto do ano da eleição. Quem a fizer antes fica sujeito a multa de 5 mil a 25 mil reais ou equivalente ao custo da propaganda, se maior, conforme o § 3º do artigo.
+
+    A lei permite, porém, algumas condutas antes desse prazo, desde que não envolvam pedido explícito de voto (art. 36-A): menção à pretensa candidatura, exaltação de qualidades pessoais, participação em entrevistas e debates, prévias partidárias, divulgação de posicionamento pessoal sobre questões políticas, inclusive nas redes sociais.
+
+    A Justiça Eleitoral avalia caso a caso se houve pedido explícito de voto ou uso de meios proibidos no período de campanha.
+  contexto: |
+    Pré-candidatos costumam fazer eventos, entrevistas e postagens antes de agosto. As representações por propaganda antecipada discutem se houve pedido explícito de voto, ou o uso de "palavras mágicas" equivalentes, segundo a jurisprudência do TSE.
+  base_legal:
+    - {nome: "Lei nº 9.504/1997, arts. 36 e 36-A", url: "@L9504"}
+  relacionados: [propaganda-eleitoral, horario-eleitoral-gratuito, registro-de-candidatura, tse]
+  faqs:
+    - {p: "Quando começa a propaganda eleitoral permitida?", r: "No dia 16 de agosto do ano da eleição, porque a lei a permite após 15 de agosto."}
+    - {p: "Pré-candidato pode se apresentar como pré-candidato?", r: "Sim. O art. 36-A da Lei nº 9.504/1997 permite mencionar a pretensa candidatura, desde que sem pedido explícito de voto."}
+    - {p: "Qual a punição por propaganda antecipada?", r: "Multa prevista no art. 36, § 3º, da Lei nº 9.504/1997, para o responsável e o beneficiário, quando comprovado seu conhecimento."}
+    - {p: "Entrevistas antes de agosto são permitidas?", r: "Sim. Participar de entrevistas, debates e programas é permitido, desde que as emissoras deem tratamento isonômico."}
+    - {p: "Postar opiniões nas redes é propaganda antecipada?", r: "Não, se não houver pedido explícito de voto. A lei permite divulgar posicionamento pessoal sobre questões políticas."}
+- termo: Propaganda eleitoral
+  slug: propaganda-eleitoral
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [propaganda de campanha]
+  autolink: [propaganda eleitoral]
+  resumo: "é a divulgação de candidaturas e propostas para conquistar votos, permitida a partir de 16 de agosto do ano da eleição e regulada pela Lei das Eleições."
+  definicao: |
+    A Lei nº 9.504/1997 regula as formas de propaganda permitidas: comícios, carreatas, distribuição de material impresso, propaganda na internet, inserções e horário gratuito no rádio e na TV, entre outras. Também estabelece proibições, como outdoors, showmícios e brindes ao eleitor.
+
+    Na internet, a propaganda é permitida em sites do candidato e do partido, blogs, redes sociais e aplicativos de mensagem, com regras sobre impulsionamento pago, que só pode ser contratado por candidatos, partidos e coligações e deve ser identificado como tal. O TSE edita resoluções a cada eleição, inclusive sobre uso de inteligência artificial.
+
+    A propaganda paga na imprensa escrita tem limites de tamanho e de quantidade de anúncios, e a propaganda paga no rádio e na TV é proibida.
+  contexto: |
+    Em cada eleição, o TSE atualiza as resoluções de propaganda. Nos últimos pleitos, foram incluídas regras sobre conteúdo manipulado por inteligência artificial e a exigência de rótulos em material sintético.
+  base_legal:
+    - {nome: "Lei nº 9.504/1997, arts. 36 a 57-J", url: "@L9504"}
+    - {nome: "Código Eleitoral, arts. 240 a 256", url: "@CE"}
+  relacionados: [propaganda-antecipada, horario-eleitoral-gratuito, tse, fundo-eleitoral]
+  faqs:
+    - {p: "Quando a propaganda eleitoral pode começar?", r: "A partir de 16 de agosto do ano da eleição."}
+    - {p: "Outdoor é permitido na campanha?", r: "Não. A Lei nº 9.504/1997 proíbe propaganda eleitoral por meio de outdoors, inclusive eletrônicos."}
+    - {p: "Quem pode pagar impulsionamento nas redes?", r: "Apenas candidatos, partidos, coligações e federações, com identificação do conteúdo como propaganda."}
+    - {p: "Pode haver propaganda paga na TV?", r: "Não. No rádio e na TV, só existe o horário eleitoral gratuito e as inserções previstas em lei."}
+    - {p: "Quem fiscaliza a propaganda?", r: "A Justiça Eleitoral, que recebe representações de partidos, candidatos, federações e do Ministério Público Eleitoral."}
+- termo: Horário eleitoral gratuito
+  slug: horario-eleitoral-gratuito
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [horário eleitoral, propaganda gratuita no rádio e na TV]
+  autolink: [horário eleitoral gratuito, horário eleitoral, horário gratuito]
+  resumo: "é o tempo reservado no rádio e na TV para a propaganda dos candidatos, nos 35 dias que antecedem a antevéspera da eleição."
+  definicao: |
+    O art. 47 da Lei nº 9.504/1997 determina que emissoras de rádio e televisão reservem, nos 35 dias anteriores à antevéspera das eleições, horário para a propaganda eleitoral gratuita, em blocos e em inserções ao longo da programação.
+
+    A divisão do tempo segue o § 2º do mesmo artigo: 90% distribuídos proporcionalmente ao número de representantes na Câmara dos Deputados dos partidos e federações, e 10% distribuídos igualitariamente. Nas coligações majoritárias, considera-se a soma dos representantes dos seis maiores partidos que as integram.
+
+    Apesar do nome, o horário não é gratuito para o poder público: as emissoras têm direito a compensação fiscal (art. 99).
+  contexto: |
+    O tempo de TV é um dos motivos que levam partidos a formar coligações e federações. A cláusula de desempenho também afeta o acesso ao horário: partidos que não a atingem perdem o direito ao tempo gratuito.
+  base_legal:
+    - {nome: "Lei nº 9.504/1997, arts. 44 a 57 e 99", url: "@L9504"}
+    - {nome: "Constituição Federal, art. 17, § 3º", url: "@CF"}
+  relacionados: [propaganda-eleitoral, clausula-de-desempenho, coligacao, federacao-partidaria]
+  faqs:
+    - {p: "Quando começa o horário eleitoral gratuito?", r: "Nos 35 dias anteriores à antevéspera das eleições, conforme o art. 47 da Lei nº 9.504/1997."}
+    - {p: "Como o tempo é dividido?", r: "90% proporcionalmente à bancada dos partidos e federações na Câmara e 10% igualmente entre todos."}
+    - {p: "O horário eleitoral é realmente gratuito?", r: "Para os partidos sim, mas as emissoras recebem compensação fiscal, prevista no art. 99 da lei."}
+    - {p: "Partido pequeno tem direito ao horário?", r: "Depende da cláusula de desempenho. A Constituição garante acesso gratuito ao rádio e à TV aos partidos que a cumprem."}
+    - {p: "Há horário eleitoral no segundo turno?", r: "Sim. A lei prevê propaganda gratuita no segundo turno, dividida igualmente entre os dois candidatos."}
+- termo: Sistema proporcional
+  slug: sistema-proporcional
+  categoria: eleitoral
+  imagem: plenario-camara
+  sinonimos: [eleição proporcional, eleições proporcionais, sistema majoritário]
+  autolink: [sistema proporcional, eleição proporcional, eleições proporcionais, sistema majoritário, eleição majoritária, eleições majoritárias]
+  resumo: "é o sistema usado para eleger deputados e vereadores, em que as vagas são distribuídas conforme os votos de cada partido."
+  definicao: |
+    No Brasil, deputados federais, estaduais, distritais e vereadores são eleitos pelo sistema proporcional de lista aberta (arts. 27 e 45 da Constituição; arts. 105 a 113 do Código Eleitoral). Primeiro, calcula-se o quociente eleitoral, dividindo os votos válidos pelo número de vagas. Depois, o quociente partidário define quantas cadeiras cada partido ou federação obtém. As vagas são ocupadas pelos candidatos mais votados de cada legenda, respeitada a votação nominal mínima.
+
+    No sistema majoritário, usado para presidente, governador, senador e prefeito, vence quem tem mais votos. Para presidente, governador e prefeito de municípios com mais de 200 mil eleitores, é preciso maioria absoluta dos votos válidos, ou há segundo turno.
+
+    No proporcional, o eleitor pode votar no candidato ou apenas na legenda. Os dois votos contam para o partido.
+  contexto: |
+    Por causa do sistema proporcional, um candidato muito votado pode ajudar a eleger outros da mesma lista, e um candidato com muitos votos pode ficar de fora se seu partido não alcançar o quociente. As regras das sobras foram alteradas em 2021 e discutidas no STF.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 27, 29, 45, 46 e 77", url: "@CF"}
+    - {nome: "Código Eleitoral, arts. 105 a 113", url: "@CE"}
+  relacionados: [quociente-eleitoral, quociente-partidario, sobras-eleitorais, segundo-turno]
+  faqs:
+    - {p: "Quais cargos são eleitos pelo sistema proporcional?", r: "Deputados federais, estaduais, distritais e vereadores."}
+    - {p: "Senador é eleito pelo sistema proporcional?", r: "Não. Senadores são eleitos pelo sistema majoritário, segundo o art. 46 da Constituição."}
+    - {p: "O que é lista aberta?", r: "É o modelo em que os eleitores definem a ordem dos candidatos de cada partido pelo número de votos nominais."}
+    - {p: "Voto de legenda conta?", r: "Sim. O voto na legenda soma para o partido no cálculo do quociente partidário."}
+    - {p: "Quando há segundo turno?", r: "Para presidente, governador e prefeito de municípios com mais de 200 mil eleitores, quando ninguém obtém maioria absoluta dos votos válidos."}
+- termo: Quociente partidário
+  slug: quociente-partidario
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [quocientes partidários]
+  autolink: [quociente partidário, quocientes partidários]
+  resumo: "é o número de vagas que cada partido ou federação conquista na eleição proporcional, obtido pela divisão de seus votos pelo quociente eleitoral."
+  definicao: |
+    Segundo o art. 107 do Código Eleitoral, o quociente partidário é calculado dividindo o número de votos válidos dados ao partido, sob a mesma legenda, pelo quociente eleitoral, desprezada a fração. O resultado indica quantas cadeiras o partido ou a federação ocupa na primeira fase da distribuição.
+
+    Para ocupar essas vagas, o candidato precisa ter votação nominal mínima de 10% do quociente eleitoral (art. 108). As vagas não preenchidas nessa etapa vão para a distribuição das sobras, regulada pelo art. 109.
+
+    A federação partidária é tratada como um só partido para esse cálculo.
+  contexto: |
+    Exemplo hipotético: se o quociente eleitoral é 100 mil votos e um partido obtém 350 mil, seu quociente partidário é 3. Os votos restantes entram no cálculo das sobras.
+  base_legal:
+    - {nome: "Código Eleitoral, arts. 106 a 109", url: "@CE"}
+  relacionados: [quociente-eleitoral, sobras-eleitorais, sistema-proporcional, federacao-partidaria]
+  faqs:
+    - {p: "Como se calcula o quociente partidário?", r: "Dividindo os votos válidos do partido ou federação pelo quociente eleitoral, sem considerar a fração."}
+    - {p: "Qual a diferença entre quociente eleitoral e partidário?", r: "O eleitoral é o número de votos necessário para uma vaga. O partidário é o número de vagas que cada partido obtém."}
+    - {p: "Todo candidato do partido pode ocupar a vaga?", r: "Só os que obtiverem votação nominal mínima de 10% do quociente eleitoral, conforme o art. 108 do Código Eleitoral."}
+    - {p: "O que acontece com as vagas que sobram?", r: "São distribuídas pelas regras das sobras eleitorais, previstas no art. 109 do Código Eleitoral."}
+    - {p: "Federação conta como um partido?", r: "Sim. Para o cálculo dos quocientes, a federação atua como se fosse um único partido."}
+- termo: Sobras eleitorais
+  slug: sobras-eleitorais
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [sobras, distribuição das sobras]
+  autolink: [sobras eleitorais, distribuição das sobras, cálculo das sobras]
+  resumo: "são as vagas da eleição proporcional que não foram preenchidas pelo quociente partidário e são distribuídas por regras de média."
+  definicao: |
+    O art. 109 do Código Eleitoral regula a distribuição das vagas não preenchidas com a aplicação dos quocientes partidários e da votação nominal mínima. O método divide os votos de cada partido pelo número de vagas que já obteve mais um, e a vaga vai para quem tiver a maior média, repetindo-se a operação.
+
+    A Lei nº 14.211/2021 passou a exigir, para disputar as sobras, que os partidos tenham obtido pelo menos 80% do quociente eleitoral e os candidatos, votação nominal de pelo menos 20% desse quociente. Se não houver mais quem atenda a esses requisitos, as cadeiras restantes são distribuídas aos partidos com as maiores médias.
+
+    Essas regras foram questionadas no STF, inclusive na ADI 7325, e o tribunal decidiu sobre a participação de todos os partidos na última etapa da distribuição.
+  contexto: |
+    O cálculo das sobras pode mudar a composição de bancadas, especialmente em estados com poucas vagas. Por isso, decisões sobre a regra afetam quem assume ou perde mandatos.
+  base_legal:
+    - {nome: "Código Eleitoral, arts. 108 e 109", url: "@CE"}
+    - {nome: "Lei nº 14.211/2021", url: "@L14211"}
+  relacionados: [quociente-partidario, quociente-eleitoral, sistema-proporcional, stf]
+  faqs:
+    - {p: "O que são sobras eleitorais?", r: "São as vagas que não foram preenchidas pela divisão dos votos pelo quociente eleitoral e que são distribuídas por médias."}
+    - {p: "Quem pode disputar as sobras?", r: "Pela Lei nº 14.211/2021, partidos com pelo menos 80% do quociente eleitoral e candidatos com pelo menos 20% desse quociente, com regra subsidiária para as vagas restantes."}
+    - {p: "Como funciona o cálculo da média?", r: "Divide-se a votação do partido pelo número de vagas que já obteve mais um. Quem tiver a maior média leva a vaga."}
+    - {p: "O STF julgou a regra das sobras?", r: "Sim. O tribunal analisou ações sobre o tema, entre elas a ADI 7325, e definiu a participação dos partidos na última etapa da distribuição."}
+    - {p: "Onde está a regra das sobras?", r: "No art. 109 do Código Eleitoral, com redação dada por leis de 2015 e 2021."}
+- termo: Registro de candidatura
+  slug: registro-de-candidatura
+  categoria: eleitoral
+  imagem: tse
+  sinonimos: [pedido de registro, registro de candidato]
+  autolink: [registro de candidatura, registros de candidatura, pedido de registro de candidatura]
+  resumo: "é o pedido feito pelos partidos à Justiça Eleitoral para que alguém possa disputar a eleição, apresentado até 15 de agosto do ano eleitoral."
+  definicao: |
+    O art. 11 da Lei nº 9.504/1997 estabelece que partidos, coligações e federações solicitem o registro de seus candidatos até as 19 horas de 15 de agosto do ano da eleição. O pedido deve vir acompanhado de documentos como ata da convenção, declaração de bens, certidões criminais e comprovante de escolaridade.
+
+    A Justiça Eleitoral verifica as condições de elegibilidade previstas no art. 14, § 3º, da Constituição, como nacionalidade brasileira, pleno exercício dos direitos políticos, alistamento, domicílio eleitoral, filiação partidária e idade mínima, e a ausência de causas de inelegibilidade.
+
+    Partidos, candidatos e Ministério Público podem impugnar o pedido em cinco dias após a publicação do edital, conforme a Lei Complementar nº 64/1990.
+  contexto: |
+    Um candidato com registro indeferido pode continuar fazendo campanha enquanto recorre, por sua conta e risco, conforme o art. 16-A da Lei nº 9.504/1997. Se o indeferimento for mantido, seus votos são anulados.
+  base_legal:
+    - {nome: "Constituição Federal, art. 14, § 3º", url: "@CF"}
+    - {nome: "Lei nº 9.504/1997, arts. 11 e 16-A", url: "@L9504"}
+    - {nome: "Lei Complementar nº 64/1990, art. 3º", url: "@LC64"}
+  relacionados: [inelegibilidade, ficha-limpa, filiacao-partidaria, desincompatibilizacao]
+  faqs:
+    - {p: "Qual o prazo para registrar candidatura?", r: "Até as 19 horas de 15 de agosto do ano da eleição, segundo o art. 11 da Lei nº 9.504/1997."}
+    - {p: "Quem pede o registro?", r: "O partido, a coligação ou a federação. O candidato pode pedir diretamente se o partido não o fizer, dentro do prazo legal."}
+    - {p: "Quais são as condições de elegibilidade?", r: "Nacionalidade brasileira, direitos políticos plenos, alistamento, domicílio eleitoral, filiação partidária e idade mínima para o cargo."}
+    - {p: "Quem pode impugnar uma candidatura?", r: "Candidatos, partidos, coligações, federações e o Ministério Público, no prazo de cinco dias da publicação do pedido."}
+    - {p: "Candidato com registro negado pode fazer campanha?", r: "Pode, enquanto recorre, mas a validade dos votos depende do deferimento final do registro."}
+- termo: Desincompatibilização
+  slug: desincompatibilizacao
+  categoria: eleitoral
+  imagem: esplanada
+  sinonimos: [desincompatibilizar]
+  autolink: [desincompatibilização, desincompatibilizar]
+  resumo: "é o afastamento obrigatório de cargo ou função, em prazo definido em lei, para que a pessoa possa se candidatar."
+  definicao: |
+    A Lei Complementar nº 64/1990 lista ocupantes de cargos que precisam se afastar antes da eleição para não ficarem inelegíveis. Os prazos variam conforme o cargo e a disputa, chegando a seis meses para ministros de Estado, secretários e dirigentes de vários órgãos, e a três ou quatro meses para servidores e outras funções.
+
+    Para chefes do Executivo, a regra está no art. 14, § 6º, da Constituição: presidente, governadores e prefeitos que queiram concorrer a outros cargos devem renunciar aos mandatos até seis meses antes do pleito. Para disputar a reeleição ao mesmo cargo, não precisam se afastar.
+
+    O objetivo é evitar o uso da máquina pública em benefício de candidaturas.
+  contexto: |
+    Em anos eleitorais, abril é o mês de saída de ministros e secretários que vão concorrer, o que provoca reformas ministeriais e trocas no primeiro escalão.
+  base_legal:
+    - {nome: "Constituição Federal, art. 14, § 6º", url: "@CF"}
+    - {nome: "Lei Complementar nº 64/1990, art. 1º", url: "@LC64"}
+  relacionados: [inelegibilidade, ministro-de-estado, reeleicao, registro-de-candidatura]
+  faqs:
+    - {p: "Ministro precisa deixar o cargo para ser candidato?", r: "Sim. A LC 64/1990 exige afastamento em prazo definido, que para ministros é de seis meses antes da eleição."}
+    - {p: "Presidente que disputa reeleição precisa se afastar?", r: "Não. A Constituição só exige renúncia de chefes do Executivo que forem concorrer a outros cargos."}
+    - {p: "Prefeito que quer ser deputado precisa renunciar?", r: "Sim, até seis meses antes da eleição, segundo o art. 14, § 6º, da Constituição."}
+    - {p: "Servidor público precisa se afastar para ser candidato?", r: "Em regra sim, nos prazos da LC 64/1990, com direito à remuneração em várias hipóteses."}
+    - {p: "O que acontece se não houver desincompatibilização?", r: "A pessoa fica inelegível para aquela eleição, e o registro de candidatura pode ser negado."}
+- termo: Abuso de poder
+  slug: abuso-de-poder
+  categoria: eleitoral
+  imagem: tse
+  sinonimos: [abuso de poder econômico, abuso de poder político, AIJE]
+  autolink: [abuso de poder econômico, abuso de poder político, abuso de autoridade nas eleições, investigação judicial eleitoral]
+  resumo: "é o uso indevido de recursos econômicos, de cargos públicos ou dos meios de comunicação para desequilibrar uma eleição."
+  definicao: |
+    A Constituição determina que a lei proteja a normalidade e a legitimidade das eleições contra a influência do poder econômico ou o abuso do exercício de função, cargo ou emprego (art. 14, § 9º). A Lei Complementar nº 64/1990 prevê, no art. 22, a ação de investigação judicial eleitoral, conhecida como AIJE, que pode ser proposta por partido, coligação, candidato ou Ministério Público Eleitoral.
+
+    Comprovado o abuso, o candidato beneficiado pode ter o registro ou o diploma cassado, e os responsáveis ficam inelegíveis por oito anos. Para isso, basta a gravidade das circunstâncias, sem necessidade de demonstrar que o resultado da eleição foi alterado.
+
+    A jurisprudência do TSE reconhece formas como o abuso de poder econômico, político e o uso indevido dos meios de comunicação, inclusive redes sociais.
+  contexto: |
+    Ações por abuso de poder podem levar à inelegibilidade de candidatos eleitos ou derrotados. O TSE já julgou casos envolvendo uso de estrutura pública, reuniões oficiais e disseminação de conteúdo nas redes.
+  base_legal:
+    - {nome: "Constituição Federal, art. 14, §§ 9º e 10", url: "@CF"}
+    - {nome: "Lei Complementar nº 64/1990, art. 22", url: "@LC64"}
+  relacionados: [inelegibilidade, compra-de-votos, cassacao-de-mandato, tse]
+  faqs:
+    - {p: "O que é AIJE?", r: "É a ação de investigação judicial eleitoral, prevista no art. 22 da LC 64/1990, usada para apurar abuso de poder."}
+    - {p: "Qual a punição por abuso de poder?", r: "Cassação do registro ou do diploma do beneficiado e inelegibilidade de oito anos para os responsáveis."}
+    - {p: "É preciso provar que o abuso mudou o resultado?", r: "Não. A lei considera a gravidade das circunstâncias, não a potencialidade de alterar o resultado."}
+    - {p: "Quem pode propor a ação?", r: "Partidos, coligações, federações, candidatos e o Ministério Público Eleitoral."}
+    - {p: "Uso de redes sociais pode configurar abuso?", r: "Sim. O TSE admite o enquadramento de uso indevido dos meios de comunicação, incluindo plataformas digitais."}
+- termo: Compra de votos
+  slug: compra-de-votos
+  categoria: eleitoral
+  imagem: urna
+  sinonimos: [captação ilícita de sufrágio, compra de voto]
+  autolink: [compra de votos, compra de voto, captação ilícita de sufrágio]
+  resumo: "é a oferta de bem ou vantagem ao eleitor em troca do voto, punida com multa e cassação do registro ou do diploma."
+  definicao: |
+    O art. 41-A da Lei nº 9.504/1997, incluído pela Lei nº 9.840/1999, de iniciativa popular, define como captação ilícita de sufrágio o candidato doar, oferecer, prometer ou entregar ao eleitor bem ou vantagem pessoal de qualquer natureza, inclusive emprego ou função pública, com o fim de obter o voto, desde o registro da candidatura até o dia da eleição.
+
+    A pena é multa de mil a cinquenta mil UFIR e cassação do registro ou do diploma. Não é necessário pedido explícito de voto, bastando a evidência do dolo. A condenação também gera inelegibilidade de oito anos pela Lei Complementar nº 64/1990.
+
+    Além da punição eleitoral, a compra de votos é crime previsto no art. 299 do Código Eleitoral.
+  contexto: |
+    A Lei nº 9.840/1999 foi a primeira lei de iniciativa popular aprovada no país e é frequentemente lembrada como precursora da Ficha Limpa.
+  base_legal:
+    - {nome: "Lei nº 9.504/1997, art. 41-A", url: "@L9504"}
+    - {nome: "Código Eleitoral, art. 299", url: "@CE"}
+    - {nome: "Lei Complementar nº 64/1990", url: "@LC64"}
+  relacionados: [abuso-de-poder, inelegibilidade, iniciativa-popular, cassacao-de-mandato]
+  faqs:
+    - {p: "Compra de votos é crime?", r: "Sim. É crime eleitoral (art. 299 do Código Eleitoral) e também ilícito eleitoral que leva à cassação (art. 41-A da Lei nº 9.504/1997)."}
+    - {p: "Qual a punição para o candidato?", r: "Multa e cassação do registro ou do diploma, além de inelegibilidade por oito anos."}
+    - {p: "Precisa haver pedido explícito de voto?", r: "Não. A lei diz que basta a evidência do dolo, consistente no especial fim de agir."}
+    - {p: "Prometer emprego em troca de voto é compra de voto?", r: "Sim. A lei inclui expressamente emprego ou função pública entre as vantagens proibidas."}
+    - {p: "O eleitor que vende o voto também comete crime?", r: "Sim. O art. 299 do Código Eleitoral pune quem dá, oferece, promete, solicita ou recebe vantagem para votar."}

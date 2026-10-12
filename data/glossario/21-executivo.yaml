@@ -1,0 +1,268 @@
+termos:
+- termo: Ministro de Estado
+  slug: ministro-de-estado
+  categoria: executivo
+  imagem: esplanada
+  sinonimos: [ministros de Estado, ministério, ministérios]
+  autolink: [ministro de Estado, ministros de Estado, ministra de Estado]
+  resumo: "é o auxiliar direto do presidente da República na direção de uma área do governo federal, nomeado e exonerado livremente por ele."
+  definicao: |
+    O art. 87 da Constituição prevê que os ministros de Estado serão escolhidos entre brasileiros maiores de 21 anos e no exercício dos direitos políticos. Compete a eles orientar, coordenar e supervisionar os órgãos da sua área, referendar os atos e decretos assinados pelo presidente, expedir instruções para a execução das leis e apresentar relatório anual de gestão.
+
+    A criação e a extinção de ministérios dependem de lei (art. 88). A estrutura atual foi organizada pela Lei nº 14.600/2023, que define os ministérios e suas competências. A organização interna pode ser ajustada por decreto, desde que não aumente despesa nem crie ou extinga órgãos.
+
+    Os ministros podem ser convocados pela Câmara, pelo Senado ou por suas comissões, e a ausência sem justificativa configura crime de responsabilidade.
+  contexto: |
+    Os ministros do Ministério da Defesa e das Relações Exteriores, por exemplo, têm requisitos adicionais em leis específicas. Parlamentares nomeados ministros não perdem o mandato: licenciam-se, e o suplente assume, conforme o art. 56 da Constituição.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 50, 56, 87 e 88", url: "@CF"}
+    - {nome: "Lei nº 14.600/2023 (organização dos ministérios)", url: "@L14600"}
+  relacionados: [presidente-da-republica, casa-civil, decreto, requerimento]
+  faqs:
+    - {p: "Quem pode ser ministro de Estado?", r: "Brasileiros maiores de 21 anos, no exercício dos direitos políticos, conforme o art. 87 da Constituição."}
+    - {p: "Deputado que vira ministro perde o mandato?", r: "Não. Ele se licencia e o suplente assume. Ao deixar o ministério, pode reassumir a cadeira."}
+    - {p: "O presidente pode criar um ministério por decreto?", r: "Não. A criação e a extinção de ministérios dependem de lei, que pode ser originada de medida provisória."}
+    - {p: "Ministro é obrigado a ir ao Congresso quando convocado?", r: "Sim. A ausência sem justificação adequada importa crime de responsabilidade, segundo o art. 50 da Constituição."}
+    - {p: "Ministro de Estado tem foro no STF?", r: "Sim. Nos crimes comuns e de responsabilidade, ministros de Estado são julgados pelo STF, ressalvados os crimes de responsabilidade conexos com os do presidente, julgados pelo Senado."}
+- termo: Decreto
+  slug: decreto
+  categoria: executivo
+  imagem: planalto
+  sinonimos: [decretos, decreto presidencial, decreto regulamentar, decreto autônomo]
+  autolink: [decreto presidencial, decretos presidenciais, decreto regulamentar, decretos regulamentares, decreto autônomo]
+  resumo: "é o ato do chefe do Executivo usado para regulamentar leis e organizar a administração, sem poder criar obrigações não previstas em lei."
+  definicao: |
+    O art. 84, IV, da Constituição atribui ao presidente da República expedir decretos e regulamentos para a fiel execução das leis. O decreto regulamentar detalha como uma lei será aplicada, mas não pode inovar, contrariar a lei ou criar direitos e deveres que ela não prevê.
+
+    O art. 84, VI, prevê o chamado decreto autônomo, que pode dispor sobre a organização e o funcionamento da administração federal, quando não implicar aumento de despesa nem criação ou extinção de órgãos públicos, e sobre a extinção de funções ou cargos públicos vagos.
+
+    Se o decreto exorbitar do poder regulamentar, o Congresso pode sustá-lo por decreto legislativo (art. 49, V), e o Judiciário pode anulá-lo.
+  contexto: |
+    O termo também aparece para atos excepcionais, como o decreto de intervenção federal ou de estado de defesa, que seguem ritos próprios. Decretos, assim como leis e medidas provisórias, são publicados no Diário Oficial da União e consolidados no portal do Planalto.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 49 (V) e 84 (IV e VI)", url: "@CF"}
+  relacionados: [presidente-da-republica, projeto-de-decreto-legislativo, ministro-de-estado, intervencao-federal]
+  faqs:
+    - {p: "Decreto pode criar imposto?", r: "Não. A criação de tributo depende de lei. A Constituição permite ao Executivo alterar, por decreto, as alíquotas de alguns tributos, como IOF e IPI, dentro dos limites legais."}
+    - {p: "Decreto pode revogar uma lei?", r: "Não. O decreto está abaixo da lei e só pode regulamentá-la. Uma lei só é revogada por outra lei."}
+    - {p: "O que acontece se o decreto passar dos limites da lei?", r: "O Congresso pode sustá-lo por decreto legislativo, e o Judiciário pode declarar a ilegalidade ou a inconstitucionalidade."}
+    - {p: "O que é decreto autônomo?", r: "É o decreto previsto no art. 84, VI, que organiza a administração federal sem aumentar despesa e sem criar ou extinguir órgãos, e extingue cargos vagos."}
+    - {p: "Governadores e prefeitos também editam decretos?", r: "Sim. Pelo princípio da simetria, chefes do Executivo estadual e municipal regulamentam as leis por decreto, nos limites das constituições estaduais e leis orgânicas."}
+- termo: Casa Civil
+  slug: casa-civil
+  categoria: executivo
+  imagem: planalto
+  sinonimos: [Casa Civil da Presidência da República]
+  resumo: "é o órgão da Presidência da República que coordena a ação do governo, a articulação entre ministérios e a análise jurídica dos atos do presidente."
+  definicao: |
+    A Casa Civil integra a Presidência da República. Suas competências, definidas na Lei nº 14.600/2023, incluem assistir diretamente o presidente na coordenação e na integração das ações governamentais, verificar previamente a constitucionalidade e a legalidade dos atos presidenciais e analisar o mérito, a oportunidade e a compatibilidade das propostas com as diretrizes do governo.
+
+    É na Casa Civil que tramitam os projetos de lei, decretos e medidas provisórias antes da assinatura do presidente, com pareceres da Subchefia para Assuntos Jurídicos. O órgão também publica a legislação federal no portal do Planalto.
+
+    O titular tem status de ministro de Estado.
+  contexto: |
+    O ministro da Casa Civil costuma ser descrito como coordenador do governo, porque organiza a agenda de projetos prioritários e arbitra divergências entre ministérios. A estrutura e o nome dos órgãos da Presidência podem mudar a cada governo, por lei.
+  base_legal:
+    - {nome: "Lei nº 14.600/2023", url: "@L14600"}
+    - {nome: "Constituição Federal, arts. 84 e 87", url: "@CF"}
+  relacionados: [ministro-de-estado, presidente-da-republica, decreto, medida-provisoria]
+  faqs:
+    - {p: "A Casa Civil é um ministério?", r: "É órgão da Presidência da República, e seu titular tem status de ministro de Estado."}
+    - {p: "Toda medida provisória passa pela Casa Civil?", r: "Sim. Propostas de MPs, decretos e projetos do Executivo são analisados pela Casa Civil antes da assinatura do presidente."}
+    - {p: "Onde a Casa Civil publica a legislação?", r: "No portal do Planalto, que mantém a legislação federal compilada, com as alterações de cada norma."}
+    - {p: "A estrutura da Casa Civil é fixa?", r: "Não. Ela é definida em lei de organização dos ministérios e regulamentada por decreto, e pode mudar entre governos."}
+    - {p: "Qual o papel da Subchefia para Assuntos Jurídicos?", r: "Analisar a constitucionalidade e a legalidade dos atos submetidos ao presidente e preparar os textos para publicação."}
+- termo: Advocacia-Geral da União
+  slug: agu
+  categoria: executivo
+  imagem: esplanada
+  sigla: AGU
+  sinonimos: [advogado-geral da União]
+  resumo: "é a instituição que representa a União na Justiça e presta consultoria jurídica ao Poder Executivo federal."
+  definicao: |
+    Prevista no art. 131 da Constituição, a Advocacia-Geral da União representa a União, judicial e extrajudicialmente, e cuida das atividades de consultoria e assessoramento jurídico do Poder Executivo. Sua organização está na Lei Complementar nº 73/1993.
+
+    O advogado-geral da União é de livre nomeação pelo presidente da República, entre cidadãos maiores de 35 anos, de notável saber jurídico e reputação ilibada. A AGU reúne carreiras como advogados da União, procuradores federais e procuradores da Fazenda Nacional, estes últimos responsáveis pela execução da dívida ativa de natureza tributária.
+
+    Nas ações diretas de inconstitucionalidade, o art. 103, § 3º, da Constituição prevê que o advogado-geral da União seja citado para defender a norma questionada.
+  contexto: |
+    A AGU aparece no noticiário em ações em que a União é parte, como disputas com estados, acordos de grande valor e defesa de leis no STF. Não confundir com a PGR, que chefia o Ministério Público da União e tem atuação independente do governo.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 103 (§ 3º) e 131", url: "@CF"}
+    - {nome: "Lei Complementar nº 73/1993", url: "@LC73"}
+  relacionados: [procurador-geral-da-republica, adi, ministro-de-estado, stf]
+  faqs:
+    - {p: "Qual a diferença entre AGU e PGR?", r: "A AGU defende a União e assessora o governo. A PGR chefia o Ministério Público da União, que fiscaliza a lei e acusa nas ações penais, com autonomia em relação ao governo."}
+    - {p: "Quem nomeia o advogado-geral da União?", r: "O presidente da República, livremente, sem necessidade de aprovação do Senado."}
+    - {p: "A AGU defende leis no STF?", r: "Sim. Nas ações diretas de inconstitucionalidade, o advogado-geral da União é citado para defender o ato impugnado."}
+    - {p: "A AGU representa estados e municípios?", r: "Não. Estados e municípios têm suas próprias procuradorias. A AGU representa a União e, por meio da Procuradoria-Geral Federal, autarquias e fundações federais."}
+    - {p: "Quem cobra a dívida ativa da União?", r: "A Procuradoria-Geral da Fazenda Nacional, órgão vinculado à AGU, nos casos de natureza tributária."}
+- termo: Crime de responsabilidade
+  slug: crime-de-responsabilidade
+  categoria: controle
+  imagem: senado2
+  sinonimos: [crimes de responsabilidade]
+  resumo: "é a infração político-administrativa cometida por altas autoridades, como o presidente da República, que pode levar à perda do cargo e à inabilitação para funções públicas."
+  definicao: |
+    O art. 85 da Constituição considera crimes de responsabilidade os atos do presidente da República que atentem contra a Constituição e, especialmente, contra a existência da União, o livre exercício dos Poderes, os direitos políticos, individuais e sociais, a segurança interna, a probidade na administração, a lei orçamentária e o cumprimento das leis e decisões judiciais.
+
+    A definição das condutas e o processo estão na Lei nº 1.079/1950, que também se aplica a ministros de Estado, ministros do STF, procurador-geral da República, governadores e secretários estaduais. Para prefeitos, as regras estão no Decreto-Lei nº 201/1967.
+
+    Apesar do nome, não é crime no sentido penal: a pena é a perda do cargo, com inabilitação por oito anos para o exercício de função pública, sem prejuízo de outras sanções judiciais.
+  contexto: |
+    O julgamento do presidente por crime de responsabilidade é político-jurídico: a Câmara autoriza por dois terços e o Senado julga, sob a presidência do presidente do STF. O STF, na ADPF 378 (2015), definiu o rito aplicável ao processo de impeachment com base na Constituição e na Lei nº 1.079/1950.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 52, 85 e 86", url: "@CF"}
+    - {nome: "Lei nº 1.079/1950", url: "@L1079"}
+  relacionados: [impeachment, presidente-da-republica, ministro-de-estado, maioria-qualificada]
+  faqs:
+    - {p: "Crime de responsabilidade dá prisão?", r: "Não. A sanção é a perda do cargo e a inabilitação por oito anos para funções públicas. Eventuais crimes comuns são julgados separadamente pela Justiça."}
+    - {p: "Quem julga o presidente por crime de responsabilidade?", r: "O Senado, depois de a Câmara autorizar a instauração do processo por dois terços dos deputados."}
+    - {p: "Ministro do STF pode responder por crime de responsabilidade?", r: "Sim. A Lei nº 1.079/1950 prevê crimes de responsabilidade de ministros do STF, processados e julgados pelo Senado."}
+    - {p: "Qual lei define os crimes de responsabilidade?", r: "A Lei nº 1.079/1950, para presidente, ministros, ministros do STF, PGR e governadores, e o Decreto-Lei nº 201/1967, para prefeitos."}
+    - {p: "Crime de responsabilidade é o mesmo que improbidade?", r: "Não. A improbidade é julgada pelo Judiciário em ação civil e tem sanções próprias. O crime de responsabilidade é julgado por órgão político, como o Senado."}
+- termo: Estado de defesa
+  slug: estado-de-defesa
+  categoria: executivo
+  imagem: tres-poderes
+  resumo: "é a medida excepcional decretada pelo presidente para preservar ou restabelecer a ordem pública em locais restritos, com restrição temporária de alguns direitos."
+  definicao: |
+    O art. 136 da Constituição permite ao presidente da República, ouvidos o Conselho da República e o Conselho de Defesa Nacional, decretar estado de defesa para preservar ou prontamente restabelecer, em locais restritos e determinados, a ordem pública ou a paz social ameaçadas por grave e iminente instabilidade institucional ou atingidas por calamidades de grandes proporções na natureza.
+
+    O decreto fixa o tempo de duração, que não pode passar de 30 dias, prorrogável uma vez por igual período, e as medidas coercitivas, como restrições aos direitos de reunião, ao sigilo de correspondência e de comunicação telefônica.
+
+    Em 24 horas, o presidente submete o decreto ao Congresso, que decide por maioria absoluta em até dez dias. Rejeitado o decreto, cessa imediatamente o estado de defesa.
+  contexto: |
+    O estado de defesa nunca foi decretado desde 1988. Ele é mais restrito que o estado de sítio: vale para locais determinados e não exige autorização prévia do Congresso, apenas aprovação posterior.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 136, 140 e 141", url: "@CF"}
+  relacionados: [estado-de-sitio, intervencao-federal, presidente-da-republica, garantia-da-lei-e-da-ordem]
+  faqs:
+    - {p: "Quanto tempo dura o estado de defesa?", r: "Até 30 dias, prorrogável uma vez por igual período, conforme o art. 136 da Constituição."}
+    - {p: "O Congresso precisa aprovar o estado de defesa?", r: "Sim, depois de decretado. O presidente envia o decreto em 24 horas e o Congresso decide por maioria absoluta em até dez dias."}
+    - {p: "Quais direitos podem ser restringidos?", r: "Os direitos de reunião, ainda que em associações, o sigilo de correspondência e o sigilo de comunicação telegráfica e telefônica, além de ocupação temporária de bens públicos em caso de calamidade."}
+    - {p: "Alguém pode ser preso no estado de defesa sem ordem judicial?", r: "A prisão por crime contra o Estado pode ser determinada pelo executor da medida, mas deve ser comunicada imediatamente ao juiz, e não pode passar de dez dias sem autorização judicial."}
+    - {p: "A Constituição pode ser emendada durante o estado de defesa?", r: "Não. O art. 60, § 1º, proíbe emendas constitucionais na vigência de estado de defesa, estado de sítio ou intervenção federal."}
+- termo: Estado de sítio
+  slug: estado-de-sitio
+  categoria: executivo
+  imagem: tres-poderes
+  resumo: "é a medida excepcional mais grave prevista na Constituição, decretada com autorização prévia do Congresso em casos de comoção grave ou guerra."
+  definicao: |
+    O art. 137 da Constituição permite ao presidente da República, ouvidos o Conselho da República e o Conselho de Defesa Nacional, solicitar ao Congresso autorização para decretar estado de sítio em dois casos: comoção grave de repercussão nacional ou fatos que comprovem a ineficácia de medida tomada durante o estado de defesa; e declaração de estado de guerra ou resposta a agressão armada estrangeira.
+
+    A autorização depende de maioria absoluta do Congresso. No primeiro caso, o estado de sítio dura até 30 dias por vez; no caso de guerra, pode durar enquanto ela durar. O decreto indica as normas, as garantias suspensas e as áreas abrangidas.
+
+    As medidas possíveis incluem obrigação de permanência em local determinado, detenção em edifício não destinado a presos comuns, restrições à inviolabilidade da correspondência e à liberdade de imprensa, suspensão da liberdade de reunião, busca e apreensão em domicílio e requisição de bens.
+  contexto: |
+    O estado de sítio não foi decretado desde 1988. Durante sua vigência, o Congresso permanece em funcionamento, e a imunidade parlamentar só pode ser suspensa por dois terços dos votos da Casa, em casos específicos.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 137 a 141", url: "@CF"}
+  relacionados: [estado-de-defesa, intervencao-federal, imunidade-parlamentar, presidente-da-republica]
+  faqs:
+    - {p: "Qual a diferença entre estado de defesa e estado de sítio?", r: "O estado de defesa é local, decretado antes da aprovação do Congresso. O estado de sítio é mais grave, pode abranger todo o país e exige autorização prévia do Congresso."}
+    - {p: "Quantos votos são necessários para autorizar o estado de sítio?", r: "Maioria absoluta do Congresso Nacional, conforme o art. 137, parágrafo único, da Constituição."}
+    - {p: "O Congresso fecha durante o estado de sítio?", r: "Não. O art. 138, § 3º, determina que o Congresso permaneça em funcionamento até o término das medidas."}
+    - {p: "Quanto tempo dura o estado de sítio?", r: "Até 30 dias por vez, prorrogáveis, no caso de comoção grave. Em caso de guerra, pode durar enquanto durar a guerra ou a agressão estrangeira."}
+    - {p: "Há controle sobre os atos praticados no estado de sítio?", r: "Sim. Terminada a medida, o presidente relata ao Congresso as providências adotadas, e os executores respondem pelos ilícitos cometidos, conforme o art. 141."}
+- termo: Garantia da Lei e da Ordem
+  slug: garantia-da-lei-e-da-ordem
+  categoria: executivo
+  imagem: esplanada
+  sigla: GLO
+  sinonimos: [operação de GLO, operações de Garantia da Lei e da Ordem]
+  resumo: "é o emprego temporário das Forças Armadas na segurança pública, autorizado pelo presidente da República quando os órgãos de segurança se mostram insuficientes."
+  definicao: |
+    O art. 142 da Constituição atribui às Forças Armadas a defesa da pátria, a garantia dos Poderes constitucionais e, por iniciativa de qualquer destes, da lei e da ordem. A Lei Complementar nº 97/1999, no art. 15, regula esse emprego: ele depende de decisão do presidente da República e ocorre depois de esgotados os instrumentos destinados à preservação da ordem pública, como as polícias.
+
+    A operação de GLO é episódica, em área previamente estabelecida e por tempo limitado. Pode ser decretada por iniciativa própria do presidente ou a pedido dos presidentes do STF, do Senado ou da Câmara. Governadores costumam solicitar a medida quando reconhecem que suas forças de segurança estão indisponíveis, inexistentes ou insuficientes.
+
+    O STF decidiu em 2024, na ADI 6457, que a Constituição não atribui às Forças Armadas papel de poder moderador entre os Poderes.
+  contexto: |
+    Operações de GLO foram usadas em grandes eventos, em greves de polícias estaduais e em portos e aeroportos. A GLO é diferente da intervenção federal: não afasta o governador nem transfere o comando da segurança do estado.
+  base_legal:
+    - {nome: "Constituição Federal, art. 142", url: "@CF"}
+    - {nome: "Lei Complementar nº 97/1999, art. 15", url: "@LC97"}
+  relacionados: [intervencao-federal, estado-de-defesa, presidente-da-republica, federalismo]
+  faqs:
+    - {p: "Quem pode decretar uma GLO?", r: "O presidente da República, por iniciativa própria ou a pedido de qualquer dos Poderes, por meio dos presidentes do STF, do Senado ou da Câmara."}
+    - {p: "Qual a diferença entre GLO e intervenção federal?", r: "A GLO emprega militares em apoio à segurança sem afastar o governo estadual. Na intervenção, a União assume uma área de competência do estado por decreto aprovado pelo Congresso."}
+    - {p: "A GLO precisa ser aprovada pelo Congresso?", r: "Não. É ato do presidente da República, com base na Lei Complementar nº 97/1999, sem necessidade de aprovação legislativa."}
+    - {p: "Quanto tempo dura uma GLO?", r: "O tempo definido no decreto, sempre limitado e em área determinada, como prevê o art. 15 da Lei Complementar nº 97/1999."}
+    - {p: "As Forças Armadas podem atuar como poder moderador?", r: "Não. O STF decidiu na ADI 6457 que o art. 142 não autoriza intervenção militar sobre os Poderes nem papel de poder moderador."}
+- termo: Agência reguladora
+  slug: agencia-reguladora
+  categoria: executivo
+  imagem: esplanada
+  sinonimos: [agências reguladoras]
+  resumo: "é a autarquia federal de regime especial que regula e fiscaliza um setor da economia, com diretores com mandato fixo aprovados pelo Senado."
+  definicao: |
+    As agências reguladoras são autarquias com autonomia administrativa e financeira, criadas por lei para regular serviços públicos e setores econômicos, como energia (Aneel), telecomunicações (Anatel), petróleo (ANP), saúde suplementar (ANS), vigilância sanitária (Anvisa), transportes (ANTT e Antaq) e aviação (Anac).
+
+    A Lei nº 13.848/2019, conhecida como Lei Geral das Agências, define regras comuns: tomada de decisão colegiada, análise de impacto regulatório, consultas públicas, transparência e controle externo pelo Congresso com auxílio do TCU. A Lei nº 9.986/2000 trata da indicação dos dirigentes, que têm mandato fixo, são nomeados pelo presidente da República e precisam de aprovação do Senado.
+
+    A autonomia significa que os dirigentes não podem ser exonerados livremente durante o mandato, salvo nas hipóteses legais.
+  contexto: |
+    As decisões das agências afetam tarifas, contratos de concessão e regras de produtos. Por isso, nomeações para diretorias e mudanças na lei geral são acompanhadas de perto pelo Congresso e pelo setor regulado.
+  base_legal:
+    - {nome: "Lei nº 13.848/2019 (Lei Geral das Agências Reguladoras)", url: "@L13848"}
+    - {nome: "Lei nº 9.986/2000", url: "@L9986"}
+  relacionados: [sabatina, banco-central, tcu, decreto]
+  faqs:
+    - {p: "Quem nomeia os diretores das agências reguladoras?", r: "O presidente da República, depois de aprovação do Senado, que sabatina os indicados."}
+    - {p: "O governo pode demitir diretor de agência a qualquer momento?", r: "Não. Os dirigentes têm mandato fixo e só perdem o cargo nas hipóteses previstas em lei, como renúncia, condenação ou processo disciplinar."}
+    - {p: "Qual a lei geral das agências?", r: "A Lei nº 13.848/2019, que padroniza governança, transparência, análise de impacto regulatório e prestação de contas."}
+    - {p: "Agência reguladora pode criar regras?", r: "Pode editar normas técnicas dentro dos limites da lei que a criou. Não pode inovar além do que a lei autoriza."}
+    - {p: "Quem fiscaliza as agências?", r: "O Congresso, com auxílio do TCU, além dos ministérios a que estão vinculadas, nos termos da Lei nº 13.848/2019."}
+- termo: Banco Central do Brasil
+  slug: banco-central
+  categoria: executivo
+  imagem: bc
+  sigla: BC
+  sinonimos: [Banco Central, autonomia do Banco Central]
+  autolink: [Banco Central do Brasil, Banco Central, autonomia do Banco Central]
+  autolink_sigla: false
+  resumo: "é a autarquia responsável pela política monetária, pelo controle da inflação e pela regulação do sistema financeiro, com autonomia definida em lei desde 2021."
+  definicao: |
+    O Banco Central do Brasil é uma autarquia federal cuja missão principal, segundo a Lei Complementar nº 179/2021, é assegurar a estabilidade de preços. Também zela pela estabilidade e eficiência do sistema financeiro, suaviza as flutuações da atividade econômica e fomenta o pleno emprego. É o Comitê de Política Monetária (Copom), formado pela diretoria, que define a taxa básica de juros, a Selic.
+
+    A LC 179/2021 deu autonomia ao BC: o presidente e os diretores têm mandatos fixos de quatro anos, não coincidentes com o do presidente da República, e só podem ser exonerados nas hipóteses legais. São indicados e nomeados pelo presidente da República após aprovação do Senado.
+
+    O art. 164 da Constituição proíbe o Banco Central de conceder empréstimos ao Tesouro Nacional.
+  contexto: |
+    O presidente do BC presta contas ao Senado periodicamente sobre as decisões de política monetária. Como o mandato começa no terceiro ano do mandato presidencial, cada governo convive por dois anos com uma diretoria indicada pelo antecessor. O STF confirmou a constitucionalidade da lei de autonomia em 2021, na ADI 6696.
+  base_legal:
+    - {nome: "Lei Complementar nº 179/2021", url: "@LC179"}
+    - {nome: "Constituição Federal, arts. 52 (III, d) e 164", url: "@CF"}
+  relacionados: [agencia-reguladora, sabatina, arcabouco-fiscal, ministro-de-estado]
+  faqs:
+    - {p: "Quem define a taxa Selic?", r: "O Comitê de Política Monetária, formado pelo presidente e pelos diretores do Banco Central, em reuniões periódicas."}
+    - {p: "O presidente da República pode demitir o presidente do Banco Central?", r: "Não livremente. A Lei Complementar nº 179/2021 só admite exoneração em hipóteses como desempenho insuficiente, com aprovação do Senado, condenação ou doença."}
+    - {p: "Qual o mandato do presidente do Banco Central?", r: "Quatro anos, começando em 1º de janeiro do terceiro ano do mandato do presidente da República, permitida uma recondução."}
+    - {p: "O Banco Central pode financiar o governo?", r: "Não. O art. 164 da Constituição proíbe empréstimos do Banco Central ao Tesouro Nacional e a qualquer órgão que não seja instituição financeira."}
+    - {p: "O STF validou a autonomia do Banco Central?", r: "Sim. Em 2021, o STF julgou improcedente a ADI 6696 e manteve a Lei Complementar nº 179/2021."}
+- termo: Indulto
+  slug: indulto
+  categoria: executivo
+  imagem: planalto
+  sinonimos: [indulto natalino, graça presidencial, indultos]
+  autolink: [indulto, indultos, indulto natalino, graça presidencial]
+  resumo: "é o perdão de penas concedido pelo presidente da República por decreto, de forma coletiva (indulto) ou individual (graça)."
+  definicao: |
+    O art. 84, XII, da Constituição atribui ao presidente da República conceder indulto e comutar penas, com audiência, se necessário, dos órgãos instituídos em lei. O indulto coletivo é concedido por decreto que define requisitos, como tempo de pena cumprido e tipo de crime. A graça, também chamada indulto individual, beneficia uma pessoa determinada.
+
+    A Constituição proíbe graça e anistia para a prática de tortura, o tráfico ilícito de drogas, o terrorismo e os crimes definidos como hediondos (art. 5º, XLIII). O indulto extingue a punibilidade, mas não apaga a condenação para outros efeitos, como a reincidência.
+
+    O STF decidiu em 2019, na ADI 5874, que a concessão é ato discricionário do presidente, limitado pelas vedações constitucionais.
+  contexto: |
+    Por tradição, o decreto de indulto natalino é editado todos os anos no fim de dezembro. Em 2023, o STF anulou um decreto de graça individual de 2022 por desvio de finalidade, nas ADPFs 964, 965, 966 e 967.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 5º (XLIII) e 84 (XII)", url: "@CF"}
+    - {nome: "Código de Processo Penal, arts. 734 a 742", url: "@CPP"}
+  relacionados: [presidente-da-republica, decreto, transitado-em-julgado, stf]
+  faqs:
+    - {p: "Qual a diferença entre indulto e graça?", r: "O indulto é coletivo e alcança todos que cumprem os requisitos do decreto. A graça é individual e beneficia uma pessoa determinada."}
+    - {p: "Todo crime pode ser indultado?", r: "Não. A Constituição proíbe graça e anistia para tortura, tráfico de drogas, terrorismo e crimes hediondos, e os decretos costumam excluir outros crimes."}
+    - {p: "Indulto apaga a condenação?", r: "Não. Extingue a pena, mas a condenação permanece registrada e pode gerar efeitos, como a reincidência."}
+    - {p: "Qual a diferença entre indulto e anistia?", r: "O indulto é concedido pelo presidente por decreto e atinge a pena. A anistia é concedida por lei do Congresso e apaga o próprio crime para os fatos que abrange."}
+    - {p: "O STF pode anular um indulto?", r: "Pode, se houver violação das vedações constitucionais ou desvio de finalidade. Em 2023, o STF anulou um decreto de graça individual editado em 2022."}

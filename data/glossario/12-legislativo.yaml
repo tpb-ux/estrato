@@ -1,0 +1,317 @@
+termos:
+- termo: Projeto de lei de conversão
+  slug: projeto-de-lei-de-conversao
+  categoria: processo-legislativo
+  imagem: plenario-senado
+  sigla: PLV
+  resumo: "é o texto que resulta de uma medida provisória alterada pelo Congresso e que, aprovado, segue para sanção do presidente da República."
+  definicao: |
+    Quando o Congresso aprova a medida provisória sem mudanças, ela é promulgada como lei pelo presidente do Senado. Quando o texto é alterado, a MP passa a tramitar como projeto de lei de conversão, o PLV, elaborado a partir do parecer da comissão mista.
+
+    O art. 62, § 12, da Constituição estabelece que, aprovado o PLV, a medida provisória continua integralmente em vigor até que o projeto seja sancionado ou vetado. Como qualquer projeto de lei, o PLV pode receber vetos totais ou parciais.
+
+    As alterações devem guardar pertinência com o tema da MP. O STF considerou incompatível com a Constituição a inclusão de emendas sem relação com o objeto da medida.
+  contexto: |
+    A maior parte das medidas provisórias aprovadas chega ao fim como PLV, porque deputados e senadores costumam ajustar o texto. É no PLV que costumam aparecer os chamados jabutis, trechos estranhos ao tema original.
+  base_legal:
+    - {nome: "Constituição Federal, art. 62, § 12", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 32/2001", url: "@EC32"}
+  relacionados: [medida-provisoria, comissao-mista, jabuti, sancao]
+  faqs:
+    - {p: "MP aprovada sem mudanças vira PLV?", r: "Não. Sem alterações, a medida é aprovada no texto original e promulgada pelo presidente do Senado, sem sanção."}
+    - {p: "Enquanto o PLV aguarda sanção, a MP continua valendo?", r: "Sim. O art. 62, § 12, da Constituição mantém a MP em vigor até a sanção ou o veto do projeto de lei de conversão."}
+    - {p: "O presidente pode vetar o PLV?", r: "Sim. O PLV é um projeto de lei e se sujeita a sanção ou veto, total ou parcial."}
+    - {p: "Quem redige o PLV?", r: "O relator da comissão mista, no parecer. O texto pode ser alterado depois pelos plenários da Câmara e do Senado."}
+    - {p: "O PLV pode tratar de outros assuntos além do tema da MP?", r: "Não deveria. Desde a ADI 5127, de 2015, o STF considera inconstitucional incluir em lei de conversão emendas sem pertinência temática com a medida provisória."}
+- termo: Iniciativa popular
+  slug: iniciativa-popular
+  categoria: processo-legislativo
+  imagem: congresso2
+  sinonimos: [projeto de iniciativa popular, projetos de iniciativa popular]
+  autolink: [iniciativa popular, projeto de iniciativa popular, projetos de iniciativa popular]
+  resumo: "é o direito dos eleitores de apresentar projeto de lei à Câmara, com assinaturas de pelo menos 1% do eleitorado nacional, distribuídas por cinco estados."
+  definicao: |
+    O art. 61, § 2º, da Constituição prevê que a iniciativa popular pode ser exercida pela apresentação à Câmara dos Deputados de projeto de lei subscrito por, no mínimo, 1% do eleitorado nacional, distribuído por pelo menos cinco estados, com não menos de 0,3% dos eleitores de cada um deles.
+
+    A iniciativa popular é uma das formas de exercício direto da soberania popular previstas no art. 14 da Constituição, ao lado do plebiscito e do referendo, regulamentadas pela Lei nº 9.709/1998. Pelo Regimento Interno da Câmara, o projeto de iniciativa popular não tramita em caráter conclusivo e é sempre votado no plenário.
+
+    Nos estados e municípios, as constituições estaduais e leis orgânicas fixam regras próprias de iniciativa popular.
+  contexto: |
+    Exemplos conhecidos são a Lei nº 9.840/1999, que tornou crime eleitoral a compra de votos com cassação do registro, e a Lei Complementar nº 135/2010, a Ficha Limpa. Na prática, para ganhar rapidez, projetos com apoio popular costumam ser apresentados também por um parlamentar, porque a conferência das assinaturas é demorada.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 14 e 61, § 2º", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 24 e 252", url: "@RICD"}
+  relacionados: [projeto-de-lei, ficha-limpa, compra-de-votos, poder-conclusivo]
+  faqs:
+    - {p: "Quantas assinaturas são necessárias para um projeto de iniciativa popular?", r: "Pelo menos 1% do eleitorado nacional, distribuído por no mínimo cinco estados, com pelo menos 0,3% dos eleitores de cada um deles."}
+    - {p: "Iniciativa popular pode propor PEC?", r: "A Constituição Federal prevê a iniciativa popular para projetos de lei. A PEC tem rol próprio de autores no art. 60, que não inclui os eleitores diretamente."}
+    - {p: "A assinatura precisa ter título de eleitor?", r: "Sim. O Regimento Interno da Câmara exige nome completo, endereço e dados do título eleitoral de cada signatário."}
+    - {p: "Projeto de iniciativa popular tem prioridade?", r: "Não há prioridade automática, mas ele não pode ser aprovado só em comissão: o Regimento Interno da Câmara exige votação no plenário."}
+    - {p: "Quais leis nasceram de iniciativa popular?", r: "Entre os exemplos estão a Lei nº 9.840/1999, sobre compra de votos, e a Lei Complementar nº 135/2010, a Lei da Ficha Limpa."}
+- termo: Recesso parlamentar
+  slug: recesso-parlamentar
+  categoria: processo-legislativo
+  imagem: congresso
+  sinonimos: [recesso legislativo, recesso do Congresso, recesso branco]
+  autolink: [recesso parlamentar, recesso legislativo, recesso do Congresso, recesso branco]
+  resumo: "é o intervalo entre os períodos da sessão legislativa, de 18 a 31 de julho e de 23 de dezembro a 1º de fevereiro, em que o Congresso não realiza sessões ordinárias."
+  definicao: |
+    O recesso corresponde aos períodos fora da sessão legislativa ordinária definida no art. 57 da Constituição. Durante esse tempo, funciona uma comissão representativa do Congresso, eleita pelas duas Casas, com atribuições definidas no regimento comum (art. 58, § 4º).
+
+    O Congresso pode ser chamado a se reunir em sessão legislativa extraordinária. A convocação cabe ao presidente do Senado em casos como decretação de estado de defesa ou de intervenção federal, ou ao presidente da República, aos presidentes das Casas ou à maioria dos membros de ambas, em caso de urgência ou interesse público relevante, com aprovação da maioria absoluta de cada Casa (art. 57, § 6º).
+
+    Na convocação extraordinária, só se delibera sobre a matéria que a motivou e as medidas provisórias em vigor, e é vedado pagamento extra aos parlamentares.
+  contexto: |
+    O chamado recesso branco é informal: ocorre quando, sem aprovação da LDO, a sessão legislativa não é interrompida em julho, mas as Casas não marcam votações. Os prazos das medidas provisórias ficam suspensos durante o recesso.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 57 e 58, § 4º", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 50/2006", url: "@EC50"}
+  relacionados: [sessao-legislativa, medida-provisoria, ldo, legislatura]
+  faqs:
+    - {p: "Quando é o recesso parlamentar?", r: "De 18 a 31 de julho e de 23 de dezembro a 1º de fevereiro, os períodos fora da sessão legislativa ordinária."}
+    - {p: "Deputados recebem a mais quando há convocação extraordinária?", r: "Não. Desde a Emenda Constitucional nº 50/2006, é vedado o pagamento de parcela indenizatória pela convocação extraordinária."}
+    - {p: "O que é recesso branco?", r: "É um recesso informal, sem sessões deliberativas, quando a sessão legislativa não pode ser formalmente interrompida porque a LDO não foi aprovada."}
+    - {p: "Os prazos das medidas provisórias correm no recesso?", r: "Não. O art. 62, § 4º, da Constituição suspende a contagem do prazo de vigência das MPs durante os períodos de recesso."}
+    - {p: "Quem pode convocar o Congresso durante o recesso?", r: "O presidente do Senado, nos casos de estado de defesa, intervenção federal e estado de sítio, ou o presidente da República, os presidentes das Casas ou a maioria de seus membros, com aprovação da maioria absoluta de cada Casa."}
+- termo: Questão de ordem
+  slug: questao-de-ordem
+  categoria: processo-legislativo
+  imagem: plenario-camara2
+  sinonimos: [questões de ordem]
+  resumo: "é a dúvida levantada por um parlamentar sobre a interpretação do regimento ou da Constituição na condução dos trabalhos, decidida pelo presidente da sessão."
+  definicao: |
+    O Regimento Interno da Câmara define questão de ordem como toda dúvida sobre a interpretação do regimento, na sua prática exclusiva ou relacionada com a Constituição. O parlamentar formula a questão de forma objetiva, indicando o dispositivo em causa, e o presidente da sessão decide.
+
+    Da decisão cabe recurso à Comissão de Constituição e Justiça e, depois, ao plenário, conforme o regimento. As decisões sobre questões de ordem formam precedentes que orientam a condução dos trabalhos em casos semelhantes.
+
+    No Senado, o mecanismo é parecido e está previsto no Regimento Interno do Senado Federal.
+  contexto: |
+    Questões de ordem são usadas para discutir procedimentos, como a ordem de votação, o cabimento de uma emenda ou a contagem de prazos. Algumas decisões, como a que restringiu o trancamento de pauta por medidas provisórias, mudaram a prática do Congresso por anos.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, art. 95", url: "@RICD"}
+    - {nome: "Regimento Interno do Senado Federal, arts. 403 a 408", url: "@RISF"}
+  relacionados: [regimento-interno, presidente-da-camara, ccj, trancamento-de-pauta]
+  faqs:
+    - {p: "Quem decide a questão de ordem?", r: "O presidente da sessão, no plenário ou na comissão. A decisão pode ser contestada por recurso, conforme o regimento."}
+    - {p: "Questão de ordem pode tratar de qualquer assunto?", r: "Não. Deve se referir à interpretação do regimento ou da Constituição aplicada aos trabalhos, com indicação do dispositivo."}
+    - {p: "Decisão de questão de ordem vira regra?", r: "Ela forma precedente, que pode ser invocado em casos semelhantes, mas não muda o texto do regimento."}
+    - {p: "Questão de ordem pode ser levada ao STF?", r: "O STF costuma considerar matéria interna das Casas, mas pode analisar por mandado de segurança se houver violação de regra constitucional do processo legislativo."}
+    - {p: "Qual a diferença entre questão de ordem e reclamação?", r: "Ambas tratam de regras de funcionamento. Na Câmara, a reclamação se refere à observância do regimento nos serviços da Casa, enquanto a questão de ordem trata da interpretação durante os trabalhos."}
+- termo: Pedido de vista
+  slug: pedido-de-vista
+  categoria: processo-legislativo
+  imagem: comissao
+  sinonimos: [pedidos de vista, vista coletiva]
+  autolink: [pedido de vista, pedidos de vista, vista coletiva, pediu vista, pedir vista]
+  resumo: "é a solicitação de mais tempo para examinar um processo ou proposição antes da votação, usada em comissões do Congresso e em tribunais."
+  definicao: |
+    Nas comissões do Congresso, o membro que deseja analisar melhor um parecer pode pedir vista, o que adia a votação. Na Câmara, o Regimento Interno prevê vista pelo prazo de duas sessões, e a vista é concedida uma única vez para o mesmo parecer; quando vários membros pedem ao mesmo tempo, a vista é coletiva.
+
+    Nos tribunais, o pedido de vista suspende o julgamento para que o magistrado examine os autos. No STF, uma mudança no Regimento Interno aprovada em 2022 fixou prazo de 90 dias para a devolução dos processos com vista; vencido o prazo, o processo é liberado automaticamente para a continuidade do julgamento.
+
+    O Código de Processo Civil, no art. 940, também prevê prazo para devolução dos autos nos tribunais.
+  contexto: |
+    Em comissões, o pedido de vista é um instrumento comum para adiar votações polêmicas por alguns dias. No STF, julgamentos interrompidos por vista por longos períodos motivaram a mudança regimental de 2022.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, art. 57, XVI", url: "@RICD"}
+    - {nome: "Código de Processo Civil (Lei nº 13.105/2015), art. 940", url: "@CPC"}
+  relacionados: [parecer, comissao-permanente, plenario-virtual, relator]
+  faqs:
+    - {p: "Quanto tempo dura o pedido de vista na Câmara?", r: "Duas sessões, segundo o Regimento Interno da Câmara, concedido uma única vez para o mesmo parecer."}
+    - {p: "O que é vista coletiva?", r: "É a vista concedida a vários membros ao mesmo tempo, com prazo comum, para evitar adiamentos sucessivos."}
+    - {p: "Qual o prazo de vista no STF?", r: "Desde a emenda regimental de 2022, 90 dias. Depois disso, o processo é liberado automaticamente para julgamento."}
+    - {p: "Pedido de vista anula os votos já dados?", r: "Não. Os votos já proferidos continuam válidos, e o julgamento é retomado do ponto em que parou, salvo se algum ministro mudar o voto antes do fim."}
+    - {p: "Pedido de vista é a mesma coisa que pedido de destaque?", r: "Não. No plenário virtual do STF, o destaque leva o caso ao plenário presencial e reinicia o julgamento. A vista apenas suspende para análise."}
+- termo: Cláusula pétrea
+  slug: clausula-petrea
+  categoria: processo-legislativo
+  imagem: constituicao
+  sinonimos: [cláusulas pétreas]
+  resumo: "é o núcleo da Constituição que não pode ser abolido nem por emenda constitucional: federação, voto, separação dos Poderes e direitos e garantias individuais."
+  definicao: |
+    O art. 60, § 4º, da Constituição determina que não será objeto de deliberação a proposta de emenda tendente a abolir: a forma federativa de Estado; o voto direto, secreto, universal e periódico; a separação dos Poderes; e os direitos e garantias individuais.
+
+    A proteção não impede qualquer mudança nesses temas, mas veda as alterações que tendam a suprimi-los ou esvaziá-los. Cabe ao STF, em última instância, dizer se uma emenda violou cláusula pétrea, o que ele pode fazer tanto ao julgar ações contra emendas já promulgadas quanto, excepcionalmente, em mandado de segurança de parlamentar durante a tramitação.
+
+    Como o voto obrigatório não está no rol, ele poderia, em tese, ser alterado por emenda; já o voto direto e secreto, não.
+  contexto: |
+    O tema aparece sempre que uma PEC mexe em direitos ou na estrutura dos Poderes. Durante a tramitação, a Comissão de Constituição e Justiça examina a admissibilidade, inclusive se a proposta respeita as cláusulas pétreas.
+  base_legal:
+    - {nome: "Constituição Federal, art. 60, § 4º", url: "@CF"}
+  relacionados: [pec, ccj, federalismo, controle-de-constitucionalidade]
+  faqs:
+    - {p: "Quais são as cláusulas pétreas?", r: "A forma federativa de Estado; o voto direto, secreto, universal e periódico; a separação dos Poderes; e os direitos e garantias individuais."}
+    - {p: "Uma PEC pode mudar uma cláusula pétrea?", r: "Pode ajustar, mas não pode tender a aboli-la. O STF interpreta caso a caso se a mudança esvazia a proteção."}
+    - {p: "O voto obrigatório é cláusula pétrea?", r: "Não. A Constituição protege o voto direto, secreto, universal e periódico. A obrigatoriedade não está no rol do art. 60, § 4º."}
+    - {p: "Quem decide se uma emenda violou cláusula pétrea?", r: "O STF, ao julgar ações contra a emenda promulgada. A CCJ faz a análise preliminar durante a tramitação."}
+    - {p: "Parlamentar pode questionar no STF uma PEC que fere cláusula pétrea?", r: "Sim. O STF admite mandado de segurança de parlamentar para impedir a tramitação de PEC que viole cláusula pétrea, em caráter excepcional."}
+- termo: Regimento interno
+  slug: regimento-interno
+  categoria: congresso
+  imagem: plenario-camara2
+  sinonimos: [regimentos internos, Regimento Interno da Câmara, Regimento Interno do Senado, Regimento Comum]
+  resumo: "é o conjunto de regras que organiza o funcionamento de cada Casa do Congresso, de suas comissões e do processo de votação."
+  definicao: |
+    A Constituição atribui à Câmara (art. 51, III) e ao Senado (art. 52, XII) a competência privativa para elaborar seus regimentos internos. Eles definem a composição da Mesa e das comissões, os ritos de tramitação, os prazos, os tipos de votação, a atuação dos líderes e o uso da palavra.
+
+    O Regimento Interno da Câmara dos Deputados foi aprovado pela Resolução nº 17/1989, e o do Senado pela Resolução nº 93/1970, ambos com diversas alterações posteriores. As sessões conjuntas seguem o Regimento Comum do Congresso Nacional.
+
+    Os regimentos são aprovados e alterados por resolução, sem sanção presidencial.
+  contexto: |
+    Muitas disputas no Congresso são, na verdade, sobre o regimento: prazos de emendas, uso de requerimentos, quebra de interstício. O STF costuma tratar a interpretação regimental como assunto interno das Casas, salvo quando há violação direta da Constituição.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 51 (III) e 52 (XII)", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados", url: "@RICD"}
+    - {nome: "Regimento Interno do Senado Federal", url: "@RISF"}
+  relacionados: [questao-de-ordem, projeto-de-resolucao, mesa-diretora, tramitacao]
+  faqs:
+    - {p: "Quem aprova o regimento interno?", r: "Cada Casa aprova o seu, por resolução votada pelo próprio plenário, sem sanção do presidente da República."}
+    - {p: "O regimento da Câmara vale no Senado?", r: "Não. Cada Casa tem o seu regimento. As sessões conjuntas seguem o Regimento Comum do Congresso Nacional."}
+    - {p: "O regimento pode contrariar a Constituição?", r: "Não. As regras regimentais estão abaixo da Constituição e podem ser questionadas no STF se a violarem."}
+    - {p: "O STF pode anular uma votação por descumprimento do regimento?", r: "Em regra, o STF considera a interpretação do regimento matéria interna da Casa. A intervenção é admitida quando há ofensa direta a norma constitucional do processo legislativo."}
+    - {p: "Onde consultar os regimentos?", r: "Nos portais da Câmara e do Senado, que publicam o texto consolidado com as alterações."}
+- termo: Urgência constitucional
+  slug: urgencia-constitucional
+  categoria: processo-legislativo
+  imagem: planalto
+  sinonimos: [urgência pedida pelo presidente, regime de urgência constitucional]
+  autolink: [urgência constitucional, regime de urgência constitucional]
+  resumo: "é o pedido do presidente da República para que projeto de sua iniciativa seja votado em até 45 dias em cada Casa, sob pena de trancar a pauta."
+  definicao: |
+    O art. 64, § 1º, da Constituição permite que o presidente da República solicite urgência para a apreciação de projetos de sua iniciativa. Nesse caso, a Câmara e o Senado têm, sucessivamente, até 45 dias cada um para se manifestar.
+
+    Se o prazo vencer sem deliberação, ficam sobrestadas todas as demais deliberações legislativas da respectiva Casa, com exceção das que tenham prazo constitucional determinado, até que se conclua a votação. As eventuais emendas do Senado devem ser apreciadas pela Câmara em dez dias.
+
+    Os prazos não correm nos períodos de recesso e não se aplicam aos projetos de código.
+  contexto: |
+    A urgência constitucional é diferente da urgência regimental, aprovada por requerimento dos parlamentares. O presidente também pode retirar a urgência por nova mensagem ao Congresso, o que ocorre quando há acordo para votar o projeto em outro ritmo.
+  base_legal:
+    - {nome: "Constituição Federal, art. 64, §§ 1º a 4º", url: "@CF"}
+  relacionados: [regime-de-urgencia, trancamento-de-pauta, projeto-de-lei, presidente-da-republica]
+  faqs:
+    - {p: "Qual o prazo da urgência constitucional?", r: "Até 45 dias na Câmara e, depois, até 45 dias no Senado. As emendas do Senado devem ser votadas pela Câmara em até dez dias."}
+    - {p: "O presidente pode pedir urgência para qualquer projeto?", r: "Só para projetos de sua iniciativa e que não sejam projetos de código, segundo o art. 64 da Constituição."}
+    - {p: "Qual a diferença entre urgência constitucional e regimental?", r: "A constitucional é pedida pelo presidente da República e tranca a pauta após 45 dias. A regimental é aprovada pelos parlamentares e dispensa etapas da tramitação."}
+    - {p: "A urgência pode ser retirada?", r: "Sim. O presidente da República pode retirar a urgência por mensagem ao Congresso."}
+    - {p: "O prazo corre no recesso?", r: "Não. O art. 64, § 4º, da Constituição suspende a contagem durante o recesso parlamentar."}
+- termo: Jabuti
+  slug: jabuti
+  categoria: processo-legislativo
+  imagem: plenario-senado
+  sinonimos: [jabutis, contrabando legislativo, emenda sem pertinência temática]
+  autolink: [jabuti, jabutis, contrabando legislativo]
+  resumo: "é o nome informal dado a trecho incluído num projeto ou medida provisória sem relação com o tema principal do texto."
+  definicao: |
+    A expressão vem do ditado de que "jabuti não sobe em árvore": se está lá, alguém o colocou. No vocabulário do Congresso, designa a emenda sem pertinência temática, inserida para aprovar um assunto diferente aproveitando a tramitação de outro.
+
+    A Lei Complementar nº 95/1998, que trata da elaboração das leis, determina que cada lei trate de um único objeto e não contenha matéria estranha a ele. Em 2015, ao julgar a ADI 5127, o STF decidiu que é incompatível com a Constituição a apresentação de emendas sem relação de pertinência temática com a medida provisória submetida à conversão, preservando as leis já promulgadas até então.
+
+    Desde então, as presidências da Câmara e do Senado podem impugnar emendas estranhas ao tema, e o presidente da República pode vetá-las na sanção.
+  contexto: |
+    O termo é usado por parlamentares e pela imprensa de todos os lados do espectro político. Na prática, a análise sobre se um trecho tem ou não relação com o tema pode ser controversa e acaba decidida pela presidência da Casa, em veto ou no STF.
+  base_legal:
+    - {nome: "Lei Complementar nº 95/1998, art. 7º", url: "@LC95"}
+    - {nome: "Constituição Federal, art. 62", url: "@CF"}
+  relacionados: [emenda, projeto-de-lei-de-conversao, medida-provisoria, veto]
+  faqs:
+    - {p: "Por que o nome jabuti?", r: "Por causa do ditado popular de que jabuti não sobe em árvore sozinho: se o trecho está no texto sem relação com o tema, alguém o colocou ali."}
+    - {p: "Jabuti é proibido?", r: "A Lei Complementar nº 95/1998 exige que cada lei trate de um único objeto, e o STF declarou inconstitucional a emenda sem pertinência temática em medida provisória, na ADI 5127."}
+    - {p: "As leis com jabuti aprovadas antes de 2015 foram anuladas?", r: "Não. Na ADI 5127, o STF preservou as leis já promulgadas, aplicando o entendimento para casos futuros."}
+    - {p: "Quem pode barrar um jabuti?", r: "O relator e a presidência da Casa, que podem impugnar a emenda, o presidente da República, que pode vetá-la, e o STF, se acionado."}
+    - {p: "Jabuti só existe em medida provisória?", r: "É mais comum em MPs, mas o termo também é usado para emendas sem relação com o tema em projetos de lei."}
+- termo: Lei delegada
+  slug: lei-delegada
+  categoria: processo-legislativo
+  imagem: planalto
+  sinonimos: [leis delegadas]
+  resumo: "é a lei elaborada pelo presidente da República a partir de delegação do Congresso, aprovada por resolução que define conteúdo e limites."
+  definicao: |
+    Prevista no art. 68 da Constituição, a lei delegada é editada pelo presidente da República depois de solicitar e obter delegação do Congresso. A delegação é feita por resolução, que especifica o conteúdo e os termos de exercício. A resolução pode determinar que o projeto seja apreciado pelo Congresso, em votação única e sem emendas.
+
+    Não podem ser delegados os atos de competência exclusiva do Congresso, os de competência privativa da Câmara ou do Senado, a matéria reservada a lei complementar e a legislação sobre organização do Judiciário e do Ministério Público, nacionalidade, cidadania, direitos individuais, políticos e eleitorais, planos plurianuais, diretrizes orçamentárias e orçamentos.
+
+    O Congresso pode sustar, por decreto legislativo, o ato que exorbite dos limites da delegação (art. 49, V).
+  contexto: |
+    A lei delegada caiu em desuso depois de 1988, porque a medida provisória oferece ao presidente um caminho mais rápido. A última lei delegada federal é a de nº 13, de 1992.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 49 (V), 59 (IV) e 68", url: "@CF"}
+  relacionados: [medida-provisoria, projeto-de-resolucao, projeto-de-decreto-legislativo, presidente-da-republica]
+  faqs:
+    - {p: "Lei delegada ainda é usada?", r: "Quase nunca. Desde 1988 foram editadas poucas leis delegadas federais, a última em 1992. A medida provisória ocupou esse espaço."}
+    - {p: "Qual a diferença entre lei delegada e medida provisória?", r: "A lei delegada depende de autorização prévia do Congresso. A MP é editada pelo presidente e vale de imediato, sujeita a aprovação posterior."}
+    - {p: "Que temas não podem ser objeto de lei delegada?", r: "Os listados no art. 68, § 1º, da Constituição, como matéria de lei complementar, direitos individuais, políticos e eleitorais e as leis orçamentárias."}
+    - {p: "O Congresso pode anular uma lei delegada?", r: "Pode sustar, por decreto legislativo, a parte que exceder os limites da delegação, conforme o art. 49, V, da Constituição."}
+    - {p: "Lei delegada tem a mesma força de lei ordinária?", r: "Sim. Ela está no mesmo patamar da lei ordinária na hierarquia das normas."}
+- termo: Projeto de resolução
+  slug: projeto-de-resolucao
+  categoria: processo-legislativo
+  imagem: plenario-senado
+  sinonimos: [resolução do Senado, resolução da Câmara]
+  resumo: "é a proposição que trata de assuntos de competência privativa da Câmara, do Senado ou do Congresso, aprovada sem sanção presidencial."
+  definicao: |
+    A resolução é uma das espécies normativas do art. 59 da Constituição. É usada para regular matérias internas das Casas, como os regimentos, a criação de comissões e a organização administrativa, e para assuntos de competência privativa definidos na Constituição.
+
+    O Senado, por exemplo, edita resoluções para fixar limites globais da dívida consolidada de estados e municípios, autorizar operações externas de natureza financeira e estabelecer alíquotas de alguns tributos, conforme o art. 52 e o art. 155 da Constituição. O Congresso usa resolução para delegar poderes no caso da lei delegada.
+
+    Como não há sanção, a resolução aprovada é promulgada pela Mesa da Casa ou pelo presidente do Congresso.
+  contexto: |
+    Na Câmara, os projetos de resolução recebem a sigla PRC; no Senado, PRS. Grupos parlamentares de amizade com outros países e alterações no regimento, por exemplo, são criados por projeto de resolução.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 52, 59 (VII) e 68", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, art. 109", url: "@RICD"}
+  relacionados: [regimento-interno, projeto-de-decreto-legislativo, lei-delegada, promulgacao]
+  faqs:
+    - {p: "Resolução precisa de sanção do presidente da República?", r: "Não. É promulgada pela Mesa da Casa que a aprovou ou pelo presidente do Congresso, no caso de resolução do Congresso."}
+    - {p: "Qual a diferença entre resolução e decreto legislativo?", r: "Os dois dispensam sanção. O decreto legislativo trata de competências exclusivas do Congresso com efeitos externos, como tratados; a resolução, em geral, de matérias internas ou privativas de cada Casa."}
+    - {p: "O que o Senado regula por resolução?", r: "Entre outros temas, os limites de endividamento de estados e municípios e as operações de crédito externo, conforme o art. 52 da Constituição."}
+    - {p: "Quem pode apresentar projeto de resolução?", r: "Parlamentares, comissões e a Mesa, conforme o regimento de cada Casa."}
+    - {p: "Resolução é lei?", r: "Não é lei em sentido estrito, mas é norma primária prevista no art. 59 da Constituição, com força obrigatória no âmbito da matéria que regula."}
+- termo: Audiência pública
+  slug: audiencia-publica
+  categoria: processo-legislativo
+  imagem: comissao
+  sinonimos: [audiências públicas]
+  resumo: "é a reunião de comissão para ouvir especialistas, autoridades e representantes da sociedade sobre um projeto ou tema de interesse público."
+  definicao: |
+    O art. 58, § 2º, II, da Constituição atribui às comissões a realização de audiências públicas com entidades da sociedade civil. Na Câmara, o Regimento Interno prevê que a comissão pode realizar audiência com entidades para instruir matéria em tramitação ou tratar de assunto de interesse público relevante, aprovada por requerimento.
+
+    Os convidados expõem seus pontos de vista e respondem a perguntas dos parlamentares. As audiências são transmitidas e registradas em notas taquigráficas, que ficam disponíveis nos portais das Casas.
+
+    No STF, também há audiências públicas, convocadas pelo relator para ouvir especialistas em temas técnicos de processos de grande repercussão.
+  contexto: |
+    Projetos complexos costumam passar por uma série de audiências antes do parecer, para que diferentes setores apresentem dados e argumentos. A lista de convidados é definida por requerimentos aprovados na comissão e procura contemplar posições distintas.
+  base_legal:
+    - {nome: "Constituição Federal, art. 58, § 2º, II", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 255 a 258", url: "@RICD"}
+    - {nome: "Lei nº 9.868/1999, art. 9º, § 1º", url: "@L9868"}
+  relacionados: [comissao-permanente, comissao-especial, requerimento, amicus-curiae]
+  faqs:
+    - {p: "Qualquer pessoa pode falar em audiência pública?", r: "Falam os convidados aprovados pela comissão. O público pode acompanhar e, em muitos casos, enviar perguntas pelos canais de participação das Casas."}
+    - {p: "Audiência pública é obrigatória antes da votação?", r: "Não. É um instrumento à disposição das comissões, aprovado por requerimento, e não uma etapa obrigatória da tramitação."}
+    - {p: "O STF faz audiência pública?", r: "Sim. A Lei nº 9.868/1999 permite que o relator ouça especialistas em audiência pública em ações de controle de constitucionalidade."}
+    - {p: "Onde assistir às audiências?", r: "Nos canais da TV Câmara e da TV Senado e nos portais das Casas, que mantêm os vídeos e as notas taquigráficas."}
+    - {p: "Qual a diferença entre audiência pública e sessão de debates temáticos?", r: "A audiência é feita pelas comissões. A sessão de debates temáticos ocorre no plenário do Senado, com convidados, para discutir um tema."}
+- termo: Sabatina
+  slug: sabatina
+  categoria: congresso
+  imagem: comissao
+  sinonimos: [sabatinas, sabatinado, sabatinada, arguição pública]
+  resumo: "é a arguição pública, no Senado, de indicados a cargos como ministro do STF, procurador-geral da República e diretor do Banco Central, antes da votação de sua aprovação."
+  definicao: |
+    O art. 52, III, da Constituição atribui ao Senado aprovar previamente, por voto secreto e após arguição pública, a escolha de magistrados nos casos previstos, ministros do TCU indicados pelo presidente da República, presidente e diretores do Banco Central, o procurador-geral da República e titulares de outros cargos que a lei determinar, como diretores de agências reguladoras.
+
+    A arguição ocorre na comissão competente, em geral a Comissão de Constituição e Justiça para indicados a tribunais e à PGR e a Comissão de Assuntos Econômicos para o Banco Central. Depois da votação na comissão, a indicação é votada no plenário.
+
+    Para ministro do STF, a aprovação exige maioria absoluta do Senado, 41 votos, conforme o art. 101 da Constituição. Os chefes de missão diplomática são arguidos em sessão secreta (art. 52, IV).
+  contexto: |
+    O Senado raramente rejeita indicações. A rejeição de indicados ao STF só ocorreu no século 19, em 1894. Em outros cargos sujeitos à aprovação do Senado, rejeições são raras, mas já ocorreram.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 52 (III e IV) e 101", url: "@CF"}
+    - {nome: "Regimento Interno do Senado Federal, art. 383", url: "@RISF"}
+  relacionados: [stf, procurador-geral-da-republica, ccj, agencia-reguladora]
+  faqs:
+    - {p: "Quantos votos um indicado ao STF precisa no Senado?", r: "Maioria absoluta, ou seja, 41 dos 81 senadores, em votação secreta no plenário."}
+    - {p: "O voto na sabatina é secreto?", r: "Sim. O art. 52, III, da Constituição prevê voto secreto na aprovação de autoridades, tanto na comissão quanto no plenário."}
+    - {p: "Quais cargos passam por sabatina?", r: "Ministros de tribunais superiores e do STF, ministros do TCU indicados pelo presidente, o procurador-geral da República, presidente e diretores do Banco Central, diretores de agências reguladoras e embaixadores, entre outros."}
+    - {p: "O Senado já rejeitou indicado ao STF?", r: "Sim, mas só no início da República, em 1894. Desde então, todas as indicações ao STF votadas foram aprovadas."}
+    - {p: "Embaixadores também são sabatinados?", r: "Sim, pela Comissão de Relações Exteriores, mas a arguição de chefes de missão diplomática permanente é feita em sessão secreta."}

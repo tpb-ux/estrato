@@ -1,0 +1,171 @@
+termos:
+- termo: Imunidade parlamentar
+  slug: imunidade-parlamentar
+  categoria: congresso
+  imagem: plenario-camara
+  sinonimos: [imunidades parlamentares, imunidade material, imunidade formal]
+  resumo: "é o conjunto de garantias que protegem o mandato de deputados e senadores, como a inviolabilidade por opiniões, palavras e votos e regras especiais para prisão e processo."
+  definicao: |
+    O art. 53 da Constituição prevê dois tipos de imunidade. A material torna deputados e senadores invioláveis, civil e penalmente, por quaisquer de suas opiniões, palavras e votos. O STF entende que a proteção alcança manifestações relacionadas ao exercício do mandato, inclusive fora do Congresso, mas não protege falas sem ligação com a atividade parlamentar.
+
+    A imunidade formal trata de prisão e processo. Desde a diplomação, os parlamentares não podem ser presos, salvo em flagrante de crime inafiançável. Nesse caso, os autos são remetidos em 24 horas à Casa respectiva, que decide sobre a prisão pelo voto da maioria de seus membros. Recebida denúncia contra parlamentar por crime ocorrido após a diplomação, o STF dá ciência à Casa, que pode sustar o andamento da ação, por iniciativa de partido e voto da maioria de seus membros.
+
+    As imunidades subsistem durante o estado de sítio e só podem ser suspensas pelo voto de dois terços dos membros da Casa, em casos específicos.
+  contexto: |
+    Antes da Emenda Constitucional nº 35/2001, o STF precisava de licença prévia da Casa para processar parlamentares. Hoje, o processo começa sem autorização, e a Casa só pode sustá-lo depois. Deputados estaduais têm imunidades equivalentes, pelo art. 27, § 1º, da Constituição; vereadores têm apenas a material, na circunscrição do município.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 27 (§ 1º), 29 (VIII) e 53", url: "@CF"}
+  relacionados: [foro-privilegiado, quebra-de-decoro, diplomacao, cassacao-de-mandato]
+  faqs:
+    - {p: "Deputado pode ser preso?", r: "Só em flagrante de crime inafiançável, desde a diplomação. A Casa decide, em 24 horas após receber os autos, se mantém a prisão, pela maioria de seus membros. Após condenação definitiva, a prisão segue as regras gerais."}
+    - {p: "A imunidade protege qualquer fala do parlamentar?", r: "Não. O STF entende que a inviolabilidade cobre opiniões ligadas ao exercício do mandato. Falas sem relação com a atividade parlamentar podem gerar responsabilização."}
+    - {p: "A Câmara precisa autorizar processo contra deputado?", r: "Não desde 2001. O STF pode receber a denúncia, e a Casa pode sustar o andamento da ação por crime posterior à diplomação, pela maioria de seus membros."}
+    - {p: "Vereador tem imunidade?", r: "Tem a imunidade material, por opiniões, palavras e votos no exercício do mandato e na circunscrição do município, mas não a formal."}
+    - {p: "Imunidade parlamentar é o mesmo que foro privilegiado?", r: "Não. A imunidade protege o mandato. O foro por prerrogativa de função define que o STF julga os crimes comuns de deputados e senadores."}
+- termo: Quebra de decoro parlamentar
+  slug: quebra-de-decoro
+  categoria: congresso
+  imagem: plenario-camara2
+  sinonimos: [decoro parlamentar, Conselho de Ética, Conselho de Ética e Decoro Parlamentar]
+  autolink: [quebra de decoro, decoro parlamentar, Conselho de Ética, Conselho de Ética e Decoro Parlamentar, procedimento incompatível com o decoro]
+  resumo: "é a conduta incompatível com o decoro do mandato, que pode levar a punições aplicadas pela Casa, da censura à perda do mandato."
+  definicao: |
+    O art. 55, II, da Constituição prevê a perda do mandato do parlamentar cujo procedimento for declarado incompatível com o decoro parlamentar. O § 1º diz que é incompatível, além dos casos definidos no regimento, o abuso das prerrogativas asseguradas aos parlamentares ou a percepção de vantagens indevidas.
+
+    Na Câmara, o Código de Ética e Decoro Parlamentar (Resolução nº 25/2001) lista condutas e penalidades: censura verbal ou escrita, suspensão de prerrogativas regimentais, suspensão do exercício do mandato por até seis meses e perda do mandato. Os processos tramitam no Conselho de Ética, que dá parecer; as penas mais graves dependem do plenário.
+
+    A perda do mandato por quebra de decoro é decidida pelo plenário, por maioria absoluta, em votação aberta.
+  contexto: |
+    Os processos no Conselho de Ética começam por representação da Mesa ou de partido com representação no Congresso. Muitas representações são arquivadas ou terminam em penas mais brandas; a cassação por quebra de decoro é rara e exige 257 votos na Câmara ou 41 no Senado.
+  base_legal:
+    - {nome: "Constituição Federal, art. 55 (II e §§ 1º e 2º)", url: "@CF"}
+    - {nome: "Código de Ética e Decoro Parlamentar da Câmara (Resolução nº 25/2001)", url: "@CEDP"}
+  relacionados: [cassacao-de-mandato, imunidade-parlamentar, mesa-diretora, maioria-absoluta]
+  faqs:
+    - {p: "Quem pode pedir a abertura de processo por quebra de decoro?", r: "A Mesa da Casa ou partido político com representação no Congresso, por representação ao Conselho de Ética."}
+    - {p: "Quais são as penas por quebra de decoro na Câmara?", r: "Censura verbal ou escrita, suspensão de prerrogativas regimentais, suspensão do mandato por até seis meses e perda do mandato, conforme a gravidade."}
+    - {p: "Quantos votos são necessários para cassar por quebra de decoro?", r: "Maioria absoluta da Casa em votação aberta: 257 deputados ou 41 senadores."}
+    - {p: "A renúncia encerra o processo por quebra de decoro?", r: "Não. Desde 1994, a renúncia de parlamentar submetido a processo que possa levar à perda do mandato tem os efeitos suspensos até a decisão final."}
+    - {p: "Cassado por quebra de decoro fica inelegível?", r: "Sim. A Lei Complementar nº 64/1990 torna inelegíveis os parlamentares que perderam o mandato por quebra de decoro, para as eleições realizadas durante o restante do mandato e nos oito anos seguintes."}
+- termo: Cassação de mandato
+  slug: cassacao-de-mandato
+  categoria: congresso
+  imagem: plenario-camara
+  sinonimos: [cassação, cassado, cassada, perda do mandato, perda de mandato]
+  autolink: [cassação de mandato, cassação do mandato, cassações de mandato, perda do mandato, perda de mandato, teve o mandato cassado]
+  resumo: "é a perda do mandato eletivo decidida pela Casa legislativa, pela Mesa ou pela Justiça Eleitoral, nos casos previstos na Constituição."
+  definicao: |
+    O art. 55 da Constituição lista as hipóteses de perda do mandato de deputado ou senador: violar as proibições do art. 54, como manter contrato com empresa pública; procedimento incompatível com o decoro; faltar, sem licença, a um terço das sessões ordinárias de cada sessão legislativa; perder ou ter suspensos os direitos políticos; decisão da Justiça Eleitoral; e condenação criminal com trânsito em julgado.
+
+    Nos casos de proibições, decoro e condenação criminal, a perda é decidida pela Casa, por maioria absoluta, em votação aberta desde a Emenda Constitucional nº 76/2013, mediante provocação da Mesa ou de partido, assegurada ampla defesa. Nos casos de faltas, direitos políticos e decisão eleitoral, a perda é declarada pela Mesa.
+
+    Para chefes do Executivo, a perda do cargo pode decorrer de impeachment ou de decisões da Justiça Eleitoral, como a cassação de diploma por abuso de poder ou compra de votos.
+  contexto: |
+    No noticiário, "cassação" aparece tanto para decisões do plenário de uma Casa quanto para decisões da Justiça Eleitoral que cassam o registro ou o diploma. As consequências são parecidas, mas os ritos e os órgãos que decidem são diferentes.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 54 e 55", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 76/2013", url: "@EC76"}
+    - {nome: "Lei Complementar nº 64/1990, art. 1º", url: "@LC64"}
+  relacionados: [quebra-de-decoro, abuso-de-poder, compra-de-votos, impeachment, suplente]
+  faqs:
+    - {p: "A votação de cassação é secreta?", r: "Não. Desde a Emenda Constitucional nº 76/2013, as votações de perda de mandato de deputados e senadores são abertas."}
+    - {p: "Faltar às sessões pode levar à perda do mandato?", r: "Sim. Quem faltar, sem licença ou missão autorizada, a um terço das sessões ordinárias de uma sessão legislativa perde o mandato, por declaração da Mesa."}
+    - {p: "Quem assume a vaga do cassado?", r: "O suplente. Na Câmara, o próximo mais votado do partido ou da federação; no Senado, o primeiro suplente da chapa."}
+    - {p: "A Justiça Eleitoral pode cassar um deputado?", r: "Pode cassar o registro ou o diploma em ações eleitorais, como as de abuso de poder e captação ilícita de sufrágio. A perda do mandato é então declarada pela Mesa."}
+    - {p: "Condenação criminal leva automaticamente à perda do mandato?", r: "A condenação com trânsito em julgado está entre as hipóteses do art. 55, mas, para deputados e senadores, a perda depende de decisão da Casa por maioria absoluta."}
+- termo: Frente parlamentar
+  slug: frente-parlamentar
+  categoria: congresso
+  imagem: plenario-camara2
+  sinonimos: [frentes parlamentares]
+  resumo: "é a associação suprapartidária de parlamentares registrada na Câmara para atuar em defesa de um tema ou setor."
+  definicao: |
+    Pelo Ato da Mesa nº 69/2005 da Câmara, frente parlamentar é a associação suprapartidária de pelo menos um terço de membros do Poder Legislativo Federal, destinada a promover o aprimoramento da legislação federal sobre determinado setor da sociedade. O número mínimo corresponde a 198 parlamentares, contando deputados e senadores.
+
+    O registro exige ata de fundação, estatuto e indicação de um representante responsável perante a Mesa. As frentes podem usar espaços da Câmara para reuniões, a critério da Mesa, mas sem contratação de pessoal nem fornecimento de passagens.
+
+    As frentes não são órgãos da Casa, não votam proposições e se encerram ao fim de cada legislatura, precisando ser recriadas na seguinte.
+  contexto: |
+    O noticiário costuma chamar de "bancadas temáticas" os grupos organizados em frentes parlamentares. Como um parlamentar pode participar de várias frentes, a soma de integrantes não indica votos garantidos numa votação específica.
+  base_legal:
+    - {nome: "Ato da Mesa nº 69/2005 da Câmara dos Deputados", url: "@ATO69"}
+  relacionados: [bancada, lider-partidario, colegio-de-lideres, legislatura]
+  faqs:
+    - {p: "Quantos parlamentares são necessários para criar uma frente?", r: "Pelo menos um terço dos membros do Congresso, o que corresponde a 198 deputados e senadores, segundo o Ato da Mesa nº 69/2005."}
+    - {p: "Frente parlamentar tem poder de votar projetos?", r: "Não. Ela articula e debate, mas não é comissão nem órgão da Casa e não delibera sobre proposições."}
+    - {p: "Um deputado pode participar de várias frentes?", r: "Sim. Não há limite, e é comum que parlamentares integrem dezenas de frentes."}
+    - {p: "As frentes recebem recursos da Câmara?", r: "Podem usar espaço físico para reuniões, a critério da Mesa, mas o ato proíbe contratação de pessoal e fornecimento de passagens aéreas."}
+    - {p: "Onde consultar as frentes registradas?", r: "No portal da Câmara dos Deputados, que lista as frentes de cada legislatura com os integrantes."}
+- termo: Presidente da República
+  slug: presidente-da-republica
+  categoria: executivo
+  imagem: planalto
+  sinonimos: [Presidência da República, chefe do Executivo federal]
+  autolink: [presidente da República, Presidência da República, presidente da república]
+  resumo: "é o chefe de Estado e de governo do Brasil, eleito por voto direto para mandato de quatro anos, com possibilidade de uma reeleição consecutiva."
+  definicao: |
+    O art. 76 da Constituição diz que o Poder Executivo é exercido pelo presidente da República, auxiliado pelos ministros de Estado. O presidente é eleito com o vice, em chapa única, pela maioria absoluta dos votos válidos, excluídos brancos e nulos; se ninguém a obtiver no primeiro turno, há segundo turno entre os dois mais votados.
+
+    As atribuições privativas estão no art. 84: nomear e exonerar ministros, sancionar, promulgar e vetar leis, expedir decretos para a fiel execução das leis, editar medidas provisórias, manter relações com Estados estrangeiros, exercer o comando supremo das Forças Armadas, conceder indulto e enviar ao Congresso os projetos do PPA, da LDO e do Orçamento, entre outras.
+
+    O mandato é de quatro anos, e a Emenda Constitucional nº 16/1997 permitiu uma reeleição para o período subsequente. A Emenda Constitucional nº 111/2021 fixou a posse em 5 de janeiro, a partir dos eleitos em 2026.
+  contexto: |
+    Requisitos para a candidatura incluem ser brasileiro nato e ter pelo menos 35 anos. Nos crimes de responsabilidade, o presidente é processado por impeachment; nas infrações penais comuns, pelo STF, depois de autorização de dois terços da Câmara. Durante o mandato, não pode ser responsabilizado por atos estranhos ao exercício de suas funções.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 76 a 86", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 16/1997", url: "@EC16"}
+    - {nome: "Emenda Constitucional nº 111/2021", url: "@EC111"}
+  relacionados: [vice-presidente, decreto, medida-provisoria, crime-de-responsabilidade, reeleicao]
+  faqs:
+    - {p: "Quando toma posse o presidente eleito em 2026?", r: "Em 5 de janeiro de 2027, conforme a Emenda Constitucional nº 111/2021, que mudou a data de 1º de janeiro."}
+    - {p: "Quantas vezes um presidente pode ser reeleito?", r: "Uma vez para o período imediatamente seguinte. Depois de dois mandatos consecutivos, pode voltar a concorrer após um intervalo."}
+    - {p: "Qual a idade mínima para ser presidente?", r: "35 anos, conforme o art. 14, § 3º, da Constituição, além de ser brasileiro nato e preencher as demais condições de elegibilidade."}
+    - {p: "O presidente pode ser processado por crime comum durante o mandato?", r: "Sim, pelo STF, desde que a Câmara autorize por dois terços dos votos. Por atos estranhos às funções, não pode ser responsabilizado na vigência do mandato."}
+    - {p: "O presidente precisa de autorização para viajar ao exterior?", r: "Sim, se a ausência for superior a 15 dias, conforme o art. 83 da Constituição; caso contrário, perde o cargo."}
+- termo: Vice-presidente da República
+  slug: vice-presidente
+  categoria: executivo
+  imagem: planalto
+  sinonimos: [vice-presidente, vice-presidência da República]
+  autolink: [vice-presidente da República, vice-presidência da República]
+  resumo: "é o eleito na mesma chapa do presidente que o substitui em impedimentos e o sucede em caso de vaga."
+  definicao: |
+    O art. 79 da Constituição determina que o vice-presidente substitui o presidente no caso de impedimento e o sucede no de vaga. Além disso, auxilia o presidente sempre que convocado para missões especiais e exerce outras atribuições que lhe forem conferidas por lei complementar.
+
+    O vice é eleito junto com o presidente, em chapa única, e não há eleição separada para o cargo. Ele integra o Conselho da República e o Conselho de Defesa Nacional e pode ocupar ministério, se nomeado.
+
+    Se presidente e vice estiverem impedidos ou os cargos vagos, são chamados, sucessivamente, os presidentes da Câmara, do Senado e do STF.
+  contexto: |
+    Desde 1988, dois vice-presidentes assumiram definitivamente a Presidência após processos de impeachment, em 1992 e em 2016. Em viagens do presidente ao exterior, o vice assume interinamente, o que é registrado no Diário Oficial.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 77, 79, 80 e 81", url: "@CF"}
+  relacionados: [presidente-da-republica, linha-sucessoria, impeachment, presidente-da-camara]
+  faqs:
+    - {p: "O vice-presidente é eleito separadamente?", r: "Não. A Constituição prevê eleição em chapa: o voto no candidato a presidente vale também para o vice registrado com ele."}
+    - {p: "Quando o vice assume a Presidência?", r: "Temporariamente, nos impedimentos do presidente, como viagens ao exterior. Definitivamente, em caso de vaga, como morte, renúncia ou perda do cargo."}
+    - {p: "O vice pode ser ministro?", r: "Sim. Nada impede que o vice-presidente seja nomeado ministro de Estado, acumulando as funções."}
+    - {p: "Se o vice também sair, quem governa?", r: "Assumem temporariamente, na ordem, os presidentes da Câmara, do Senado e do STF, e é convocada nova eleição, conforme o art. 81 da Constituição."}
+    - {p: "O vice-presidente pode sofrer impeachment?", r: "Sim. A Lei nº 1.079/1950 e o art. 52 da Constituição preveem o julgamento do vice-presidente por crime de responsabilidade pelo Senado."}
+- termo: Linha sucessória
+  slug: linha-sucessoria
+  categoria: executivo
+  imagem: tres-poderes
+  sinonimos: [linha de sucessão, sucessão presidencial]
+  resumo: "é a ordem de quem assume a Presidência da República em caso de impedimento ou vaga: vice-presidente e, depois, os presidentes da Câmara, do Senado e do STF."
+  definicao: |
+    Pelo art. 79 da Constituição, o vice-presidente substitui o presidente e o sucede em caso de vaga. O art. 80 estabelece que, no impedimento de ambos ou na vacância dos dois cargos, serão chamados sucessivamente ao exercício da Presidência o presidente da Câmara, o presidente do Senado e o presidente do STF.
+
+    Os presidentes das Casas e do STF não sucedem definitivamente. Vagando os cargos de presidente e vice, o art. 81 manda fazer eleição 90 dias depois de aberta a última vaga. Se a vacância ocorrer nos últimos dois anos do mandato, a eleição é feita pelo Congresso, 30 dias depois, e os eleitos apenas completam o período.
+
+    O STF decidiu, em 2016, que réus em ação penal no Tribunal não podem substituir o presidente da República, embora possam permanecer na presidência de suas Casas.
+  contexto: |
+    A linha sucessória é acionada com frequência de forma temporária, em viagens simultâneas do presidente e do vice. Nesses casos, o presidente da Câmara assume por poucos dias e o fato é registrado oficialmente.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 79, 80 e 81", url: "@CF"}
+  relacionados: [vice-presidente, presidente-da-camara, presidente-do-senado, stf]
+  faqs:
+    - {p: "Quem é o primeiro na linha sucessória?", r: "O vice-presidente da República. Depois vêm os presidentes da Câmara, do Senado e do STF."}
+    - {p: "O presidente da Câmara pode governar até o fim do mandato?", r: "Não. Ele assume temporariamente. Vagos os dois cargos, convoca-se nova eleição, direta nos dois primeiros anos e indireta, pelo Congresso, nos dois últimos."}
+    - {p: "O que é eleição indireta para presidente?", r: "É a eleição pelo Congresso Nacional, prevista no art. 81 da Constituição quando presidente e vice deixam os cargos nos últimos dois anos do mandato."}
+    - {p: "Réu pode assumir a Presidência na linha sucessória?", r: "O STF decidiu em 2016 que réus em ação penal no Tribunal não podem substituir o presidente da República, mesmo que ocupem a presidência da Câmara ou do Senado."}
+    - {p: "A linha sucessória já foi usada desde 1988?", r: "De forma definitiva, só para o vice-presidente, em 1992 e 2016. De forma temporária, presidentes da Câmara, do Senado e do STF já exerceram a Presidência em viagens."}

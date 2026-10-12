@@ -1,0 +1,252 @@
+termos:
+- termo: Supremo Tribunal Federal
+  slug: stf
+  categoria: judiciario
+  imagem: stf
+  sigla: STF
+  sinonimos: [Supremo]
+  autolink: [Supremo Tribunal Federal]
+  resumo: "é a mais alta corte do país, responsável principalmente pela guarda da Constituição, formada por onze ministros nomeados pelo presidente e aprovados pelo Senado."
+  definicao: |
+    O art. 101 da Constituição estabelece que o STF compõe-se de onze ministros, escolhidos entre cidadãos com mais de 35 e menos de 70 anos, de notável saber jurídico e reputação ilibada. São nomeados pelo presidente da República depois de aprovada a escolha pela maioria absoluta do Senado. A aposentadoria é compulsória aos 75 anos.
+
+    O art. 102 define as competências. Em ações originárias, o STF julga as ações de controle concentrado (ADI, ADC, ADO e ADPF), os crimes comuns do presidente, do vice, dos parlamentares federais, dos ministros e do procurador-geral da República, conflitos entre a União e os estados e habeas corpus contra atos de tribunais superiores, entre outros. Em recurso extraordinário, julga causas em que se alega ofensa à Constituição, desde que haja repercussão geral.
+
+    O tribunal funciona em plenário, com os onze ministros, e em duas turmas, de cinco ministros cada. O presidente do STF também preside o Conselho Nacional de Justiça.
+  contexto: |
+    Grande parte dos julgamentos do STF ocorre no plenário virtual, em sessões assíncronas. As decisões em ações de controle concentrado valem para todos e vinculam os demais órgãos do Judiciário e a administração pública.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 101 a 103-B", url: "@CF"}
+    - {nome: "Lei nº 9.868/1999", url: "@L9868"}
+  relacionados: [adi, adpf, plenario-virtual, sabatina, repercussao-geral, foro-privilegiado]
+  faqs:
+    - {p: "Quantos ministros tem o STF?", r: "Onze, conforme o art. 101 da Constituição."}
+    - {p: "Até que idade um ministro fica no STF?", r: "Até os 75 anos, idade da aposentadoria compulsória, salvo se se aposentar antes ou deixar o cargo por outro motivo."}
+    - {p: "Quem escolhe os ministros do STF?", r: "O presidente da República indica e nomeia, depois de aprovação pela maioria absoluta do Senado, após sabatina na Comissão de Constituição e Justiça."}
+    - {p: "Qual a diferença entre plenário e turma no STF?", r: "O plenário reúne os onze ministros e julga, por exemplo, as ações de controle de constitucionalidade. As duas turmas, de cinco ministros, julgam outros processos, como parte dos habeas corpus e recursos."}
+    - {p: "Quem preside o STF?", r: "Um dos ministros, eleito pelos colegas para mandato de dois anos, por tradição seguindo a ordem de antiguidade. O presidente do STF também preside o CNJ."}
+- termo: Superior Tribunal de Justiça
+  slug: stj
+  categoria: judiciario
+  imagem: stj
+  sigla: STJ
+  autolink: [Superior Tribunal de Justiça]
+  resumo: "é o tribunal que uniformiza a interpretação da legislação federal no país, formado por no mínimo 33 ministros."
+  definicao: |
+    Pelo art. 104 da Constituição, o STJ compõe-se de, no mínimo, 33 ministros, nomeados pelo presidente da República entre brasileiros com mais de 35 e menos de 70 anos, depois de aprovada a escolha pela maioria absoluta do Senado. Um terço vem dos Tribunais Regionais Federais, um terço dos Tribunais de Justiça e um terço, em partes iguais, de advogados e membros do Ministério Público.
+
+    A principal função do STJ é julgar o recurso especial, que discute se uma decisão de tribunal contrariou lei federal ou deu a ela interpretação diferente da de outro tribunal. Em ações originárias, julga, entre outros, os crimes comuns de governadores e os crimes comuns e de responsabilidade de desembargadores e conselheiros de tribunais de contas.
+
+    A Emenda Constitucional nº 125/2022 criou o requisito de relevância da questão de direito federal para admitir o recurso especial.
+  contexto: |
+    O STJ é chamado de "tribunal da cidadania" porque julga temas de direito civil, penal, do consumidor e administrativo que afetam o dia a dia. Quando o STJ fixa tese em recurso repetitivo, os demais tribunais devem segui-la.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 104 e 105", url: "@CF"}
+    - {nome: "Código de Processo Civil, arts. 1.029 a 1.041", url: "@CPC"}
+  relacionados: [recurso-especial, stf, foro-privilegiado, habeas-corpus]
+  faqs:
+    - {p: "Qual a diferença entre STJ e STF?", r: "O STJ uniformiza a interpretação das leis federais. O STF é o guardião da Constituição e julga questões constitucionais."}
+    - {p: "Quem julga governadores por crime comum?", r: "O STJ, conforme o art. 105, I, a, da Constituição."}
+    - {p: "Como são escolhidos os ministros do STJ?", r: "A partir de listas elaboradas pelo próprio tribunal, o presidente da República escolhe e indica, e o Senado aprova por maioria absoluta."}
+    - {p: "O que é recurso repetitivo?", r: "É o julgamento de um recurso especial que representa muitos casos iguais. A tese fixada orienta os demais processos sobre o mesmo tema."}
+    - {p: "Qualquer processo pode chegar ao STJ?", r: "Não. É preciso que haja discussão sobre lei federal e que o recurso preencha requisitos como o prequestionamento e, conforme a EC 125/2022, a relevância da questão."}
+- termo: Tribunal Superior Eleitoral
+  slug: tse
+  categoria: eleitoral
+  imagem: tse
+  sigla: TSE
+  autolink: [Tribunal Superior Eleitoral]
+  resumo: "é o órgão máximo da Justiça Eleitoral, responsável por organizar as eleições gerais e julgar recursos em matéria eleitoral."
+  definicao: |
+    O art. 119 da Constituição estabelece que o TSE se compõe de, no mínimo, sete membros: três juízes escolhidos entre os ministros do STF, dois entre os ministros do STJ, por voto secreto, e dois advogados de notável saber jurídico e idoneidade moral, nomeados pelo presidente da República a partir de lista sêxtupla indicada pelo STF. O presidente e o vice-presidente do TSE são ministros do STF.
+
+    Os juízes servem por dois anos, no mínimo, e nunca por mais de dois biênios consecutivos. O TSE expede resoluções para a execução da legislação eleitoral, registra os partidos, organiza a eleição presidencial, totaliza os votos e diploma o presidente e o vice.
+
+    Abaixo do TSE estão os Tribunais Regionais Eleitorais, os juízes eleitorais e as juntas eleitorais.
+  contexto: |
+    As resoluções do TSE detalham regras de propaganda, prestação de contas e calendário a cada eleição. As decisões do TSE são irrecorríveis, salvo as que contrariarem a Constituição e as que denegarem habeas corpus ou mandado de segurança.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 118 a 121", url: "@CF"}
+    - {nome: "Código Eleitoral (Lei nº 4.737/1965)", url: "@CE"}
+  relacionados: [urna-eletronica, registro-de-candidatura, diplomacao, prestacao-de-contas-eleitoral, stf]
+  faqs:
+    - {p: "Quantos ministros tem o TSE?", r: "Sete efetivos: três do STF, dois do STJ e dois advogados, além de substitutos escolhidos da mesma forma."}
+    - {p: "Quanto tempo um ministro fica no TSE?", r: "Dois anos, podendo ser reconduzido uma vez, sem ultrapassar dois biênios consecutivos."}
+    - {p: "Quem preside o TSE?", r: "Um ministro do STF eleito pelos membros do TSE, conforme o art. 119 da Constituição."}
+    - {p: "Cabe recurso contra decisão do TSE?", r: "Em regra não, salvo ao STF quando a decisão contrariar a Constituição ou negar habeas corpus ou mandado de segurança."}
+    - {p: "O TSE pode criar regras eleitorais?", r: "Pode expedir resoluções para executar a legislação. Elas não podem restringir direitos nem criar sanções não previstas em lei."}
+- termo: Procurador-geral da República
+  slug: procurador-geral-da-republica
+  categoria: judiciario
+  imagem: stf
+  sigla: PGR
+  sinonimos: [Procuradoria-Geral da República, procuradora-geral da República]
+  resumo: "é o chefe do Ministério Público da União, nomeado pelo presidente após aprovação do Senado, com mandato de dois anos."
+  definicao: |
+    Pelo art. 128, § 1º, da Constituição, o Ministério Público da União tem por chefe o procurador-geral da República, nomeado pelo presidente entre integrantes da carreira maiores de 35 anos, depois de aprovado pela maioria absoluta do Senado, para mandato de dois anos, permitida a recondução. A destituição antes do fim do mandato depende de iniciativa do presidente e de autorização da maioria absoluta do Senado.
+
+    O PGR atua no STF e no STJ. É ele quem pode denunciar o presidente da República, parlamentares federais e ministros por crimes comuns, e quem pede a abertura de inquéritos contra autoridades com foro no STF. Também propõe ações de controle de constitucionalidade e emite pareceres nos processos em que atua.
+
+    A Lei Complementar nº 75/1993 organiza o Ministério Público da União e as atribuições do PGR.
+  contexto: |
+    A Associação Nacional dos Procuradores da República realiza uma eleição interna e envia uma lista tríplice ao presidente, mas a Constituição não obriga a escolha entre os nomes da lista. O PGR também preside o Conselho Nacional do Ministério Público.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 103 (VI), 127 a 130-A", url: "@CF"}
+    - {nome: "Lei Complementar nº 75/1993", url: "@LC75"}
+  relacionados: [ministerio-publico, denuncia, inquerito, sabatina, adi]
+  faqs:
+    - {p: "Quem escolhe o procurador-geral da República?", r: "O presidente da República, entre membros da carreira com mais de 35 anos, depois de aprovação por maioria absoluta do Senado."}
+    - {p: "O presidente precisa seguir a lista tríplice?", r: "Não. A lista é feita por associação de classe e não tem previsão constitucional; a escolha é livre entre integrantes da carreira."}
+    - {p: "Qual o mandato do PGR?", r: "Dois anos, permitidas reconduções, sempre com nova aprovação do Senado."}
+    - {p: "O PGR pode ser destituído?", r: "Sim, por iniciativa do presidente da República, com autorização da maioria absoluta do Senado."}
+    - {p: "Quem pode denunciar o presidente da República por crime comum?", r: "O procurador-geral da República. A denúncia só é analisada pelo STF depois de autorização de dois terços da Câmara."}
+- termo: Ministério Público
+  slug: ministerio-publico
+  categoria: judiciario
+  imagem: justica
+  sinonimos: [Ministério Público Federal, MPF, Ministérios Públicos, promotoria, Ministério Público estadual]
+  autolink: [Ministério Público, Ministério Público Federal, Ministérios Públicos, Ministério Público estadual]
+  resumo: "é a instituição permanente que defende a ordem jurídica, o regime democrático e os interesses sociais, e é titular da ação penal pública."
+  definicao: |
+    O art. 127 da Constituição define o Ministério Público como instituição permanente, essencial à função jurisdicional do Estado, incumbida da defesa da ordem jurídica, do regime democrático e dos interesses sociais e individuais indisponíveis. Ele tem autonomia funcional e administrativa e não pertence a nenhum dos três Poderes.
+
+    O Ministério Público abrange o Ministério Público da União, formado pelo Ministério Público Federal, do Trabalho, Militar e do Distrito Federal e Territórios, e os Ministérios Públicos dos estados. Entre as funções do art. 129 estão promover, privativamente, a ação penal pública, instaurar inquérito civil e propor ação civil pública e exercer o controle externo da atividade policial.
+
+    Os membros têm vitaliciedade, inamovibilidade e irredutibilidade de subsídio, e o Conselho Nacional do Ministério Público faz o controle administrativo e financeiro da instituição.
+  contexto: |
+    Promotores e procuradores de justiça atuam nos estados; procuradores da República, na Justiça Federal. A sigla MP também designa medida provisória, por isso o Estrato faz o link automático só pelo nome por extenso.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 127 a 130-A", url: "@CF"}
+    - {nome: "Lei Complementar nº 75/1993", url: "@LC75"}
+  relacionados: [procurador-geral-da-republica, denuncia, inquerito, improbidade-administrativa]
+  faqs:
+    - {p: "O Ministério Público faz parte do Judiciário?", r: "Não. É instituição autônoma, essencial à Justiça, que não integra nenhum dos três Poderes."}
+    - {p: "Quem pode oferecer denúncia em crimes de ação pública?", r: "Privativamente o Ministério Público, conforme o art. 129, I, da Constituição."}
+    - {p: "Qual a diferença entre promotor e procurador?", r: "Nos estados, promotores atuam na primeira instância e procuradores de justiça nos tribunais. No Ministério Público Federal, os membros são procuradores da República."}
+    - {p: "O que é ação civil pública?", r: "É a ação usada pelo Ministério Público e outros legitimados para proteger patrimônio público, meio ambiente, consumidor e outros interesses coletivos."}
+    - {p: "Quem fiscaliza o Ministério Público?", r: "O Conselho Nacional do Ministério Público, que faz o controle administrativo, financeiro e disciplinar dos membros, além das corregedorias internas."}
+- termo: Conselho Nacional de Justiça
+  slug: cnj
+  categoria: judiciario
+  imagem: justica
+  sigla: CNJ
+  autolink: [Conselho Nacional de Justiça]
+  resumo: "é o órgão que faz o controle administrativo, financeiro e disciplinar do Judiciário, presidido pelo presidente do STF."
+  definicao: |
+    Criado pela Emenda Constitucional nº 45/2004, o CNJ está previsto no art. 103-B da Constituição. Tem quinze membros, com mandato de dois anos, admitida uma recondução: o presidente do STF, que o preside, magistrados de diferentes tribunais, membros do Ministério Público, dois advogados indicados pela OAB e dois cidadãos de notável saber jurídico, indicados um pela Câmara e outro pelo Senado.
+
+    Compete ao CNJ o controle da atuação administrativa e financeira do Poder Judiciário e do cumprimento dos deveres funcionais dos juízes. Ele pode receber reclamações contra magistrados, aplicar sanções administrativas, como aposentadoria compulsória, e expedir resoluções sobre o funcionamento dos tribunais.
+
+    O CNJ não tem função jurisdicional: não julga processos nem revê decisões judiciais.
+  contexto: |
+    Resoluções do CNJ padronizaram temas como a proibição do nepotismo nos tribunais, as audiências de custódia e metas de produtividade. O STF decidiu, na ADI 3367, que o CNJ é constitucional e que o próprio STF não está sujeito ao seu controle.
+  base_legal:
+    - {nome: "Constituição Federal, art. 103-B", url: "@CF"}
+    - {nome: "Emenda Constitucional nº 45/2004", url: "@EC45"}
+  relacionados: [stf, ministerio-publico, nepotismo, decisao-monocratica]
+  faqs:
+    - {p: "O CNJ pode mudar uma decisão judicial?", r: "Não. O CNJ tem funções administrativas e disciplinares. Decisões judiciais só são revistas por recursos no próprio Judiciário."}
+    - {p: "Quem preside o CNJ?", r: "O presidente do STF, conforme o art. 103-B, § 1º, da Constituição."}
+    - {p: "Qualquer pessoa pode reclamar ao CNJ?", r: "Sim. O CNJ recebe reclamações contra membros e órgãos do Judiciário, que são analisadas pela Corregedoria Nacional de Justiça."}
+    - {p: "Quais punições o CNJ pode aplicar a juízes?", r: "Sanções administrativas como advertência, censura, remoção, disponibilidade e aposentadoria compulsória, nos termos da Lei Orgânica da Magistratura."}
+    - {p: "O STF se submete ao CNJ?", r: "Não. O STF decidiu na ADI 3367 que, como órgão de cúpula do Judiciário, não está sujeito ao controle do CNJ."}
+- termo: Arguição de Descumprimento de Preceito Fundamental
+  slug: adpf
+  categoria: judiciario
+  imagem: stf
+  sigla: ADPF
+  sinonimos: [ADPFs]
+  resumo: "é a ação apresentada ao STF para evitar ou reparar lesão a preceito fundamental causada por ato do poder público, quando não houver outro meio eficaz."
+  definicao: |
+    Prevista no art. 102, § 1º, da Constituição e regulamentada pela Lei nº 9.882/1999, a ADPF permite ao STF analisar atos do poder público que violem preceitos fundamentais, como direitos fundamentais, separação dos Poderes e princípios estruturantes do Estado.
+
+    Ela tem caráter subsidiário: só é admitida quando não houver outro meio eficaz de sanar a lesividade (art. 4º, § 1º, da Lei nº 9.882/1999). Por isso, é usada contra atos que não cabem em ADI, como leis municipais, normas anteriores à Constituição de 1988, interpretações judiciais reiteradas e atos administrativos.
+
+    Os legitimados são os mesmos da ADI. A decisão tem eficácia contra todos e efeito vinculante, e a medida liminar exige maioria absoluta dos ministros, salvo em caso de extrema urgência, quando o relator pode decidir sozinho, sujeito a referendo do plenário.
+  contexto: |
+    Exemplos de ADPFs julgadas pelo STF incluem a ADPF 54, sobre interrupção de gestação de fetos anencéfalos (2012), e as ADPFs que discutiram as emendas de relator ao Orçamento (2022). Por sua amplitude, a ADPF passou a ser usada também para questionar políticas públicas inteiras.
+  base_legal:
+    - {nome: "Constituição Federal, art. 102, § 1º", url: "@CF"}
+    - {nome: "Lei nº 9.882/1999", url: "@L9882"}
+  relacionados: [adi, adc, controle-de-constitucionalidade, stf, emendas-de-relator]
+  faqs:
+    - {p: "Qual a diferença entre ADPF e ADI?", r: "A ADI questiona leis federais e estaduais posteriores a 1988. A ADPF é subsidiária e alcança atos que a ADI não cobre, como leis municipais e normas anteriores à Constituição."}
+    - {p: "Quem pode propor ADPF?", r: "Os mesmos legitimados da ADI, listados no art. 103 da Constituição, como o presidente da República, as Mesas do Congresso, partidos com representação no Congresso e o procurador-geral da República."}
+    - {p: "Lei municipal pode ser questionada no STF?", r: "Sim, por meio de ADPF, quando houver violação a preceito fundamental e não houver outro meio eficaz."}
+    - {p: "O relator pode conceder liminar sozinho em ADPF?", r: "Em caso de extrema urgência, perigo de lesão grave ou período de recesso, sim, com referendo posterior do plenário, conforme a Lei nº 9.882/1999."}
+    - {p: "O que é preceito fundamental?", r: "A lei não define. O STF considera preceitos fundamentais os princípios e direitos essenciais da Constituição, como os direitos fundamentais e as cláusulas pétreas."}
+- termo: Ação Declaratória de Constitucionalidade
+  slug: adc
+  categoria: judiciario
+  imagem: stf
+  sigla: ADC
+  sinonimos: [ADCs]
+  resumo: "é a ação proposta ao STF para confirmar que uma lei ou ato normativo federal é compatível com a Constituição, quando há controvérsia judicial relevante."
+  definicao: |
+    A ADC foi criada pela Emenda Constitucional nº 3/1993 e está no art. 102, I, a, da Constituição. Seu objetivo é afastar a insegurança jurídica quando juízes e tribunais divergem sobre a validade de uma lei federal. A Lei nº 9.868/1999 exige que a petição demonstre a existência de controvérsia judicial relevante sobre a norma.
+
+    Os legitimados são os mesmos da ADI. A decisão de mérito tem eficácia contra todos e efeito vinculante. Se o STF julgar a ADC improcedente, a lei é declarada inconstitucional, porque ADI e ADC têm natureza ambivalente.
+
+    O STF pode conceder medida cautelar em ADC, por maioria absoluta, para suspender os processos que envolvam a aplicação da lei até o julgamento final.
+  contexto: |
+    Casos conhecidos são as ADCs 29 e 30, que confirmaram a Lei da Ficha Limpa (2012), e as ADCs 43, 44 e 54, em que o STF decidiu, em 2019, que o cumprimento da pena exige trânsito em julgado da condenação.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 102 (I, a) e 103", url: "@CF"}
+    - {nome: "Lei nº 9.868/1999, arts. 13 a 21", url: "@L9868"}
+  relacionados: [adi, adpf, controle-de-constitucionalidade, presuncao-de-inocencia, ficha-limpa]
+  faqs:
+    - {p: "ADC serve para lei estadual?", r: "Não. A ADC tem como objeto lei ou ato normativo federal, conforme o art. 102, I, a, da Constituição."}
+    - {p: "Por que pedir que o STF declare uma lei constitucional?", r: "Para encerrar divergências entre juízes e tribunais sobre a validade da norma e dar segurança jurídica a quem a aplica."}
+    - {p: "O que acontece se a ADC for julgada improcedente?", r: "A lei é declarada inconstitucional, com os mesmos efeitos de uma ADI julgada procedente."}
+    - {p: "É preciso haver controvérsia para propor ADC?", r: "Sim. A Lei nº 9.868/1999 exige demonstrar controvérsia judicial relevante sobre a aplicação da norma."}
+    - {p: "A decisão em ADC obriga os juízes?", r: "Sim. Tem eficácia contra todos e efeito vinculante para o Judiciário e a administração pública."}
+- termo: Ação Direta de Inconstitucionalidade por Omissão
+  slug: ado
+  categoria: judiciario
+  imagem: stf
+  sigla: ADO
+  resumo: "é a ação que pede ao STF o reconhecimento de que um Poder deixou de editar norma necessária para tornar efetiva uma regra da Constituição."
+  definicao: |
+    O art. 103, § 2º, da Constituição prevê que, declarada a inconstitucionalidade por omissão de medida para tornar efetiva norma constitucional, será dada ciência ao Poder competente para a adoção das providências necessárias e, em se tratando de órgão administrativo, para fazê-lo em 30 dias.
+
+    A Lei nº 12.063/2009 incluiu na Lei nº 9.868/1999 o rito da ADO. Os legitimados são os mesmos da ADI. A ação pode tratar de omissão total, quando não existe a norma, ou parcial, quando a norma existe mas é insuficiente.
+
+    A ADO se distingue do mandado de injunção: a ADO é ação de controle abstrato, com efeitos gerais; o mandado de injunção protege direito concreto de quem o impetra ou de uma coletividade.
+  contexto: |
+    Na ADO 25, julgada em 2016, o STF reconheceu a omissão do Congresso em editar a lei complementar sobre a compensação aos estados pelas perdas com a desoneração de exportações e fixou prazo para a edição da norma.
+  base_legal:
+    - {nome: "Constituição Federal, art. 103, § 2º", url: "@CF"}
+    - {nome: "Lei nº 12.063/2009 (inclui o rito da ADO na Lei nº 9.868/1999)", url: "@L12063"}
+  relacionados: [adi, mandado-de-injuncao, controle-de-constitucionalidade, stf]
+  faqs:
+    - {p: "O STF pode criar a lei que falta numa ADO?", r: "Em regra, o STF dá ciência ao Poder responsável. Em alguns casos, o tribunal fixou prazo ou estabeleceu regras provisórias até a edição da norma."}
+    - {p: "Qual a diferença entre ADO e mandado de injunção?", r: "A ADO é abstrata e trata da omissão em geral. O mandado de injunção é usado por quem tem um direito concreto que não pode exercer por falta de norma."}
+    - {p: "Quem pode propor ADO?", r: "Os mesmos legitimados da ADI, previstos no art. 103 da Constituição."}
+    - {p: "Há prazo para o Poder cumprir a decisão da ADO?", r: "Para órgãos administrativos, a Constituição fixa 30 dias. Para o Legislativo, não há prazo constitucional, mas o STF já estabeleceu prazos em casos concretos."}
+    - {p: "ADO serve para omissão parcial?", r: "Sim. A Lei nº 9.868/1999 admite ADO contra omissão total ou parcial quanto ao cumprimento de dever constitucional de legislar."}
+- termo: Liminar
+  slug: liminar
+  categoria: judiciario
+  imagem: justica
+  sinonimos: [liminares, medida liminar, medida cautelar, tutela de urgência]
+  autolink: [liminar, liminares, medida liminar, medidas liminares, tutela de urgência]
+  resumo: "é a decisão provisória e urgente tomada no início ou no curso de um processo para evitar dano antes do julgamento final."
+  definicao: |
+    No Código de Processo Civil, as liminares são espécies de tutela provisória (arts. 294 a 311). A tutela de urgência é concedida quando há elementos que evidenciem a probabilidade do direito e o perigo de dano ou o risco ao resultado útil do processo (art. 300). Ela pode ser revogada ou modificada a qualquer tempo e não encerra o processo.
+
+    Nas ações de controle de constitucionalidade, a medida cautelar tem regras próprias. Em ADI, a Lei nº 9.868/1999 exige maioria absoluta dos ministros do STF para concedê-la, salvo no recesso. Em ADPF, a Lei nº 9.882/1999 admite decisão do relator em caso de extrema urgência, sujeita a referendo do plenário.
+
+    O termo é usado de forma ampla no noticiário para qualquer decisão provisória, inclusive em mandado de segurança e habeas corpus.
+  contexto: |
+    Uma liminar pode suspender uma lei, um contrato ou uma eleição interna enquanto o mérito não é julgado. Como é provisória, a decisão final pode confirmá-la ou derrubá-la, e cabe recurso contra ela ao colegiado ou ao tribunal superior.
+  base_legal:
+    - {nome: "Código de Processo Civil, arts. 294 a 311", url: "@CPC"}
+    - {nome: "Lei nº 9.868/1999, art. 10", url: "@L9868"}
+    - {nome: "Lei nº 9.882/1999, art. 5º", url: "@L9882"}
+  relacionados: [decisao-monocratica, mandado-de-seguranca, adi, plenario-virtual]
+  faqs:
+    - {p: "Liminar é decisão definitiva?", r: "Não. É provisória e pode ser revogada ou modificada. A decisão definitiva vem com o julgamento do mérito."}
+    - {p: "Quais os requisitos para uma liminar?", r: "No CPC, a probabilidade do direito e o perigo de dano ou risco ao resultado útil do processo, conforme o art. 300."}
+    - {p: "Cabe recurso contra liminar?", r: "Sim. Nos tribunais, em regra cabe agravo interno ao colegiado; na primeira instância, agravo de instrumento."}
+    - {p: "Um ministro do STF pode suspender uma lei sozinho?", r: "A Lei nº 9.868/1999 exige maioria absoluta para cautelar em ADI, salvo no recesso. Em casos urgentes, decisões individuais têm sido submetidas a referendo imediato do plenário, conforme o regimento do STF."}
+    - {p: "Qual a diferença entre liminar e tutela antecipada?", r: "Tutela antecipada é uma espécie de tutela de urgência que antecipa efeitos do pedido final. Liminar é o nome usado para a decisão provisória concedida no início do processo."}

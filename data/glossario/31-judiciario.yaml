@@ -1,0 +1,251 @@
+termos:
+- termo: Decisão monocrática
+  slug: decisao-monocratica
+  categoria: judiciario
+  imagem: stf
+  sinonimos: [decisões monocráticas, decisão individual]
+  autolink: [decisão monocrática, decisões monocráticas, monocraticamente, decisão individual do relator]
+  resumo: "é a decisão tomada individualmente por um ministro ou desembargador relator, sem passar pelo colegiado do tribunal."
+  definicao: |
+    Nos tribunais, o relator conduz o processo e pode decidir sozinho em várias situações previstas no Código de Processo Civil (art. 932): negar seguimento a recurso inadmissível, decidir pedidos de tutela provisória e dar ou negar provimento a recursos contrários a súmula ou a tese firmada em julgamento repetitivo. Essas são as decisões monocráticas.
+
+    Contra a decisão monocrática cabe agravo interno, para que o colegiado, como a turma ou o plenário, examine a questão (art. 1.021 do CPC). No STF, o Regimento Interno prevê que medidas urgentes concedidas individualmente sejam submetidas a referendo do colegiado, o que costuma ocorrer no plenário virtual.
+
+    O volume de decisões monocráticas nos tribunais superiores é alto, porque muitos recursos repetem temas já decididos.
+  contexto: |
+    O tema entrou no debate legislativo: em 2023, o Senado aprovou uma proposta de emenda à Constituição que limita decisões monocráticas que suspendam a eficácia de leis, e a proposta seguiu para a Câmara. Para o leitor, a distinção importante é se a decisão noticiada é de um ministro ou do tribunal.
+  base_legal:
+    - {nome: "Código de Processo Civil, arts. 932 e 1.021", url: "@CPC"}
+    - {nome: "Lei nº 9.868/1999, art. 10", url: "@L9868"}
+  relacionados: [liminar, plenario-virtual, relator, stf]
+  faqs:
+    - {p: "Decisão monocrática vale como decisão do tribunal?", r: "Produz efeitos imediatos, mas pode ser revista pelo colegiado por meio de agravo interno ou referendo."}
+    - {p: "Qual o recurso contra decisão monocrática?", r: "O agravo interno, dirigido ao órgão colegiado competente, conforme o art. 1.021 do Código de Processo Civil."}
+    - {p: "Ministro do STF pode suspender uma lei sozinho?", r: "Em situações urgentes há decisões individuais, mas a Lei nº 9.868/1999 exige maioria absoluta para cautelar em ADI fora do recesso, e o regimento do STF prevê referendo do plenário."}
+    - {p: "Por que há tantas decisões monocráticas?", r: "Porque muitos recursos tratam de temas já pacificados, e o CPC autoriza o relator a decidi-los com base em súmulas e teses repetitivas."}
+    - {p: "Monocrática é o mesmo que liminar?", r: "Não necessariamente. A liminar é provisória; a decisão monocrática pode ser liminar ou de mérito, desde que tomada só pelo relator."}
+- termo: Plenário virtual
+  slug: plenario-virtual
+  categoria: judiciario
+  imagem: stf
+  sinonimos: [sessão virtual, sessões virtuais, julgamento virtual]
+  autolink: [plenário virtual, sessão virtual, sessões virtuais, julgamento virtual]
+  resumo: "é a modalidade de julgamento em que os ministros registram seus votos num sistema eletrônico durante um período, sem sessão presencial."
+  definicao: |
+    No plenário virtual, o relator disponibiliza o voto no sistema e os demais ministros votam ao longo do período da sessão, que costuma durar seis dias úteis no STF. Ao fim do prazo, o resultado é proclamado. Os votos e o andamento ficam disponíveis para consulta pública no portal do tribunal.
+
+    O STF ampliou o uso do plenário virtual a partir de 2019 e 2020, por resoluções internas, permitindo julgar nessa modalidade quase todas as classes processuais, inclusive ações de controle de constitucionalidade. Advogados podem enviar sustentação oral gravada.
+
+    Qualquer ministro pode pedir destaque, o que leva o processo ao plenário presencial e reinicia o julgamento, ou pedir vista, que suspende a contagem até a devolução.
+  contexto: |
+    Hoje a maior parte das decisões colegiadas do STF é tomada em sessões virtuais. No noticiário, a expressão "maioria formada no plenário virtual" indica que já há votos suficientes, mas o resultado só é definitivo ao fim da sessão, porque ministros ainda podem mudar o voto, pedir vista ou destaque.
+  base_legal:
+    - {nome: "Constituição Federal, art. 93, IX (publicidade dos julgamentos)", url: "@CF"}
+  relacionados: [pedido-de-vista, decisao-monocratica, stf, plenario]
+  faqs:
+    - {p: "Quanto tempo dura uma sessão do plenário virtual?", r: "No STF, as sessões virtuais costumam durar seis dias úteis, com início e fim definidos no calendário do tribunal."}
+    - {p: "O que é pedido de destaque?", r: "É o pedido de um ministro para levar o caso do plenário virtual ao presencial. O julgamento recomeça na sessão física."}
+    - {p: "Dá para acompanhar os votos no plenário virtual?", r: "Sim. O STF publica os votos e o placar na página do processo durante a sessão."}
+    - {p: "Maioria formada no plenário virtual é resultado final?", r: "Não necessariamente. Até o encerramento, ministros podem mudar o voto, pedir vista ou destaque."}
+    - {p: "Advogados podem fazer sustentação oral no plenário virtual?", r: "Sim, por meio de arquivo de áudio ou vídeo enviado ao sistema, conforme as regras do tribunal."}
+- termo: Foro por prerrogativa de função
+  slug: foro-privilegiado
+  categoria: judiciario
+  imagem: stf
+  sinonimos: [foro privilegiado, foro especial]
+  autolink: [foro privilegiado, foro por prerrogativa de função, foro especial]
+  resumo: "é a regra que define que certas autoridades sejam julgadas por crimes diretamente em tribunais, como o STF e o STJ, e não na primeira instância."
+  definicao: |
+    O foro por prerrogativa de função, conhecido como foro privilegiado, está previsto em vários artigos da Constituição. Pelo art. 102, I, b e c, o STF julga nas infrações penais comuns o presidente da República, o vice, os membros do Congresso, os ministros do STF, o procurador-geral da República e os ministros de Estado, entre outros. Pelo art. 105, I, a, o STJ julga os governadores. Prefeitos são julgados pelos Tribunais de Justiça (art. 29, X).
+
+    A justificativa é proteger o cargo, não a pessoa. Em 2018, na Ação Penal 937, o STF restringiu o foro de parlamentares aos crimes cometidos durante o exercício do mandato e relacionados às funções. Em 2025, o tribunal decidiu que a competência permanece mesmo após a saída do cargo, para crimes praticados no exercício e em razão das funções.
+
+    O foro vale para ações penais. Ações de improbidade administrativa, em regra, correm na primeira instância.
+  contexto: |
+    A discussão sobre o alcance do foro reaparece quando uma autoridade é investigada. Inquéritos contra pessoas com foro no STF são supervisionados por um ministro relator, a quem cabe autorizar medidas como buscas e quebras de sigilo.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 29 (X), 102 (I, b e c) e 105 (I, a)", url: "@CF"}
+  relacionados: [stf, stj, imunidade-parlamentar, inquerito, denuncia]
+  faqs:
+    - {p: "Quem tem foro no STF?", r: "Entre outros, o presidente e o vice, deputados federais e senadores, ministros de Estado, ministros do STF e o procurador-geral da República, nas infrações penais comuns."}
+    - {p: "Deputado tem foro por qualquer crime?", r: "Não. Desde 2018, o STF limita o foro a crimes cometidos durante o mandato e relacionados às funções. Outros crimes vão para a primeira instância."}
+    - {p: "Quem perde o cargo perde o foro?", r: "Em 2025, o STF decidiu que o foro se mantém após a saída do cargo para crimes praticados no exercício e em razão das funções."}
+    - {p: "Governador é julgado onde?", r: "No STJ, nas infrações penais comuns, conforme o art. 105, I, a, da Constituição."}
+    - {p: "Foro privilegiado vale para processo civil?", r: "Não. A prerrogativa é para ações penais. Ações civis, inclusive de improbidade, em regra tramitam na primeira instância."}
+- termo: Habeas corpus
+  slug: habeas-corpus
+  categoria: judiciario
+  imagem: justica
+  sigla: HC
+  sinonimos: [habeas corpus preventivo]
+  resumo: "é a ação que protege a liberdade de locomoção contra prisão ou ameaça de prisão ilegal ou abusiva."
+  definicao: |
+    O art. 5º, LXVIII, da Constituição prevê que será concedido habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder. O habeas corpus é gratuito (art. 5º, LXXVII) e pode ser impetrado por qualquer pessoa, em favor próprio ou de terceiro, mesmo sem advogado.
+
+    Há o habeas corpus liberatório, quando a prisão já ocorreu, e o preventivo, quando há ameaça. O Código de Processo Penal regula o procedimento nos arts. 647 a 667. Pode ser concedido de ofício pelo juiz ou tribunal que perceber a ilegalidade.
+
+    A Constituição não admite habeas corpus em relação a punições disciplinares militares (art. 142, § 2º), salvo para discutir aspectos de legalidade, segundo a jurisprudência.
+  contexto: |
+    O habeas corpus é uma das ações mais julgadas pelo STF e pelo STJ. Também é usado para trancar investigações ou ações penais sem justa causa e para garantir a investigados o direito de não produzir prova contra si, inclusive em depoimentos a CPIs.
+  base_legal:
+    - {nome: "Constituição Federal, art. 5º, LXVIII e LXXVII", url: "@CF"}
+    - {nome: "Código de Processo Penal, arts. 647 a 667", url: "@CPP"}
+  relacionados: [prisao-preventiva, mandado-de-seguranca, stf, stj]
+  faqs:
+    - {p: "Precisa de advogado para pedir habeas corpus?", r: "Não. Qualquer pessoa pode impetrar habeas corpus, em favor próprio ou de outra pessoa, sem custo."}
+    - {p: "Habeas corpus serve para quem ainda não foi preso?", r: "Sim. O habeas corpus preventivo protege quem está ameaçado de prisão ilegal e resulta em salvo-conduto."}
+    - {p: "CPI pode ser alvo de habeas corpus?", r: "Sim. Depoentes costumam obter habeas corpus para garantir o direito ao silêncio e à assistência de advogado."}
+    - {p: "Qual a diferença entre habeas corpus e mandado de segurança?", r: "O habeas corpus protege a liberdade de locomoção. O mandado de segurança protege outros direitos líquidos e certos contra atos de autoridade."}
+    - {p: "Juiz pode conceder habeas corpus sem pedido?", r: "Sim. O CPP permite a concessão de ofício quando, no curso do processo, o juiz ou o tribunal verificar que alguém sofre coação ilegal."}
+- termo: Mandado de segurança
+  slug: mandado-de-seguranca
+  categoria: judiciario
+  imagem: justica
+  sinonimos: [mandados de segurança, mandado de segurança coletivo]
+  autolink: [mandado de segurança, mandados de segurança, mandado de segurança coletivo]
+  resumo: "é a ação para proteger direito líquido e certo, não amparado por habeas corpus, contra ato ilegal ou abusivo de autoridade pública."
+  definicao: |
+    O art. 5º, LXIX, da Constituição prevê o mandado de segurança para proteger direito líquido e certo quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente no exercício de atribuições do poder público. A Lei nº 12.016/2009 regula o procedimento.
+
+    Direito líquido e certo é aquele que pode ser comprovado de plano, por documentos, sem necessidade de produção de outras provas. O prazo para impetrar é de 120 dias, contados da ciência do ato (art. 23 da lei). Cabe liminar para suspender o ato quando houver fundamento relevante e risco de ineficácia da medida.
+
+    O mandado de segurança coletivo pode ser impetrado por partido político com representação no Congresso, organização sindical, entidade de classe ou associação legalmente constituída há pelo menos um ano.
+  contexto: |
+    Parlamentares usam mandado de segurança no STF para questionar a tramitação de proposições que violem regras constitucionais do processo legislativo. Servidores e empresas também o utilizam com frequência contra atos de órgãos públicos.
+  base_legal:
+    - {nome: "Constituição Federal, art. 5º, LXIX e LXX", url: "@CF"}
+    - {nome: "Lei nº 12.016/2009", url: "@L12016"}
+  relacionados: [habeas-corpus, liminar, mandado-de-injuncao, stf]
+  faqs:
+    - {p: "Qual o prazo para entrar com mandado de segurança?", r: "120 dias, contados da data em que o interessado tomou ciência do ato, conforme o art. 23 da Lei nº 12.016/2009."}
+    - {p: "O que é direito líquido e certo?", r: "É o direito comprovado de imediato por documentos, sem necessidade de perícia ou testemunhas."}
+    - {p: "Cabe mandado de segurança contra lei?", r: "Não contra lei em tese, segundo a Súmula 266 do STF. Cabe contra o ato concreto que aplica a lei."}
+    - {p: "Quem pode impetrar mandado de segurança coletivo?", r: "Partido político com representação no Congresso, organização sindical, entidade de classe e associação constituída há pelo menos um ano."}
+    - {p: "Parlamentar pode usar mandado de segurança contra votação no Congresso?", r: "Sim. O STF admite mandado de segurança de parlamentar para garantir o devido processo legislativo, em situações excepcionais."}
+- termo: Mandado de injunção
+  slug: mandado-de-injuncao
+  categoria: judiciario
+  imagem: justica
+  sinonimos: [mandados de injunção]
+  autolink: [mandado de injunção, mandados de injunção]
+  resumo: "é a ação usada quando a falta de norma regulamentadora impede o exercício de direito previsto na Constituição."
+  definicao: |
+    O art. 5º, LXXI, da Constituição prevê o mandado de injunção sempre que a falta de norma regulamentadora tornar inviável o exercício dos direitos e liberdades constitucionais e das prerrogativas inerentes à nacionalidade, à soberania e à cidadania. A Lei nº 13.300/2016 regulamenta o procedimento.
+
+    Reconhecida a omissão, o tribunal determina prazo para que o órgão responsável edite a norma e estabelece as condições em que o direito será exercido, caso a norma não seja editada no prazo. A decisão vale, em regra, para as partes, mas pode ter efeitos para todos quando isso for inerente ao direito.
+
+    Há também o mandado de injunção coletivo, que pode ser proposto pelo Ministério Público, por partidos com representação no Congresso, por sindicatos e associações e pela Defensoria Pública.
+  contexto: |
+    Em 2007, nos mandados de injunção 670, 708 e 712, o STF determinou a aplicação da lei de greve do setor privado aos servidores públicos, enquanto não houvesse lei específica. O caso é citado como marco da mudança no alcance dessas decisões.
+  base_legal:
+    - {nome: "Constituição Federal, art. 5º, LXXI", url: "@CF"}
+    - {nome: "Lei nº 13.300/2016", url: "@L13300"}
+  relacionados: [ado, mandado-de-seguranca, controle-de-constitucionalidade, stf]
+  faqs:
+    - {p: "Para que serve o mandado de injunção?", r: "Para garantir um direito constitucional que não pode ser exercido porque falta a lei ou a norma que o regulamenta."}
+    - {p: "Qual a diferença entre mandado de injunção e ADO?", r: "O mandado de injunção protege direito de quem o propõe ou de uma coletividade. A ADO é ação abstrata, proposta por legitimados específicos, sobre a omissão em geral."}
+    - {p: "O tribunal pode suprir a falta da lei?", r: "Sim. A Lei nº 13.300/2016 permite que a decisão estabeleça as condições para o exercício do direito se a norma não for editada no prazo fixado."}
+    - {p: "A decisão vale para todos?", r: "Em regra, só para as partes, mas pode ter eficácia geral quando isso for indispensável ao exercício do direito."}
+    - {p: "Quem pode propor mandado de injunção coletivo?", r: "Ministério Público, partido com representação no Congresso, organização sindical, entidade de classe, associação e Defensoria Pública."}
+- termo: Súmula vinculante
+  slug: sumula-vinculante
+  categoria: judiciario
+  imagem: stf
+  sinonimos: [súmulas vinculantes]
+  autolink: [súmula vinculante, súmulas vinculantes]
+  resumo: "é o enunciado aprovado por dois terços do STF que, após reiteradas decisões sobre matéria constitucional, obriga todo o Judiciário e a administração pública."
+  definicao: |
+    Criada pela Emenda Constitucional nº 45/2004, a súmula vinculante está prevista no art. 103-A da Constituição e regulamentada pela Lei nº 11.417/2006. O STF pode aprovar, revisar ou cancelar súmula, de ofício ou por provocação, mediante decisão de dois terços de seus membros, ou seja, oito ministros, depois de reiteradas decisões sobre matéria constitucional.
+
+    A súmula tem por objetivo dar validade, interpretação e eficácia a normas sobre as quais haja controvérsia atual entre órgãos judiciários ou entre estes e a administração, que acarrete grave insegurança jurídica e multiplicação de processos.
+
+    Do ato administrativo ou da decisão judicial que contrariar súmula vinculante cabe reclamação ao STF, que pode anular o ato ou cassar a decisão.
+  contexto: |
+    Exemplos conhecidos são a Súmula Vinculante 13, que proíbe o nepotismo na administração pública, e a Súmula Vinculante 11, que restringe o uso de algemas. A lista completa é mantida pelo STF.
+  base_legal:
+    - {nome: "Constituição Federal, art. 103-A", url: "@CF"}
+    - {nome: "Lei nº 11.417/2006", url: "@L11417"}
+    - {nome: "Emenda Constitucional nº 45/2004", url: "@EC45"}
+  relacionados: [reclamacao-constitucional, repercussao-geral, nepotismo, stf, maioria-qualificada]
+  faqs:
+    - {p: "Quantos ministros precisam votar para aprovar uma súmula vinculante?", r: "Dois terços dos membros do STF, isto é, oito dos onze ministros."}
+    - {p: "Súmula vinculante obriga o Congresso?", r: "Não. Vincula os demais órgãos do Judiciário e a administração pública direta e indireta. O Legislativo, na função de legislar, não fica vinculado."}
+    - {p: "O que fazer se um órgão descumprir súmula vinculante?", r: "Cabe reclamação diretamente ao STF, que pode anular o ato administrativo ou cassar a decisão judicial."}
+    - {p: "Qual a diferença entre súmula comum e vinculante?", r: "A súmula comum orienta a jurisprudência, mas não obriga. A vinculante tem efeito obrigatório previsto na Constituição."}
+    - {p: "Quem pode pedir a edição de súmula vinculante?", r: "Além do próprio STF, os legitimados da ADI, o defensor público-geral da União e tribunais, conforme a Lei nº 11.417/2006."}
+- termo: Trânsito em julgado
+  slug: transitado-em-julgado
+  categoria: judiciario
+  imagem: justica
+  sinonimos: [transitado em julgado, transitada em julgado, coisa julgada]
+  autolink: [trânsito em julgado, transitado em julgado, transitada em julgado, transitou em julgado, coisa julgada]
+  resumo: "é o momento em que uma decisão judicial se torna definitiva, porque não cabe mais nenhum recurso."
+  definicao: |
+    Uma decisão transita em julgado quando se esgotam os recursos possíveis ou quando o prazo para recorrer termina sem que a parte recorra. A partir daí, forma-se a coisa julgada, que o Código de Processo Civil define como a autoridade que torna imutável e indiscutível a decisão de mérito não mais sujeita a recurso (art. 502).
+
+    A Constituição protege a coisa julgada contra leis posteriores (art. 5º, XXXVI) e estabelece que ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória (art. 5º, LVII).
+
+    Mesmo depois do trânsito, existem vias excepcionais: a ação rescisória no processo civil, em até dois anos, e a revisão criminal, que pode ser pedida a qualquer tempo em favor do condenado.
+  contexto: |
+    No noticiário, o trânsito em julgado marca, por exemplo, o início da inelegibilidade em algumas hipóteses e o momento em que a pena pode ser executada, segundo o entendimento do STF de 2019. Muitas regras da Ficha Limpa, porém, já se aplicam com decisão de órgão colegiado, antes do trânsito.
+  base_legal:
+    - {nome: "Constituição Federal, art. 5º, XXXVI e LVII", url: "@CF"}
+    - {nome: "Código de Processo Civil, arts. 502 e 975", url: "@CPC"}
+    - {nome: "Código de Processo Penal, arts. 621 e 622", url: "@CPP"}
+  relacionados: [presuncao-de-inocencia, recurso-extraordinario, ficha-limpa, acordao]
+  faqs:
+    - {p: "O que significa transitado em julgado?", r: "Que a decisão é definitiva, porque não há mais recurso possível ou o prazo para recorrer acabou."}
+    - {p: "Uma decisão transitada em julgado pode ser mudada?", r: "Só em hipóteses excepcionais, como a ação rescisória no processo civil, em até dois anos, e a revisão criminal em favor do condenado."}
+    - {p: "A pena só pode ser cumprida após o trânsito em julgado?", r: "Em 2019, nas ADCs 43, 44 e 54, o STF decidiu que sim, ressalvadas as prisões cautelares, como a preventiva."}
+    - {p: "Ficha Limpa exige trânsito em julgado?", r: "Não em todos os casos. Várias hipóteses de inelegibilidade da Lei Complementar nº 64/1990 se aplicam já com decisão de órgão judicial colegiado."}
+    - {p: "Lei nova pode mudar uma decisão transitada em julgado?", r: "Não. A Constituição protege a coisa julgada contra leis posteriores, no art. 5º, XXXVI."}
+- termo: Recurso extraordinário
+  slug: recurso-extraordinario
+  categoria: judiciario
+  imagem: stf
+  sinonimos: [recursos extraordinários]
+  autolink: [recurso extraordinário, recursos extraordinários]
+  resumo: "é o recurso ao STF contra decisões de última instância que contrariem a Constituição, admitido apenas quando a questão tem repercussão geral."
+  definicao: |
+    O art. 102, III, da Constituição atribui ao STF julgar, em recurso extraordinário, as causas decididas em única ou última instância quando a decisão contrariar dispositivo da Constituição, declarar a inconstitucionalidade de tratado ou lei federal, julgar válida lei ou ato de governo local contestado em face da Constituição ou julgar válida lei local contestada em face de lei federal.
+
+    Desde a Emenda Constitucional nº 45/2004, o recorrente precisa demonstrar a repercussão geral das questões constitucionais discutidas, e o STF só pode recusar o recurso por esse motivo com o voto de dois terços dos ministros. Também se exige o prequestionamento, isto é, que a questão constitucional tenha sido debatida na decisão recorrida.
+
+    O recurso extraordinário não serve para reexaminar fatos e provas, apenas questões de direito constitucional.
+  contexto: |
+    Quando o STF julga um recurso extraordinário com repercussão geral, fixa uma tese que passa a orientar todos os processos sobre o mesmo tema. Por isso, decisões em recursos individuais podem ter efeitos amplos.
+  base_legal:
+    - {nome: "Constituição Federal, art. 102, III e § 3º", url: "@CF"}
+    - {nome: "Código de Processo Civil, arts. 1.029 a 1.041", url: "@CPC"}
+  relacionados: [repercussao-geral, recurso-especial, stf, transitado-em-julgado]
+  faqs:
+    - {p: "Qual a diferença entre recurso extraordinário e especial?", r: "O extraordinário vai ao STF e discute a Constituição. O especial vai ao STJ e discute lei federal."}
+    - {p: "O STF reexamina provas no recurso extraordinário?", r: "Não. O recurso extraordinário trata apenas de questões de direito constitucional, sem reexame de fatos e provas."}
+    - {p: "O que é prequestionamento?", r: "É a exigência de que a questão constitucional tenha sido debatida na decisão recorrida para que possa ser levada ao STF."}
+    - {p: "O STF pode recusar um recurso extraordinário?", r: "Sim, se entender que não há repercussão geral, por decisão de dois terços dos ministros, ou se faltarem outros requisitos."}
+    - {p: "Recurso extraordinário suspende a decisão recorrida?", r: "Em regra não. O recurso não tem efeito suspensivo automático, mas a parte pode pedir esse efeito ao tribunal."}
+- termo: Recurso especial
+  slug: recurso-especial
+  categoria: judiciario
+  imagem: stj
+  sinonimos: [recursos especiais]
+  autolink: [recurso especial, recursos especiais]
+  resumo: "é o recurso ao STJ contra decisões de tribunais que contrariem lei federal ou deem a ela interpretação divergente da de outro tribunal."
+  definicao: |
+    Pelo art. 105, III, da Constituição, cabe ao STJ julgar, em recurso especial, as causas decididas em única ou última instância pelos Tribunais Regionais Federais ou pelos Tribunais de Justiça quando a decisão contrariar tratado ou lei federal, ou negar-lhes vigência; julgar válido ato de governo local contestado em face de lei federal; ou der a lei federal interpretação divergente da que lhe atribuiu outro tribunal.
+
+    A Emenda Constitucional nº 125/2022 incluiu a exigência de demonstrar a relevância das questões de direito federal infraconstitucional, que pode ser recusada por dois terços dos membros do órgão competente. Como no recurso extraordinário, não se reexaminam fatos e provas.
+
+    Quando há muitos recursos sobre a mesma questão, o STJ julga um caso representativo como recurso repetitivo e fixa tese a ser seguida pelos demais tribunais.
+  contexto: |
+    Recursos especiais definem temas que afetam muitas pessoas, como contratos bancários, planos de saúde, direito do consumidor e matéria penal. As teses de repetitivos são publicadas pelo STJ com número e enunciado.
+  base_legal:
+    - {nome: "Constituição Federal, art. 105, III e §§ 2º e 3º", url: "@CF"}
+    - {nome: "Código de Processo Civil, arts. 1.029 a 1.041", url: "@CPC"}
+  relacionados: [stj, recurso-extraordinario, transitado-em-julgado, acordao]
+  faqs:
+    - {p: "Contra que decisões cabe recurso especial?", r: "Contra decisões de última instância dos TRFs e Tribunais de Justiça que contrariem lei federal ou a interpretem de forma diferente de outro tribunal."}
+    - {p: "O que mudou com a EC 125/2022?", r: "Passou a ser exigida a demonstração de relevância da questão de direito federal, nos termos da lei, como filtro para o recurso especial."}
+    - {p: "Recurso especial reexamina provas?", r: "Não. O STJ examina apenas a interpretação da lei federal, sem reavaliar fatos e provas."}
+    - {p: "O que é recurso repetitivo?", r: "É o julgamento, pelo STJ, de um recurso que representa muitos casos iguais. A tese fixada orienta os demais processos."}
+    - {p: "Posso apresentar recurso especial e extraordinário ao mesmo tempo?", r: "Sim. Quando a decisão envolve questão federal e constitucional, os dois recursos podem ser interpostos simultaneamente."}

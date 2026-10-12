@@ -1,0 +1,290 @@
+termos:
+- termo: Emenda
+  slug: emenda
+  categoria: processo-legislativo
+  imagem: plenario-camara2
+  autolink: [emenda, emendas]
+  resumo: "é a proposição acessória que altera o texto de outra proposição, como um projeto de lei, uma medida provisória ou o projeto de Orçamento."
+  definicao: |
+    No processo legislativo, emenda é a proposta de mudança apresentada a um texto que já está em tramitação. Ela não existe sozinha: depende da proposição principal e é votada junto com ela ou em separado.
+
+    O Regimento Interno da Câmara classifica as emendas em supressivas (retiram parte do texto), aglutinativas (fundem emendas ou o texto original), substitutivas (trocam um dispositivo ou o texto inteiro), modificativas (alteram sem mudar a substância) e aditivas (acrescentam dispositivos). Pode haver ainda subemenda, que é a emenda feita a outra emenda.
+
+    A Constituição limita algumas emendas. O art. 63 proíbe aumentar a despesa prevista em projetos de iniciativa exclusiva do presidente da República, salvo nas leis orçamentárias, e em projetos sobre a organização administrativa da Câmara, do Senado, dos tribunais e do Ministério Público.
+  contexto: |
+    O termo aparece em dois sentidos no noticiário. O primeiro é este, o de alteração a um projeto em discussão. O segundo é o das emendas ao Orçamento, em que deputados e senadores indicam onde aplicar parte dos recursos da União, tratado no verbete [emenda parlamentar](/glossario/emenda-parlamentar/). E "emenda constitucional" é o nome da norma que resulta de uma [PEC](/glossario/pec/) aprovada.
+  exemplos:
+    - "Quando uma emenda do Senado altera um projeto que veio da Câmara, o texto volta para a Câmara, que pode aceitar ou rejeitar a mudança, mas não pode criar texto novo."
+  base_legal:
+    - {nome: "Constituição Federal, arts. 63 e 65", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 118 a 125", url: "@RICD"}
+  relacionados: [substitutivo, destaque, emenda-parlamentar, casa-revisora, jabuti]
+  faqs:
+    - {p: "Quem pode apresentar emenda a um projeto?", r: "Deputados e senadores, individualmente ou em grupo, e as comissões, nos prazos fixados pelos regimentos de cada Casa. O relator também pode propor mudanças por meio de substitutivo ou emendas de relator."}
+    - {p: "Qual a diferença entre emenda e substitutivo?", r: "A emenda muda partes do texto. O substitutivo é um tipo de emenda que troca o texto inteiro por uma nova versão, que passa a ser a base da votação."}
+    - {p: "Uma emenda pode tratar de assunto diferente do projeto?", r: "Não deveria. Os regimentos exigem relação com o tema da proposição, e o STF considerou inconstitucional incluir em medida provisória emenda sem pertinência temática, prática conhecida como jabuti."}
+    - {p: "O que é emenda aglutinativa?", r: "É a emenda que funde o conteúdo de outras emendas, ou de emendas com o texto original, para chegar a uma redação de consenso. Costuma ser apresentada em plenário."}
+    - {p: "Emenda ao Orçamento segue as mesmas regras?", r: "Não. As emendas ao projeto de lei orçamentária seguem o art. 166 da Constituição e a Resolução nº 1/2006 do Congresso, com limites de valor e indicação da fonte dos recursos."}
+- termo: Substitutivo
+  slug: substitutivo
+  categoria: processo-legislativo
+  imagem: plenario-camara2
+  resumo: "é a emenda que substitui integralmente o texto de um projeto por uma nova versão, geralmente apresentada pelo relator."
+  definicao: |
+    O substitutivo é a forma mais ampla de emenda: em vez de mudar artigos isolados, propõe um texto completo no lugar do original. Pelo Regimento Interno da Câmara, recebe esse nome a emenda que altera a proposição "no seu conjunto", substancial ou formalmente.
+
+    Na prática, o substitutivo costuma reunir no mesmo texto o projeto principal, os projetos apensados e as sugestões aceitas durante a discussão. Quando aprovado por uma comissão ou pelo plenário, passa a ser o texto que segue em tramitação.
+
+    No Senado, o substitutivo aprovado em comissão em caráter terminativo é submetido a um turno suplementar, em que podem ser oferecidas novas emendas antes da votação final.
+  contexto: |
+    Projetos com muitos apensados, como os de reforma de códigos, quase sempre avançam por substitutivo. Por isso a versão votada pode ser bem diferente da apresentada pelo autor. Ao acompanhar uma votação, vale conferir qual texto está em pauta: o original, o substitutivo da comissão ou o de plenário.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, art. 118", url: "@RICD"}
+    - {nome: "Regimento Interno do Senado Federal, art. 282", url: "@RISF"}
+  relacionados: [emenda, relator, parecer, tramitacao]
+  faqs:
+    - {p: "Quem apresenta o substitutivo?", r: "Na maioria das vezes, o relator da matéria, junto com o parecer. Mas qualquer parlamentar pode apresentar emenda substitutiva dentro dos prazos regimentais."}
+    - {p: "Se o substitutivo for aprovado, o projeto original deixa de existir?", r: "O original continua na tramitação como referência, mas o texto que segue para votação é o do substitutivo aprovado. Se o substitutivo for rejeitado, volta-se ao texto original."}
+    - {p: "O que é turno suplementar?", r: "É uma nova rodada de discussão e votação exigida no Senado quando uma comissão aprova substitutivo em decisão terminativa, para permitir emendas ao novo texto."}
+    - {p: "Substitutivo pode juntar vários projetos?", r: "Sim. É comum o relator unificar no substitutivo o projeto principal e os apensados, que tratam do mesmo tema."}
+    - {p: "Como saber qual texto está sendo votado?", r: "A pauta e a página da proposição nos sites da Câmara e do Senado indicam se a votação é do texto original, do substitutivo de comissão ou de um substitutivo apresentado em plenário."}
+- termo: Relator
+  slug: relator
+  categoria: processo-legislativo
+  imagem: plenario-camara2
+  sinonimos: [relatora, relatoria]
+  resumo: "é o parlamentar designado para analisar uma proposição e apresentar parecer, com voto favorável, contrário ou com mudanças."
+  definicao: |
+    Cada proposição que chega a uma comissão recebe um relator, escolhido pelo presidente da comissão entre os seus membros. Cabe a ele estudar o texto, ouvir os interessados quando necessário e apresentar parecer com o voto pela aprovação, rejeição ou aprovação com emendas ou substitutivo.
+
+    Quando a matéria vai direto ao plenário, como em regime de urgência, o presidente da Casa pode designar relator de plenário, que dá parecer em nome das comissões. No Congresso, as medidas provisórias têm relator na comissão mista, e o Orçamento tem relator-geral e relatores setoriais na Comissão Mista de Planos, Orçamentos Públicos e Fiscalização.
+
+    O relator não decide sozinho: o parecer é votado pela comissão ou pelo plenário. Se o parecer for rejeitado, um novo relator é designado para redigir o voto vencedor.
+  contexto: |
+    A escolha do relator costuma ser negociada entre partidos, porque ele influencia o texto final. No noticiário, frases como "o relator apresentou novo parecer" indicam mudança na versão que será votada. Na Justiça, o termo tem outro uso: é o ministro ou juiz que conduz o processo e apresenta o primeiro voto.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 41, 56 e 57", url: "@RICD"}
+    - {nome: "Regimento Interno do Senado Federal, art. 126", url: "@RISF"}
+  relacionados: [parecer, substitutivo, comissao-permanente, emendas-de-relator]
+  faqs:
+    - {p: "Quem escolhe o relator de um projeto?", r: "Nas comissões, o presidente da comissão. No plenário, quando o projeto não passou pelas comissões, o presidente da Casa designa o relator de plenário."}
+    - {p: "O relator pode mudar o texto do projeto?", r: "Pode propor mudanças por meio de emendas ou de substitutivo no parecer. As mudanças só valem se o parecer for aprovado pelo colegiado."}
+    - {p: "O que acontece quando o parecer do relator é derrotado?", r: "O presidente da comissão designa outro parlamentar, normalmente de quem votou com a maioria, para redigir o parecer vencedor."}
+    - {p: "Relator de projeto é o mesmo que relator do Orçamento?", r: "Não. O relator-geral do Orçamento atua na comissão mista do Congresso e consolida o projeto da lei orçamentária, com relatores setoriais por área."}
+    - {p: "Quem é o relator nos tribunais?", r: "É o ministro ou desembargador sorteado para conduzir o processo. Ele prepara o caso, pode decidir pedidos urgentes e apresenta o primeiro voto no julgamento."}
+- termo: Parecer
+  slug: parecer
+  categoria: processo-legislativo
+  imagem: comissao
+  sinonimos: [pareceres]
+  autolink: [parecer do relator, parecer da comissão, pareceres das comissões, parecer de plenário, parecer favorável, parecer contrário]
+  resumo: "é o documento em que a comissão ou o relator se manifesta sobre uma proposição, com análise e voto pela aprovação ou rejeição."
+  definicao: |
+    O parecer é o pronunciamento oficial de uma comissão sobre a matéria que ela analisou. Começa como voto do relator e, depois de discutido e votado, passa a ser o parecer da comissão. Pelo Regimento Interno da Câmara, tem relatório, voto do relator e o resultado da votação no colegiado.
+
+    Há pareceres de mérito, que avaliam a conveniência da proposta, e pareceres de admissibilidade, como o da Comissão de Constituição e Justiça sobre constitucionalidade e técnica legislativa, ou o da Comissão de Finanças e Tributação sobre adequação orçamentária. Parecer pela inconstitucionalidade, em regra, leva ao arquivamento, cabendo recurso ao plenário.
+
+    Quando a matéria tramita em urgência, os pareceres podem ser dados diretamente em plenário, por relator designado.
+  contexto: |
+    Ler o parecer é a forma mais direta de entender o que muda num projeto. Ele explica as emendas aceitas e rejeitadas e traz o texto proposto. Na Câmara e no Senado, os pareceres ficam públicos na página de cada proposição, com data e versão.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 54 a 57 e 126 a 130", url: "@RICD"}
+    - {nome: "Regimento Interno do Senado Federal, arts. 132 e 133", url: "@RISF"}
+  relacionados: [relator, ccj, comissao-permanente, substitutivo]
+  faqs:
+    - {p: "O parecer da comissão obriga o plenário?", r: "Não, salvo nos casos em que a comissão tem poder conclusivo. Nos demais, o plenário pode aprovar ou rejeitar o projeto mesmo contra o parecer."}
+    - {p: "O que é parecer terminativo?", r: "É o parecer que encerra a tramitação na Casa, como o de inconstitucionalidade na CCJ ou o de inadequação orçamentária, salvo se houver recurso ao plenário no prazo regimental."}
+    - {p: "Onde encontrar o parecer de um projeto?", r: "Na página da proposição nos portais da Câmara e do Senado, na aba de tramitação ou de documentos, com o arquivo do relatório e do voto."}
+    - {p: "Parecer pode ser dado em plenário?", r: "Sim. Em matérias urgentes, o relator designado pelo presidente da Casa apresenta parecer oral ou escrito diretamente em plenário, em substituição às comissões."}
+    - {p: "Qual a diferença entre voto em separado e parecer?", r: "O voto em separado é a manifestação de um membro da comissão que discorda do relator. Ele só vira parecer se for aprovado no lugar do voto do relator."}
+- termo: Comissão permanente
+  slug: comissao-permanente
+  categoria: processo-legislativo
+  imagem: comissao
+  sinonimos: [comissões temáticas, comissão temática]
+  resumo: "é o colegiado temático de deputados ou senadores que analisa as proposições de sua área e fiscaliza o governo de forma contínua."
+  definicao: |
+    As comissões permanentes integram a estrutura fixa de cada Casa e funcionam durante toda a legislatura, divididas por tema, como saúde, educação, finanças e relações exteriores. A Constituição, no art. 58, atribui a elas discutir e votar projetos, realizar audiências públicas, convocar ministros, receber petições e acompanhar programas de governo.
+
+    A composição respeita, tanto quanto possível, a proporcionalidade dos partidos e blocos. Os membros e o presidente são renovados periodicamente, conforme os regimentos. Na Câmara, a lista e as competências de cada comissão estão no art. 32 do Regimento Interno; no Senado, nos arts. 72 e seguintes.
+
+    Em muitos casos, a comissão decide sem passar pelo plenário, o chamado poder conclusivo na Câmara ou decisão terminativa no Senado.
+  contexto: |
+    O caminho de um projeto depende das comissões para as quais ele é distribuído. Uma proposta de saúde com impacto financeiro, por exemplo, passa pela comissão de mérito, pela de finanças e pela CCJ. A escolha das presidências de comissões é negociada entre os partidos no início de cada ano legislativo.
+  base_legal:
+    - {nome: "Constituição Federal, art. 58", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 22 a 32", url: "@RICD"}
+    - {nome: "Regimento Interno do Senado Federal, arts. 72 a 104", url: "@RISF"}
+  relacionados: [ccj, comissao-especial, poder-conclusivo, audiencia-publica, relator]
+  faqs:
+    - {p: "Quantas comissões permanentes existem?", r: "O número muda por resolução de cada Casa. A lista atualizada está no art. 32 do Regimento Interno da Câmara e nos arts. 72 e seguintes do Regimento Interno do Senado."}
+    - {p: "Comissão pode aprovar uma lei sozinha?", r: "Pode aprovar o projeto na Casa sem plenário, quando há poder conclusivo, salvo recurso de um décimo dos membros. A lei ainda depende da outra Casa e da sanção."}
+    - {p: "Comissão pode convocar ministro?", r: "Sim. O art. 58 da Constituição permite convocar ministro de Estado para prestar informações. A ausência sem justificativa pode configurar crime de responsabilidade."}
+    - {p: "Como os membros das comissões são escolhidos?", r: "Os líderes partidários indicam os integrantes, respeitando a proporcionalidade das bancadas. O presidente da Casa designa os indicados."}
+    - {p: "Qual a diferença entre comissão permanente e temporária?", r: "A permanente existe de forma contínua e trata de uma área. A temporária, como a especial ou a CPI, é criada para um fim específico e se extingue ao terminar o trabalho ou o prazo."}
+- termo: Comissão especial
+  slug: comissao-especial
+  categoria: processo-legislativo
+  imagem: comissao
+  sinonimos: [comissões especiais]
+  resumo: "é a comissão temporária criada na Câmara para dar parecer sobre PECs, códigos e projetos que envolvem muitas áreas."
+  definicao: |
+    A comissão especial é uma comissão temporária. Pelo art. 34 do Regimento Interno da Câmara, ela é constituída para analisar propostas de emenda à Constituição, projetos de código e proposições que tratem de matéria de competência de mais de três comissões de mérito.
+
+    Ela substitui as comissões permanentes no exame do mérito e tem prazo para concluir os trabalhos. No caso das PECs, recebe a proposta depois que a Comissão de Constituição e Justiça admite sua tramitação, e tem até 40 sessões para votar o parecer, segundo o art. 202 do regimento.
+
+    A composição segue a proporcionalidade partidária, com membros indicados pelos líderes. A comissão se extingue ao concluir seu trabalho.
+  contexto: |
+    Quando uma PEC "chega à comissão especial", significa que já foi considerada admissível e que agora o conteúdo será discutido. É nessa fase que o texto costuma mudar mais, com audiências públicas e substitutivo do relator, antes de ir aos dois turnos de votação no plenário.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 33, 34 e 202", url: "@RICD"}
+  relacionados: [pec, ccj, comissao-permanente, turno-de-votacao]
+  faqs:
+    - {p: "Toda PEC passa por comissão especial?", r: "Na Câmara, sim, depois da admissibilidade na CCJ. No Senado, a PEC é analisada pela CCJ e segue ao plenário, sem comissão especial."}
+    - {p: "Qual o prazo de uma comissão especial de PEC?", r: "O Regimento Interno da Câmara fixa 40 sessões do plenário para a comissão proferir parecer, contadas da sua constituição. Emendas podem ser apresentadas nas dez primeiras sessões."}
+    - {p: "Comissão especial é o mesmo que CPI?", r: "Não. Ambas são temporárias, mas a CPI investiga fato determinado, com poderes de investigação, e a comissão especial analisa proposições."}
+    - {p: "O parecer da comissão especial pode ser mudado em plenário?", r: "Sim, por destaques e emendas aglutinativas, desde que observadas as regras regimentais para cada tipo de proposição."}
+    - {p: "Quando uma comissão especial é criada para um projeto de lei?", r: "Quando o projeto trata de mérito de mais de três comissões permanentes. Nesse caso, uma única comissão especial examina o mérito no lugar delas."}
+- termo: Comissão mista
+  slug: comissao-mista
+  categoria: processo-legislativo
+  imagem: sessao-conjunta
+  sinonimos: [comissões mistas]
+  resumo: "é a comissão formada por deputados e senadores, usada principalmente para analisar medidas provisórias e o Orçamento."
+  definicao: |
+    A comissão mista reúne membros das duas Casas do Congresso. A Constituição prevê dois casos de destaque: a comissão mista que examina cada medida provisória e emite parecer antes da votação nos plenários (art. 62, § 9º) e a comissão mista permanente de Orçamento (art. 166, § 1º), que examina os projetos do PPA, da LDO, da LOA e dos créditos adicionais.
+
+    Há também comissões mistas permanentes criadas por resolução do Congresso, como a de Controle das Atividades de Inteligência, e comissões mistas temporárias para temas específicos, inclusive CPIs mistas, chamadas CPMIs.
+
+    A composição alterna entre deputados e senadores, e a presidência e a relatoria costumam se revezar entre as Casas.
+  contexto: |
+    O STF decidiu em 2012, na ADI 4029, que o parecer da comissão mista sobre medida provisória é obrigatório e não pode ser substituído por parecer de relator em plenário. Por isso, a tramitação de uma MP começa pela instalação da comissão mista.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 58, 62 (§ 9º) e 166 (§ 1º)", url: "@CF"}
+    - {nome: "Resolução nº 1/2006 do Congresso Nacional (CMO)", url: "@RCN1-2006"}
+  relacionados: [medida-provisoria, comissao-mista-de-orcamento, sessao-conjunta, cpi]
+  faqs:
+    - {p: "O que é CPMI?", r: "É a Comissão Parlamentar Mista de Inquérito, uma CPI formada por deputados e senadores, criada a requerimento de um terço dos membros de cada Casa."}
+    - {p: "Toda medida provisória passa por comissão mista?", r: "Sim. A Constituição exige o exame por comissão mista antes da votação nos plenários, e o STF confirmou que essa etapa é obrigatória."}
+    - {p: "Como é dividida a comissão mista?", r: "Entre deputados e senadores, em número definido pelo regimento comum ou pela resolução que a cria, respeitando a proporcionalidade dos partidos em cada Casa."}
+    - {p: "A comissão mista vota a lei?", r: "Não. Ela aprova parecer. A votação final da medida provisória ocorre separadamente nos plenários da Câmara e do Senado; a do Orçamento, em sessão conjunta do Congresso."}
+    - {p: "Qual a comissão mista mais conhecida?", r: "A Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, a CMO, que analisa os projetos do Orçamento e as emendas parlamentares."}
+- termo: Plenário
+  slug: plenario
+  categoria: processo-legislativo
+  imagem: plenario-camara
+  autolink: [plenário da Câmara, plenário do Senado, Plenário da Câmara, Plenário do Senado]
+  resumo: "é o órgão máximo de deliberação de cada Casa, formado por todos os seus membros, e também o nome do local onde se reúnem."
+  definicao: |
+    O plenário reúne todos os deputados, na Câmara, ou todos os senadores, no Senado. É ali que se tomam as decisões finais da Casa sobre a maioria das proposições, depois da passagem pelas comissões. A Constituição estabelece, no art. 47, que as deliberações são tomadas por maioria dos votos, presente a maioria absoluta dos membros, salvo disposição em contrário.
+
+    As sessões do plenário podem ser deliberativas, quando há votação, ou não deliberativas, destinadas a debates e pronunciamentos. A pauta é definida pelo presidente da Casa, ouvido o colégio de líderes.
+
+    Nos tribunais, plenário é a reunião de todos os ministros ou desembargadores, distinta das turmas, que reúnem só parte deles.
+  contexto: |
+    O plenário da Câmara é chamado de Plenário Ulysses Guimarães. Quando o noticiário diz que um projeto "vai a plenário", quer dizer que sairá das comissões para votação de todos os membros. Em sessões conjuntas, o plenário da Câmara recebe também os senadores.
+  base_legal:
+    - {nome: "Constituição Federal, art. 47", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 65 a 79", url: "@RICD"}
+  relacionados: [quorum, sessao-conjunta, colegio-de-lideres, plenario-virtual]
+  faqs:
+    - {p: "Quantos parlamentares precisam estar presentes para votar em plenário?", r: "Para votar, é preciso a presença da maioria absoluta: 257 deputados ou 41 senadores. A aprovação depende do quórum exigido para cada tipo de proposição."}
+    - {p: "Quem define o que o plenário vota?", r: "O presidente da Casa, que organiza a pauta ouvindo o colégio de líderes. Requerimentos aprovados pelo plenário também podem alterar a ordem."}
+    - {p: "Qual a diferença entre sessão deliberativa e não deliberativa?", r: "Na deliberativa há votação de matérias. Na não deliberativa, há debates e pronunciamentos, sem votação."}
+    - {p: "Deputados podem votar a distância?", r: "Os regimentos preveem formas de registro remoto em situações definidas pela Mesa. As regras mudaram desde 2020 e estão em atos da Mesa de cada Casa."}
+    - {p: "O que é plenário no STF?", r: "É a reunião dos onze ministros. Ele julga, por exemplo, as ações de controle de constitucionalidade, enquanto as duas turmas, de cinco ministros, julgam outros processos."}
+- termo: Mesa Diretora
+  slug: mesa-diretora
+  categoria: congresso
+  imagem: senado2
+  sinonimos: [Mesa da Câmara, Mesa do Senado]
+  resumo: "é o órgão que dirige os trabalhos e a administração de cada Casa do Congresso, formado pelo presidente, vice-presidentes e secretários."
+  definicao: |
+    A Mesa é eleita pelos próprios parlamentares para mandato de dois anos. Pelo art. 57, § 4º, da Constituição, é vedada a recondução para o mesmo cargo na eleição imediatamente seguinte dentro da mesma legislatura. A composição deve respeitar, tanto quanto possível, a representação proporcional dos partidos.
+
+    Na Câmara, a Mesa tem presidente, dois vice-presidentes, quatro secretários e suplentes. No Senado, a estrutura é semelhante. Compete à Mesa dirigir os trabalhos legislativos e os serviços administrativos, promulgar emendas constitucionais junto com a Mesa da outra Casa e propor ações ao STF, como a ação direta de inconstitucionalidade.
+
+    A Mesa do Congresso Nacional é presidida pelo presidente do Senado e composta alternadamente por membros das duas Mesas.
+  contexto: |
+    A eleição da Mesa ocorre no início de fevereiro do primeiro e do terceiro ano da legislatura. É uma das disputas internas mais acompanhadas, porque o presidente da Casa controla a pauta de votações e despacha os pedidos de abertura de processos como o de impeachment, na Câmara.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 57 (§§ 4º e 5º), 58 e 103", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 14 a 19", url: "@RICD"}
+  relacionados: [presidente-da-camara, presidente-do-senado, promulgacao, legislatura]
+  faqs:
+    - {p: "Quanto dura o mandato da Mesa?", r: "Dois anos. Há duas eleições por legislatura, em fevereiro do primeiro e do terceiro ano."}
+    - {p: "O presidente da Câmara pode ser reeleito?", r: "A Constituição veda a recondução para o mesmo cargo na eleição imediatamente subsequente. O STF entendeu em 2020, na ADI 6524, que a vedação vale dentro da mesma legislatura."}
+    - {p: "Quem preside a Mesa do Congresso Nacional?", r: "O presidente do Senado. Os demais cargos são ocupados alternadamente pelos membros das Mesas da Câmara e do Senado."}
+    - {p: "A Mesa pode propor ação no STF?", r: "Sim. As Mesas da Câmara e do Senado estão entre os legitimados para propor ação direta de inconstitucionalidade e ação declaratória de constitucionalidade."}
+    - {p: "Qual o papel da Mesa na cassação de mandato?", r: "Em alguns casos, como perda de direitos políticos ou faltas, a Mesa declara a perda do mandato. Nos casos de quebra de decoro, a decisão é do plenário."}
+- termo: Presidente da Câmara
+  slug: presidente-da-camara
+  categoria: congresso
+  imagem: plenario-camara
+  sinonimos: [presidente da Câmara dos Deputados]
+  resumo: "é o deputado eleito pelos pares para dirigir a Câmara, definir a pauta de votações e representar a Casa, além de ser o primeiro na linha sucessória após o vice-presidente da República."
+  definicao: |
+    O presidente da Câmara é o chefe da Mesa Diretora. Pelo Regimento Interno, compete a ele presidir as sessões, organizar a ordem do dia ouvido o colégio de líderes, distribuir as proposições às comissões, decidir questões de ordem e representar a Casa.
+
+    Também é o presidente da Câmara quem recebe e decide, de forma preliminar, sobre as denúncias por crime de responsabilidade contra o presidente da República, o primeiro passo de um processo de impeachment. Se aceitar a denúncia, cria-se comissão especial e o plenário vota a autorização.
+
+    Pela Constituição, em caso de impedimento ou vacância simultânea do presidente e do vice-presidente da República, é o primeiro a ser chamado ao exercício da Presidência, seguido pelo presidente do Senado e pelo do STF.
+  contexto: |
+    O controle da pauta dá ao cargo grande peso político: um projeto pode esperar anos se não for colocado em votação. Por isso a eleição para a presidência da Câmara, a cada dois anos, envolve negociação entre partidos e blocos.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 57 (§ 4º) e 80", url: "@CF"}
+    - {nome: "Regimento Interno da Câmara dos Deputados, art. 17", url: "@RICD"}
+    - {nome: "Lei nº 1.079/1950, art. 19", url: "@L1079"}
+  relacionados: [mesa-diretora, presidente-do-senado, linha-sucessoria, impeachment]
+  faqs:
+    - {p: "O presidente da Câmara vota nas sessões?", r: "Pelo Regimento Interno, o presidente da Câmara, em regra, não vota, salvo em escrutínio secreto ou para desempatar. Para votar nas demais, precisa deixar a presidência da sessão."}
+    - {p: "Quem substitui o presidente da Câmara?", r: "Os vice-presidentes, na ordem. Em caso de vaga definitiva, o Regimento Interno prevê nova eleição para completar o mandato."}
+    - {p: "O presidente da Câmara pode arquivar pedido de impeachment?", r: "Sim. Ele faz o exame preliminar das denúncias e pode rejeitá-las. Cabe recurso ao plenário, segundo o Regimento Interno."}
+    - {p: "Qual o mandato do presidente da Câmara?", r: "Dois anos, o mesmo da Mesa Diretora, com eleição no início do primeiro e do terceiro ano da legislatura."}
+    - {p: "O presidente da Câmara assume a Presidência da República?", r: "Sim, temporariamente, se o presidente e o vice estiverem impedidos ou os cargos vagos. Se a vacância for definitiva, convoca-se nova eleição, na forma do art. 81 da Constituição."}
+- termo: Presidente do Senado
+  slug: presidente-do-senado
+  categoria: congresso
+  imagem: senado2
+  sinonimos: [presidente do Senado Federal, presidente do Congresso]
+  resumo: "é o senador eleito pelos pares para dirigir o Senado e que também preside o Congresso Nacional nas sessões conjuntas."
+  definicao: |
+    O presidente do Senado comanda a Mesa da Casa, define a pauta de votações do plenário e representa o Senado. Pela Constituição, é também o presidente da Mesa do Congresso Nacional, responsável por convocar e conduzir as sessões conjuntas, como as de análise de vetos e do Orçamento.
+
+    Cabe a ele promulgar as leis quando o presidente da República não o faz no prazo, e promulgar decretos legislativos e resoluções do Congresso. Também conduz a pauta de matérias de competência privativa do Senado, como a aprovação de autoridades e o julgamento por crime de responsabilidade, que é presidido pelo presidente do STF quando o réu é o presidente da República.
+
+    Na linha de substituição da Presidência da República, vem depois do vice-presidente e do presidente da Câmara.
+  contexto: |
+    A eleição ocorre em fevereiro do primeiro e do terceiro ano da legislatura, para mandato de dois anos. Como o Senado tem 81 membros e a renovação é de um terço ou de dois terços a cada eleição, a composição que elege o presidente pode mudar bastante de uma legislatura para outra.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 57 (§ 5º), 66 (§ 7º) e 80", url: "@CF"}
+    - {nome: "Regimento Interno do Senado Federal, art. 48", url: "@RISF"}
+  relacionados: [mesa-diretora, presidente-da-camara, sessao-conjunta, sabatina]
+  faqs:
+    - {p: "O presidente do Senado é o presidente do Congresso?", r: "Sim. A Constituição atribui ao presidente do Senado a presidência da Mesa do Congresso Nacional."}
+    - {p: "Quando o presidente do Senado promulga uma lei?", r: "Quando o presidente da República não promulga em 48 horas a lei sancionada tacitamente ou com veto derrubado. Se o presidente do Senado também não o fizer em igual prazo, cabe ao vice-presidente do Senado."}
+    - {p: "Quem preside o julgamento de impeachment do presidente da República?", r: "O presidente do STF, no plenário do Senado, conforme o parágrafo único do art. 52 da Constituição."}
+    - {p: "Qual a posição do presidente do Senado na linha sucessória?", r: "É o terceiro, depois do vice-presidente da República e do presidente da Câmara, e antes do presidente do STF."}
+    - {p: "O presidente do Senado define a pauta sozinho?", r: "Ele organiza a ordem do dia, normalmente em acordo com os líderes partidários, e o plenário pode aprovar requerimentos que alteram a pauta."}
+- termo: Colégio de líderes
+  slug: colegio-de-lideres
+  categoria: congresso
+  imagem: plenario-camara2
+  resumo: "é a reunião dos líderes partidários, de blocos, do governo, da maioria e da minoria, que negocia a pauta e os acordos de votação na Câmara."
+  definicao: |
+    Previsto no art. 20 do Regimento Interno da Câmara, o colégio de líderes é formado pelos líderes da maioria, da minoria, dos partidos, dos blocos parlamentares e do governo.
+
+    O colégio é ouvido pelo presidente da Câmara na organização da pauta e pode firmar acordos sobre a ordem de votação, a urgência de projetos e a forma de deliberar. As decisões são tomadas, sempre que possível, por consenso; quando não há, prevalece o critério da maioria absoluta, ponderados os votos dos líderes pelo tamanho de suas bancadas.
+
+    No Senado, a reunião de líderes tem função semelhante, ainda que com menos detalhamento regimental.
+  contexto: |
+    Boa parte da agenda semanal do Congresso sai das reuniões de líderes. Quando o noticiário fala que "os líderes fecharam acordo", em geral significa que se definiu o que vai à votação e com que texto, o que reduz obstrução e destaques no plenário.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, art. 20", url: "@RICD"}
+  relacionados: [lider-partidario, bancada, regime-de-urgencia, obstrucao]
+  faqs:
+    - {p: "Quem participa do colégio de líderes?", r: "Os líderes dos partidos e blocos, o líder do governo e os líderes da maioria e da minoria, conforme o Regimento Interno da Câmara."}
+    - {p: "Como o colégio de líderes decide?", r: "Preferencialmente por consenso. Sem consenso, conta o voto de cada líder com peso proporcional ao tamanho da sua bancada."}
+    - {p: "O colégio de líderes pode aprovar urgência?", r: "O colégio pode combinar quais urgências irão a voto, mas o requerimento precisa ser assinado por um terço dos deputados ou por líderes que representem esse número e aprovado pela maioria absoluta do plenário."}
+    - {p: "As reuniões do colégio de líderes são públicas?", r: "Em geral são reuniões de negociação, sem transmissão. As decisões aparecem depois na pauta e nas sessões do plenário."}
+    - {p: "Existe colégio de líderes no Senado?", r: "Os líderes do Senado também se reúnem com o presidente para combinar a pauta, mas o Regimento Interno do Senado não detalha esse órgão como o da Câmara."}

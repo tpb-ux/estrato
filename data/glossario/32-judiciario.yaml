@@ -1,0 +1,227 @@
+termos:
+- termo: Reclamação constitucional
+  slug: reclamacao-constitucional
+  categoria: judiciario
+  imagem: stf
+  sinonimos: [reclamação ao STF, reclamações constitucionais]
+  autolink: [reclamação constitucional, reclamações constitucionais]
+  resumo: "é a ação usada para preservar a competência de um tribunal e garantir a autoridade de suas decisões e das súmulas vinculantes."
+  definicao: |
+    A reclamação está prevista na Constituição para o STF (art. 102, I, l) e para o STJ (art. 105, I, f), com a finalidade de preservar a competência desses tribunais e garantir a autoridade de suas decisões. O art. 103-A, § 3º, acrescenta o cabimento contra ato ou decisão que contrarie súmula vinculante.
+
+    O Código de Processo Civil (art. 988) estendeu a reclamação a todos os tribunais e listou as hipóteses: preservar a competência do tribunal, garantir a autoridade de suas decisões, garantir a observância de decisão do STF em controle concentrado de constitucionalidade e de enunciado de súmula vinculante, e garantir a observância de precedentes firmados em incidentes de demandas repetitivas e de assunção de competência.
+
+    Julgada procedente, o tribunal cassa a decisão ou determina a medida adequada à solução da controvérsia.
+  contexto: |
+    A reclamação permite levar o caso diretamente ao tribunal superior, sem percorrer todas as instâncias, quando uma decisão inferior desrespeita o que ele já definiu. Por isso aparece com frequência em disputas sobre liberdade de imprensa, temas trabalhistas e competência de foro.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 102, I, l; 103-A, § 3º; e 105, I, f", url: "@CF"}
+    - {nome: "Código de Processo Civil, arts. 988 a 993", url: "@CPC"}
+  relacionados: [sumula-vinculante, stf, adi, controle-de-constitucionalidade]
+  faqs:
+    - {p: "Para que serve a reclamação constitucional?", r: "Para garantir que decisões e a competência de um tribunal sejam respeitadas, inclusive súmulas vinculantes e decisões do STF em controle concentrado."}
+    - {p: "Reclamação é um recurso?", r: "Não. É uma ação autônoma, proposta diretamente no tribunal cuja decisão ou competência foi desrespeitada."}
+    - {p: "Quem pode apresentar reclamação?", r: "A parte interessada ou o Ministério Público, conforme o art. 988 do Código de Processo Civil."}
+    - {p: "O que acontece se a reclamação for aceita?", r: "O tribunal cassa a decisão que o contrariou ou determina a medida adequada para resolver a controvérsia."}
+    - {p: "Cabe reclamação contra decisão já transitada em julgado?", r: "Não. O CPC não admite reclamação proposta após o trânsito em julgado da decisão reclamada."}
+- termo: Controle de constitucionalidade
+  slug: controle-de-constitucionalidade
+  categoria: judiciario
+  imagem: constituicao
+  sinonimos: [controle concentrado, controle difuso]
+  autolink: [controle de constitucionalidade, controle concentrado, controle difuso]
+  resumo: "é o conjunto de mecanismos que verificam se leis e atos normativos estão de acordo com a Constituição."
+  definicao: |
+    No Brasil, o controle de constitucionalidade combina dois modelos. No controle difuso, qualquer juiz ou tribunal pode deixar de aplicar uma lei que considere inconstitucional ao decidir um caso concreto, e a questão pode chegar ao STF por recurso extraordinário. No controle concentrado, o STF julga a lei em tese, por meio de ações como ADI, ADC, ADO e ADPF, com efeitos para todos e efeito vinculante.
+
+    Nos tribunais, a declaração de inconstitucionalidade depende do voto da maioria absoluta dos membros ou do órgão especial, conforme a cláusula de reserva de plenário (art. 97 da Constituição). A Súmula Vinculante 10 reforça essa regra.
+
+    Também há controle preventivo, antes de a lei existir, feito pelas comissões de constituição e justiça do Congresso e pelo veto do presidente por inconstitucionalidade.
+  contexto: |
+    Leis aprovadas pelo Congresso costumam ser questionadas no STF logo após a sanção. A Lei nº 9.868/1999 permite que o tribunal module os efeitos da decisão, por maioria de dois terços, por razões de segurança jurídica ou de excepcional interesse social.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 97, 102 e 103", url: "@CF"}
+    - {nome: "Lei nº 9.868/1999 (ADI, ADC e ADO)", url: "@L9868"}
+    - {nome: "Lei nº 9.882/1999 (ADPF)", url: "@L9882"}
+  relacionados: [adi, adc, ado, adpf, recurso-extraordinario, ccj]
+  faqs:
+    - {p: "Qual a diferença entre controle difuso e concentrado?", r: "No difuso, qualquer juiz analisa a constitucionalidade num caso concreto. No concentrado, o STF julga a norma em tese, com efeito para todos."}
+    - {p: "O Congresso faz controle de constitucionalidade?", r: "Sim, de forma preventiva, principalmente na Comissão de Constituição e Justiça, e pode sustar atos do Executivo que excedam o poder regulamentar."}
+    - {p: "O que é cláusula de reserva de plenário?", r: "É a regra do art. 97 da Constituição: tribunais só declaram uma lei inconstitucional pelo voto da maioria absoluta dos membros ou do órgão especial."}
+    - {p: "O que é modulação de efeitos?", r: "É a possibilidade de o STF definir a partir de quando a decisão vale, por dois terços dos votos, conforme o art. 27 da Lei nº 9.868/1999."}
+    - {p: "Uma lei declarada inconstitucional deixa de existir?", r: "No controle concentrado, ela perde eficácia para todos. No difuso, a decisão vale para o caso, salvo quando o tema tem repercussão geral ou o Senado suspende a lei."}
+- termo: Amicus curiae
+  slug: amicus-curiae
+  categoria: judiciario
+  imagem: stf
+  sinonimos: [amigo da corte, amici curiae]
+  autolink: [amicus curiae, amici curiae, amigo da corte]
+  resumo: "é a pessoa ou entidade admitida num processo para fornecer informações e argumentos ao tribunal, sem ser parte."
+  definicao: |
+    A expressão latina significa "amigo da corte". O Código de Processo Civil (art. 138) permite que o juiz ou relator, considerando a relevância da matéria, a especificidade do tema ou a repercussão social da controvérsia, admita a participação de pessoa natural ou jurídica, órgão ou entidade especializada com representatividade adequada.
+
+    No controle concentrado de constitucionalidade, a Lei nº 9.868/1999 (art. 7º, § 2º) autoriza o relator, por despacho irrecorrível, a admitir a manifestação de outros órgãos ou entidades. O amicus curiae pode apresentar memoriais e, em regra, fazer sustentação oral, mas não pode recorrer, salvo exceções previstas no CPC.
+
+    O instituto amplia o debate em processos de grande impacto, trazendo visões técnicas e de grupos afetados.
+  contexto: |
+    Em julgamentos de grande repercussão no STF, dezenas de entidades costumam pedir ingresso como amicus curiae, entre associações profissionais, organizações da sociedade civil, estados e órgãos públicos.
+  base_legal:
+    - {nome: "Código de Processo Civil, art. 138", url: "@CPC"}
+    - {nome: "Lei nº 9.868/1999, art. 7º, § 2º", url: "@L9868"}
+  relacionados: [adi, audiencia-publica, controle-de-constitucionalidade, stf]
+  faqs:
+    - {p: "O amicus curiae é parte no processo?", r: "Não. Ele contribui com informações e argumentos, mas não é autor nem réu."}
+    - {p: "Quem pode ser amicus curiae?", r: "Pessoas naturais ou jurídicas, órgãos e entidades com representatividade adequada, a critério do juiz ou relator."}
+    - {p: "O amicus curiae pode recorrer?", r: "Em regra, não. O CPC permite apenas embargos de declaração e recurso contra decisão em incidente de resolução de demandas repetitivas."}
+    - {p: "O amicus curiae pode falar no julgamento?", r: "Em regra, pode fazer sustentação oral, conforme as normas do tribunal."}
+    - {p: "Qual a diferença entre amicus curiae e audiência pública?", r: "O amicus curiae participa formalmente do processo com petições. A audiência pública é uma sessão em que especialistas são ouvidos pelo relator."}
+- termo: Inquérito
+  slug: inquerito
+  categoria: judiciario
+  imagem: justica
+  sinonimos: [inquérito policial, inquéritos]
+  autolink: [inquérito policial, inquéritos policiais, inquérito, inquéritos]
+  resumo: "é o procedimento de investigação que reúne provas sobre um possível crime e sua autoria, antes de eventual acusação formal."
+  definicao: |
+    O inquérito policial é regulado pelo Código de Processo Penal (arts. 4º a 23) e conduzido pela polícia judiciária, sob controle judicial e com acompanhamento do Ministério Público. Seu objetivo é apurar a materialidade do crime e indícios de autoria para que o MP decida se oferece denúncia.
+
+    O art. 10 do CPP fixa prazo de 10 dias para concluir o inquérito quando o investigado estiver preso e de 30 dias quando estiver solto, prazo que pode ser prorrogado nesse último caso. Medidas como busca e apreensão e quebra de sigilo dependem de autorização judicial.
+
+    Ser investigado não significa ser acusado nem culpado. Concluído o inquérito, o MP pode oferecer denúncia, pedir novas diligências ou pedir o arquivamento.
+  contexto: |
+    Investigações envolvendo autoridades com foro no STF tramitam como inquéritos supervisionados por um ministro relator. O Ministério Público também pode conduzir investigações próprias, conforme reconhecido pelo STF.
+  base_legal:
+    - {nome: "Código de Processo Penal, arts. 4º a 23", url: "@CPP"}
+    - {nome: "Constituição Federal, art. 144, § 1º, IV, e § 4º", url: "@CF"}
+  relacionados: [denuncia, ministerio-publico, foro-privilegiado, prisao-preventiva]
+  faqs:
+    - {p: "Qual o prazo do inquérito policial?", r: "Pelo art. 10 do CPP, 10 dias se o investigado estiver preso e 30 dias se estiver solto, com possibilidade de prorrogação nesse caso."}
+    - {p: "Ser investigado em inquérito significa ser réu?", r: "Não. Só se torna réu quem tem denúncia recebida pela Justiça. O inquérito é uma fase de apuração."}
+    - {p: "Quem conduz o inquérito?", r: "A polícia judiciária, ou seja, a Polícia Federal ou as polícias civis, com controle do Judiciário e participação do Ministério Público."}
+    - {p: "O inquérito pode ser arquivado?", r: "Sim. Se não houver elementos suficientes, o Ministério Público pode promover o arquivamento."}
+    - {p: "O investigado tem acesso ao inquérito?", r: "A defesa tem direito de acessar os elementos já documentados, conforme a Súmula Vinculante 14, ressalvadas diligências em andamento."}
+- termo: Denúncia
+  slug: denuncia
+  categoria: judiciario
+  imagem: justica
+  sinonimos: [denúncia criminal, denúncias]
+  autolink: [denúncia criminal, oferecimento da denúncia, recebimento da denúncia]
+  resumo: "é a peça em que o Ministério Público acusa formalmente alguém de um crime, dando início à ação penal pública."
+  definicao: |
+    A denúncia é o ato que inicia a ação penal pública e cabe ao Ministério Público (art. 129, I, da Constituição). Segundo o art. 41 do Código de Processo Penal, ela deve conter a exposição do fato criminoso com todas as suas circunstâncias, a qualificação do acusado, a classificação do crime e, quando necessário, o rol de testemunhas.
+
+    O art. 46 do CPP fixa prazo de 5 dias para oferecer a denúncia se o investigado estiver preso e de 15 dias se estiver solto. A partir do recebimento da denúncia pelo juiz ou tribunal, o denunciado passa a ser réu.
+
+    Em crimes de ação privada, a peça equivalente é a queixa-crime, apresentada pela vítima.
+  contexto: |
+    No noticiário, é importante distinguir as etapas: investigação, denúncia oferecida pelo MP, denúncia recebida pela Justiça e julgamento. Quando a autoridade tem foro no STF, a denúncia é apresentada pela Procuradoria-Geral da República e analisada por uma turma ou pelo plenário.
+  base_legal:
+    - {nome: "Constituição Federal, art. 129, I", url: "@CF"}
+    - {nome: "Código de Processo Penal, arts. 24, 41 e 46", url: "@CPP"}
+  relacionados: [inquerito, ministerio-publico, procurador-geral-da-republica, presuncao-de-inocencia]
+  faqs:
+    - {p: "Quem oferece a denúncia?", r: "O Ministério Público, nos crimes de ação penal pública. Nas ações privadas, a vítima apresenta queixa-crime."}
+    - {p: "Quando a pessoa vira ré?", r: "Quando o juiz ou tribunal recebe a denúncia. O oferecimento pelo MP ainda não torna a pessoa ré."}
+    - {p: "Qual o prazo para o MP oferecer denúncia?", r: "Pelo art. 46 do CPP, 5 dias com o investigado preso e 15 dias com ele solto."}
+    - {p: "O que a denúncia precisa conter?", r: "A descrição do fato criminoso e suas circunstâncias, a qualificação do acusado, a classificação do crime e, se necessário, testemunhas."}
+    - {p: "Denúncia é o mesmo que condenação?", r: "Não. A denúncia é uma acusação. A culpa só é definida em sentença, observada a presunção de inocência."}
+- termo: Colaboração premiada
+  slug: colaboracao-premiada
+  categoria: judiciario
+  imagem: justica
+  sinonimos: [delação premiada, acordo de colaboração]
+  autolink: [colaboração premiada, delação premiada, delações premiadas, acordo de colaboração premiada]
+  resumo: "é o acordo em que um investigado ou réu colabora com a investigação em troca de benefícios penais, como redução de pena."
+  definicao: |
+    A colaboração premiada, também chamada de delação premiada, é regulada principalmente pela Lei nº 12.850/2013, que trata das organizações criminosas. A lei a define como negócio jurídico processual e meio de obtenção de prova. O colaborador pode receber perdão judicial, redução da pena em até dois terços ou substituição por pena restritiva de direitos, desde que a colaboração produza resultados, como identificar coautores ou recuperar recursos.
+
+    O acordo é negociado com a polícia ou o Ministério Público e precisa ser homologado por um juiz, que verifica sua regularidade, legalidade e voluntariedade. O colaborador deve estar assistido por advogado.
+
+    A lei estabelece que nenhuma sentença condenatória, medida cautelar ou recebimento de denúncia pode se basear apenas nas declarações do colaborador (art. 4º, § 16). É preciso haver outras provas.
+  contexto: |
+    Acordos de colaboração ganharam projeção em grandes investigações de corrupção. A Lei nº 13.964/2019 alterou a Lei nº 12.850 para detalhar a negociação, o sigilo e as hipóteses de rescisão do acordo.
+  base_legal:
+    - {nome: "Lei nº 12.850/2013, arts. 3º-A a 7º", url: "@L12850"}
+    - {nome: "Lei nº 13.964/2019", url: "@L13964"}
+  relacionados: [inquerito, denuncia, ministerio-publico, acordo-de-leniencia]
+  faqs:
+    - {p: "Delação premiada e colaboração premiada são a mesma coisa?", r: "Na prática, sim. A lei usa o termo colaboração premiada; delação é a forma popular."}
+    - {p: "Alguém pode ser condenado só com base em delação?", r: "Não. A Lei nº 12.850/2013 proíbe condenação, cautelar ou recebimento de denúncia com fundamento apenas nas declarações do colaborador."}
+    - {p: "Quem homologa o acordo?", r: "Um juiz, que verifica regularidade, legalidade e voluntariedade, sem avaliar se as informações são verdadeiras nessa fase."}
+    - {p: "Quais benefícios o colaborador pode receber?", r: "Perdão judicial, redução de até dois terços da pena ou substituição por pena restritiva de direitos, conforme os resultados da colaboração."}
+    - {p: "Qual a diferença para o acordo de leniência?", r: "A colaboração premiada é feita por pessoas físicas no âmbito penal. O acordo de leniência é celebrado por empresas, na esfera administrativa."}
+- termo: Prisão preventiva
+  slug: prisao-preventiva
+  categoria: judiciario
+  imagem: justica
+  sinonimos: [preventiva, prisão cautelar, prisão temporária]
+  autolink: [prisão preventiva, prisões preventivas, prisão cautelar, prisão temporária]
+  resumo: "é a prisão decretada antes da condenação definitiva, quando necessária para proteger a investigação, o processo ou a ordem pública."
+  definicao: |
+    A prisão preventiva é regulada pelos arts. 311 a 316 do Código de Processo Penal. Pode ser decretada pelo juiz, a pedido do Ministério Público, do querelante, do assistente ou por representação da autoridade policial, como garantia da ordem pública ou econômica, por conveniência da instrução criminal ou para assegurar a aplicação da lei penal, quando houver prova da existência do crime, indício suficiente de autoria e perigo gerado pela liberdade do investigado.
+
+    Desde a Lei nº 13.964/2019, o juiz não pode decretá-la de ofício, e a necessidade de manutenção deve ser revisada a cada 90 dias, em decisão fundamentada. A preventiva não tem prazo fixo, mas deve ser revogada quando cessarem os motivos.
+
+    É diferente da prisão temporária, prevista na Lei nº 7.960/1989, que só vale na fase de investigação e tem prazo de cinco dias, prorrogáveis por mais cinco, ou de 30 dias em crimes hediondos.
+  contexto: |
+    A prisão preventiva não é antecipação de pena. Antes dela, o juiz deve verificar se medidas cautelares diversas, como monitoramento eletrônico ou proibição de contato, são suficientes (art. 319 do CPP).
+  base_legal:
+    - {nome: "Código de Processo Penal, arts. 311 a 316 e 319", url: "@CPP"}
+    - {nome: "Lei nº 7.960/1989 (prisão temporária)", url: "@L7960"}
+    - {nome: "Lei nº 13.964/2019", url: "@L13964"}
+  relacionados: [habeas-corpus, presuncao-de-inocencia, inquerito, denuncia]
+  faqs:
+    - {p: "Quanto tempo pode durar a prisão preventiva?", r: "Não há prazo fixo, mas a necessidade deve ser revisada a cada 90 dias e a prisão revogada quando os motivos deixarem de existir."}
+    - {p: "Qual a diferença entre prisão preventiva e temporária?", r: "A temporária só cabe na investigação e tem prazo definido em lei. A preventiva pode ocorrer na investigação ou no processo e não tem prazo fixo."}
+    - {p: "O juiz pode decretar preventiva sem pedido?", r: "Não. Desde a Lei nº 13.964/2019, o CPP exige requerimento do MP, do querelante, do assistente ou representação da autoridade policial."}
+    - {p: "Prisão preventiva significa culpa?", r: "Não. É uma medida cautelar. A pessoa continua presumida inocente até o trânsito em julgado da condenação."}
+    - {p: "Existem alternativas à preventiva?", r: "Sim. O art. 319 do CPP prevê medidas como monitoramento eletrônico, recolhimento domiciliar noturno e proibição de contato."}
+- termo: Presunção de inocência
+  slug: presuncao-de-inocencia
+  categoria: judiciario
+  imagem: constituicao
+  sinonimos: [princípio da não culpabilidade, prisão em segunda instância]
+  autolink: [presunção de inocência, prisão em segunda instância, prisão após condenação em segunda instância]
+  resumo: "é a garantia constitucional de que ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória."
+  definicao: |
+    O art. 5º, LVII, da Constituição estabelece que ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória. O princípio garante que o ônus de provar a culpa é da acusação e que o acusado seja tratado como inocente durante o processo.
+
+    O alcance da garantia sobre o início do cumprimento da pena variou na jurisprudência do STF. Em 2016, o tribunal admitiu a execução após condenação em segunda instância. Em 2019, no julgamento das ADCs 43, 44 e 54, voltou a exigir o trânsito em julgado, ressalvadas as prisões cautelares.
+
+    Em 2024, ao julgar o Tema 1068 de repercussão geral, o STF decidiu que a soberania dos veredictos do tribunal do júri autoriza a execução imediata da pena imposta pelo júri.
+  contexto: |
+    No Congresso, há propostas para permitir a prisão após condenação em segunda instância por meio de emenda constitucional ou mudança no Código de Processo Penal. O tema é frequente em debates sobre segurança pública e combate à corrupção.
+  base_legal:
+    - {nome: "Constituição Federal, art. 5º, LVII", url: "@CF"}
+    - {nome: "Código de Processo Penal, art. 283", url: "@CPP"}
+  relacionados: [transitado-em-julgado, prisao-preventiva, habeas-corpus, stf]
+  faqs:
+    - {p: "O que diz a Constituição sobre presunção de inocência?", r: "O art. 5º, LVII, diz que ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória."}
+    - {p: "Hoje é possível prisão após condenação em segunda instância?", r: "Desde 2019, o STF exige trânsito em julgado para executar a pena, salvo prisões cautelares e, desde 2024, condenações pelo tribunal do júri."}
+    - {p: "Presunção de inocência impede a prisão preventiva?", r: "Não. A preventiva é cautelar e pode ser decretada quando presentes os requisitos legais, sem significar antecipação de pena."}
+    - {p: "O que decidiu o STF no Tema 1068?", r: "Que a soberania dos veredictos do júri autoriza a execução imediata da condenação imposta pelo conselho de sentença."}
+    - {p: "O Congresso pode mudar essa regra?", r: "Há propostas de emenda constitucional e de mudança no CPP sobre o tema. O alcance de cada proposta depende do texto aprovado e de eventual controle pelo STF."}
+- termo: Acórdão
+  slug: acordao
+  categoria: judiciario
+  imagem: stf
+  sinonimos: [acórdãos]
+  autolink: [acórdão, acórdãos]
+  resumo: "é a decisão tomada por um órgão colegiado de tribunal, como turma, câmara ou plenário."
+  definicao: |
+    O Código de Processo Civil (art. 204) define acórdão como o julgamento colegiado proferido pelos tribunais. É diferente da sentença, dada por um juiz de primeira instância, e da decisão monocrática, tomada pelo relator sozinho.
+
+    O acórdão é formado pelo voto do relator e pelos votos dos demais julgadores, e é publicado com uma ementa, que resume a tese adotada. A publicação marca, em regra, o início da contagem de prazos para recursos, como os embargos de declaração.
+
+    No Tribunal de Contas da União, as deliberações dos colegiados também recebem o nome de acórdão, numeradas por ano.
+  contexto: |
+    Entre o julgamento e a publicação do acórdão pode haver intervalo de semanas ou meses, porque os votos precisam ser revisados e reunidos. Por isso, notícias costumam informar o resultado antes de o texto integral estar disponível.
+  base_legal:
+    - {nome: "Código de Processo Civil, arts. 204 e 943", url: "@CPC"}
+  relacionados: [decisao-monocratica, plenario-virtual, transitado-em-julgado, tcu]
+  faqs:
+    - {p: "Qual a diferença entre acórdão e sentença?", r: "A sentença é dada por um juiz de primeira instância. O acórdão é a decisão de um colegiado de tribunal."}
+    - {p: "O que é ementa?", r: "É o resumo do acórdão, que apresenta a tese jurídica adotada. O CPC exige ementa em todo acórdão."}
+    - {p: "O acórdão é publicado no mesmo dia do julgamento?", r: "Nem sempre. A redação final e a revisão dos votos podem levar tempo, e os prazos de recurso contam a partir da publicação."}
+    - {p: "Cabe recurso contra acórdão?", r: "Sim, conforme o caso: embargos de declaração, recurso especial, recurso extraordinário, entre outros."}
+    - {p: "O TCU também emite acórdãos?", r: "Sim. As decisões dos colegiados do Tribunal de Contas da União são chamadas de acórdãos."}

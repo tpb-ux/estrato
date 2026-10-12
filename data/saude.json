@@ -2,7 +2,7 @@
  "formato": "saude-portal/1",
  "portal": "Estrato",
  "url": "https://estrato.com.br",
- "gerado_em": "2026-10-12T12:01:25+00:00",
+ "gerado_em": "2026-10-12T15:40:35+00:00",
  "materias": {
   "total": 20,
   "ultimas_24h": 0,
@@ -14,7 +14,7 @@
    "url": "https://estrato.com.br/congresso/2026-10-09-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos/",
    "fonte": "Agência Câmara",
    "publicada_em": "2026-10-09T19:15:00-03:00",
-   "idade_horas": 61.8
+   "idade_horas": 65.4
   }
  },
  "feeds": {
@@ -95,12 +95,12 @@
  "qualidade": {
   "unicidade": {
    "glossario": {
-    "paginas": 34,
-    "avaliadas": 34,
+    "paginas": 164,
+    "avaliadas": 164,
     "corte": 0.15,
-    "texto_proprio_p10": 0.696,
-    "texto_proprio_mediana": 0.789,
-    "texto_proprio_p90": 0.845,
+    "texto_proprio_p10": 0.889,
+    "texto_proprio_mediana": 0.913,
+    "texto_proprio_p90": 0.927,
     "abaixo_do_corte": 0
    },
    "deputados": {
@@ -133,7 +133,7 @@
   },
   "noindex_por_unicidade": 0,
   "similaridade_jaccard5": {
-   "glossario": 0.048,
+   "glossario": 0.035,
    "deputados": 0.28,
    "senadores": 0.297,
    "partidos": 0.358
@@ -146,11 +146,11 @@
   "rede_links_pct": {
    "modalnews.com.br": 0.0
   },
-  "ondas_noindex": 585
+  "ondas_noindex": 0
  },
  "site": {
-  "paginas_indexaveis": 107,
-  "paginas_total": 723,
+  "paginas_indexaveis": 822,
+  "paginas_total": 853,
   "noindex_global": true,
   "links_internos_quebrados": 0,
   "build": "local"

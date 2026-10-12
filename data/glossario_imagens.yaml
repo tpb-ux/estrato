@@ -1,0 +1,170 @@
+# Fotos livres (Wikimedia Commons), verificadas em 12/10/2026: licença CC BY/CC BY-SA/domínio público/CC0, sem marca d'água.
+# Cada verbete aponta para uma chave (campo imagem) e o build grava /static/img/glossario/<slug>.webp com crédito e link.
+congresso:
+  descricao: Fachada do Palácio do Congresso Nacional, em Brasília, com as cúpulas da Câmara e do Senado
+  autor: Agência Senado
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Imagens_de_Bras%C3%ADlia_-_Fachada_do_Pal%C3%A1cio_do_Congresso_Nacional_(53457492293).jpg
+  arquivo: Imagens de Brasília - Fachada do Palácio do Congresso Nacional (53457492293).jpg
+congresso2:
+  descricao: Congresso Nacional visto do espelho d'água, em Brasília
+  autor: Dária Baísa
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Congresso_Nacional,_Bras%C3%ADlia-DF,_Brasil.jpg
+  arquivo: Congresso Nacional, Brasília-DF, Brasil.jpg
+plenario-congresso:
+  descricao: Plenário da Câmara dos Deputados durante sessão
+  autor: Senado Federal
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Plen%C3%A1rio_do_Congresso_(21630525922).jpg
+  arquivo: Plenário do Congresso (21630525922).jpg
+sessao-conjunta:
+  descricao: Sessão conjunta do Congresso Nacional no plenário da Câmara
+  autor: Senado Federal
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Plen%C3%A1rio_do_Congresso_(41664202372).jpg
+  arquivo: Plenário do Congresso (41664202372).jpg
+plenario-camara:
+  descricao: Plenário Ulysses Guimarães, da Câmara dos Deputados, visto do alto
+  autor: Boaventuravinicius
+  licenca: CC BY-SA 4.0
+  licenca_url: https://creativecommons.org/licenses/by-sa/4.0
+  pagina: https://commons.wikimedia.org/wiki/File:Plen%C3%A1rio_Ulysses_Guimar%C3%A3es.jpg
+  arquivo: Plenário Ulysses Guimarães.jpg
+plenario-camara2:
+  descricao: Plenário Ulysses Guimarães, da Câmara dos Deputados, vazio
+  autor: Boaventuravinicius
+  licenca: CC BY-SA 4.0
+  licenca_url: https://creativecommons.org/licenses/by-sa/4.0
+  pagina: https://commons.wikimedia.org/wiki/File:Plen%C3%A1rio_Ulysses_Guimar%C3%A3es_2.jpg
+  arquivo: Plenário Ulysses Guimarães 2.jpg
+plenario-senado:
+  descricao: Teto iluminado do plenário do Senado Federal
+  autor: Boaventuravinicius
+  licenca: CC BY-SA 4.0
+  licenca_url: https://creativecommons.org/licenses/by-sa/4.0
+  pagina: https://commons.wikimedia.org/wiki/File:Plen%C3%A1rio_do_Senado_Federal.jpg
+  arquivo: Plenário do Senado Federal.jpg
+  foco: 0.5
+comissao:
+  descricao: Mesa diretora do plenário do Senado Federal
+  autor: Boaventuravinicius
+  licenca: CC BY-SA 4.0
+  licenca_url: https://creativecommons.org/licenses/by-sa/4.0
+  pagina: https://commons.wikimedia.org/wiki/File:Plen%C3%A1rio_do_Senado_Federal_3.jpg
+  arquivo: Plenário do Senado Federal 3.jpg
+senado2:
+  descricao: Mesa e tribuna do plenário do Senado Federal
+  autor: Boaventuravinicius
+  licenca: CC BY-SA 4.0
+  licenca_url: https://creativecommons.org/licenses/by-sa/4.0
+  pagina: https://commons.wikimedia.org/wiki/File:Plen%C3%A1rio_do_Senado_Federal_2.jpg
+  arquivo: Plenário do Senado Federal 2.jpg
+planalto:
+  descricao: Palácio do Planalto, sede da Presidência da República, à noite
+  autor: Leandro Neumann Ciuffo
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_do_Planalto_(8721928846).jpg
+  arquivo: Palácio do Planalto (8721928846).jpg
+esplanada:
+  descricao: Esplanada dos Ministérios, em Brasília
+  autor: Senado Federal
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Esplanada_dos_Minist%C3%A9rios_(48205132557).jpg
+  arquivo: Esplanada dos Ministérios (48205132557).jpg
+tres-poderes:
+  descricao: Escultura Os Candangos na Praça dos Três Poderes, em Brasília
+  autor: Senado Federal
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Imagens_de_Bras%C3%ADlia_-_Pra%C3%A7a_dos_Tr%C3%AAs_Poderes_-_49732065671.jpg
+  arquivo: Imagens de Brasília - Praça dos Três Poderes - 49732065671.jpg
+stf:
+  descricao: Fachada do Supremo Tribunal Federal, em Brasília
+  autor: Agência Senado
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Fachada_do_Supremo_Tribunal_Federal_(STF)_(54333425092).jpg
+  arquivo: Fachada do Supremo Tribunal Federal (STF) (54333425092).jpg
+justica:
+  descricao: Escultura A Justiça diante do Supremo Tribunal Federal
+  autor: Dasfour2022
+  licenca: CC BY-SA 4.0
+  licenca_url: https://creativecommons.org/licenses/by-sa/4.0
+  pagina: https://commons.wikimedia.org/wiki/File:Supreme_Federal_Court_-_Statue.jpg
+  arquivo: Supreme Federal Court - Statue.jpg
+  foco: 0.4
+stj:
+  descricao: Edifício-sede do Superior Tribunal de Justiça, em Brasília
+  autor: Superior Tribunal de Justiça STJ
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Edif%C3%ADcio_Sede_do_STJ_(54057017807).jpg
+  arquivo: Edifício Sede do STJ (54057017807).jpg
+  foco: 0.3
+tse:
+  descricao: Sede do Tribunal Superior Eleitoral, em Brasília
+  autor: O Tribunal da Democracia
+  licenca: Public domain
+  licenca_url: https://creativecommons.org/publicdomain/mark/1.0/
+  pagina: https://commons.wikimedia.org/wiki/File:2025-12-26_Fotografia_da_sede_do_TSE_em_Bras%C3%ADlia_-_DF_-_01.jpg
+  arquivo: 2025-12-26 Fotografia da sede do TSE em Brasília - DF - 01.jpg
+urna:
+  descricao: Urna eletrônica brasileira modelo 2020
+  autor: TSE -  Tribunal Superior Eleitoral
+  licenca: Public domain
+  licenca_url: https://creativecommons.org/publicdomain/mark/1.0/
+  pagina: https://commons.wikimedia.org/wiki/File:Urna_eletr%C3%B4nica_brasileira_UE2020.jpg
+  arquivo: Urna eletrônica brasileira UE2020.jpg
+  foco: 0.5
+constituicao:
+  descricao: Exemplar da Constituição Federal de 1988 em exposição
+  autor: Moacir Ximenes
+  licenca: Public domain
+  licenca_url: https://creativecommons.org/publicdomain/mark/1.0/
+  pagina: https://commons.wikimedia.org/wiki/File:Constitui%C3%A7%C3%A3o_do_Brasil_de_1988_in_exposition.JPG
+  arquivo: Constituição do Brasil de 1988 in exposition.JPG
+  foco: 0.45
+tcu:
+  descricao: Sede do Tribunal de Contas da União, em Brasília
+  autor: Borowskki
+  licenca: Public domain
+  licenca_url: https://creativecommons.org/publicdomain/mark/1.0/
+  pagina: https://commons.wikimedia.org/wiki/File:Tribunal_de_contas_da_uniao_sede.jpg
+  arquivo: Tribunal de contas da uniao sede.jpg
+fazenda:
+  descricao: Fachada do Ministério da Fazenda, na Esplanada dos Ministérios
+  autor: Agência Senado
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Imagens_de_Bras%C3%ADlia_(52652558481).jpg
+  arquivo: Imagens de Brasília (52652558481).jpg
+  foco: 0.3
+bc:
+  descricao: Edifício-sede do Banco Central do Brasil, em Brasília
+  autor: Banco Central do Brasil
+  licenca: CC BY 2.0
+  licenca_url: https://creativecommons.org/licenses/by/2.0
+  pagina: https://commons.wikimedia.org/wiki/File:Edif%C3%ADcio_%22Sede%22_do_Banco_Central_do_Brasil_em_Bras%C3%ADlia.jpg
+  arquivo: Edifício "Sede" do Banco Central do Brasil em Brasília.jpg
+  foco: 0.35
+mapa:
+  descricao: Mapa político do Brasil com a divisão dos estados
+  autor: BrankoMarinovic99
+  licenca: CC0
+  licenca_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+  pagina: https://commons.wikimedia.org/wiki/File:Mapa_dos_estados_do_Brasil.jpg
+  arquivo: Mapa dos estados do Brasil.jpg
+camara-municipal:
+  descricao: Palácio Anchieta, sede da Câmara Municipal de São Paulo
+  autor: Henrique Boney
+  licenca: CC BY-SA 3.0
+  licenca_url: https://creativecommons.org/licenses/by-sa/3.0
+  pagina: https://commons.wikimedia.org/wiki/File:Vista_do_Pal%C3%A1cio_Anchieta.JPG
+  arquivo: Vista do Palácio Anchieta.JPG

@@ -1,0 +1,128 @@
+termos:
+- termo: Arcabouço fiscal
+  slug: arcabouco-fiscal
+  categoria: orcamento
+  imagem: fazenda
+  sinonimos: [novo arcabouço fiscal, regime fiscal sustentável, teto de gastos]
+  autolink: [arcabouço fiscal, regime fiscal sustentável, teto de gastos]
+  resumo: "é o conjunto de regras da Lei Complementar nº 200/2023 que limita o crescimento das despesas federais e o vincula ao comportamento da receita e da meta fiscal."
+  definicao: |
+    O arcabouço fiscal, oficialmente Regime Fiscal Sustentável, foi instituído pela Lei Complementar nº 200/2023, após a Emenda Constitucional nº 126/2022 determinar a substituição do teto de gastos criado pela Emenda Constitucional nº 95/2016.
+
+    Pela regra, o limite de despesas primárias de cada ano é corrigido pela inflação e por um crescimento real equivalente a 70% do crescimento real da receita primária, quando a meta de resultado primário do ano anterior tiver sido cumprida, ou a 50%, quando não tiver. Em qualquer caso, o crescimento real fica entre 0,6% e 2,5% ao ano.
+
+    A lei também prevê banda de tolerância para a meta de resultado primário, de 0,25 ponto percentual do PIB para mais ou para menos, e medidas de ajuste caso a meta seja descumprida.
+  contexto: |
+    O debate em torno do arcabouço envolve o crescimento de despesas obrigatórias, que reduz o espaço para gastos discricionários dentro do limite, e o cumprimento das metas anuais definidas na LDO.
+  base_legal:
+    - {nome: "Lei Complementar nº 200/2023", url: "@LC200"}
+    - {nome: "Emenda Constitucional nº 126/2022", url: "@EC126"}
+    - {nome: "Emenda Constitucional nº 95/2016 (teto de gastos)", url: "@EC95"}
+  relacionados: [meta-fiscal, contingenciamento, lei-de-responsabilidade-fiscal, ldo]
+  faqs:
+    - {p: "O arcabouço fiscal substituiu o teto de gastos?", r: "Sim. A EC 126/2022 previu a substituição, e a LC 200/2023 instituiu o novo regime."}
+    - {p: "Quanto a despesa pode crescer?", r: "Pela inflação mais 70% do crescimento real da receita, se a meta foi cumprida, ou 50%, se não foi, sempre entre 0,6% e 2,5% reais ao ano."}
+    - {p: "O que é a banda da meta fiscal?", r: "É a tolerância de 0,25 ponto percentual do PIB, para mais ou para menos, em relação à meta de resultado primário."}
+    - {p: "O que acontece se a meta for descumprida?", r: "O crescimento permitido da despesa no ano seguinte cai para 50% do crescimento da receita, e a lei prevê medidas de contenção."}
+    - {p: "O arcabouço vale para estados e municípios?", r: "Não. A LC 200/2023 trata das contas da União. Estados e municípios seguem a LRF e regras próprias."}
+- termo: Lei de Responsabilidade Fiscal
+  slug: lei-de-responsabilidade-fiscal
+  categoria: orcamento
+  imagem: fazenda
+  sigla: LRF
+  autolink: [Lei de Responsabilidade Fiscal]
+  resumo: "é a Lei Complementar nº 101/2000, que estabelece normas de finanças públicas para a gestão fiscal responsável da União, dos estados e dos municípios."
+  definicao: |
+    A Lei de Responsabilidade Fiscal define regras para planejamento, controle e transparência das contas públicas. Ela exige metas fiscais na LDO, cria mecanismos de limitação de empenho e fixa limites para despesas com pessoal e para o endividamento.
+
+    Pelo art. 19, a despesa total com pessoal não pode ultrapassar 50% da receita corrente líquida na União e 60% nos estados e municípios, com sublimites por Poder. A lei também proíbe, nos dois últimos quadrimestres do mandato, contrair obrigação de despesa que não possa ser paga integralmente no mesmo exercício sem disponibilidade de caixa (art. 42).
+
+    A LRF prevê ainda relatórios periódicos, como o Relatório Resumido da Execução Orçamentária e o Relatório de Gestão Fiscal, que devem ser publicados.
+  contexto: |
+    Descumprimentos da LRF podem levar a restrições, como suspensão de transferências voluntárias, e podem embasar julgamentos de contas, ações de improbidade e crimes contra as finanças públicas previstos na Lei nº 10.028/2000.
+  base_legal:
+    - {nome: "Lei Complementar nº 101/2000", url: "@LRF"}
+    - {nome: "Constituição Federal, arts. 163 e 169", url: "@CF"}
+  relacionados: [arcabouco-fiscal, meta-fiscal, contingenciamento, restos-a-pagar, transferencias-voluntarias]
+  faqs:
+    - {p: "Qual o limite de gasto com pessoal pela LRF?", r: "50% da receita corrente líquida na União e 60% nos estados e municípios."}
+    - {p: "A LRF vale para todos os entes?", r: "Sim. Aplica-se à União, aos estados, ao Distrito Federal e aos municípios."}
+    - {p: "O que a LRF proíbe no fim do mandato?", r: "Contrair, nos últimos oito meses, obrigação que não possa ser paga no mesmo ano sem caixa suficiente, conforme o art. 42."}
+    - {p: "Quem fiscaliza o cumprimento da LRF?", r: "O Poder Legislativo, com auxílio dos tribunais de contas, e o sistema de controle interno de cada Poder."}
+    - {p: "A LRF tem relação com o impeachment de 2016?", r: "O processo de 2016 tratou de crimes de responsabilidade ligados a créditos suplementares e a operações com bancos públicos, temas relacionados às regras fiscais."}
+- termo: Meta fiscal
+  slug: meta-fiscal
+  categoria: orcamento
+  imagem: bc
+  sinonimos: [meta de resultado primário, resultado primário, déficit primário, superávit primário]
+  autolink: [meta fiscal, metas fiscais, meta de resultado primário, resultado primário, déficit primário, superávit primário]
+  resumo: "é o resultado das contas públicas, sem contar juros da dívida, que o governo se compromete a alcançar em cada ano."
+  definicao: |
+    O resultado primário é a diferença entre as receitas e as despesas primárias, ou seja, sem considerar o pagamento de juros. Quando as receitas superam as despesas, há superávit primário; no caso contrário, déficit primário.
+
+    A meta de resultado primário é fixada no Anexo de Metas Fiscais da LDO, conforme o art. 4º da Lei de Responsabilidade Fiscal. Com a Lei Complementar nº 200/2023, a meta passou a ter banda de tolerância de 0,25 ponto percentual do PIB, e seu cumprimento afeta o crescimento permitido das despesas no ano seguinte.
+
+    Ao longo do ano, o governo acompanha a meta nos relatórios bimestrais e pode contingenciar despesas para cumpri-la. A alteração da meta exige lei que modifique a LDO.
+  contexto: |
+    O resultado primário é um dos indicadores mais citados sobre a situação fiscal porque mostra se o governo arrecada o suficiente para cobrir suas despesas antes dos juros, o que influencia a trajetória da dívida pública.
+  base_legal:
+    - {nome: "Lei Complementar nº 101/2000, arts. 4º e 9º", url: "@LRF"}
+    - {nome: "Lei Complementar nº 200/2023", url: "@LC200"}
+  relacionados: [ldo, arcabouco-fiscal, contingenciamento, banco-central]
+  faqs:
+    - {p: "O que é resultado primário?", r: "É a diferença entre receitas e despesas do governo, sem contar os juros da dívida pública."}
+    - {p: "Onde a meta fiscal é definida?", r: "No Anexo de Metas Fiscais da Lei de Diretrizes Orçamentárias."}
+    - {p: "O que é a banda da meta?", r: "Tolerância de 0,25 ponto percentual do PIB, prevista na LC 200/2023, dentro da qual a meta é considerada cumprida."}
+    - {p: "O governo pode mudar a meta durante o ano?", r: "Sim, mas precisa aprovar no Congresso uma lei que altere a LDO."}
+    - {p: "Quem calcula o resultado primário?", r: "O Tesouro Nacional divulga o resultado do governo central, e o Banco Central calcula o do setor público consolidado."}
+- termo: Restos a pagar
+  slug: restos-a-pagar
+  categoria: orcamento
+  imagem: fazenda
+  sinonimos: [restos a pagar processados, restos a pagar não processados]
+  autolink: [restos a pagar]
+  resumo: "são despesas empenhadas em um ano e não pagas até 31 de dezembro, que passam para os anos seguintes."
+  definicao: |
+    A Lei nº 4.320/1964 (art. 36) define restos a pagar como as despesas empenhadas mas não pagas até o dia 31 de dezembro. Elas se dividem em processadas, quando o serviço ou a entrega já foi verificado, e não processadas, quando ainda não houve essa verificação, chamada liquidação.
+
+    O estoque de restos a pagar mostra compromissos herdados de orçamentos anteriores que consomem recursos financeiros dos anos seguintes. Regras de cancelamento e validade são definidas em decretos de execução orçamentária.
+
+    A Lei de Responsabilidade Fiscal (art. 42) restringe a inscrição de restos a pagar sem disponibilidade de caixa nos últimos oito meses de mandato.
+  contexto: |
+    Emendas parlamentares empenhadas e não pagas costumam se transformar em restos a pagar, o que faz o tema aparecer nas negociações entre Executivo e Congresso.
+  base_legal:
+    - {nome: "Lei nº 4.320/1964, arts. 36 e 92", url: "@L4320"}
+    - {nome: "Lei Complementar nº 101/2000, art. 42", url: "@LRF"}
+  relacionados: [lei-orcamentaria-anual, lei-de-responsabilidade-fiscal, emendas-individuais, contingenciamento]
+  faqs:
+    - {p: "O que são restos a pagar?", r: "São despesas empenhadas que não foram pagas até o fim do ano e ficam para os exercícios seguintes."}
+    - {p: "Qual a diferença entre processados e não processados?", r: "Nos processados, a despesa já foi liquidada, isto é, o serviço foi verificado. Nos não processados, ainda não."}
+    - {p: "Restos a pagar podem ser cancelados?", r: "Sim, conforme regras de validade definidas na legislação de execução orçamentária."}
+    - {p: "Por que os restos a pagar importam?", r: "Porque consomem recursos dos anos seguintes e reduzem o espaço financeiro para novas despesas."}
+    - {p: "A LRF limita restos a pagar?", r: "Sim. O art. 42 proíbe, nos dois últimos quadrimestres do mandato, criar despesas sem caixa suficiente para pagá-las."}
+- termo: Comissão Mista de Orçamento
+  slug: comissao-mista-de-orcamento
+  categoria: orcamento
+  imagem: comissao
+  sigla: CMO
+  sinonimos: ["Comissão Mista de Planos, Orçamentos Públicos e Fiscalização"]
+  autolink: [Comissão Mista de Orçamento, "Comissão Mista de Planos, Orçamentos Públicos e Fiscalização"]
+  resumo: "é a comissão formada por deputados e senadores que analisa os projetos do PPA, da LDO e da LOA e emite parecer antes da votação no Congresso."
+  definicao: |
+    O art. 166, § 1º, da Constituição atribui a uma comissão mista permanente de senadores e deputados examinar e emitir parecer sobre os projetos de lei orçamentária e sobre as contas do presidente da República, além de acompanhar a execução orçamentária. É a Comissão Mista de Planos, Orçamentos Públicos e Fiscalização.
+
+    A Resolução nº 1/2006 do Congresso Nacional regula seu funcionamento: a comissão tem 40 membros titulares, sendo 30 deputados e 10 senadores, e a presidência se alterna entre as duas Casas a cada ano. As emendas ao orçamento são apresentadas na CMO, onde são analisadas pelos relatores setoriais e pelo relator-geral.
+
+    Após a votação na CMO, os projetos seguem para o plenário do Congresso, em sessão conjunta.
+  contexto: |
+    A escolha do relator-geral do orçamento e dos relatores setoriais é objeto de negociação entre partidos, porque define quem conduz a distribuição de recursos entre áreas.
+  base_legal:
+    - {nome: "Constituição Federal, art. 166, §§ 1º e 2º", url: "@CF"}
+    - {nome: "Resolução nº 1/2006 do Congresso Nacional", url: "@RCN1-2006"}
+  relacionados: [lei-orcamentaria-anual, ldo, ppa, comissao-mista, sessao-conjunta]
+  faqs:
+    - {p: "Quantos membros tem a CMO?", r: "40 titulares: 30 deputados e 10 senadores, conforme a Resolução nº 1/2006 do Congresso."}
+    - {p: "O que a CMO analisa?", r: "Os projetos do PPA, da LDO, da LOA e de créditos adicionais, além das contas do presidente da República."}
+    - {p: "Onde os parlamentares apresentam emendas ao orçamento?", r: "Na Comissão Mista de Orçamento."}
+    - {p: "Quem preside a CMO?", r: "A presidência alterna anualmente entre um deputado e um senador."}
+    - {p: "Depois da CMO, o orçamento vai para onde?", r: "Para votação em sessão conjunta do Congresso Nacional."}

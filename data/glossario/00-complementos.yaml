@@ -1,0 +1,206 @@
+# Complementos dos 34 verbetes originais (data/glossario.yaml): categoria, imagem, contexto, sinônimos e regras de autolink.
+complementos:
+  pec:
+    categoria: processo-legislativo
+    imagem: plenario-camara
+    sinonimos: [emenda constitucional, emenda à Constituição, Proposta de Emenda Constitucional]
+    contexto: |
+      Desde 1988, a Constituição recebeu mais de 130 emendas, o que faz da PEC um dos temas mais frequentes do noticiário do Congresso. Um exemplo de trajetória: na Câmara, a PEC passa pela CCJ (admissibilidade), pela [comissão especial](/glossario/comissao-especial/) (mérito) e por dois turnos no plenário; depois repete os dois turnos no Senado. Se o Senado mudar o mérito, a parte alterada volta à Câmara.
+  medida-provisoria:
+    categoria: processo-legislativo
+    imagem: planalto
+    autolink_sigla: false
+    sinonimos: [MPs]
+    contexto: |
+      Na prática, a MP produz efeitos imediatos, como a abertura de crédito extraordinário ou a mudança de uma alíquota, enquanto o Congresso decide se a mantém. A Emenda Constitucional nº 32/2001 criou as regras atuais de prazo e proibiu a reedição na mesma sessão legislativa de MP rejeitada ou que perdeu a eficácia por decurso de prazo.
+  projeto-de-lei:
+    categoria: processo-legislativo
+    imagem: plenario-camara2
+    autolink_sigla: false
+    sinonimos: [projetos de lei ordinária, projeto de lei ordinária]
+    contexto: |
+      A sigla PL também é usada pelo Partido Liberal, por isso o Estrato só faz o link automático pelo nome por extenso. Um projeto apresentado por deputado começa na Câmara; um do presidente da República, do STF ou dos tribunais superiores também começa na Câmara, por determinação do art. 64 da Constituição; um de senador começa no Senado.
+  projeto-de-lei-complementar:
+    categoria: processo-legislativo
+    imagem: plenario-camara2
+    sinonimos: [lei complementar, leis complementares]
+    contexto: |
+      A Constituição indica quando um tema exige lei complementar: é o caso das hipóteses de inelegibilidade (LC 64/1990), da responsabilidade fiscal (LC 101/2000) e do regime fiscal sustentável (LC 200/2023). Por precisar de 257 votos na Câmara e 41 no Senado, é mais difícil de aprovar que uma lei ordinária.
+  projeto-de-decreto-legislativo:
+    categoria: processo-legislativo
+    imagem: plenario-senado
+    sinonimos: [decreto legislativo, decretos legislativos]
+    contexto: |
+      Um uso comum do PDL é sustar atos do Executivo que exorbitem do poder regulamentar, com base no art. 49, V, da Constituição. Também é por decreto legislativo que o Congresso aprova tratados internacionais e autoriza referendos e plebiscitos. Como não há sanção, o texto aprovado é promulgado pelo presidente do Senado.
+  quorum:
+    categoria: processo-legislativo
+    imagem: plenario-camara
+    autolink: [quórum, quorum, quóruns]
+    contexto: |
+      Há dois quóruns diferentes que costumam ser confundidos: o de presença, necessário para abrir a votação (maioria absoluta dos membros), e o de aprovação, que varia com a matéria, de [maioria simples](/glossario/maioria-simples/) a três quintos. Uma sessão pode ter quórum para votar e, ainda assim, a proposta não alcançar os votos para ser aprovada.
+  maioria-absoluta:
+    categoria: processo-legislativo
+    imagem: plenario-camara
+    contexto: |
+      A maioria absoluta é calculada sobre o total de membros, não sobre os presentes: 257 deputados e 41 senadores. É exigida, por exemplo, para aprovar lei complementar, para derrubar veto em sessão conjunta e para o Senado aprovar a indicação de ministro do STF.
+  regime-de-urgencia:
+    categoria: processo-legislativo
+    imagem: plenario-camara2
+    sinonimos: [urgência regimental, requerimento de urgência, regime de urgência urgentíssima]
+    contexto: |
+      No noticiário, "aprovar a urgência" quase sempre significa aprovar um requerimento que leva o projeto direto ao plenário, sem passar pelas comissões. Na Câmara, o requerimento precisa de maioria absoluta. Já a urgência pedida pelo presidente da República é outra regra, a [urgência constitucional](/glossario/urgencia-constitucional/).
+  destaque:
+    categoria: processo-legislativo
+    imagem: plenario-camara
+    autolink: [pedido de destaque, pedidos de destaque, destaque para votação em separado, destaques para votação em separado, votação dos destaques, destaques ao texto, destaque de bancada, destaques de bancada]
+    contexto: |
+      Depois de aprovado o texto-base, o plenário vota os destaques um a um. Um destaque de bancada pode retirar um trecho do texto, que então só permanece se obtiver os votos necessários. Por isso a votação de uma PEC pode se estender por dias depois da aprovação do texto principal.
+  veto:
+    categoria: processo-legislativo
+    imagem: planalto
+    sinonimos: [vetou, vetado, vetada, vetados, vetadas, veto parcial, veto total]
+    contexto: |
+      O veto pode ser total ou parcial, mas o parcial precisa abranger texto integral de artigo, parágrafo, inciso ou alínea. Os vetos são analisados em [sessão conjunta](/glossario/sessao-conjunta/) do Congresso, e a derrubada exige a maioria absoluta de deputados e de senadores, contados separadamente.
+  sancao:
+    categoria: processo-legislativo
+    imagem: planalto
+    autolink: [sanção presidencial, sanção da lei, sancionou, sancionada, sancionado, sancionar, sanciona, sancionadas, sancionados]
+    contexto: |
+      Se o presidente não se manifestar em 15 dias úteis, o silêncio vale como sanção, chamada de sanção tácita. A sanção encerra o processo legislativo do projeto, mas a lei só passa a valer depois da publicação e do prazo de vigência que ela mesma fixar.
+  promulgacao:
+    categoria: processo-legislativo
+    imagem: senado2
+    sinonimos: [promulgou, promulgada, promulgado]
+    contexto: |
+      A emenda constitucional é promulgada em sessão solene do Congresso, pelas Mesas da Câmara e do Senado. Já a lei com veto derrubado é promulgada pelo presidente da República em 48 horas; se ele não o fizer, a tarefa passa ao presidente do Senado e, depois, ao vice-presidente do Senado.
+  cpi:
+    categoria: congresso
+    imagem: comissao
+    sinonimos: [CPIs]
+    contexto: |
+      A CPI pode quebrar sigilos bancário, fiscal e telefônico (dados de registros, não o conteúdo das conversas) por decisão fundamentada do colegiado, ouvir testemunhas e requisitar documentos, mas não pode julgar nem aplicar penas. O relatório final é enviado ao Ministério Público e a outros órgãos para que adotem as medidas cabíveis.
+  ccj:
+    categoria: processo-legislativo
+    imagem: comissao
+    sinonimos: [Comissão de Constituição e Justiça e de Cidadania, Comissão de Constituição, Justiça e Cidadania]
+    contexto: |
+      Na Câmara, a CCJ é a comissão mais disputada, porque analisa a admissibilidade das PECs e a constitucionalidade de quase todos os projetos. No Senado, a CCJ também sabatina indicados ao STF e a outros tribunais antes da votação em plenário.
+  emenda-parlamentar:
+    categoria: orcamento
+    imagem: sessao-conjunta
+    sinonimos: [emendas ao Orçamento, emenda ao Orçamento, emendas parlamentares ao Orçamento]
+    contexto: |
+      As emendas ao Orçamento se dividem por autor: [individuais](/glossario/emendas-individuais/), [de bancada estadual](/glossario/emendas-de-bancada/), [de comissão](/glossario/emendas-de-comissao/) e, até 2022, [de relator](/glossario/emendas-de-relator/). As individuais e as de bancada têm execução obrigatória, dentro dos limites fixados no art. 166 da Constituição.
+  lei-orcamentaria-anual:
+    categoria: orcamento
+    imagem: fazenda
+    sinonimos: [Orçamento da União, lei orçamentária]
+    contexto: |
+      O projeto da LOA chega ao Congresso até 31 de agosto e deve ser devolvido para sanção até o fim da sessão legislativa. Quando não é aprovado a tempo, a LDO costuma autorizar a execução provisória de parte das despesas, como as obrigatórias, até a aprovação.
+  fundo-partidario:
+    categoria: eleitoral
+    imagem: tse
+    sinonimos: [Fundo Especial de Assistência Financeira aos Partidos Políticos]
+    contexto: |
+      O Fundo Partidário é pago todos os anos, haja ou não eleição, e serve para manter os partidos, com parte reservada a fundações partidárias e a programas de participação política das mulheres. Só recebem os partidos que superam a [cláusula de desempenho](/glossario/clausula-de-desempenho/).
+  fundo-eleitoral:
+    categoria: eleitoral
+    imagem: urna
+    sinonimos: [Fundo Especial de Financiamento de Campanha, FEFC, fundão eleitoral]
+    contexto: |
+      O fundo existe desde as eleições de 2018, criado depois que o STF proibiu doações de empresas a campanhas, em 2015 (ADI 4650). Os valores são definidos na lei orçamentária do ano da eleição e distribuídos pelo TSE aos partidos segundo critérios da Lei 9.504/1997, com reserva mínima para candidaturas femininas e de pessoas negras.
+  cota-parlamentar:
+    categoria: congresso
+    imagem: plenario-camara2
+    sinonimos: [Cota para o Exercício da Atividade Parlamentar, CEAP, cotão]
+    contexto: |
+      Os gastos da cota são públicos e podem ser consultados por deputado no portal da Câmara e na [página de cota parlamentar](/deputados/cota-parlamentar/) do Estrato, com os dados oficiais. O limite mensal varia por estado porque inclui o custo de passagens entre Brasília e a base eleitoral.
+  legislatura:
+    categoria: congresso
+    imagem: congresso
+    sinonimos: [legislaturas]
+    contexto: |
+      A 57ª legislatura começou em 1º de fevereiro de 2023 e termina em 31 de janeiro de 2027. Os deputados eleitos em outubro de 2026 tomam posse em fevereiro de 2027, na 58ª legislatura. Cada legislatura tem quatro [sessões legislativas](/glossario/sessao-legislativa/) anuais.
+  suplente:
+    categoria: congresso
+    imagem: plenario-camara2
+    sinonimos: [suplentes, suplência]
+    contexto: |
+      Na Câmara, o suplente é o candidato mais votado entre os não eleitos do partido ou da federação. No Senado, cada senador é eleito com dois suplentes, que constam da mesma chapa. O suplente assume quando o titular se licencia por mais de 120 dias, assume cargo de ministro ou secretário ou deixa o mandato.
+  adi:
+    categoria: judiciario
+    imagem: stf
+    sinonimos: [ADIs, ação direta]
+    contexto: |
+      A ADI é a ação mais usada no controle concentrado: partidos com representação no Congresso, governadores, a OAB, confederações sindicais e o procurador-geral da República, entre outros, podem questionar leis federais e estaduais diretamente no STF. A decisão vale para todos e vincula os demais órgãos do Judiciário e a administração pública.
+  repercussao-geral:
+    categoria: judiciario
+    imagem: stf
+    contexto: |
+      Quando o STF reconhece a repercussão geral de um tema, os processos iguais em todo o país podem ficar suspensos até o julgamento. A tese fixada passa a ser aplicada pelos demais tribunais. A lista de temas, com o número de cada um, é publicada pelo próprio STF.
+  impeachment:
+    categoria: controle
+    imagem: senado2
+    sinonimos: [processo de impeachment, impedimento do presidente]
+    contexto: |
+      Desde 1988, dois presidentes da República foram alvo de processos de impeachment concluídos no Senado: em 1992, quando o presidente renunciou antes do fim do julgamento e o Senado prosseguiu, e em 2016, com a condenação e a perda do cargo. Pedidos de abertura são frequentes e, na maioria, são arquivados pelo presidente da Câmara.
+  ficha-limpa:
+    categoria: eleitoral
+    imagem: tse
+    sinonimos: [Lei Complementar 135, Lei Complementar nº 135]
+    contexto: |
+      A lei nasceu de um projeto de iniciativa popular apoiado por mais de 1,3 milhão de assinaturas e foi sancionada em 2010. O STF declarou sua constitucionalidade em 2012 (ADCs 29 e 30 e ADI 4578) e confirmou que vale para condenações anteriores à lei. Em 2025, a Lei Complementar nº 219 alterou a forma de contar alguns prazos de inelegibilidade.
+  quociente-eleitoral:
+    categoria: eleitoral
+    imagem: urna
+    sinonimos: [quocientes eleitorais]
+    contexto: |
+      Um exemplo simples: num estado com 10 vagas e 1 milhão de votos válidos, o quociente eleitoral é 100 mil. Um partido com 350 mil votos tem quociente partidário 3 e elege, em princípio, três candidatos, desde que cada um tenha pelo menos 10 mil votos (10% do quociente). As vagas restantes vão para a disputa das [sobras eleitorais](/glossario/sobras-eleitorais/).
+  segundo-turno:
+    categoria: eleitoral
+    imagem: urna
+    sinonimos: [segundos turnos]
+    contexto: |
+      Em 2026, o primeiro turno foi em 4 de outubro e o segundo turno, onde houver, é em 25 de outubro, conforme o calendário do art. 77 da Constituição (primeiro e último domingo de outubro). Há segundo turno para presidente e governador quando ninguém obtém maioria absoluta dos votos válidos, e para prefeito nos municípios com mais de 200 mil eleitores.
+  federacao-partidaria:
+    categoria: eleitoral
+    imagem: tse
+    autolink: [federação partidária, federações partidárias, federação de partidos, federações de partidos]
+    contexto: |
+      Diferentemente da antiga coligação proporcional, a federação obriga os partidos a atuarem juntos por pelo menos quatro anos, inclusive no funcionamento parlamentar, com estatuto e programa comuns registrados no TSE. A primeira eleição com federações foi a de 2022.
+  diplomacao:
+    categoria: eleitoral
+    imagem: tse
+    sinonimos: [diplomados, diploma de eleito]
+    contexto: |
+      A diplomação é o ato da Justiça Eleitoral que atesta o resultado e habilita o eleito a tomar posse. É a partir dela que começam a correr prazos importantes, como o de 15 dias para a ação de impugnação de mandato eletivo, e que o parlamentar passa a ter as [imunidades](/glossario/imunidade-parlamentar/) previstas no art. 53 da Constituição.
+  votacao-nominal:
+    categoria: processo-legislativo
+    imagem: plenario-camara
+    sinonimos: [votações nominais, painel eletrônico]
+    contexto: |
+      Na votação nominal, o voto de cada parlamentar fica registrado no painel e é publicado. É o modo exigido para PECs, leis complementares e outras matérias com quórum especial. As listas de votos podem ser consultadas nos dados abertos da Câmara e do Senado.
+  obstrucao:
+    categoria: congresso
+    imagem: plenario-camara
+    sinonimos: [obstruir a votação, kit obstrução]
+    contexto: |
+      A obstrução é uma ferramenta legítima prevista no regimento: o partido em obstrução não registra presença, para dificultar o quórum, e apresenta requerimentos, como os de adiamento e de retirada de pauta. Quando a base do governo tem número suficiente, a obstrução apenas atrasa a votação.
+  lider-partidario:
+    categoria: congresso
+    imagem: plenario-camara2
+    sinonimos: [líderes partidários, líder do partido, líder da bancada]
+    contexto: |
+      O líder fala em nome da bancada, orienta o voto dos colegas no painel e indica os membros do partido nas comissões. Além dos líderes de partido, há o líder do governo, o da maioria, o da minoria e o da oposição, com prerrogativas próprias no regimento.
+  bancada:
+    categoria: congresso
+    imagem: plenario-camara
+    sinonimos: [bancadas]
+    contexto: |
+      O termo tem dois usos: a bancada partidária, formada pelos parlamentares de um mesmo partido, e a bancada estadual, formada pelos deputados e senadores de um estado, que apresenta as [emendas de bancada](/glossario/emendas-de-bancada/) ao Orçamento. Há ainda o uso informal para grupos temáticos, que formalmente se organizam como [frentes parlamentares](/glossario/frente-parlamentar/).
+  clausula-de-desempenho:
+    categoria: eleitoral
+    imagem: tse
+    sinonimos: [cláusula de barreira]
+    contexto: |
+      A exigência cresce a cada eleição até 2030, segundo a Emenda Constitucional nº 97/2017. Partidos que não a cumprem continuam existindo e podem eleger parlamentares, mas perdem acesso ao Fundo Partidário e ao tempo de rádio e TV, o que estimula fusões, incorporações e federações.
