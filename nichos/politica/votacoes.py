@@ -224,14 +224,14 @@ def build(S):
             f'<label>Casa<select id="fc"><option value="">Ambas</option>{opt([("camara", "Câmara"), ("senado", "Senado")])}</select></label>'
             f'<label>Tema<select id="ft"><option value="">Todos</option>{opt([(t, t) for t in temas])}</select></label>'
             f'<label>Resultado<select id="fr"><option value="">Todos</option>{opt([("Aprovado", "Aprovado"), ("Rejeitado", "Rejeitado"), ("Ver descrição oficial", "Outros")])}</select></label>'
-            f'<label class="vq">Buscar<input id="fq" type="search" placeholder="Ex.: PEC 45, reforma tributária, arcabouço" autocomplete="off"></label></form><p id="fn" aria-live="polite"></p><a id="vidx" href="/votacoes/indice.json" hidden>índice</a>')
+            f'<label class="vq">Buscar<input id="fq" type="search" placeholder="Ex.: PEC 45, sistema tributário, arcabouço" autocomplete="off"></label></form><p id="fn" aria-live="polite"></p><a id="vidx" href="/votacoes/indice.json" hidden>índice</a>')
     ult = vs[:40]
     lista = '<ul class="vlist" id="vl">' + "".join(f'<li><a href="{v["url"]}">{E(v["titulo"])}</a><small>{CASA[v["casa"]][0]} · {data_br(v["data"])} · {E(v["res"])} · {v["placar"].get("sim", 0)} × {v["placar"].get("nao", 0)}</small></li>' for v in ult) + "</ul>"
     js = ("<script>(function(){var X=document.getElementById('vidx'),P=X.getAttribute('href').replace('/votacoes/indice.json',''),I=null,L=document.getElementById('vl'),N=document.getElementById('fn'),F=['fa','fc','ft','fr','fq'].map(function(i){return document.getElementById(i)});"
           "function n(s){return(s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'')}"
           "function e(s){return String(s).replace(/[&<>\"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]})}"
           "function d(s){return s.slice(8,10)+'/'+s.slice(5,7)+'/'+s.slice(0,4)}"
-          "function r(){var a=F[0].value,c=F[1].value,t=F[2].value,s=F[3].value,q=n(F[4].value),o=I.filter(function(x){return(!a||x.d.slice(0,4)==a)&&(!c||x.c==c)&&(!t||x.m.indexOf(t)>=0)&&(!s||x.r==s)&&(!q||n(x.t+' '+x.e).indexOf(q)>=0)});"
+          "function r(){var a=F[0].value,c=F[1].value,t=F[2].value,s=F[3].value,q=n(F[4].value),o=I.filter(function(x){return(!a||x.d.slice(0,4)==a)&&(!c||x.c==c)&&(!t||x.m.indexOf(t)>=0)&&(!s||x.r==s)&&(!q||n(x.t+' '+x.e+' '+x.m.join(' ')).indexOf(q)>=0)});"
           "N.textContent=o.length+' votação(ões) encontrada(s)'+(o.length>200?'; mostrando as 200 mais recentes':'');"
           "L.innerHTML=o.slice(0,200).map(function(x){return'<li><a href=\"'+P+x.u+'\">'+e(x.t)+'</a><small>'+(x.c=='camara'?'Câmara':'Senado')+' · '+d(x.d)+' · '+e(x.r)+' · '+x.s+' × '+x.n+'</small></li>'}).join('')}"
           "function g(){if(I)return r();fetch(X.href).then(function(x){return x.json()}).then(function(j){I=j;r()})}"
