@@ -2,7 +2,7 @@
  "formato": "saude-portal/1",
  "portal": "Estrato",
  "url": "https://estrato.com.br",
- "gerado_em": "2026-10-12T15:41:58+00:00",
+ "gerado_em": "2026-10-12T15:45:02+00:00",
  "materias": {
   "total": 20,
   "ultimas_24h": 0,
@@ -14,7 +14,7 @@
    "url": "https://estrato.com.br/congresso/2026-10-09-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos/",
    "fonte": "Agência Câmara",
    "publicada_em": "2026-10-09T19:15:00-03:00",
-   "idade_horas": 65.4
+   "idade_horas": 65.5
   }
  },
  "feeds": {
