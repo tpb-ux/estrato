@@ -1,0 +1,51 @@
+site_name: Estrato
+tagline: Os Três Poderes em dados
+descricao: "O Estrato acompanha o Congresso, o governo, a Justiça e as eleições com dados oficiais abertos e resumos de fontes públicas, sempre com link para a origem."
+home_titulo: "Estrato: Congresso, governo, Justiça e eleições em dados"
+language: pt-BR
+base_url: https://estrato.com.br
+cname: estrato.com.br
+nicho: politica
+# Pré-lançamento: noindex,nofollow em todas as páginas, robots Disallow e IndexNow desligado. Desligar só após 25/10/2026.
+noindex_global: true
+aviso_topo: "Versão de prévia: em revisão, não indexada."
+publisher_logo: /static/logo.png
+tema: {cor: "#8A4B08", cor2: "#6E3B05", escuro: "#1B2430"}
+modulos: [core.modulos.glossario, parlamentares, partidos]
+qualidade: {min_faqs: 5, min_palavras_pseo: 300}
+editorias:
+  - {slug: congresso, nome: Congresso, descricao: "Câmara, Senado, comissões, CPIs e a agenda de votações, com base nas agências oficiais das duas Casas.", sub: [Câmara, Senado, Comissões, CPIs, Agenda]}
+  - {slug: governo, nome: Governo, descricao: "Presidência, ministérios, orçamento, emendas e atos do Executivo federal.", sub: [Presidência, Ministérios, Orçamento e emendas, Servidor público, Atos oficiais]}
+  - {slug: justica, nome: Justiça, descricao: "STF, tribunais superiores, TSE, CNJ, TCU e Ministério Público: decisões e julgamentos de interesse público.", sub: [STF, STJ, TSE, Trabalho, CNJ, TCU e controle, MP e PGR]}
+  - {slug: eleicoes, nome: Eleições, descricao: "Calendário, regras, partidos, resultados oficiais e legislação eleitoral, sem pesquisas nem propaganda.", sub: [Eleições 2026, Partidos, Resultados oficiais, Calendário, Legislação eleitoral]}
+  - {slug: economia, nome: Economia e Tributos, curto: Economia, descricao: "Política fiscal, reforma tributária, Orçamento da União e decisões econômicas dos Três Poderes.", sub: [Fiscal, Reforma tributária, Contencioso tributário, Banco Central]}
+  - {slug: estados, nome: Estados e Municípios, curto: Estados, descricao: "Governos estaduais, assembleias, prefeituras e a relação federativa.", sub: [Governadores, Assembleias, Prefeituras, Pacto federativo]}
+  - {slug: regulacao, nome: Regulação e Setores, curto: Regulação, descricao: "Saúde, energia, infraestrutura, agro, tecnologia, educação, segurança pública e meio ambiente na agenda pública.", sub: [Saúde, Energia, Infraestrutura, Agro, Tecnologia e IA, Educação, Segurança pública, Meio ambiente]}
+  - {slug: internacional, nome: Internacional, descricao: "Diplomacia, acordos e a atuação do Brasil no exterior.", sub: [Diplomacia, Brasil no mundo]}
+menu:
+  barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Glossário, /glossario/]]
+  rotulo_dropdown: Dados
+  referencia: [[Cota parlamentar, /deputados/cota-parlamentar/], [Deputados por estado, /deputados/#uf], [Buscar, /busca/]]
+rodape:
+  - {titulo: Editorias, links: [[Congresso, /congresso/], [Governo, /governo/], [Justiça, /justica/], [Eleições, /eleicoes/], [Economia e Tributos, /economia/], [Estados e Municípios, /estados/], [Regulação e Setores, /regulacao/], [Internacional, /internacional/]]}
+  - {titulo: Dados, links: [[Deputados federais, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Cota parlamentar, /deputados/cota-parlamentar/], [Glossário político, /glossario/], [Buscar, /busca/]]}
+  - {titulo: Institucional, links: [[Sobre, /sobre/], [Expediente, /expediente/], [Política editorial, /politica-editorial/], [Metodologia, /metodologia/], [Correções, /correcoes/], [Direito de resposta, /direito-de-resposta/], [Contato, /contato/], [Termos, /termos/], [Privacidade, /privacidade/], [RSS, /rss.xml]]}
+home_faqs:
+  - {p: "O que é o Estrato?", r: "Um portal sobre os Três Poderes que reúne dados oficiais abertos, como os da Câmara e do Senado, e resumos de fontes públicas com link para a íntegra."}
+  - {p: "O Estrato apoia algum partido ou candidato?", r: "Não. O portal é apartidário: todas as páginas de parlamentares e partidos seguem o mesmo modelo, com dados oficiais e sem opinião."}
+  - {p: "De onde vêm as notícias?", r: "Das agências oficiais, como Agência Câmara, Agência Senado, Agência Brasil, STF e TCU. Cada resumo leva crédito e link para o original."}
+  - {p: "Com que frequência o site é atualizado?", r: "As notícias são coletadas a cada 30 minutos e os dados oficiais uma vez por dia."}
+  - {p: "O Estrato publica pesquisas eleitorais?", r: "Não. O portal não publica pesquisas de intenção de voto nem conteúdo de campanha."}
+# Responsável pelo conteúdo: deixar vazio até o Tercio indicar (linhas com campo vazio ficam ocultas)
+responsavel_editorial: ""
+empresa:
+  razao_social: Patini Brasil Serviços Publicidade e Propaganda
+  cnpj: 53.816.326/0001-58
+  endereco: {logradouro: "Av. Pacaembu, 1088", bairro: Pacaembu, cidade: São Paulo, uf: SP, cep: 01234-000}
+  email: ""
+  formulario_url: ""
+  encarregado_lgpd: ""
+  redes: []
+verificacao: {google: "", bing: ""}
+indexnow_key: "c0f3a1e9b7d24e6f8a5b2c9d1e7f4a30"
+llms_intro: "Portal apartidário em português sobre os Três Poderes do Brasil. Páginas de dados usam APIs oficiais (Câmara dos Deputados, Senado Federal) com fonte e data de coleta; notícias são resumos de agências oficiais com link para a fonte e não são indexadas."

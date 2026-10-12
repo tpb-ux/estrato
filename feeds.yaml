@@ -1,0 +1,33 @@
+# Só fontes oficiais ou de licença aberta (decisão de 12/10/2026). Testadas do box em 12/10/2026; retestar da VPS antes do lançamento.
+# Fora: Planalto (og:image é o logo genérico), TSE e STJ (403), CNJ (feed sem itens), portais privados (direitos reservados).
+max_por_execucao: 20
+max_por_feed: 4
+max_idade_dias: 3
+editoria_padrao: congresso
+aviso_resumo: "Resumo automático a partir do feed público de {f}, com crédito e link para o original."
+feeds:
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/ultimas-noticias", confiavel: true, max: 6}
+  - {nome: Agência Senado, url: "https://www12.senado.leg.br/noticias/rss", confiavel: true, max: 6}
+  - {nome: STF, url: "https://noticias.stf.jus.br/feed/", confiavel: true, editoria: justica}
+  - {nome: TCU, url: "https://portal.tcu.gov.br/rss/noticias.xml", confiavel: true, editoria: justica}
+  - {nome: Agência Brasil, url: "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml", confiavel: true}
+  - {nome: Agência Brasil, url: "https://agenciabrasil.ebc.com.br/rss/justica/feed.xml", confiavel: true, editoria: justica}
+palavras_editoria:
+  congresso: [câmara, senado, deputad, senador, plenário, comissão, cpi, cpmi, proposta, projeto de lei, pec, votação, relator, congresso]
+  governo: [ministr, presidente da república, planalto, governo federal, decreto, orçamento, emenda parlamentar, servidor, lula, esplanada]
+  justica: [stf, supremo, stj, tribunal, ministro relator, julgamento, tcu, cnj, pgr, ministério público, decisão judicial, tst, justiça]
+  eleicoes: [eleição, eleições, eleitoral, tse, urna, candidat, turno, partido, voto, eleitor]
+  economia: [imposto, tributár, reforma tributária, fiscal, arrecadação, banco central, juros, inflação, pib, receita federal]
+  estados: [governador, prefeit, assembleia legislativa, município, estado de, câmara municipal]
+  regulacao: [saúde, sus, energia, anvisa, ans, aneel, educação, segurança pública, meio ambiente, agro, tecnologia, inteligência artificial, infraestrutura]
+  internacional: [itamaraty, diplomac, embaixad, onu, mercosul, acordo internacional, relações exteriores, chanceler]
+palavras_relevancia: [política, poder, governo, lei, norma]
+nota_minima: 3
+# Restrições eleitorais (até o fim do 2º turno e por política editorial): sem pesquisas de intenção de voto.
+bloqueio_palavras: [pesquisa eleitoral, intenção de voto, intenções de voto, datafolha, quaest, atlasintel, ipec, paraná pesquisas, real time big data, futebol, novela, horóscopo, celebridade, loteria, mega-sena]
+bloqueio_fontes: []
+# Período eleitoral (até o fim do 2º turno): na editoria Eleições só entram itens institucionais da Justiça Eleitoral;
+# em qualquer editoria ("*"), itens de agenda/ato de campanha são bloqueados. Remover/ajustar depois de 26/10/2026.
+restricao_editoria:
+  eleicoes: {ate: "2026-10-26", exige: [tse, tre, justiça eleitoral, calendário eleitoral, urna, totalização, retotalização, diplomação, resolução, eleitorado, seção eleitoral, biometria, mesário]}
+  "*": {ate: "2026-10-26", exige: [""], bloqueia: [ato pela, reeleição, comício, carreata, palanque, campanha de, campanha do, campanha da, propaganda eleitoral, apoio a lula, apoio a flávio, reunido com prefeitos, pede voto, pedido de voto]}

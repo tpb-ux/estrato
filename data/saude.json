@@ -1,0 +1,101 @@
+{
+ "formato": "saude-portal/1",
+ "portal": "Estrato",
+ "url": "https://estrato.com.br",
+ "gerado_em": "2026-10-12T10:51:18+00:00",
+ "materias": {
+  "total": 20,
+  "ultimas_24h": 0,
+  "ultimos_7d": 20,
+  "com_imagem_propria_pct": 100.0,
+  "mais_recente": {
+   "titulo": "Projeto pune empresas que atrasarem pagamento de médicos",
+   "url": "https://estrato.com.br/congresso/2026-10-09-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos/",
+   "fonte": "Agência Câmara",
+   "publicada_em": "2026-10-09T19:15:00-03:00",
+   "idade_horas": 60.6
+  }
+ },
+ "feeds": {
+  "total": 6,
+  "ok": 5,
+  "erro": 1,
+  "vazio": 0,
+  "itens_com_imagem_no_feed_pct": 72.9,
+  "lista": [
+   {
+    "nome": "Agência Câmara",
+    "url": "https://www.camara.leg.br/noticias/rss/ultimas-noticias",
+    "status": "ok",
+    "itens": 20,
+    "itens_com_imagem_no_feed": 20,
+    "novas": 6,
+    "descartadas_sem_foto": 0
+   },
+   {
+    "nome": "Agência Senado",
+    "url": "https://www12.senado.leg.br/noticias/rss",
+    "status": "ok",
+    "itens": 15,
+    "itens_com_imagem_no_feed": 0,
+    "novas": 2,
+    "descartadas_sem_foto": 7
+   },
+   {
+    "nome": "STF",
+    "url": "https://noticias.stf.jus.br/feed/",
+    "status": "ok",
+    "itens": 10,
+    "itens_com_imagem_no_feed": 2,
+    "novas": 0,
+    "descartadas_sem_foto": 0
+   },
+   {
+    "nome": "TCU",
+    "url": "https://portal.tcu.gov.br/rss/noticias.xml",
+    "status": "ok",
+    "itens": 30,
+    "itens_com_imagem_no_feed": 30,
+    "novas": 0,
+    "descartadas_sem_foto": 0
+   },
+   {
+    "nome": "Agência Brasil",
+    "url": "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml",
+    "status": "ok",
+    "itens": 10,
+    "itens_com_imagem_no_feed": 10,
+    "novas": 4,
+    "descartadas_sem_foto": 0
+   },
+   {
+    "nome": "Agência Brasil",
+    "url": "https://agenciabrasil.ebc.com.br/rss/justica/feed.xml",
+    "status": "erro",
+    "itens": 0,
+    "itens_com_imagem_no_feed": 0,
+    "novas": 0,
+    "descartadas_sem_foto": 0,
+    "erro": "<urlopen error timed out>"
+   }
+  ]
+ },
+ "coleta": {
+  "ultima_execucao": "2026-10-12T10:34:55+00:00",
+  "evento": "local",
+  "run_id": null,
+  "novas_na_ultima": 12,
+  "ultima_execucao_automatica_ok": null,
+  "ultima_execucao_agendada_ok": null,
+  "por_evento": {
+   "local": "2026-10-12T10:34:55+00:00"
+  }
+ },
+ "site": {
+  "paginas_indexaveis": 696,
+  "paginas_total": 722,
+  "noindex_global": true,
+  "links_internos_quebrados": 0,
+  "build": "local"
+ }
+}

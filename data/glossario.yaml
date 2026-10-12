@@ -1,0 +1,645 @@
+nome: Glossário político
+atualizado: 2026-10-12
+descricao: "Termos do Congresso, do governo, da Justiça e das eleições explicados com base na Constituição, nos regimentos e nas leis, com links oficiais."
+faqs:
+  - {p: "Para que serve o glossário político do Estrato?", r: "Para explicar, em linguagem direta, os termos usados no Congresso, no governo, nos tribunais e nas eleições, sempre com a base legal e o link oficial."}
+  - {p: "Os textos do glossário são revisados?", r: "Sim. Cada termo indica a data de revisão e as normas usadas. Pedidos de correção podem ser feitos pela página de correções."}
+  - {p: "O glossário tem opinião política?", r: "Não. Os verbetes descrevem regras e procedimentos previstos em lei, sem juízo de valor sobre partidos ou pessoas."}
+  - {p: "Os números de votos citados valem sempre?", r: "Os quóruns citados consideram a composição atual: 513 deputados e 81 senadores. Se a composição mudar por lei, os números mudam."}
+  - {p: "Posso citar os verbetes?", r: "Sim, com link para a página do termo. Para uso jurídico, consulte sempre o texto oficial da norma."}
+termos:
+- termo: Proposta de Emenda à Constituição
+  slug: pec
+  sigla: PEC
+  resumo: "é a proposição que altera o texto da Constituição Federal e precisa de 3/5 dos votos em dois turnos na Câmara e no Senado."
+  definicao: |
+    A PEC é o instrumento para mudar a Constituição. Pelo art. 60 da Constituição, pode ser apresentada por pelo menos um terço dos deputados ou dos senadores, pelo presidente da República ou por mais da metade das assembleias legislativas.
+
+    Na Câmara, a PEC passa primeiro pela Comissão de Constituição e Justiça e de Cidadania, que analisa a admissibilidade, e depois por uma comissão especial, que analisa o mérito. Em seguida vai ao plenário. Em cada Casa, é discutida e votada em dois turnos e só é aprovada com três quintos dos votos: 308 deputados e 49 senadores.
+
+    A emenda aprovada é promulgada pelas Mesas da Câmara e do Senado, sem sanção ou veto do presidente. Não pode ser objeto de deliberação a proposta tendente a abolir as cláusulas pétreas: a forma federativa, o voto direto, secreto, universal e periódico, a separação dos Poderes e os direitos e garantias individuais.
+  base_legal:
+    - {nome: "Constituição Federal, art. 60", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [quorum, ccj, votacao-nominal, promulgacao]
+  faqs:
+    - {p: "Quantos votos uma PEC precisa para ser aprovada?", r: "Três quintos dos membros de cada Casa, em dois turnos: 308 dos 513 deputados e 49 dos 81 senadores."}
+    - {p: "O presidente da República pode vetar uma PEC?", r: "Não. A emenda constitucional é promulgada pelas Mesas da Câmara e do Senado, sem sanção nem veto."}
+    - {p: "Quem pode apresentar uma PEC?", r: "Um terço dos deputados ou dos senadores, o presidente da República ou mais da metade das assembleias legislativas, cada uma pela maioria relativa de seus membros."}
+    - {p: "O que acontece se uma PEC for rejeitada?", r: "A matéria rejeitada ou havida por prejudicada não pode ser reapresentada na mesma sessão legislativa, conforme o art. 60, parágrafo 5º, da Constituição."}
+    - {p: "Uma PEC pode ser votada durante intervenção federal?", r: "Não. A Constituição não pode ser emendada na vigência de intervenção federal, estado de defesa ou estado de sítio."}
+- termo: Medida Provisória
+  slug: medida-provisoria
+  sigla: MP
+  resumo: "é o ato do presidente da República com força de lei, editado em caso de relevância e urgência, que precisa ser aprovado pelo Congresso para continuar valendo."
+  definicao: |
+    A medida provisória está prevista no art. 62 da Constituição. Ela entra em vigor na data da publicação e tem força de lei, mas perde a eficácia desde a edição se não for convertida em lei pelo Congresso em 60 dias, prazo prorrogável uma vez por mais 60.
+
+    A MP é analisada primeiro por uma comissão mista de deputados e senadores e depois votada nos plenários da Câmara e do Senado, nessa ordem. Se não for apreciada em 45 dias da publicação, entra em regime de urgência e passa a trancar a pauta da Casa em que estiver.
+
+    A Constituição proíbe MP sobre alguns temas, como nacionalidade, direitos políticos, partidos, direito eleitoral, direito penal e processual e organização do Judiciário e do Ministério Público. Durante a tramitação, o texto pode ser alterado e virar um projeto de lei de conversão.
+  base_legal:
+    - {nome: "Constituição Federal, art. 62", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [projeto-de-lei, regime-de-urgencia, sancao, veto]
+  faqs:
+    - {p: "Quanto tempo vale uma medida provisória?", r: "Sessenta dias, prorrogáveis uma vez por mais 60. Se não for aprovada nesse prazo, perde a eficácia desde a edição."}
+    - {p: "O que significa a MP trancar a pauta?", r: "Depois de 45 dias da publicação sem votação, a MP entra em regime de urgência e as demais deliberações da Casa em que estiver ficam sobrestadas até que ela seja votada, com exceções definidas pela jurisprudência e pelos regimentos."}
+    - {p: "Uma MP pode tratar de eleições?", r: "Não. O art. 62 proíbe medida provisória sobre direitos políticos, partidos políticos e direito eleitoral."}
+    - {p: "O Congresso pode mudar o texto de uma MP?", r: "Sim. Com mudanças, a MP vira um projeto de lei de conversão, que vai à sanção do presidente."}
+    - {p: "Uma MP rejeitada pode ser reeditada?", r: "Não na mesma sessão legislativa. A Constituição proíbe reeditar, no mesmo ano legislativo, MP rejeitada ou que tenha perdido a eficácia por decurso de prazo."}
+- termo: Projeto de Lei
+  slug: projeto-de-lei
+  sigla: PL
+  resumo: "é a proposição que cria ou altera uma lei ordinária e é aprovada por maioria simples, presente a maioria absoluta dos membros da Casa."
+  definicao: |
+    O projeto de lei ordinária é a proposição mais comum do Congresso. Pode ser apresentado por deputados, senadores, comissões, pelo presidente da República, pelo STF, pelos tribunais superiores, pelo procurador-geral da República e pelos cidadãos, por iniciativa popular, conforme o art. 61 da Constituição.
+
+    O projeto tramita nas comissões e, quando necessário, nos plenários. Algumas matérias são aprovadas de forma conclusiva nas comissões, sem passar pelo plenário, salvo recurso. Aprovado em uma Casa, segue para a outra, que revisa. Se houver mudança, volta à Casa de origem.
+
+    A aprovação exige maioria simples dos votos, desde que esteja presente a maioria absoluta dos membros (art. 47). Depois de aprovado pelas duas Casas, o projeto vai à sanção ou ao veto do presidente da República.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 47, 61, 65 e 66", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [projeto-de-lei-complementar, sancao, veto, quorum]
+  faqs:
+    - {p: "Quantos votos um projeto de lei precisa?", r: "A maioria dos votos dos presentes, desde que estejam presentes pelo menos 257 deputados na Câmara ou 41 senadores no Senado."}
+    - {p: "Qualquer cidadão pode apresentar projeto de lei?", r: "Sim, por iniciativa popular: o projeto precisa da assinatura de no mínimo 1% do eleitorado nacional, distribuído por pelo menos cinco estados, com não menos de 0,3% dos eleitores de cada um."}
+    - {p: "O que é aprovação conclusiva?", r: "É quando as comissões aprovam o projeto sem necessidade de votação no plenário, a menos que haja recurso de parte dos parlamentares."}
+    - {p: "O que acontece quando o Senado muda um projeto da Câmara?", r: "O projeto volta à Câmara, que decide sobre as mudanças do Senado antes de enviá-lo à sanção."}
+    - {p: "Qual é a diferença entre PL e PLP?", r: "O PL cria lei ordinária e precisa de maioria simples. O PLP cria lei complementar, exigida pela Constituição em temas específicos, e precisa de maioria absoluta."}
+- termo: Projeto de Lei Complementar
+  slug: projeto-de-lei-complementar
+  sigla: PLP
+  resumo: "é a proposição que cria ou altera uma lei complementar, exigida pela Constituição em temas específicos, e precisa de maioria absoluta nas duas Casas."
+  definicao: |
+    A lei complementar regulamenta temas que a própria Constituição reserva a esse tipo de norma, como normas gerais de direito tributário, finanças públicas, a Lei da Ficha Limpa e a organização de alguns órgãos.
+
+    O art. 69 da Constituição exige maioria absoluta para aprovar leis complementares. Na prática, são necessários os votos favoráveis de pelo menos 257 deputados e 41 senadores, independentemente de quantos estejam presentes na sessão.
+
+    Por exigir quórum qualificado, a votação de PLP é nominal. A tramitação segue as mesmas etapas do projeto de lei ordinária, com análise em comissões, votação nas duas Casas e sanção ou veto do presidente da República.
+  base_legal:
+    - {nome: "Constituição Federal, art. 69", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [projeto-de-lei, maioria-absoluta, votacao-nominal, ficha-limpa]
+  faqs:
+    - {p: "Quantos votos um PLP precisa?", r: "Maioria absoluta: 257 votos favoráveis na Câmara e 41 no Senado."}
+    - {p: "Quando a Constituição exige lei complementar?", r: "Quando o próprio texto constitucional diz que o tema será regulado por lei complementar, como normas gerais tributárias e casos de inelegibilidade."}
+    - {p: "Lei complementar está acima da lei ordinária?", r: "Elas tratam de campos diferentes definidos pela Constituição. Uma lei ordinária não pode tratar de tema reservado à lei complementar."}
+    - {p: "PLP pode ser vetado?", r: "Sim. Como o projeto de lei ordinária, vai à sanção ou ao veto do presidente da República."}
+    - {p: "A votação de PLP é secreta?", r: "Não. É nominal e aberta, com o voto de cada parlamentar registrado no painel."}
+- termo: Projeto de Decreto Legislativo
+  slug: projeto-de-decreto-legislativo
+  sigla: PDL
+  resumo: "é a proposição para temas de competência exclusiva do Congresso, como sustar atos do Executivo que exorbitem o poder regulamentar, e não vai à sanção."
+  definicao: |
+    O decreto legislativo trata de matérias que a Constituição atribui exclusivamente ao Congresso Nacional, listadas principalmente no art. 49. Entre elas estão aprovar tratados internacionais, autorizar referendos e plebiscitos, julgar as contas do presidente da República e sustar atos normativos do Poder Executivo que exorbitem do poder regulamentar.
+
+    Por ser matéria de competência exclusiva do Congresso, o decreto legislativo não passa por sanção ou veto do presidente. Depois de aprovado pelas duas Casas, é promulgado pelo presidente do Senado.
+
+    O PDL é muito usado quando parlamentares querem derrubar um decreto, uma portaria ou uma resolução do governo que, na avaliação deles, foi além do que a lei permite.
+  base_legal:
+    - {nome: "Constituição Federal, art. 49", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [projeto-de-lei, promulgacao, medida-provisoria]
+  faqs:
+    - {p: "PDL vai à sanção do presidente?", r: "Não. O decreto legislativo é de competência exclusiva do Congresso e é promulgado pelo presidente do Senado."}
+    - {p: "Um PDL pode derrubar um decreto presidencial?", r: "Pode sustar atos normativos do Executivo que exorbitem do poder regulamentar ou dos limites de delegação legislativa, conforme o art. 49, inciso V."}
+    - {p: "Tratados internacionais passam por PDL?", r: "Sim. O Congresso aprova tratados que acarretem encargos ou compromissos gravosos ao patrimônio nacional por decreto legislativo."}
+    - {p: "Qual quórum o PDL exige?", r: "Em regra, maioria simples, presente a maioria absoluta dos membros de cada Casa."}
+    - {p: "Qual é a diferença entre PDL e PL?", r: "O PL cria lei e passa pela sanção. O PDL trata de temas exclusivos do Congresso e não passa pelo presidente da República."}
+- termo: Quórum
+  slug: quorum
+  resumo: "é o número mínimo de parlamentares presentes ou de votos exigido para abrir uma sessão ou aprovar uma matéria."
+  definicao: |
+    Há dois tipos de quórum. O quórum de presença, ou de deliberação, é o número mínimo de parlamentares presentes para que haja votação. O quórum de aprovação é o número de votos necessário para aprovar a matéria.
+
+    Pelo art. 47 da Constituição, salvo disposição em contrário, as deliberações são tomadas por maioria dos votos, presente a maioria absoluta dos membros. Com 513 deputados e 81 senadores, a maioria absoluta é de 257 na Câmara e 41 no Senado.
+
+    Algumas matérias exigem quórum qualificado: maioria absoluta para lei complementar e para derrubar veto, três quintos para PEC e dois terços para autorizar processo de impeachment na Câmara e para condenar no Senado.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 47, 60, 66, 69 e 86", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [maioria-absoluta, pec, projeto-de-lei-complementar, impeachment]
+  faqs:
+    - {p: "Qual é o quórum mínimo para votar na Câmara?", r: "A maioria absoluta dos deputados, ou seja, 257 presentes."}
+    - {p: "Qual é o quórum mínimo para votar no Senado?", r: "A maioria absoluta dos senadores, ou seja, 41 presentes."}
+    - {p: "Qual é o quórum para aprovar uma PEC?", r: "Três quintos em dois turnos: 308 deputados e 49 senadores."}
+    - {p: "Qual é o quórum para derrubar um veto?", r: "Maioria absoluta de deputados e de senadores, em sessão conjunta: 257 deputados e 41 senadores."}
+    - {p: "Obstrução afeta o quórum?", r: "Sim. Parlamentares em obstrução não são contados para o quórum de votação, o que pode impedir a deliberação."}
+- termo: Maioria absoluta
+  slug: maioria-absoluta
+  resumo: "é o primeiro número inteiro acima da metade do total de membros da Casa: 257 na Câmara e 41 no Senado."
+  definicao: |
+    A maioria absoluta é calculada sobre o número total de membros da Casa, e não sobre os presentes. Na Câmara, com 513 deputados, é de 257. No Senado, com 81 senadores, é de 41.
+
+    É diferente da maioria simples, ou relativa, que é a maioria dos votos dos presentes na sessão, desde que haja quórum. Uma lei ordinária pode ser aprovada com menos de 257 votos se o plenário tiver, por exemplo, 300 presentes e a maioria deles votar a favor.
+
+    A Constituição exige maioria absoluta, entre outros casos, para aprovar lei complementar (art. 69), para rejeitar veto (art. 66, parágrafo 4º) e como quórum de presença para qualquer deliberação (art. 47).
+  base_legal:
+    - {nome: "Constituição Federal, arts. 47, 66 e 69", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [quorum, projeto-de-lei-complementar, veto]
+  faqs:
+    - {p: "Quanto é a maioria absoluta na Câmara?", r: "257 dos 513 deputados."}
+    - {p: "Quanto é a maioria absoluta no Senado?", r: "41 dos 81 senadores."}
+    - {p: "Qual é a diferença entre maioria absoluta e simples?", r: "A absoluta conta o total de membros da Casa. A simples conta só os votos dos presentes na sessão."}
+    - {p: "Abstenção conta para a maioria absoluta?", r: "Não como voto favorável. Para atingir a maioria absoluta, são necessários os votos 'sim', independentemente das abstenções."}
+    - {p: "Que matérias exigem maioria absoluta?", r: "Lei complementar, derrubada de veto e algumas matérias previstas nos regimentos, como requerimentos de urgência na Câmara."}
+- termo: Regime de urgência
+  slug: regime-de-urgencia
+  resumo: "é o rito que acelera a tramitação de uma proposição, dispensando prazos e formalidades para que ela seja votada mais rápido."
+  definicao: |
+    Há duas formas principais de urgência. A urgência constitucional pode ser pedida pelo presidente da República para projetos de sua iniciativa (art. 64 da Constituição). Nesse caso, cada Casa tem 45 dias para votar. Esgotado o prazo, as demais deliberações ficam sobrestadas, com exceção das que têm prazo constitucional determinado.
+
+    A urgência regimental é aprovada pelo plenário a pedido de parlamentares e líderes. Na Câmara, o art. 155 do Regimento Interno prevê a chamada urgência urgentíssima, que permite incluir a matéria na pauta imediatamente, aprovada pela maioria absoluta dos deputados.
+
+    A urgência não muda o quórum de aprovação da matéria, só o tempo e o caminho da tramitação. Com ela, o projeto pode ir direto ao plenário, com parecer dado no próprio plenário.
+  base_legal:
+    - {nome: "Constituição Federal, art. 64", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+    - {nome: "Regimento Interno da Câmara dos Deputados", url: "https://www2.camara.leg.br/atividade-legislativa/legislacao/regimento-interno-da-camara-dos-deputados"}
+  relacionados: [projeto-de-lei, medida-provisoria, maioria-absoluta]
+  faqs:
+    - {p: "O que é urgência urgentíssima?", r: "É a urgência prevista no art. 155 do Regimento da Câmara, que permite votar a matéria imediatamente. O requerimento precisa da maioria absoluta dos deputados."}
+    - {p: "A urgência muda o número de votos para aprovar?", r: "Não. Ela acelera a tramitação, mas o quórum de aprovação continua o mesmo."}
+    - {p: "O presidente pode pedir urgência?", r: "Sim, para projetos de sua iniciativa. Cada Casa tem 45 dias para votar antes do sobrestamento da pauta."}
+    - {p: "Um projeto com urgência precisa passar pelas comissões?", r: "Pode ir direto ao plenário, com os pareceres das comissões dados em plenário por relatores designados."}
+    - {p: "A urgência pode ser retirada?", r: "Sim. O presidente da República pode retirar a urgência constitucional, e o plenário pode aprovar requerimento para retirar a regimental."}
+- termo: Destaque
+  slug: destaque
+  resumo: "é o pedido para votar separadamente uma parte do texto, como um artigo ou uma emenda, depois da votação do texto principal."
+  definicao: |
+    O destaque permite que o plenário vote em separado um trecho da proposição. Primeiro se vota o texto principal, normalmente o parecer do relator, ressalvados os destaques. Depois cada destaque é votado.
+
+    O destaque mais comum é o de votação em separado, chamado DVS. Nesse caso, quem quer manter o trecho destacado precisa reunir os votos necessários para aprová-lo. Em uma PEC, por exemplo, isso significa 308 votos na Câmara para manter o trecho no texto.
+
+    Os regimentos limitam o número de destaques por bancada, de acordo com o tamanho do partido. Os destaques são um instrumento importante para a oposição e para grupos que querem retirar ou incluir pontos específicos de um projeto.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados", url: "https://www2.camara.leg.br/atividade-legislativa/legislacao/regimento-interno-da-camara-dos-deputados"}
+  relacionados: [votacao-nominal, pec, lider-partidario]
+  faqs:
+    - {p: "O que é DVS?", r: "Destaque para votação em separado: um trecho do texto é retirado da votação principal e votado depois, isoladamente."}
+    - {p: "Quem pode apresentar destaque?", r: "Parlamentares e bancadas, nos limites do regimento, que variam conforme o tamanho do partido."}
+    - {p: "O que acontece se o destaque for aprovado?", r: "Depende do tipo: o trecho destacado pode ser retirado ou mantido no texto, conforme o que foi votado."}
+    - {p: "Destaque em PEC precisa de 308 votos?", r: "Para manter um trecho destacado no texto de uma PEC na Câmara, são necessários 308 votos favoráveis."}
+    - {p: "Destaques podem atrasar uma votação?", r: "Sim. Cada destaque é uma votação adicional, o que pode estender a sessão."}
+- termo: Veto
+  slug: veto
+  resumo: "é a recusa do presidente da República, total ou parcial, a um projeto aprovado pelo Congresso, que pode derrubá-la por maioria absoluta."
+  definicao: |
+    Pelo art. 66 da Constituição, o presidente da República tem 15 dias úteis, contados do recebimento, para sancionar ou vetar um projeto aprovado. O veto pode ser total ou parcial, e o parcial precisa abranger texto integral de artigo, parágrafo, inciso ou alínea. Os motivos podem ser inconstitucionalidade ou contrariedade ao interesse público.
+
+    O veto é comunicado ao presidente do Senado em 48 horas e analisado pelo Congresso em sessão conjunta em até 30 dias. Esgotado o prazo sem deliberação, o veto passa a trancar a pauta da sessão conjunta.
+
+    Para derrubar o veto é preciso a maioria absoluta de deputados e senadores: 257 e 41. Derrubado o veto, o trecho é enviado para promulgação.
+  base_legal:
+    - {nome: "Constituição Federal, art. 66", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [sancao, promulgacao, maioria-absoluta, projeto-de-lei]
+  faqs:
+    - {p: "Quanto tempo o presidente tem para vetar?", r: "Quinze dias úteis do recebimento do projeto."}
+    - {p: "Quantos votos são necessários para derrubar um veto?", r: "Maioria absoluta das duas Casas em sessão conjunta: 257 deputados e 41 senadores."}
+    - {p: "O presidente pode vetar só uma palavra?", r: "Não. O veto parcial precisa abranger texto integral de artigo, parágrafo, inciso ou alínea."}
+    - {p: "O que acontece se o Congresso não analisar o veto?", r: "Depois de 30 dias, o veto é colocado na ordem do dia da sessão conjunta e sobrestá as demais proposições até a votação final."}
+    - {p: "Quais são os motivos aceitos para vetar?", r: "Inconstitucionalidade, chamado veto jurídico, ou contrariedade ao interesse público, chamado veto político."}
+- termo: Sanção
+  slug: sancao
+  resumo: "é a concordância do presidente da República com um projeto aprovado pelo Congresso, que assim se transforma em lei."
+  definicao: |
+    A sanção completa o processo legislativo de leis ordinárias e complementares. Depois de aprovado pelas duas Casas, o projeto é enviado ao presidente da República, que tem 15 dias úteis para sancionar ou vetar, conforme o art. 66 da Constituição.
+
+    A sanção pode ser expressa, quando o presidente assina o texto, ou tácita, quando o prazo de 15 dias úteis termina sem manifestação. Pode ser total ou parcial: quando há veto de parte do projeto, o restante é sancionado.
+
+    Depois da sanção, a lei é promulgada e publicada no Diário Oficial da União. A data de vigência é a definida no próprio texto da lei. Sem essa definição, a Lei de Introdução às Normas do Direito Brasileiro fixa 45 dias depois da publicação.
+  base_legal:
+    - {nome: "Constituição Federal, art. 66", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+    - {nome: "Decreto-Lei 4.657/1942 (LINDB), art. 1º", url: "https://www.planalto.gov.br/ccivil_03/decreto-lei/del4657compilado.htm"}
+  relacionados: [veto, promulgacao, projeto-de-lei]
+  faqs:
+    - {p: "O que é sanção tácita?", r: "É quando o presidente não se manifesta em 15 dias úteis e o projeto é considerado sancionado."}
+    - {p: "PEC passa por sanção?", r: "Não. Emendas constitucionais são promulgadas pelas Mesas da Câmara e do Senado."}
+    - {p: "Quando uma lei sancionada começa a valer?", r: "Na data prevista no texto. Se não houver previsão, 45 dias depois da publicação oficial."}
+    - {p: "Pode haver sanção de parte do projeto?", r: "Sim. Quando há veto parcial, o restante do texto é sancionado e vira lei."}
+    - {p: "Onde a lei sancionada é publicada?", r: "No Diário Oficial da União."}
+- termo: Promulgação
+  slug: promulgacao
+  resumo: "é o ato que atesta a existência de uma lei ou emenda e ordena sua aplicação, feito antes da publicação oficial."
+  definicao: |
+    A promulgação declara que a norma existe e deve ser cumprida. Para leis, em regra é feita pelo presidente da República junto com a sanção. Se ele não promulgar a lei em 48 horas nos casos de sanção tácita ou de veto derrubado, a tarefa passa ao presidente do Senado e, depois, ao vice-presidente do Senado (art. 66, parágrafo 7º).
+
+    Emendas constitucionais são promulgadas pelas Mesas da Câmara e do Senado, em sessão do Congresso. Decretos legislativos e resoluções do Congresso são promulgados pelo presidente do Senado.
+
+    Depois da promulgação vem a publicação no Diário Oficial, que torna a norma conhecida e dá início à contagem do prazo de vigência.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 60 e 66", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [sancao, veto, pec, projeto-de-decreto-legislativo]
+  faqs:
+    - {p: "Quem promulga uma emenda constitucional?", r: "As Mesas da Câmara dos Deputados e do Senado Federal, em conjunto."}
+    - {p: "Quem promulga uma lei com veto derrubado?", r: "O presidente da República, em 48 horas. Se não o fizer, o presidente do Senado e, depois, o vice-presidente do Senado."}
+    - {p: "Promulgação e publicação são a mesma coisa?", r: "Não. A promulgação atesta a existência da norma. A publicação no Diário Oficial a torna pública e marca o início da contagem da vigência."}
+    - {p: "Decreto legislativo é promulgado por quem?", r: "Pelo presidente do Senado, que também preside o Congresso Nacional."}
+    - {p: "Uma norma promulgada já está valendo?", r: "Só a partir da data de vigência prevista, contada depois da publicação."}
+- termo: Comissão Parlamentar de Inquérito
+  slug: cpi
+  sigla: CPI
+  resumo: "é a comissão temporária do Congresso que investiga fato determinado por prazo certo, com poderes de investigação próprios das autoridades judiciais."
+  definicao: |
+    A CPI está prevista no art. 58, parágrafo 3º, da Constituição. Pode ser criada na Câmara, no Senado ou em conjunto pelas duas Casas, a CPMI, mediante requerimento de um terço dos membros: 171 deputados ou 27 senadores. O requerimento precisa indicar um fato determinado e um prazo certo.
+
+    A CPI pode convocar testemunhas, ouvir investigados, requisitar documentos e determinar a quebra de sigilos bancário, fiscal e telefônico, desde que de forma fundamentada. Não pode, porém, determinar prisões, salvo em flagrante, nem aplicar penas.
+
+    Ao final, a CPI aprova um relatório. Se houver indícios de crime, as conclusões são encaminhadas ao Ministério Público para que promova a responsabilidade civil ou criminal dos envolvidos.
+  base_legal:
+    - {nome: "Constituição Federal, art. 58, §3º", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+    - {nome: "Lei 1.579/1952", url: "https://www.planalto.gov.br/ccivil_03/leis/l1579.htm"}
+  relacionados: [ccj, bancada, quorum]
+  faqs:
+    - {p: "Quantas assinaturas são necessárias para criar uma CPI?", r: "Um terço dos membros da Casa: 171 deputados ou 27 senadores. Para a CPMI, um terço de cada Casa."}
+    - {p: "A CPI pode prender alguém?", r: "Só em flagrante, por exemplo de falso testemunho. Ela não aplica penas nem decreta prisões preventivas."}
+    - {p: "A CPI pode quebrar sigilo bancário?", r: "Sim, por decisão fundamentada da comissão, porque tem poderes de investigação próprios das autoridades judiciais."}
+    - {p: "O que acontece no fim da CPI?", r: "A comissão vota um relatório, que pode ser enviado ao Ministério Público e a outros órgãos para providências."}
+    - {p: "O que é CPMI?", r: "É a comissão parlamentar mista de inquérito, formada por deputados e senadores."}
+- termo: Comissão de Constituição e Justiça
+  slug: ccj
+  sigla: CCJ
+  resumo: "é a comissão que analisa se as proposições respeitam a Constituição e a técnica legislativa, e uma das mais importantes da Câmara e do Senado."
+  definicao: |
+    Na Câmara, o nome oficial é Comissão de Constituição e Justiça e de Cidadania, a CCJC. No Senado, Comissão de Constituição, Justiça e Cidadania, a CCJ. Ambas analisam a constitucionalidade, a juridicidade e a técnica legislativa das proposições.
+
+    Na Câmara, a CCJC dá o parecer sobre a admissibilidade das PECs, antes da comissão especial, e analisa a constitucionalidade de quase todos os projetos. Um parecer pela inconstitucionalidade pode levar ao arquivamento, salvo recurso ao plenário.
+
+    No Senado, a CCJ também sabatina indicados a cargos como ministro do STF e procurador-geral da República, antes da votação no plenário.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados", url: "https://www2.camara.leg.br/atividade-legislativa/legislacao/regimento-interno-da-camara-dos-deputados"}
+    - {nome: "Regimento Interno do Senado Federal", url: "https://www25.senado.leg.br/web/atividade/regimento-interno"}
+  relacionados: [pec, projeto-de-lei, cpi]
+  faqs:
+    - {p: "O que a CCJ analisa?", r: "Se a proposição é constitucional, jurídica e escrita conforme a técnica legislativa. Em alguns casos, também o mérito."}
+    - {p: "Toda PEC passa pela CCJ?", r: "Na Câmara, sim: a CCJC analisa a admissibilidade antes da comissão especial. No Senado, a PEC também é analisada pela CCJ."}
+    - {p: "A CCJ do Senado sabatina ministros do STF?", r: "Sim. Os indicados ao STF são sabatinados na CCJ e depois votados pelo plenário do Senado."}
+    - {p: "Um projeto rejeitado na CCJ é arquivado?", r: "Em regra, o parecer pela inconstitucionalidade leva ao arquivamento, mas pode haver recurso para votação no plenário."}
+    - {p: "Quem escolhe os membros da CCJ?", r: "Os líderes partidários indicam os membros, respeitando a proporcionalidade das bancadas."}
+- termo: Emenda parlamentar
+  slug: emenda-parlamentar
+  resumo: "é a indicação feita por deputados, senadores e bancadas para destinar parte do Orçamento da União a obras, serviços e entidades."
+  definicao: |
+    Na lei orçamentária anual, parlamentares apresentam emendas para direcionar recursos a estados, municípios, órgãos e entidades. Há emendas individuais, de bancada estadual e de comissão.
+
+    As emendas individuais passaram a ter execução obrigatória com a Emenda Constitucional 86/2015. As emendas de bancada estadual tornaram-se obrigatórias com a Emenda Constitucional 100/2019. Os limites e percentuais são definidos no art. 166 da Constituição e na Lei de Diretrizes Orçamentárias de cada ano.
+
+    Regras de transparência e rastreabilidade das emendas foram objeto de decisões do STF e de mudanças legislativas recentes. Os valores pagos podem ser consultados no Portal da Transparência e no Siga Brasil, do Senado.
+  base_legal:
+    - {nome: "Constituição Federal, art. 166", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+    - {nome: "Portal da Transparência: emendas parlamentares", url: "https://portaldatransparencia.gov.br/emendas"}
+  relacionados: [lei-orcamentaria-anual, bancada, cota-parlamentar]
+  faqs:
+    - {p: "Emenda parlamentar é obrigatória?", r: "As individuais e as de bancada estadual têm execução obrigatória, com as exceções técnicas previstas na Constituição e na LDO."}
+    - {p: "Onde consultar as emendas de um parlamentar?", r: "No Portal da Transparência e no Siga Brasil, ambos com dados oficiais."}
+    - {p: "Quem recebe o dinheiro das emendas?", r: "Estados, municípios, órgãos federais e entidades indicadas, para obras, serviços e equipamentos."}
+    - {p: "Qual é a diferença entre emenda individual e de bancada?", r: "A individual é indicada por um parlamentar. A de bancada é definida em conjunto pelos parlamentares de um estado."}
+    - {p: "Emenda parlamentar e cota parlamentar são a mesma coisa?", r: "Não. A emenda destina verbas do Orçamento a terceiros. A cota parlamentar reembolsa despesas do próprio mandato."}
+- termo: Lei Orçamentária Anual
+  slug: lei-orcamentaria-anual
+  sigla: LOA
+  resumo: "é a lei que estima as receitas e fixa as despesas da União para o ano seguinte, elaborada pelo Executivo e votada pelo Congresso."
+  definicao: |
+    O sistema orçamentário federal tem três leis, previstas no art. 165 da Constituição. O Plano Plurianual (PPA) define metas para quatro anos. A Lei de Diretrizes Orçamentárias (LDO) define as metas e prioridades do ano seguinte e orienta a elaboração do Orçamento. A Lei Orçamentária Anual (LOA) estima as receitas e fixa as despesas.
+
+    O projeto da LOA é enviado pelo presidente da República ao Congresso até 31 de agosto. Ele é analisado pela Comissão Mista de Planos, Orçamentos Públicos e Fiscalização (CMO), que recebe as emendas parlamentares, e depois votado em sessão conjunta do Congresso.
+
+    A execução da LOA é acompanhada pelos relatórios bimestrais do Executivo e fiscalizada pelo Congresso, com o auxílio do Tribunal de Contas da União.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 165 e 166", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [emenda-parlamentar, projeto-de-lei]
+  faqs:
+    - {p: "Quando o governo envia o Orçamento ao Congresso?", r: "O projeto da LOA deve ser enviado até 31 de agosto de cada ano."}
+    - {p: "Qual é a diferença entre LDO e LOA?", r: "A LDO define metas, prioridades e regras para o Orçamento seguinte. A LOA fixa as receitas e despesas em si."}
+    - {p: "Quem analisa o Orçamento no Congresso?", r: "A Comissão Mista de Planos, Orçamentos Públicos e Fiscalização, a CMO, e depois o plenário do Congresso em sessão conjunta."}
+    - {p: "O que é o PPA?", r: "O Plano Plurianual, que estabelece diretrizes, objetivos e metas para quatro anos."}
+    - {p: "Quem fiscaliza a execução do Orçamento?", r: "O Congresso Nacional, com o auxílio do TCU, além dos sistemas de controle interno de cada Poder."}
+- termo: Fundo Partidário
+  slug: fundo-partidario
+  resumo: "é o fundo público que financia o funcionamento permanente dos partidos políticos, distribuído conforme o desempenho na eleição para a Câmara."
+  definicao: |
+    O Fundo Especial de Assistência Financeira aos Partidos Políticos, conhecido como Fundo Partidário, é regulado pela Lei 9.096/1995. É formado por dotações do Orçamento da União, multas eleitorais e doações.
+
+    A distribuição é feita pelo Tribunal Superior Eleitoral. Pelo art. 41-A da lei, 5% do total são divididos igualmente entre os partidos que cumprem os requisitos de acesso, e 95% são divididos na proporção dos votos obtidos na última eleição para a Câmara dos Deputados. Partidos que não atingem a cláusula de desempenho prevista na Constituição não têm acesso ao fundo.
+
+    O dinheiro pode ser usado em despesas como sedes, pessoal, propaganda doutrinária e campanhas, com prestação de contas à Justiça Eleitoral. Ele não deve ser confundido com o Fundo Eleitoral, específico para campanhas.
+  base_legal:
+    - {nome: "Lei 9.096/1995 (Lei dos Partidos Políticos)", url: "https://www.planalto.gov.br/ccivil_03/leis/l9096.htm"}
+  relacionados: [fundo-eleitoral, federacao-partidaria, clausula-de-desempenho]
+  faqs:
+    - {p: "Qual é a diferença entre Fundo Partidário e Fundo Eleitoral?", r: "O Fundo Partidário financia o funcionamento dos partidos todos os anos. O Fundo Eleitoral financia as campanhas, só em ano de eleição."}
+    - {p: "Como o Fundo Partidário é dividido?", r: "5% igualmente entre os partidos com acesso e 95% na proporção dos votos para a Câmara na última eleição."}
+    - {p: "Todo partido recebe Fundo Partidário?", r: "Não. Só os que cumprem a cláusula de desempenho prevista no art. 17 da Constituição."}
+    - {p: "Quem fiscaliza o uso do Fundo Partidário?", r: "A Justiça Eleitoral, por meio da prestação de contas anual dos partidos."}
+    - {p: "Onde consultar os valores?", r: "No portal do Tribunal Superior Eleitoral, que publica a distribuição mensal por partido."}
+- termo: Fundo Eleitoral
+  slug: fundo-eleitoral
+  sigla: FEFC
+  resumo: "é o Fundo Especial de Financiamento de Campanha, recurso público distribuído aos partidos em ano de eleição para pagar as campanhas."
+  definicao: |
+    O FEFC foi criado pela Lei 13.487/2017, depois que o STF proibiu doações de empresas a campanhas. O valor é definido no Orçamento da União do ano eleitoral.
+
+    A divisão entre os partidos segue o art. 16-D da Lei 9.504/1997: 2% igualmente entre todos os partidos registrados no TSE, 35% entre os partidos com pelo menos um deputado federal, na proporção dos votos obtidos na última eleição para a Câmara, 48% na proporção do número de deputados e 15% na proporção do número de senadores.
+
+    Cada partido define internamente a distribuição entre seus candidatos, respeitando as regras de cotas para candidaturas femininas e de pessoas negras. Os gastos são declarados à Justiça Eleitoral e podem ser consultados no DivulgaCandContas.
+  base_legal:
+    - {nome: "Lei 9.504/1997, arts. 16-C e 16-D", url: "https://www.planalto.gov.br/ccivil_03/leis/l9504.htm"}
+    - {nome: "Lei 13.487/2017", url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13487.htm"}
+  relacionados: [fundo-partidario, cota-parlamentar, segundo-turno]
+  faqs:
+    - {p: "Quando o Fundo Eleitoral é distribuído?", r: "Em ano de eleição, depois da definição do valor no Orçamento e do cálculo do TSE."}
+    - {p: "Como o Fundo Eleitoral é dividido entre os partidos?", r: "2% igualmente entre todos, 35% pelos votos para a Câmara entre partidos com deputado, 48% pelo número de deputados e 15% pelo número de senadores."}
+    - {p: "Onde ver quanto um candidato recebeu?", r: "No DivulgaCandContas, sistema do TSE com as receitas e despesas de campanha."}
+    - {p: "Partido pode recusar o Fundo Eleitoral?", r: "Sim. O partido pode renunciar aos recursos, que retornam ao Tesouro."}
+    - {p: "Por que o fundo foi criado?", r: "Para financiar campanhas depois da proibição de doações de pessoas jurídicas, decidida pelo STF em 2015."}
+- termo: Cota parlamentar
+  slug: cota-parlamentar
+  sigla: CEAP
+  resumo: "é a Cota para o Exercício da Atividade Parlamentar, verba mensal que reembolsa despesas do mandato, como passagens, combustível e divulgação."
+  definicao: |
+    Na Câmara, a CEAP é regulada pelo Ato da Mesa 43/2009 e suas alterações. Cada deputado tem um valor mensal máximo que varia conforme o estado de origem, por causa do custo das passagens aéreas até Brasília. O Senado tem cota semelhante, a CEAPS.
+
+    A cota cobre despesas como passagens aéreas, combustível, aluguel de escritório no estado, telefonia, divulgação da atividade parlamentar, consultorias e alimentação. As despesas são reembolsadas mediante apresentação de nota fiscal e ficam públicas.
+
+    O Estrato publica os gastos declarados de cada deputado com base na API de Dados Abertos da Câmara. Os valores são despesas declaradas e reembolsadas, e a análise da regularidade é feita pela própria Câmara e pelos órgãos de controle.
+  base_legal:
+    - {nome: "API Dados Abertos da Câmara: despesas", url: "https://dadosabertos.camara.leg.br/swagger/api.html"}
+  relacionados: [emenda-parlamentar, legislatura, bancada]
+  faqs:
+    - {p: "O que a cota parlamentar paga?", r: "Despesas do mandato como passagens, combustível, escritório no estado, telefonia, divulgação e consultorias, mediante nota fiscal."}
+    - {p: "Todos os deputados têm o mesmo valor de cota?", r: "Não. O teto mensal varia por estado, por causa da distância e do custo das passagens até Brasília."}
+    - {p: "Os gastos da cota são públicos?", r: "Sim. A Câmara publica cada despesa reembolsada no portal e na API de Dados Abertos."}
+    - {p: "Gastar mais da cota é irregular?", r: "Não necessariamente. O valor gasto, dentro do teto e com nota fiscal, é permitido. A regularidade de cada despesa é verificada pela Câmara e pelos órgãos de controle."}
+    - {p: "A cota é salário?", r: "Não. É reembolso de despesas do mandato. O subsídio do parlamentar é pago separadamente."}
+- termo: Legislatura
+  slug: legislatura
+  resumo: "é o período de quatro anos que corresponde ao mandato dos deputados federais, dividido em quatro sessões legislativas anuais."
+  definicao: |
+    Pelo parágrafo único do art. 44 da Constituição, cada legislatura tem duração de quatro anos. A 57ª legislatura começou em 1º de fevereiro de 2023 e termina em 31 de janeiro de 2027. Os deputados eleitos em outubro de 2026 tomam posse no início da 58ª legislatura, em fevereiro de 2027.
+
+    Cada ano da legislatura é uma sessão legislativa ordinária, que vai de 2 de fevereiro a 17 de julho e de 1º de agosto a 22 de dezembro (art. 57). Fora desses períodos, o Congresso está em recesso, mas pode ser convocado extraordinariamente.
+
+    O mandato de senador dura oito anos, ou duas legislaturas. O Senado é renovado de forma alternada a cada quatro anos, por um terço e dois terços. Em 2026, foram eleitos dois terços dos senadores, 54 vagas.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 44, 46 e 57", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [suplente, bancada, quorum]
+  faqs:
+    - {p: "Quanto dura uma legislatura?", r: "Quatro anos, igual ao mandato de deputado federal."}
+    - {p: "Qual é a legislatura atual?", r: "A 57ª, de 1º de fevereiro de 2023 a 31 de janeiro de 2027."}
+    - {p: "Quanto dura o mandato de senador?", r: "Oito anos, o equivalente a duas legislaturas."}
+    - {p: "Quando é o recesso parlamentar?", r: "De 18 a 31 de julho e de 23 de dezembro a 1º de fevereiro, salvo convocação extraordinária."}
+    - {p: "Quantas vagas do Senado foram disputadas em 2026?", r: "Dois terços das cadeiras: 54 vagas, duas por estado e pelo Distrito Federal."}
+- termo: Suplente
+  slug: suplente
+  resumo: "é quem assume a vaga de um parlamentar em caso de licença, posse em outro cargo, renúncia, cassação ou morte."
+  definicao: |
+    No Senado, cada senador é eleito com dois suplentes, que constam da mesma chapa (art. 46, parágrafo 3º, da Constituição). O primeiro suplente assume em caso de afastamento do titular, e o segundo, se o primeiro não puder.
+
+    Na Câmara, os suplentes são os candidatos mais votados do partido ou federação que não foram eleitos, na ordem de votação. Eles assumem quando um deputado se licencia por mais de 120 dias, assume cargo de ministro ou secretário, renuncia, é cassado ou morre.
+
+    O Estrato indica, nas páginas de senadores, se o parlamentar em exercício é titular ou suplente, conforme a base de Dados Abertos do Senado.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 46 e 56", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [legislatura, quociente-eleitoral, federacao-partidaria]
+  faqs:
+    - {p: "Quantos suplentes tem um senador?", r: "Dois, eleitos na mesma chapa."}
+    - {p: "Quem é o suplente de um deputado?", r: "O candidato mais votado do mesmo partido ou federação que não foi eleito."}
+    - {p: "Quando o suplente assume?", r: "Em licenças acima de 120 dias, nomeação para ministério ou secretaria, renúncia, cassação ou morte do titular."}
+    - {p: "O suplente tem os mesmos direitos do titular?", r: "Enquanto estiver em exercício, sim: vota, apresenta proposições e usa a cota parlamentar."}
+    - {p: "O suplente de senador recebe votos?", r: "Não diretamente. Ele integra a chapa do titular, que recebe os votos."}
+- termo: Ação Direta de Inconstitucionalidade
+  slug: adi
+  sigla: ADI
+  resumo: "é a ação proposta no STF para declarar que uma lei ou ato normativo federal ou estadual contraria a Constituição."
+  definicao: |
+    A ADI é julgada pelo Supremo Tribunal Federal (art. 102, I, a, da Constituição) e regulada pela Lei 9.868/1999. Ela faz o chamado controle concentrado de constitucionalidade: a decisão vale para todos e vincula os demais órgãos do Judiciário e da administração pública.
+
+    Só podem propor ADI os legitimados do art. 103 da Constituição: o presidente da República, as Mesas do Senado, da Câmara e das assembleias legislativas, os governadores, o procurador-geral da República, o Conselho Federal da OAB, partidos políticos com representação no Congresso e confederações sindicais ou entidades de classe de âmbito nacional.
+
+    O relator pode conceder medida cautelar, depois referendada pelo plenário, suspendendo a norma até o julgamento final.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 102 e 103", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+    - {nome: "Lei 9.868/1999", url: "https://www.planalto.gov.br/ccivil_03/leis/l9868.htm"}
+  relacionados: [repercussao-geral, projeto-de-lei, pec]
+  faqs:
+    - {p: "Quem pode entrar com ADI?", r: "Os legitimados do art. 103: presidente da República, Mesas do Congresso e das assembleias, governadores, PGR, OAB, partidos com representação no Congresso e entidades nacionais de classe ou sindicais."}
+    - {p: "Um cidadão pode propor ADI?", r: "Não diretamente. Ele pode procurar um dos legitimados, como um partido ou entidade de classe."}
+    - {p: "A decisão em ADI vale para todos?", r: "Sim. Tem eficácia contra todos e efeito vinculante."}
+    - {p: "O STF pode suspender uma lei antes do julgamento final?", r: "Sim, por medida cautelar, que precisa ser referendada pelo plenário."}
+    - {p: "Uma emenda constitucional pode ser alvo de ADI?", r: "Sim, quando houver alegação de violação das cláusulas pétreas ou do processo legislativo."}
+- termo: Repercussão geral
+  slug: repercussao-geral
+  resumo: "é o requisito para que um recurso extraordinário seja julgado pelo STF: a questão precisa ter relevância que ultrapasse o interesse das partes."
+  definicao: |
+    A repercussão geral foi criada pela Emenda Constitucional 45/2004, que incluiu o parágrafo 3º no art. 102 da Constituição. O recorrente deve demonstrar que a questão constitucional discutida é relevante do ponto de vista econômico, político, social ou jurídico.
+
+    O STF só pode recusar a repercussão geral pelo voto de dois terços dos ministros, ou seja, 8 dos 11. Quando reconhece a repercussão, o tribunal julga um caso-paradigma, chamado tema, e a tese fixada é aplicada a todos os processos sobre o mesmo assunto, que ficam suspensos até a decisão.
+
+    O STF mantém uma lista pública de temas de repercussão geral, com a situação de cada um e a tese fixada.
+  base_legal:
+    - {nome: "Constituição Federal, art. 102, §3º", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [adi]
+  faqs:
+    - {p: "Para que serve a repercussão geral?", r: "Para filtrar os recursos que chegam ao STF e garantir que uma mesma tese seja aplicada a todos os processos sobre o tema."}
+    - {p: "Quantos ministros podem recusar a repercussão geral?", r: "A recusa exige dois terços do tribunal: 8 dos 11 ministros."}
+    - {p: "O que é um tema de repercussão geral?", r: "É a questão constitucional julgada em um caso-paradigma, com número próprio e tese aplicada a casos semelhantes."}
+    - {p: "Os processos sobre o mesmo assunto ficam parados?", r: "Em regra, sim: ficam suspensos nas instâncias de origem até o STF julgar o tema."}
+    - {p: "Quando a repercussão geral foi criada?", r: "Pela Emenda Constitucional 45, de 2004, a reforma do Judiciário."}
+- termo: Impeachment
+  slug: impeachment
+  resumo: "é o processo de responsabilização do presidente da República por crime de responsabilidade, autorizado pela Câmara e julgado pelo Senado."
+  definicao: |
+    O processo está previsto nos arts. 85 e 86 da Constituição e na Lei 1.079/1950, que define os crimes de responsabilidade. Qualquer cidadão pode apresentar a denúncia à Câmara, e cabe ao presidente da Câmara decidir se dá seguimento a ela.
+
+    A Câmara autoriza a abertura do processo pelo voto de dois terços dos deputados, ou seja, 342. Instaurado o processo pelo Senado, o presidente fica suspenso das funções por até 180 dias.
+
+    O julgamento ocorre no Senado, sob a presidência do presidente do STF. A condenação exige dois terços dos senadores, ou seja, 54 votos, e resulta na perda do cargo e na inabilitação para exercer função pública por oito anos.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 52, 85 e 86", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+    - {nome: "Lei 1.079/1950", url: "https://www.planalto.gov.br/ccivil_03/leis/l1079.htm"}
+  relacionados: [quorum, votacao-nominal, cpi]
+  faqs:
+    - {p: "Quantos votos a Câmara precisa para autorizar o impeachment?", r: "Dois terços dos deputados: 342 de 513."}
+    - {p: "Quantos votos o Senado precisa para condenar?", r: "Dois terços dos senadores: 54 de 81."}
+    - {p: "Quem preside o julgamento no Senado?", r: "O presidente do Supremo Tribunal Federal."}
+    - {p: "Quem pode pedir o impeachment?", r: "Qualquer cidadão, por denúncia apresentada à Câmara dos Deputados."}
+    - {p: "O presidente é afastado durante o processo?", r: "Sim, depois da instauração do processo pelo Senado, por até 180 dias."}
+- termo: Lei da Ficha Limpa
+  slug: ficha-limpa
+  resumo: "é a Lei Complementar 135/2010, que ampliou os casos de inelegibilidade, incluindo condenados por órgão judicial colegiado."
+  definicao: |
+    A Lei da Ficha Limpa nasceu de um projeto de iniciativa popular e alterou a Lei Complementar 64/1990, a Lei das Inelegibilidades. Ela tornou inelegíveis, por prazos definidos em lei, pessoas condenadas por órgão colegiado por crimes como corrupção, lavagem de dinheiro e crimes eleitorais, além de políticos que renunciaram para escapar de cassação e de quem teve contas rejeitadas por irregularidade insanável.
+
+    A grande mudança foi dispensar o trânsito em julgado: basta a condenação por um tribunal, com decisão colegiada, para gerar a inelegibilidade. O STF declarou a lei constitucional em 2012.
+
+    A inelegibilidade é analisada pela Justiça Eleitoral no julgamento do registro de candidatura, e candidatos, partidos, federações, coligações e o Ministério Público podem impugnar um registro.
+  base_legal:
+    - {nome: "Lei Complementar 135/2010", url: "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp135.htm"}
+    - {nome: "Lei Complementar 64/1990", url: "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp64.htm"}
+  relacionados: [projeto-de-lei-complementar, diplomacao, quociente-eleitoral]
+  faqs:
+    - {p: "A Ficha Limpa exige condenação definitiva?", r: "Não. Basta a condenação por órgão judicial colegiado, nos crimes previstos na lei."}
+    - {p: "Quem analisa se um candidato é inelegível?", r: "A Justiça Eleitoral, no julgamento do pedido de registro de candidatura."}
+    - {p: "A Ficha Limpa é constitucional?", r: "Sim. O STF declarou a constitucionalidade da lei em 2012."}
+    - {p: "Quem pode contestar uma candidatura?", r: "Candidatos, partidos, federações, coligações e o Ministério Público Eleitoral, por ação de impugnação de registro."}
+    - {p: "A lei veio de iniciativa popular?", r: "Sim. O projeto foi apresentado com assinaturas de eleitores e aprovado pelo Congresso em 2010."}
+- termo: Quociente eleitoral
+  slug: quociente-eleitoral
+  resumo: "é o número de votos válidos dividido pelo número de vagas, usado para distribuir as cadeiras nas eleições proporcionais."
+  definicao: |
+    Nas eleições para deputado federal, deputado estadual e vereador, as vagas são distribuídas pelo sistema proporcional. O quociente eleitoral é calculado dividindo o número de votos válidos pelo número de vagas, desprezada a fração igual ou inferior a meio, ou arredondando para um se superior (art. 106 do Código Eleitoral).
+
+    Em seguida, calcula-se o quociente partidário: os votos de cada partido ou federação divididos pelo quociente eleitoral, o que indica quantas vagas cada um conquista (art. 107). Os eleitos são os mais votados de cada lista, desde que tenham obtido votos em número igual ou superior a 10% do quociente eleitoral.
+
+    As vagas que sobram são distribuídas pelo cálculo das médias, com regras de desempenho mínimo alteradas pela Lei 14.211/2021.
+  base_legal:
+    - {nome: "Código Eleitoral (Lei 4.737/1965), arts. 106 a 109", url: "https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm"}
+  relacionados: [federacao-partidaria, suplente, segundo-turno]
+  faqs:
+    - {p: "Como se calcula o quociente eleitoral?", r: "Divide-se o número de votos válidos pelo número de vagas em disputa."}
+    - {p: "Votos em branco contam para o quociente?", r: "Não. Só os votos válidos, ou seja, nominais e de legenda."}
+    - {p: "Por que um candidato com muitos votos pode não se eleger?", r: "Porque a distribuição depende primeiro dos votos do partido ou federação. Se a lista não atinge o quociente, pode não ter vaga."}
+    - {p: "O que é votação mínima individual?", r: "Para ser eleito pelo quociente partidário, o candidato precisa ter votos iguais ou superiores a 10% do quociente eleitoral."}
+    - {p: "O quociente vale para senador e prefeito?", r: "Não. Senador, presidente, governador e prefeito são eleitos pelo sistema majoritário."}
+- termo: Segundo turno
+  slug: segundo-turno
+  resumo: "é a nova votação entre os dois mais votados quando nenhum candidato a presidente, governador ou prefeito de cidade grande obtém maioria absoluta dos votos válidos."
+  definicao: |
+    Pelo art. 77 da Constituição, é eleito no primeiro turno o candidato a presidente que obtiver a maioria absoluta dos votos, não computados os brancos e os nulos. Se ninguém atingir essa marca, os dois mais votados disputam o segundo turno. A mesma regra vale para governadores (art. 28) e para prefeitos de municípios com mais de 200 mil eleitores (art. 29).
+
+    Em 2026, o primeiro turno foi em 4 de outubro e o segundo turno está marcado para 25 de outubro, último domingo do mês, conforme o calendário do TSE.
+
+    Senadores, deputados e vereadores não têm segundo turno: senadores são eleitos pela maioria simples, e deputados e vereadores pelo sistema proporcional.
+  base_legal:
+    - {nome: "Constituição Federal, arts. 28, 29 e 77", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+  relacionados: [quociente-eleitoral, diplomacao, maioria-absoluta]
+  faqs:
+    - {p: "Quando há segundo turno?", r: "Quando nenhum candidato a presidente, governador ou prefeito de cidade com mais de 200 mil eleitores tem mais da metade dos votos válidos."}
+    - {p: "Quando é o segundo turno de 2026?", r: "Em 25 de outubro de 2026, segundo o calendário do TSE."}
+    - {p: "Votos brancos e nulos contam?", r: "Não. A maioria absoluta é calculada só sobre os votos válidos."}
+    - {p: "Senador tem segundo turno?", r: "Não. É eleito quem tiver mais votos, pelo sistema majoritário simples."}
+    - {p: "Em quais cidades há segundo turno para prefeito?", r: "Nas que têm mais de 200 mil eleitores."}
+- termo: Federação partidária
+  slug: federacao-partidaria
+  resumo: "é a união de dois ou mais partidos que atuam como um só nas eleições e no Legislativo por pelo menos quatro anos."
+  definicao: |
+    A federação foi criada pela Lei 14.208/2021, que incluiu o art. 11-A na Lei dos Partidos Políticos. Diferentemente das antigas coligações proporcionais, a federação não se desfaz depois da eleição: os partidos precisam permanecer unidos por no mínimo quatro anos e atuar como uma única bancada.
+
+    Para todos os efeitos eleitorais, a federação funciona como um partido: apresenta lista única de candidatos e soma os votos para o cálculo do quociente partidário. Cada partido mantém seu nome, número e autonomia interna.
+
+    O registro da federação é feito no TSE. O partido que deixa a federação antes do prazo sofre sanções, como a proibição de entrar em outra federação e de celebrar coligação nas duas eleições seguintes.
+  base_legal:
+    - {nome: "Lei 14.208/2021", url: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/L14208.htm"}
+  relacionados: [quociente-eleitoral, bancada, fundo-partidario]
+  faqs:
+    - {p: "Federação é a mesma coisa que coligação?", r: "Não. A coligação proporcional, extinta em 2017, acabava depois da eleição. A federação dura pelo menos quatro anos e atua como bancada única."}
+    - {p: "Os partidos federados perdem o nome?", r: "Não. Cada partido mantém nome, número e estrutura, mas atua em conjunto nas eleições e no Legislativo."}
+    - {p: "Por quanto tempo a federação dura?", r: "No mínimo quatro anos."}
+    - {p: "O que acontece se um partido sair antes?", r: "Fica sujeito a sanções previstas em lei, como não poder integrar outra federação nem celebrar coligação nas duas eleições seguintes."}
+    - {p: "Onde a federação é registrada?", r: "No Tribunal Superior Eleitoral."}
+- termo: Diplomação
+  slug: diplomacao
+  resumo: "é o ato da Justiça Eleitoral que entrega o diploma aos eleitos e suplentes, habilitando-os a tomar posse."
+  definicao: |
+    Depois da apuração e da totalização, a Justiça Eleitoral expede os diplomas. O TSE diploma o presidente e o vice; os tribunais regionais eleitorais diplomam governadores, senadores e deputados; e as juntas eleitorais diplomam prefeitos e vereadores.
+
+    A diplomação também marca o início de prazos importantes. A ação de impugnação de mandato eletivo (AIME) pode ser proposta em até 15 dias depois da diplomação, com provas de abuso de poder econômico, corrupção ou fraude (art. 14, parágrafo 10, da Constituição). O recurso contra a expedição de diploma (RCED) tem prazo de três dias.
+
+    Para as eleições de 2026, as datas de diplomação estão no calendário eleitoral do TSE.
+  base_legal:
+    - {nome: "Constituição Federal, art. 14, §10", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+    - {nome: "Código Eleitoral, arts. 215 e 262", url: "https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm"}
+  relacionados: [segundo-turno, ficha-limpa, legislatura]
+  faqs:
+    - {p: "Quem entrega o diploma ao presidente eleito?", r: "O Tribunal Superior Eleitoral."}
+    - {p: "Quem diploma deputados e senadores?", r: "Os tribunais regionais eleitorais de cada estado."}
+    - {p: "Qual é o prazo da AIME?", r: "Quinze dias contados da diplomação."}
+    - {p: "Suplentes também são diplomados?", r: "Sim. Eleitos e suplentes recebem o diploma."}
+    - {p: "A diplomação é a posse?", r: "Não. A posse acontece depois, na data prevista na Constituição para cada cargo."}
+- termo: Votação nominal
+  slug: votacao-nominal
+  resumo: "é a votação em que o voto de cada parlamentar é registrado e divulgado, ao contrário da votação simbólica."
+  definicao: |
+    Na votação simbólica, o presidente da sessão pede que os favoráveis permaneçam como estão e proclama o resultado, sem registro individual. Na votação nominal, cada parlamentar vota pelo painel eletrônico ou por chamada, e o voto fica registrado: sim, não, abstenção ou obstrução.
+
+    A votação nominal é obrigatória quando a Constituição exige quórum qualificado, como em PEC, lei complementar e derrubada de veto. Também ocorre quando há pedido de verificação aprovado ou quando o regimento a exige.
+
+    Os votos nominais da Câmara e do Senado são publicados nas bases de Dados Abertos das duas Casas. O Estrato usa esses dados para mostrar como cada parlamentar votou.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados", url: "https://www2.camara.leg.br/atividade-legislativa/legislacao/regimento-interno-da-camara-dos-deputados"}
+    - {nome: "API Dados Abertos da Câmara: votações", url: "https://dadosabertos.camara.leg.br/swagger/api.html"}
+  relacionados: [obstrucao, destaque, quorum, pec]
+  faqs:
+    - {p: "Qual é a diferença entre votação nominal e simbólica?", r: "Na nominal, o voto de cada parlamentar é registrado. Na simbólica, só o resultado é proclamado."}
+    - {p: "Quando a votação nominal é obrigatória?", r: "Quando a matéria exige quórum qualificado, como PEC e lei complementar, ou quando há pedido de verificação aprovado."}
+    - {p: "Onde ver como um deputado votou?", r: "Na base de Dados Abertos da Câmara e nas páginas de votação do portal da Casa."}
+    - {p: "O voto pode ser secreto?", r: "Só nos casos previstos na Constituição, como algumas votações de autoridades no Senado."}
+    - {p: "O que significa votar 'obstrução'?", r: "É uma forma de não contribuir para o quórum, usada para impedir ou adiar a votação."}
+- termo: Obstrução
+  slug: obstrucao
+  resumo: "é a estratégia em que parlamentares ou bancadas deixam de contribuir para o quórum para adiar ou impedir uma votação."
+  definicao: |
+    Na Câmara, o líder pode orientar a bancada a entrar em obstrução. Os deputados que registram obstrução no painel ficam presentes na sessão, mas não são contados para o quórum de deliberação. Se não houver 257 deputados votando, a votação não ocorre.
+
+    Outras formas de obstrução são os requerimentos de retirada de pauta, adiamento da discussão e votação por partes, além do uso do tempo de fala. Essas ferramentas são usadas principalmente pela oposição, mas também por bancadas da base em momentos de negociação.
+
+    A obstrução é um instrumento legítimo previsto nos regimentos. Ela aparece nos dados oficiais de votação como uma opção de voto, ao lado de sim, não e abstenção.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados", url: "https://www2.camara.leg.br/atividade-legislativa/legislacao/regimento-interno-da-camara-dos-deputados"}
+  relacionados: [quorum, votacao-nominal, lider-partidario]
+  faqs:
+    - {p: "Obstrução é falta?", r: "Não. O parlamentar está presente, mas escolhe não contribuir para o quórum da votação."}
+    - {p: "Quem decide a obstrução?", r: "Em geral, o líder do partido orienta a bancada, mas cada parlamentar registra seu voto."}
+    - {p: "A obstrução pode derrubar uma votação?", r: "Pode impedir a votação se o número de votantes ficar abaixo do quórum."}
+    - {p: "Quais outros instrumentos de obstrução existem?", r: "Requerimentos de retirada de pauta, adiamento, votação por partes e uso do tempo de discurso."}
+    - {p: "A obstrução aparece nos dados oficiais?", r: "Sim. É registrada como opção de voto nas votações nominais."}
+- termo: Líder partidário
+  slug: lider-partidario
+  resumo: "é o parlamentar escolhido pela bancada para representá-la, orientar os votos e negociar a pauta com a Mesa e os demais líderes."
+  definicao: |
+    Na Câmara, cada partido ou bloco com representação escolhe um líder, conforme os arts. 9º e 10 do Regimento Interno. O líder orienta a bancada nas votações, indica membros para as comissões, apresenta requerimentos e participa do Colégio de Líderes, que discute a pauta com o presidente da Casa.
+
+    Há também os líderes do Governo, da Maioria, da Minoria e da Oposição, com prerrogativas próprias. No Senado, a estrutura é semelhante.
+
+    A orientação do líder aparece nas votações nominais como a orientação da bancada, publicada nos dados oficiais. É a partir dela que se calcula se um parlamentar votou com a orientação do partido.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados, arts. 9º a 11", url: "https://www2.camara.leg.br/atividade-legislativa/legislacao/regimento-interno-da-camara-dos-deputados"}
+  relacionados: [bancada, obstrucao, destaque]
+  faqs:
+    - {p: "O que faz um líder partidário?", r: "Orienta os votos da bancada, indica membros para comissões, apresenta requerimentos e negocia a pauta."}
+    - {p: "O que é o Colégio de Líderes?", r: "É a reunião dos líderes com o presidente da Câmara, onde se discute a pauta do plenário."}
+    - {p: "O deputado é obrigado a seguir o líder?", r: "Não por lei, mas o partido pode aplicar sanções internas previstas no estatuto."}
+    - {p: "Quem é o líder do Governo?", r: "É o parlamentar indicado pelo presidente da República para representar o governo em cada Casa."}
+    - {p: "Onde ver a orientação das bancadas?", r: "Nos dados oficiais de cada votação nominal, publicados pela Câmara."}
+- termo: Bancada
+  slug: bancada
+  resumo: "é o conjunto de parlamentares de um mesmo partido, estado ou grupo de interesse que atua de forma coordenada."
+  definicao: |
+    O termo bancada é usado em três sentidos. A bancada partidária reúne os parlamentares de um partido ou federação e tem um líder. A bancada estadual reúne os parlamentares de um mesmo estado, que apresentam em conjunto as emendas de bancada ao Orçamento.
+
+    Já as chamadas bancadas temáticas, como a ruralista ou a da saúde, são grupos de interesse que se organizam formalmente em frentes parlamentares, registradas nas Mesas das Casas.
+
+    O tamanho da bancada partidária define o número de vagas em comissões, o tempo de fala e o número de destaques. Nas páginas de partidos, o Estrato mostra quantos deputados e senadores cada legenda tem em exercício, conforme os dados oficiais.
+  base_legal:
+    - {nome: "Regimento Interno da Câmara dos Deputados", url: "https://www2.camara.leg.br/atividade-legislativa/legislacao/regimento-interno-da-camara-dos-deputados"}
+  relacionados: [lider-partidario, emenda-parlamentar, federacao-partidaria]
+  faqs:
+    - {p: "O que é bancada partidária?", r: "O conjunto de parlamentares do mesmo partido ou federação em uma Casa."}
+    - {p: "O que é bancada estadual?", r: "O conjunto de deputados e senadores de um mesmo estado, que define em conjunto as emendas de bancada."}
+    - {p: "O que são frentes parlamentares?", r: "Grupos registrados de parlamentares de vários partidos que se unem em torno de um tema."}
+    - {p: "Para que serve o tamanho da bancada?", r: "Define a proporção de vagas nas comissões, o tempo de fala e o número de destaques."}
+    - {p: "A bancada muda durante a legislatura?", r: "Sim, com trocas de partido nas janelas permitidas, licenças e posse de suplentes."}
+- termo: Cláusula de desempenho
+  slug: clausula-de-desempenho
+  resumo: "é a regra constitucional que exige votação mínima para que o partido tenha acesso ao Fundo Partidário e à propaganda gratuita no rádio e na TV."
+  definicao: |
+    A cláusula de desempenho, também chamada de cláusula de barreira, foi incluída no art. 17 da Constituição pela Emenda Constitucional 97/2017, com regras de transição que vão de 2018 a 2030.
+
+    Para ter acesso ao Fundo Partidário e ao tempo de propaganda gratuita, o partido precisa atingir um percentual mínimo de votos válidos na eleição para a Câmara, distribuídos em pelo menos um terço dos estados, ou eleger um número mínimo de deputados em pelo menos um terço dos estados. Os percentuais aumentam a cada eleição até 2030.
+
+    Partidos que não atingem a cláusula continuam existindo, mas perdem esses recursos. Muitos partidos se fundiram, se incorporaram ou formaram federações para superar a exigência.
+  base_legal:
+    - {nome: "Constituição Federal, art. 17, §3º", url: "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"}
+    - {nome: "Emenda Constitucional 97/2017", url: "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc97.htm"}
+  relacionados: [fundo-partidario, federacao-partidaria, quociente-eleitoral]
+  faqs:
+    - {p: "O que acontece com o partido que não atinge a cláusula?", r: "Continua existindo, mas perde o acesso ao Fundo Partidário e à propaganda gratuita no rádio e na TV."}
+    - {p: "A cláusula usa os votos para o Senado?", r: "Não. O cálculo usa os votos e os eleitos para a Câmara dos Deputados."}
+    - {p: "Os percentuais mudam?", r: "Sim. A EC 97/2017 previu aumento gradual de 2018 a 2030."}
+    - {p: "Federação ajuda a superar a cláusula?", r: "Sim. Os votos e eleitos dos partidos federados são somados para o cálculo."}
+    - {p: "Deputado de partido que não atingiu a cláusula perde o mandato?", r: "Não. O mandato é mantido, e a Constituição permite que ele mude de partido sem perder o cargo."}
