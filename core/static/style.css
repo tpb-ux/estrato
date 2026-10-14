@@ -130,3 +130,5 @@ nav.ed a,nav.ed .dd{flex:0 0 auto}nav.ed a.xtra{display:none}
 @media(max-width:860px){.edw{display:contents}.edw .sm,.edw:hover .sm,.edw:focus-within .sm{display:none}}
 .cols{columns:3 200px;padding-left:18px}.cols li{break-inside:avoid;padding:2px 0}
 .diag{margin:16px 0}
+.tline{list-style:none;padding:0 0 0 18px;border-left:3px solid var(--b);margin:18px 0}.tline .tm{position:relative;padding:0 0 16px 14px}.tline .tm:before{content:"";position:absolute;left:-26px;top:5px;width:13px;height:13px;border-radius:50%;background:#1f4e79}
+.tline .marco:before{background:var(--a)}.tline time{display:block;font-size:.8rem;font-weight:700;color:var(--m)}.tline span{display:block;font-size:.9rem;overflow-wrap:anywhere}

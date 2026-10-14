@@ -1,0 +1,57 @@
+# /linha-do-tempo/<slug>/: marcos = votações nominais de plenário das proposições listadas (data/votacoes, automático)
+# + marcos legais com data conferida no texto oficial (planalto.gov.br).
+- slug: reforma-tributaria
+  titulo: Reforma tributária do consumo
+  intro: "Da aprovação da PEC 45/2019 à regulamentação do IBS, da CBS e do comitê gestor: as votações nominais do plenário da Câmara e do Senado que montaram o novo sistema de tributos sobre o consumo."
+  props: [PEC 45/2019, PLP 68/2024, PLP 108/2024]
+  marcos: [[2023-12-20, "Promulgada a Emenda Constitucional nº 132, que altera o Sistema Tributário Nacional"], [2025-01-16, "Sancionada a Lei Complementar nº 214, que institui o IBS, a CBS e o Imposto Seletivo"]]
+  explica: como-funciona-a-reforma-tributaria
+- slug: arcabouco-fiscal
+  titulo: Arcabouço fiscal
+  intro: "O regime fiscal sustentável que substituiu o teto de gastos e as mudanças posteriores na Lei Complementar 200, votação a votação."
+  props: [PLP 93/2023, PLP 210/2024, PLP 163/2025]
+  marcos: [[2023-08-30, "Sancionada a Lei Complementar nº 200, que institui o regime fiscal sustentável"]]
+  explica: como-funciona-o-arcabouco-fiscal
+- slug: precatorios
+  titulo: PEC dos precatórios
+  intro: "A PEC 66/2023, que criou limite para o pagamento de precatórios pelos municípios e tratou de parcelamento de dívidas previdenciárias, nas votações das duas Casas."
+  props: [PEC 66/2023]
+  marcos: []
+  explica: como-funciona-uma-pec
+- slug: emendas-parlamentares
+  titulo: Regras das emendas parlamentares
+  intro: "O projeto que mudou a proposição e a execução de emendas parlamentares depois das decisões do STF sobre transparência, até a sanção da Lei Complementar 210."
+  props: [PLP 175/2024]
+  marcos: [[2024-11-25, "Sancionada a Lei Complementar nº 210, sobre a proposição e a execução de emendas parlamentares"]]
+  explica: como-funcionam-as-emendas-parlamentares
+- slug: apostas-esportivas
+  titulo: Regulamentação das apostas de quota fixa
+  intro: "O projeto que regulamentou as apostas de quota fixa, as chamadas bets, e a tributação do setor, nas votações da Câmara e do Senado."
+  props: [PL 3626/2023]
+  marcos: [[2023-12-29, "Sancionada a Lei nº 14.790, que dispõe sobre a modalidade lotérica de apostas de quota fixa"]]
+- slug: licenciamento-ambiental
+  titulo: Lei geral do licenciamento ambiental
+  intro: "O projeto da lei geral do licenciamento ambiental, que tramitou por mais de duas décadas, nas votações nominais do plenário."
+  props: [PL 2159/2021]
+  marcos: []
+- slug: crime-organizado
+  titulo: Marco legal do combate ao crime organizado
+  intro: "O projeto que institui o marco legal do combate ao crime organizado e tipifica novas condutas, votação a votação."
+  props: [PL 5582/2025]
+  marcos: []
+- slug: numero-de-deputados
+  titulo: Número de deputados por estado
+  intro: "O projeto de lei complementar que fixa o número de deputados federais e a distribuição das cadeiras entre os estados com base no Censo."
+  props: [PLP 177/2023]
+  marcos: []
+  explica: como-funciona-a-eleicao-para-deputado
+- slug: dividas-dos-estados
+  titulo: Dívidas dos estados com a União
+  intro: "Os projetos que trataram da renegociação das dívidas de estados com a União, incluindo o Programa de Pleno Pagamento de Dívidas dos Estados (Propag)."
+  props: [PLP 121/2024, PLP 85/2024]
+  marcos: []
+- slug: tributacao-da-renda
+  titulo: Tributação de fundos, offshores e subvenções
+  intro: "A tributação da renda de pessoas físicas no exterior e de fundos exclusivos e as mudanças nas subvenções do ICMS, nas votações do plenário."
+  props: [PL 4173/2023, MPV 1185/2023]
+  marcos: []
