@@ -1,0 +1,15 @@
+# Datas conferidas: Resolução TSE nº 23.760/2026 (calendário das Eleições 2026, notícia oficial do TSE de março/2026) e Constituição Federal, art. 57 e art. 82 (EC 111/2021).
+eleitoral:
+  fonte: [Resolução TSE nº 23.760/2026 (calendário eleitoral das Eleições 2026), "https://www.tse.jus.br/eleicoes/calendario-eleitoral"]
+  datas:
+    - [2026-10-04, "1º turno das eleições para presidente, governador, senador e deputados federais, estaduais e distritais, das 8h às 17h, horário de Brasília"]
+    - [2026-10-25, "Eventual 2º turno para presidente e governador, das 8h às 17h, horário de Brasília"]
+    - [2026-12-03, "Fim do prazo para justificar a ausência no 1º turno"]
+    - [2026-12-18, "Data-limite para a diplomação dos eleitos pela Justiça Eleitoral"]
+    - [2027-01-05, "Posse do presidente e do vice-presidente da República (Constituição, art. 82, com a redação da EC 111/2021)"]
+    - [2027-01-06, "Posse dos governadores e vice-governadores"]
+    - [2027-01-08, "Fim do prazo para justificar a ausência no eventual 2º turno"]
+    - [2027-02-01, "Posse dos deputados federais e senadores eleitos e início da 58ª legislatura (Constituição, art. 57, § 4º)"]
+legislativo:
+  fonte: [Constituição Federal, art. 57, "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"]
+  regra: "A sessão legislativa ordinária vai de 2 de fevereiro a 17 de julho e de 1º de agosto a 22 de dezembro. Quando a data cai em sábado, domingo ou feriado, a reunião passa para o primeiro dia útil seguinte (art. 57, § 1º)."

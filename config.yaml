@@ -11,7 +11,7 @@ noindex_global: true
 aviso_topo: "Versão de prévia: em revisão, não indexada."
 publisher_logo: /static/logo.png
 tema: {cor: "#8A4B08", cor2: "#6E3B05", escuro: "#1B2430"}
-modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, cotas, emendas, executivo, presidencia, perguntas, explica, agenda, linha_do_tempo, quem_e_quem, dados_abertos, subcategorias]
+modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, cotas, emendas, executivo, presidencia, perguntas, explica, agenda, linha_do_tempo, quem_e_quem, calendario, dados_abertos, subcategorias]
 qualidade:
   min_faqs: 5                 # hubs, institucionais e glossário
   min_palavras_pseo: 300
@@ -42,10 +42,10 @@ editorias:
 menu:
   barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Votações, /votacoes/], [Cota, /cota/], [Emendas, /emendas/], [Executivo, /executivo/], [Glossário, /glossario/]]
   rotulo_dropdown: Dados
-  referencia: [[Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Deputados por estado, /deputados/#uf], [Perguntas e respostas, /perguntas/], [Como funciona, /explica/], [Agenda dos Três Poderes, /agenda/], [Linhas do tempo, /linha-do-tempo/], [Quem é quem, /quem-e-quem/], [Dados abertos, /dados/], [Buscar, /busca/]]
+  referencia: [[Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Deputados por estado, /deputados/#uf], [Perguntas e respostas, /perguntas/], [Como funciona, /explica/], [Agenda dos Três Poderes, /agenda/], [Linhas do tempo, /linha-do-tempo/], [Quem é quem, /quem-e-quem/], [Calendário, /calendario/], [Dados abertos, /dados/], [Buscar, /busca/]]
 rodape:
   - {titulo: Editorias, links: [[Congresso, /congresso/], [Governo, /governo/], [Justiça, /justica/], [Eleições, /eleicoes/], [Economia e Tributos, /economia/], [Estados e Municípios, /estados/], [Regulação e Setores, /regulacao/], [Internacional, /internacional/]]}
-  - {titulo: Dados, links: [[Deputados federais, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Glossário político, /glossario/], [Placar de votações, /votacoes/], [Perguntas e respostas, /perguntas/], [Como funciona, /explica/], [Agenda dos Três Poderes, /agenda/], [Linhas do tempo, /linha-do-tempo/], [Quem é quem, /quem-e-quem/], [Dados abertos (CSV), /dados/], [Buscar, /busca/]]}
+  - {titulo: Dados, links: [[Deputados federais, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Glossário político, /glossario/], [Placar de votações, /votacoes/], [Perguntas e respostas, /perguntas/], [Como funciona, /explica/], [Agenda dos Três Poderes, /agenda/], [Linhas do tempo, /linha-do-tempo/], [Quem é quem, /quem-e-quem/], [Calendário, /calendario/], [Dados abertos (CSV), /dados/], [Buscar, /busca/]]}
   - {titulo: Institucional, links: [[Sobre, /sobre/], [Expediente, /expediente/], [Política editorial, /politica-editorial/], [Metodologia, /metodologia/], [Correções, /correcoes/], [Direito de resposta, /direito-de-resposta/], [Contato, /contato/], [Termos, /termos/], [Privacidade, /privacidade/], [RSS, /rss.xml]]}
 home_faqs:
   - {p: "O que é o Estrato?", r: "Um portal sobre os Três Poderes que reúne dados oficiais abertos, como os da Câmara e do Senado, e resumos de fontes públicas com link para a íntegra."}
