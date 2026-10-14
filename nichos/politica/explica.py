@@ -9,7 +9,7 @@ from . import votacoes as _vt
 def svg(passos):
     h = 46 * len(passos) + 4; r = []
     for i, p in enumerate(passos):
-        y = 4 + 46 * i; t = p.split(",")[0].split(".")[0]; t = t if len(t) <= 58 else t[:55].rsplit(" ", 1)[0] + "…"
+        y = 4 + 46 * i; t = p.rstrip("."); t = t if len(t) <= 58 else t[:56].rsplit(" ", 1)[0].rstrip(",;:") + "…"
         r.append(f'<rect x="2" y="{y}" width="396" height="36" rx="6" fill="#f4f6f8" stroke="#c7cbd1"/><circle cx="22" cy="{y + 18}" r="12" fill="#1f4e79"/>'
                  f'<text x="22" y="{y + 22}" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">{i + 1}</text><text x="42" y="{y + 22}" font-size="12" fill="#2e333d">{E(t)}</text>')
         if i < len(passos) - 1: r.append(f'<path d="M22 {y + 36} v10" stroke="#1f4e79" stroke-width="2"/>')
