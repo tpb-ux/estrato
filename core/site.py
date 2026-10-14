@@ -36,6 +36,9 @@ class Site:
         self.faq_stats = {"pseo_paginas": 0, "pseo_faqs": 0, "pseo_removidas": 0}
         self.css_v = ""
         self.nicho = c.get("nicho", "exemplo")
+        sf = self.ROOT / "data/subcategorias.yaml"  # submenu de subcategorias no desktop (nichos/*/subcategorias.py)
+        sd = yaml.safe_load(sf.read_text(encoding="utf-8")) if sf.exists() else {}
+        self.SUBMENU = {k: [(x["nome"], f"/{k}/{x['slug']}/") for x in v] for k, v in sd.items() if isinstance(v, list)}
 
     # ---------- blocos reutilizáveis ----------
     def faq_html(self, faqs):
@@ -105,7 +108,8 @@ class Site:
             meta += (f'<meta name="google-site-verification" content="{E(vf["google"])}">' if vf.get("google") else "") + (f'<meta name="msvalidate.01" content="{E(vf["bing"])}">' if vf.get("bing") else "")
         ld = json.dumps({"@context": "https://schema.org", "@graph": graph + self.site_ld()}, ensure_ascii=False).replace("</", "<\\/")
         menu = c.get("menu") or {}
-        nav_ed = "".join(f'<a class="{"on" if path.startswith(f"/{s}/") else ""}" href="/{s}/">{E(e.get("curto", e["nome"]))}</a>' for s, e in self.EDS.items())
+        sm = lambda s: (f'<div class="sm">' + "".join(f'<a href="{u}">{E(n)}</a>' for n, u in self.SUBMENU[s]) + "</div>") if self.SUBMENU.get(s) else ""
+        nav_ed = "".join(f'<span class="edw"><a class="{"on" if path.startswith(f"/{s}/") else ""}" href="/{s}/">{E(e.get("curto", e["nome"]))}</a>{sm(s)}</span>' for s, e in self.EDS.items())
         extra = "".join(f'<a class="xtra {"on" if path.startswith(u) else ""}" href="{u}">{E(n)}</a>' for n, u in menu.get("barra", []))
         refs = "".join(f'<a href="{u}">{E(n)}</a>' for n, u in menu.get("barra", []) + menu.get("referencia", []))
         nav_all = "".join(f'<a href="/{s}/">{E(e["nome"])}</a>' for s, e in self.EDS.items())

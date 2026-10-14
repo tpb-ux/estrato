@@ -124,3 +124,8 @@ nav.ed a,nav.ed .dd{flex:0 0 auto}nav.ed a.xtra{display:none}
 .cbar{margin:1rem 0}.cbar svg{max-height:220px;display:block}.cbar figcaption{font-size:.85rem;color:#555}
 .tw td{white-space:nowrap}.tw td:first-child,.tw td:has(a),.tw tbody th+td{white-space:normal}.tw td:first-child:has(> :only-child),.tw td:first-child:not(:has(*)){min-width:3.2em}
 .tw td:first-child{overflow-wrap:normal;word-break:normal}
+
+.edw{position:relative;display:inline-flex}.edw .sm{display:none;position:absolute;left:0;top:100%;z-index:20;background:#fff;border:1px solid var(--b);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.12);padding:6px;min-width:220px}
+.edw:hover .sm,.edw:focus-within .sm{display:grid}.edw .sm a{text-transform:none;font-size:.88rem;font-weight:600;padding:7px 10px;white-space:nowrap}.edw .sm a:hover{background:var(--g)}
+@media(max-width:860px){.edw{display:contents}.edw .sm,.edw:hover .sm,.edw:focus-within .sm{display:none}}
+.cols{columns:3 200px;padding-left:18px}.cols li{break-inside:avoid;padding:2px 0}

@@ -1,0 +1,103 @@
+# Subcategorias das 8 editorias (fase 1, 14/10/2026). Cada uma vira /<editoria>/<slug>/ com hub próprio.
+# palavras: em feeds.yaml (palavras_subcategoria); classificação automática por palavra-chave no título+resumo (sem acento, minúsculas, prefixo vale);
+# fontes: nomes de feed (feeds.yaml) cujos itens entram direto na subcategoria; glossario: slugs de verbetes; dados: links internos.
+# Subcategoria com menos de min_materias fica noindex até ter conteúdo.
+min_materias: 3
+congresso:
+  - {slug: camara, nome: Câmara, glossario: [presidente-da-camara, mesa-diretora, colegio-de-lideres, plenario], dados: [[Deputados federais, /deputados/], [Cota parlamentar, /cota/]],
+     intro: "Notícias do plenário, da Mesa e das lideranças da Câmara dos Deputados, a casa de 513 representantes eleitos pelo sistema proporcional. A página junta os resumos das fontes com os dados oficiais de cada deputado, da cota parlamentar e das votações nominais."}
+  - {slug: senado, nome: Senado, fontes: [Agência Senado], glossario: [presidente-do-senado, casa-revisora, sabatina, sessao-conjunta], dados: [[Senadores, /senadores/], [Cota parlamentar do Senado, /cota/#senado]],
+     intro: "Cobertura do Senado Federal, com 81 senadores, três por estado, eleitos pelo voto majoritário. Aqui ficam as notícias do plenário, das sabatinas de autoridades e da revisão de projetos vindos da Câmara, ao lado dos perfis oficiais de cada senador."}
+  - {slug: comissoes-e-cpis, nome: Comissões e CPIs, glossario: [cpi, ccj, comissao-permanente, comissao-especial, comissao-mista, audiencia-publica, poder-conclusivo], dados: [[Deputados e comissões, /deputados/]],
+     intro: "As comissões analisam projetos antes do plenário e, em vários casos, decidem sozinhas em caráter conclusivo. As CPIs investigam fatos determinados com poderes próprios de autoridade judicial. Esta página reúne o noticiário sobre esses colegiados nas duas casas."}
+  - {slug: votacoes, nome: Votações, glossario: [votacao-nominal, votacao-simbolica, quorum, maioria-absoluta, maioria-qualificada, destaque, turno-de-votacao], dados: [[Placar de votações, /votacoes/], [Metodologia do placar, /votacoes/metodologia/]],
+     intro: "O que foi aprovado ou rejeitado no plenário da Câmara e do Senado. Cada notícia pode ser cruzada com o placar de votações nominais do Estrato, que mostra o voto de cada parlamentar, a orientação das lideranças e o resultado oficial desde 2023."}
+  - {slug: projetos-em-tramitacao, nome: Projetos em tramitação, glossario: [projeto-de-lei, pec, medida-provisoria, tramitacao, regime-de-urgencia, substitutivo, projeto-de-lei-complementar], dados: [[Votações por proposição, /votacoes/]],
+     intro: "Propostas que estão andando no Congresso: projetos de lei, propostas de emenda à Constituição e medidas provisórias, do protocolo à sanção. A página acompanha prazos, relatores, pedidos de urgência e mudanças de texto noticiadas pelas fontes."}
+  - {slug: frentes-parlamentares, nome: Frentes parlamentares, glossario: [frente-parlamentar, bancada], dados: [[Senadores e frentes, /senadores/]],
+     intro: "Frentes parlamentares são associações suprapartidárias de deputados e senadores em torno de um tema, como agropecuária, saúde ou segurança. Não têm poder regimental, mas organizam votos. Aqui estão as notícias sobre a atuação dessas frentes e das bancadas temáticas."}
+governo:
+  - {slug: presidencia, nome: Presidência, glossario: [presidente-da-republica, vice-presidente, casa-civil, linha-sucessoria, sancao, veto], dados: [[Agenda do presidente e do vice, /executivo/presidencia/]],
+     intro: "Atos, decretos, sanções e vetos do presidente da República e a atuação do vice-presidente. A página liga o noticiário à agenda oficial diária publicada pelo Planalto e aos gastos públicos da Presidência compilados pelo Estrato."}
+  - {slug: ministerios, nome: Ministérios, glossario: [ministro-de-estado, casa-civil, agu, cgu], dados: [[Viagens de ministros, /executivo/]],
+     intro: "Decisões e anúncios dos ministérios do governo federal e de seus titulares. Junto ao noticiário, o Estrato publica as viagens a serviço de cada ministro de Estado e os gastos com cartão corporativo por órgão, a partir do Portal da Transparência."}
+  - {slug: agencias-reguladoras, nome: Agências reguladoras, glossario: [agencia-reguladora], dados: [[Regulação e setores, /regulacao/]],
+     intro: "As agências reguladoras federais, como Aneel, Anatel, Anvisa, ANS e ANP, têm diretoria com mandato fixo e definem regras para setores inteiros. Aqui ficam as resoluções, consultas públicas e sabatinas de diretores noticiadas pelas fontes."}
+  - {slug: programas-sociais, nome: Programas sociais, glossario: [transferencias-voluntarias], dados: [[Emendas por município, /emendas/]],
+     intro: "Programas de transferência de renda e de acesso a serviços, como Bolsa Família, Pé-de-Meia e Minha Casa, Minha Vida. A página reúne regras, calendários de pagamento e mudanças anunciadas pelo governo federal, sempre com link para a fonte."}
+  - {slug: diario-oficial, nome: Diário Oficial, glossario: [decreto, medida-provisoria, sancao], dados: [[Dados abertos, /dados/]],
+     intro: "O que saiu no Diário Oficial da União: decretos, portarias, nomeações, exonerações e medidas provisórias. Um ato só produz efeito depois de publicado, e esta página acompanha essas publicações com resumo e link para o texto oficial."}
+  - {slug: estatais, nome: Estatais, glossario: [tcu], dados: [[Cartão corporativo por órgão, /executivo/]],
+     intro: "Empresas públicas e sociedades de economia mista controladas pela União, como Petrobras, Caixa, Banco do Brasil, BNDES e Correios. A página reúne decisões de gestão, resultados, indicações para diretorias e fiscalizações do TCU sobre essas empresas."}
+justica:
+  - {slug: stf, nome: STF, fontes: [STF], glossario: [stf, adi, adpf, repercussao-geral, sumula-vinculante, decisao-monocratica, plenario-virtual, pedido-de-vista], dados: [[Quem é quem no STF, /quem-e-quem/]],
+     intro: "O Supremo Tribunal Federal guarda a Constituição e julga ações de controle de constitucionalidade, recursos extraordinários e autoridades com foro. A página acompanha decisões monocráticas, julgamentos no plenário físico e virtual e pedidos de vista."}
+  - {slug: stj, nome: STJ, glossario: [stj, recurso-especial], dados: [[Glossário jurídico, /glossario/]],
+     intro: "O Superior Tribunal de Justiça uniformiza a interpretação das leis federais no país. Aqui ficam os julgamentos de recursos especiais, as teses repetitivas e as decisões sobre governadores e outras autoridades que respondem ao tribunal."}
+  - {slug: tse, nome: TSE, glossario: [tse, registro-de-candidatura, diplomacao, inelegibilidade], dados: [[Calendário eleitoral, /calendario/]],
+     intro: "O Tribunal Superior Eleitoral organiza as eleições, registra partidos e julga recursos sobre candidaturas e propaganda. Durante o período eleitoral, a página só publica atos institucionais da Justiça Eleitoral, sem pesquisas nem cobertura de campanha."}
+  - {slug: ministerio-publico, nome: Ministério Público, glossario: [ministerio-publico, procurador-geral-da-republica, denuncia, acordo-de-leniencia, colaboracao-premiada], dados: [[Glossário, /glossario/]],
+     intro: "O Ministério Público defende a ordem jurídica e é titular da ação penal pública. A página reúne denúncias, pareceres e arquivamentos da Procuradoria-Geral da República e do Ministério Público Federal noticiados pelas fontes."}
+  - {slug: pf-e-operacoes, nome: PF e operações, glossario: [inquerito, prisao-preventiva, colaboracao-premiada], dados: [[Glossário, /glossario/]],
+     intro: "Operações da Polícia Federal, inquéritos e mandados autorizados pelo Judiciário. A página resume o que foi noticiado com link para a fonte e lembra que investigação e denúncia não equivalem a condenação: vale a presunção de inocência."}
+  - {slug: julgamentos-da-semana, nome: Julgamentos da semana, glossario: [plenario-virtual, pedido-de-vista, transitado-em-julgado, acordao], dados: [[Agenda dos Três Poderes, /agenda/]],
+     intro: "Os julgamentos em andamento ou concluídos nos tribunais superiores nos últimos dias, com o placar parcial quando divulgado. A página é atualizada a cada coleta e ajuda a acompanhar o que entra e sai da pauta do STF e do STJ."}
+eleicoes:
+  - {slug: calendario, nome: Calendário, glossario: [diplomacao, segundo-turno, desincompatibilizacao], dados: [[Calendário legislativo e eleitoral, /calendario/]],
+     intro: "Datas e prazos oficiais do processo eleitoral definidos pela Justiça Eleitoral: registro de candidaturas, propaganda, votação, totalização, diplomação e posse. A página liga o noticiário institucional ao calendário consolidado do Estrato."}
+  - {slug: partidos-e-federacoes, nome: Partidos e federações, glossario: [federacao-partidaria, filiacao-partidaria, clausula-de-desempenho, janela-partidaria, fundo-partidario], dados: [[Partidos, /partidos/]],
+     intro: "Registro, fusão e incorporação de partidos, federações partidárias e cláusula de desempenho. A página reúne o noticiário institucional sobre os partidos e liga cada um ao seu perfil no Estrato, com a bancada atual na Câmara e no Senado."}
+  - {slug: regras-e-ficha-limpa, nome: Regras e Ficha Limpa, glossario: [ficha-limpa, inelegibilidade, abuso-de-poder, propaganda-antecipada, compra-de-votos], dados: [[Glossário eleitoral, /glossario/]],
+     intro: "As regras do jogo eleitoral: resoluções do TSE, hipóteses de inelegibilidade da Lei da Ficha Limpa, limites de propaganda e punições por abuso de poder. A página explica o que muda e quando, com base em atos oficiais."}
+  - {slug: financiamento, nome: Financiamento, glossario: [fundo-eleitoral, fundo-partidario, prestacao-de-contas-eleitoral], dados: [[Dados abertos, /dados/]],
+     intro: "De onde vem e para onde vai o dinheiro das eleições: Fundo Especial de Financiamento de Campanha, Fundo Partidário, doações e prestação de contas à Justiça Eleitoral. A página resume decisões e números oficiais divulgados pelo TSE."}
+  - {slug: resultados, nome: Resultados, glossario: [quociente-eleitoral, quociente-partidario, sobras-eleitorais, sistema-proporcional, diplomacao], dados: [[Deputados federais, /deputados/], [Senadores, /senadores/]],
+     intro: "Resultados oficiais divulgados pela Justiça Eleitoral, com a explicação de como funcionam o quociente eleitoral, as sobras e a eleição majoritária. A página só publica números oficiais, sem projeções, e liga eleitos aos perfis parlamentares."}
+economia:
+  - {slug: reforma-tributaria, nome: Reforma tributária, glossario: [pec, projeto-de-lei-complementar], dados: [[Votações da reforma, /linha-do-tempo/]],
+     intro: "A reforma tributária do consumo substitui PIS, Cofins, IPI, ICMS e ISS por um IVA dual, com a CBS federal e o IBS de estados e municípios, além do Imposto Seletivo. A página acompanha a regulamentação e a transição prevista até 2033."}
+  - {slug: orcamento, nome: Orçamento, glossario: [lei-orcamentaria-anual, ldo, ppa, contingenciamento, comissao-mista-de-orcamento, restos-a-pagar], dados: [[Emendas parlamentares, /emendas/]],
+     intro: "Plano Plurianual, Lei de Diretrizes Orçamentárias e Lei Orçamentária Anual: como o governo federal planeja e executa receitas e despesas. A página reúne votações na Comissão Mista de Orçamento, bloqueios, contingenciamentos e créditos extras."}
+  - {slug: arcabouco-fiscal, nome: Arcabouço fiscal, glossario: [arcabouco-fiscal, meta-fiscal, lei-de-responsabilidade-fiscal, contingenciamento], dados: [[Linha do tempo do arcabouço, /linha-do-tempo/]],
+     intro: "O arcabouço fiscal, aprovado em 2023 por lei complementar, limita o crescimento da despesa federal e fixa metas de resultado primário com bandas de tolerância. A página acompanha relatórios bimestrais, cumprimento de metas e mudanças nas regras."}
+  - {slug: emendas, nome: Emendas, glossario: [emenda-parlamentar, emendas-individuais, emendas-de-bancada, emendas-de-comissao, emendas-pix, emendas-de-relator], dados: [[Emendas por autor e município, /emendas/]],
+     intro: "Emendas são a parte do Orçamento indicada por deputados, senadores, bancadas e comissões. A página reúne as decisões sobre execução, transparência e rastreabilidade, ligadas aos valores empenhados e pagos por autor e por município desde 2023."}
+  - {slug: impostos, nome: Impostos, glossario: [competencia-legislativa], dados: [[Dados abertos, /dados/]],
+     intro: "Mudanças em tributos que afetam pessoas e empresas: Imposto de Renda, IOF, ICMS, isenções e arrecadação federal. A página resume propostas, decisões e números divulgados pela Receita Federal e pelo Congresso, com link para cada fonte."}
+  - {slug: banco-central, nome: Banco Central, glossario: [banco-central], dados: [[Glossário econômico, /glossario/]],
+     intro: "Decisões do Banco Central, autarquia com diretoria de mandato fixo: taxa Selic definida pelo Copom, metas de inflação, regulação do sistema financeiro e do Pix. A página acompanha atas, comunicados e sabatinas de diretores no Senado."}
+estados:
+  - {slug: governadores, nome: Governadores, glossario: [federalismo, intervencao-federal], dados: [[Deputados por estado, /deputados/#uf]],
+     intro: "Atos e decisões dos governadores dos 26 estados e do Distrito Federal e a relação deles com o governo federal e o Congresso. Cada estado também tem página própria, com a bancada federal e as emendas destinadas aos seus municípios."}
+  - {slug: assembleias, nome: Assembleias, glossario: [assembleia-legislativa, competencia-legislativa], dados: [[Estados e municípios, /estados/]],
+     intro: "As assembleias legislativas fazem as leis estaduais, votam o orçamento do estado e fiscalizam o governador. A página reúne o noticiário sobre esses legislativos e sobre a Câmara Legislativa do Distrito Federal."}
+  - {slug: capitais, nome: Capitais, fontes: [Câmara Municipal de São Paulo], glossario: [camara-municipal, federalismo], dados: [[Emendas por município, /emendas/]],
+     intro: "Prefeituras e câmaras municipais das capitais e dos grandes municípios. A página acompanha leis locais, orçamento municipal e serviços públicos, com destaque para a Câmara Municipal de São Paulo, que tem feed oficial próprio."}
+  - {slug: repasses, nome: Repasses, glossario: [fundos-de-participacao, transferencias-voluntarias, emendas-pix], dados: [[Emendas por município, /emendas/]],
+     intro: "Dinheiro federal que chega a estados e municípios: fundos de participação, transferências voluntárias por convênio e emendas parlamentares. A página liga o noticiário aos valores oficiais pagos por município, compilados do Portal da Transparência."}
+regulacao:
+  - {slug: energia, nome: Energia, glossario: [agencia-reguladora], dados: [[Agências reguladoras, /governo/agencias-reguladoras/]],
+     intro: "Política energética, preços de combustíveis, tarifas de energia elétrica e decisões da Aneel e da ANP. A página reúne o noticiário regulatório do setor, com link para cada fonte oficial ou jornalística."}
+  - {slug: telecom, nome: Telecom, glossario: [agencia-reguladora], dados: [[Agências reguladoras, /governo/agencias-reguladoras/]],
+     intro: "Telefonia, internet, radiodifusão e as regras da Anatel. A página acompanha leilões de frequência, direitos do consumidor de telecomunicações e projetos sobre plataformas digitais e serviços de comunicação."}
+  - {slug: saude, nome: Saúde, glossario: [agencia-reguladora], dados: [[Emendas em saúde, /emendas/]],
+     intro: "Sistema Único de Saúde, regulação de medicamentos pela Anvisa e de planos de saúde pela ANS. A página reúne decisões do Ministério da Saúde, projetos no Congresso e julgamentos que mudam o acesso a tratamentos."}
+  - {slug: educacao, nome: Educação, glossario: [ministro-de-estado], dados: [[Programas sociais, /governo/programas-sociais/]],
+     intro: "Políticas de educação básica e superior: Fundeb, Enem, universidades federais e programas de permanência estudantil. A página acompanha decisões do MEC, votações no Congresso e números oficiais divulgados pelo governo."}
+  - {slug: agro, nome: Agro, glossario: [frente-parlamentar], dados: [[Frentes parlamentares, /congresso/frentes-parlamentares/]],
+     intro: "Agropecuária e desenvolvimento agrário: Plano Safra, crédito rural, defesa sanitária, comércio de carnes e grãos e reforma agrária. A página reúne decisões dos ministérios do setor e votações ligadas à frente parlamentar agropecuária."}
+  - {slug: meio-ambiente, nome: Meio ambiente, glossario: [agencia-reguladora], dados: [[Agenda dos Três Poderes, /agenda/]],
+     intro: "Licenciamento ambiental, combate ao desmatamento, política climática e compromissos internacionais do Brasil. A página acompanha decisões do Ibama, do Ministério do Meio Ambiente, do Congresso e do STF sobre o tema."}
+  - {slug: seguranca-publica, nome: Segurança pública, glossario: [garantia-da-lei-e-da-ordem, intervencao-federal], dados: [[Glossário, /glossario/]],
+     intro: "Políticas de segurança pública, combate ao crime organizado, sistema prisional e controle de armas. A página reúne projetos no Congresso, ações do Ministério da Justiça e decisões judiciais com impacto sobre polícias e estados."}
+  - {slug: tecnologia, nome: Tecnologia, glossario: [lei-de-acesso-a-informacao], dados: [[Dados abertos, /dados/]],
+     intro: "Regulação de inteligência artificial, plataformas digitais, proteção de dados pessoais e segurança cibernética. A página acompanha o marco legal da IA, decisões do STF sobre redes sociais e normas da ANPD."}
+internacional:
+  - {slug: diplomacia, nome: Diplomacia, glossario: [ministro-de-estado], dados: [[Viagens do ministro das Relações Exteriores, /executivo/orgaos/ministerio-das-relacoes-exteriores/]],
+     intro: "A política externa brasileira conduzida pelo Itamaraty e pela Presidência: visitas oficiais, cúpulas, embaixadas e posições do Brasil em organismos internacionais. A página liga o noticiário às viagens oficiais registradas no Portal da Transparência."}
+  - {slug: mercosul-e-brics, nome: Mercosul e BRICS, glossario: [ministro-de-estado], dados: [[Diplomacia, /internacional/diplomacia/]],
+     intro: "O Mercosul, união aduaneira com Argentina, Paraguai e Uruguai, e o BRICS, grupo ampliado de economias emergentes. A página acompanha cúpulas, presidências rotativas, decisões comerciais e o Novo Banco de Desenvolvimento."}
+  - {slug: acordos-comerciais, nome: Acordos comerciais, glossario: [ministro-de-estado], dados: [[Diplomacia, /internacional/diplomacia/]],
+     intro: "Negociações e acordos comerciais do Brasil e do Mercosul, tarifas impostas por outros países e disputas na Organização Mundial do Comércio. A página reúne decisões do governo e votações do Congresso que ratificam tratados."}
+  - {slug: eleicoes-no-mundo, nome: Eleições no mundo, glossario: [segundo-turno, sistema-proporcional], dados: [[Glossário eleitoral, /glossario/]],
+     intro: "Eleições e mudanças de governo em outros países, com foco nas que afetam o Brasil e a América Latina. A página resume resultados oficiais e explica os sistemas eleitorais de cada país, sem pesquisas de intenção de voto."}

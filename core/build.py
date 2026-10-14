@@ -103,6 +103,8 @@ def llms(S):
     for u in sorted(hubs): out.append(f"- [{S.urls[u]['title']}]({S.BASE}{u}): {S.urls[u]['desc']}")
     csvs = sorted((S.OUT / "dados").glob("*.csv")) if (S.OUT / "dados").exists() else []
     if csvs: out += ["", "## Dados abertos (CSV)", ""] + [f"- {S.BASE}/dados/{f.name}" for f in csvs]
+    subs = sorted(u for u, m in S.urls.items() if m["idx"] and m["familia"] == "subcategorias")
+    if subs: out += ["", "## Subcategorias e estados", ""] + [f"- [{S.urls[u]['title']}]({S.BASE}{u})" for u in subs]
     out += ["", "## Confiança", ""] + [f"- [{S.urls[u]['title']}]({S.BASE}{u})" for u in ("/sobre/", "/expediente/", "/politica-editorial/", "/metodologia/", "/correcoes/", "/dados/") if u in S.urls]
     out += ["", f"Lista completa: {S.BASE}/llms-full.txt · Sitemap: {S.BASE}/sitemap.xml", ""]
     sec = {}
@@ -223,7 +225,10 @@ def main(root):
     # editorias
     for s, e in S.EDS.items():
         ps = [p for p in posts if p["editoria"] == s]
-        subs = "".join(f'<span class="chip">{E(x)}</span>' for x in e.get("sub", []))
+        sl = getattr(S, "SUBS", {}).get(s)
+        subs = "".join(f'<a class="chip" href="{l}">{E(n)}</a>' for n, l in sl) if sl else "".join(f'<span class="chip">{E(x)}</span>' for x in e.get("sub", []))
+        if s == "estados" and any(k.startswith("/estados/") and k.count("/") == 3 and len(k) == 12 for k in S.urls):
+            subs += '</div><h2 id="ufs">Os 27 estados</h2><div class="chips small">' + "".join(f'<a class="chip" href="{k}">{E(S.urls[k]["title"].split(" (")[0])}</a>' for k in sorted((k for k in S.urls if k.startswith("/estados/") and len(k) == 12), key=lambda k: S.urls[k]["title"]))
         inner = "".join(card(S, p, "h2") for p in ps[:40]) or '<p class="vazio">Ainda não há matérias nesta editoria. A coleta automática roda a cada 30 minutos.</p>'
         b = f'<section class="blk">{sec("Editoria", e["nome"], tag="h1")}<p class="lead">{E(e.get("descricao", ""))}</p><div class="chips small">{subs}</div><div class="grid">{inner}</div></section>'
         S.write(f"/{s}/", S.page(f"{e['nome']}: notícias | {S.CFG['site_name']}", e.get("descricao", e["nome"]), f"/{s}/", b, faqs=faq_editoria(S, e, ps), crumbs=[(e["nome"], f"/{s}/")],

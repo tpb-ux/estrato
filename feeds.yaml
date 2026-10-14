@@ -13,8 +13,8 @@ editoria_padrao: congresso
 aviso_resumo: "Resumo automático a partir do feed público de {f}, com crédito e link para o original."
 feeds:
   - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/ultimas-noticias", confiavel: true, max: 6, vies: oficial, peso: 3}
-  - {nome: Agência Senado, url: "https://www12.senado.leg.br/noticias/rss", confiavel: true, max: 6, vies: oficial, peso: 3}
-  - {nome: STF, url: "https://noticias.stf.jus.br/feed/", confiavel: true, editoria: justica, vies: oficial, peso: 3}
+  - {nome: Agência Senado, sub: [senado], url: "https://www12.senado.leg.br/noticias/rss", confiavel: true, max: 6, vies: oficial, peso: 3}
+  - {nome: STF, sub: [stf], url: "https://noticias.stf.jus.br/feed/", confiavel: true, editoria: justica, vies: oficial, peso: 3}
   - {nome: TCU, url: "https://portal.tcu.gov.br/rss/noticias.xml", confiavel: true, editoria: justica, vies: oficial, peso: 3}
   - {nome: Agência Brasil, url: "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml", confiavel: true, vies: oficial, peso: 3}
   - {nome: Agência Brasil, url: "https://agenciabrasil.ebc.com.br/rss/justica/feed.xml", confiavel: true, editoria: justica, vies: oficial, peso: 3}
@@ -28,7 +28,7 @@ feeds:
   - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/CIDADES", editoria: estados, vies: oficial, peso: 2, confiavel: true}
   - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/COMUNICACAO", editoria: regulacao, vies: oficial, peso: 2, confiavel: true}
   - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/MEIO-AMBIENTE", editoria: regulacao, vies: oficial, peso: 2, confiavel: true}
-  - {nome: Câmara Municipal de São Paulo, url: "https://www.saopaulo.sp.leg.br/feed/", editoria: estados, vies: oficial, peso: 2, confiavel: true}
+  - {nome: Câmara Municipal de São Paulo, sub: [capitais], url: "https://www.saopaulo.sp.leg.br/feed/", editoria: estados, vies: oficial, peso: 2, confiavel: true}
   - {nome: g1 Política, url: "https://g1.globo.com/rss/g1/politica/", vies: mainstream, peso: 2, max: 2}
   - {nome: g1 Mundo, url: "https://g1.globo.com/rss/g1/mundo/", editoria: internacional, vies: mainstream, peso: 1, max: 2}
   - {nome: Folha de S.Paulo, url: "https://feeds.folha.uol.com.br/poder/rss091.xml", vies: mainstream, peso: 2, max: 2}
@@ -63,7 +63,7 @@ palavras_editoria:
   economia: [imposto, tributár, reforma tributária, fiscal, arrecadação, banco central, juros, inflação, pib, receita federal]
   estados: [governador, prefeit, assembleia legislativa, município, estado de, câmara municipal]
   regulacao: [saúde, sus, energia, anvisa, ans, aneel, educação, segurança pública, meio ambiente, agro, tecnologia, inteligência artificial, infraestrutura]
-  internacional: [itamaraty, diplomac, embaixad, onu, mercosul, acordo internacional, relações exteriores, chanceler]
+  internacional: [itamaraty, diplomac*, embaixad*, onu, mercosul, acordo internacional, relações exteriores, chanceler]
 palavras_relevancia: [política, poder, governo, lei, norma]
 nota_minima: 3
 # Restrições eleitorais (até o fim do 2º turno e por política editorial): sem pesquisas de intenção de voto.
@@ -90,3 +90,52 @@ licencas_imagem:
 # Fontes não oficiais (mainstream, esquerda, direita, regional) no período eleitoral: bloqueio adicional por termos de campanha,
 # para não publicar cobertura de campanha de veículos com linha editorial (equilíbrio). Remover depois de 26/10/2026.
 restricao_nao_oficial: {ate: "2026-10-26", bloqueia: [flávio, lula diz, lula promete, lula anuncia, candidat, campanha, empate técnico, segundo turno, 2º turno, debate, apoia lula, apoio a, pesquisa, eleitor, voto, comitê, palanque, tarcísio, nikolas, bolsonarist, petista, eleger, reeleição, eleição, extrema direita, extrema-direita, censura, partidariz]}
+
+# Fase 1 (subcategorias): regras de classificação por palavra-chave. Chave <editoria>/<subcategoria>; casa no título+resumo,
+# sem acento, palavra inteira (termine com * para prefixo). Feeds também podem levar `sub: [slug]` para entrar direto. Página: data/subcategorias.yaml.
+palavras_subcategoria:
+  congresso/camara: [câmara dos deputados, deputado, deputada, hugo motta, plenário da câmara, motta]
+  congresso/senado: [senado, senador, senadora, alcolumbre, plenário do senado]
+  congresso/comissoes-e-cpis: [comissão, cpi, cpmi, ccj, relator, audiência pública, colegiado]
+  congresso/votacoes: [aprova, aprovou, rejeita, votação, vota, votar, destaque, turno, placar]
+  congresso/projetos-em-tramitacao: [projeto de lei, pec, proposta, medida provisória, tramitação, urgência, relatório, substitutivo]
+  congresso/frentes-parlamentares: [frente parlamentar, bancada ruralista, bancada evangélica, bancada da bala, bancada feminina, frente mista]
+  governo/presidencia: [presidente lula, planalto, presidência da república, vice-presidente, alckmin, lula]
+  governo/ministerios: [ministro, ministra, ministério, esplanada, pasta]
+  governo/agencias-reguladoras: [anatel, aneel, anvisa, ans, anac, antt, antaq, anp, ana, ancine, anm, agência reguladora]
+  governo/programas-sociais: [bolsa família, pé-de-meia, minha casa, farmácia popular, auxílio, benefício, cadúnico, gás do povo, bpc]
+  governo/diario-oficial: [diário oficial, dou, decreto, portaria, publicado no, nomeação, exoneração, medida provisória publicada]
+  governo/estatais: [petrobras, correios, caixa econômica, banco do brasil, bndes, eletronuclear, estatal, estatais, embrapa, serpro, conab]
+  justica/stf: [stf, supremo, ministro do stf, fachin, moraes, gilmar, dino, zanin, mendonça, nunes marques, fux, cármen, barroso, toffoli]
+  justica/stj: [stj, superior tribunal de justiça, recurso especial]
+  justica/tse: [tse, justiça eleitoral, tribunal superior eleitoral, tre-*]
+  justica/ministerio-publico: [pgr, procurador-geral, ministério público, mpf, gonet, denúncia, procuradoria]
+  justica/pf-e-operacoes: [polícia federal, pf, operação, mandados, busca e apreensão, inquérito, indiciad*]
+  justica/julgamentos-da-semana: [julgamento, julga, pauta do plenário, sessão de julgamento, maioria para, votos para, placar no stf, plenário virtual]
+  eleicoes/calendario: [calendário eleitoral, prazo, data da eleição, segundo turno será, diplomação, posse]
+  eleicoes/partidos-e-federacoes: [partido, federação, filiação, fusão, incorporação, cláusula de desempenho, diretório]
+  eleicoes/regras-e-ficha-limpa: [ficha limpa, inelegível, inelegibilidade, resolução do tse, regra eleitoral, lei eleitoral, propaganda irregular]
+  eleicoes/financiamento: [fundo eleitoral, fundo partidário, doação, prestação de contas, gastos de campanha, limite de gastos]
+  eleicoes/resultados: [eleito, eleita, eleitos, apuração, totalização, resultado oficial, diplomado]
+  economia/reforma-tributaria: [reforma tributária, ibs, cbs, imposto seletivo, split payment, comitê gestor, iva]
+  economia/orcamento: [orçamento, loa, ldo, ppa, lei orçamentária, contingenciamento, bloqueio de, crédito suplementar]
+  economia/arcabouco-fiscal: [arcabouço, meta fiscal, resultado primário, déficit, superávit, regra fiscal, limite de gastos]
+  economia/emendas: [emenda parlamentar, emendas parlamentares, emendas pix, emenda de bancada, emenda de comissão, transferência especial]
+  economia/impostos: [imposto de renda, isenção, receita federal, tributo, alíquota, irpf, iof, icms, arrecadação]
+  economia/banco-central: [banco central, copom, selic, juros, inflação, galípolo, ipca, câmbio]
+  estados/governadores: [governador, governadora, governo do estado, governo de]
+  estados/assembleias: [assembleia legislativa, deputado estadual, deputada estadual, alesp, alerj, almg, câmara legislativa]
+  estados/capitais: [prefeitura de, prefeito, prefeita, câmara municipal, vereador, vereadora]
+  estados/repasses: [repasse, fpm, fpe, fundo de participação, transferência, convênio, emendas pix]
+  regulacao/energia: [energia, aneel, petróleo, combustível, gasolina, diesel, eletricidade, tarifa de luz, petrobras, hidrelétrica, solar, eólica]
+  regulacao/telecom: [anatel, telecom, telefonia, internet, 5g, ligações indesejadas, radiodifusão, telemarketing]
+  regulacao/saude: [saúde, sus, anvisa, ans, ministério da saúde, vacina, hospital, medicamento, plano de saúde]
+  regulacao/educacao: [educação, mec, escola, universidade, enem, professor, fundeb, ensino]
+  regulacao/agro: [agro, agropecuária, agricultura, safra, plano safra, embrapa, carne, soja, ministério da agricultura, agrário]
+  regulacao/meio-ambiente: [meio ambiente, desmatamento, ibama, clima, cop, licenciamento, amazônia, queimada, el niño]
+  regulacao/seguranca-publica: [segurança pública, polícia, crime organizado, facção, presídio, pec da segurança, violência, armas]
+  regulacao/tecnologia: [inteligência artificial, tecnologia, plataformas digitais, big techs, dados pessoais, lgpd, fake news, redes sociais, cibernética]
+  internacional/diplomacia: [itamaraty, chanceler, embaixad*, diplomac*, mauro vieira, relações exteriores, visita oficial, cúpula]
+  internacional/mercosul-e-brics: [mercosul, brics, novo banco de desenvolvimento, argentina, paraguai, uruguai]
+  internacional/acordos-comerciais: [acordo comercial, tarifa, exportação, importação, omc, união europeia, tarifaço, livre comércio]
+  internacional/eleicoes-no-mundo: [eleições nos, eleição presidencial na, eleições na, eleições em, primeiro-ministro, parlamento europeu, eleito presidente d*]

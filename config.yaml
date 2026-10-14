@@ -11,7 +11,7 @@ noindex_global: true
 aviso_topo: "Versão de prévia: em revisão, não indexada."
 publisher_logo: /static/logo.png
 tema: {cor: "#8A4B08", cor2: "#6E3B05", escuro: "#1B2430"}
-modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, cotas, emendas, executivo, presidencia, dados_abertos]
+modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, cotas, emendas, executivo, presidencia, dados_abertos, subcategorias]
 qualidade:
   min_faqs: 5                 # hubs, institucionais e glossário
   min_palavras_pseo: 300
