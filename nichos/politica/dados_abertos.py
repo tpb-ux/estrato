@@ -43,6 +43,7 @@ def build(S):
     for slug, nome, desc, n in getattr(S, "exec_sets", []):
         sets.append((slug, nome, desc, n, "Portal da Transparência (CGU), downloads de viagens a serviço e do Cartão de Pagamento do Governo Federal", "https://portaldatransparencia.gov.br/download-de-dados",
                      "Viagens de autoridades com função CNE-0001 e do vice-presidente desde 2023; CPGF somado por órgão superior e ano, sem portadores. Metodologia em /executivo/metodologia/.", S.exec_meta))
+    sets += getattr(S, "extra_sets", [])  # (slug, nome, desc, n, fonte, url_fonte, método, data) de outros módulos
     blocos, graph = "", []
     for slug, nome, desc, n, fonte, furl, metodo, mod in sets:
         blocos += (f'<section class="blk" id="{'votacoes' if slug == 'votacoes' else ('cota' if slug == 'cota-camara' else ('emendas' if slug == 'emendas-autores' else slug))}"><h2>{E(nome)}</h2><p>{E(desc)}</p>' + S.table(["Item", "Detalhe"], [

@@ -116,4 +116,7 @@ def build(S):
     S.write("/perguntas/", S.page(f"Perguntas e respostas | {S.CFG['site_name']}", "Respostas curtas sobre Congresso, partidos, estados e emendas, calculadas com dados oficiais e atualizadas a cada coleta.", "/perguntas/", hub, faqs=hf, crumbs=[("Perguntas", "/perguntas/")],
             jsonld={"@type": "CollectionPage", "name": "Perguntas e respostas", "url": S.BASE + "/perguntas/", "mainEntity": S.itemlist([(x["q"], x["url"]) for x in Q])}), lastmod=cd)
     S.perguntas = Q
+    from .dados_abertos import _csv
+    n = _csv(S.OUT / "dados/perguntas.csv", ["pergunta", "resposta", "url", "grupo"], [[x["q"], x["resp"], S.BASE + x["url"], x["grupo"]] for x in Q])
+    S.extra_sets = getattr(S, "extra_sets", []) + [("perguntas", "Perguntas e respostas", "Perguntas com resposta direta calculada dos dados oficiais.", n, "Câmara, Senado e Portal da Transparência", "https://dadosabertos.camara.leg.br/", "Respostas geradas por código a partir dos dados oficiais coletados; sem digitação manual.", cd)]
     return {"urls": urls}

@@ -41,6 +41,7 @@ editorias:
   - {slug: internacional, nome: Internacional, descricao: "Diplomacia, acordos e a atuação do Brasil no exterior.", sub: [Diplomacia, Brasil no mundo]}
 # mapas e rankings por estado (nichos/politica/mapas.py): desligados até o fim do período eleitoral; ligar com ativo: true depois de liberar_em
 mapas: {ativo: false, liberar_em: 2026-10-27}
+llms_areas: [/perguntas/, /explica/, /agenda/, /linha-do-tempo/, /quem-e-quem/, /calendario/, /checagem/metodologia/]
 menu:
   barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Votações, /votacoes/], [Cota, /cota/], [Emendas, /emendas/], [Executivo, /executivo/], [Glossário, /glossario/]]
   rotulo_dropdown: Dados

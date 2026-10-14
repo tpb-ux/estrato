@@ -103,6 +103,8 @@ def llms(S):
     for u in sorted(hubs): out.append(f"- [{S.urls[u]['title']}]({S.BASE}{u}): {S.urls[u]['desc']}")
     csvs = sorted((S.OUT / "dados").glob("*.csv")) if (S.OUT / "dados").exists() else []
     if csvs: out += ["", "## Dados abertos (CSV)", ""] + [f"- {S.BASE}/dados/{f.name}" for f in csvs]
+    areas = [u for u in S.CFG.get("llms_areas", []) if u in S.urls and S.urls[u]["idx"]]
+    if areas: out += ["", "## Áreas de referência", ""] + [f"- [{S.urls[u]['title']}]({S.BASE}{u}): {S.urls[u]['desc']}" for u in areas]
     subs = sorted(u for u, m in S.urls.items() if m["idx"] and m["familia"] == "subcategorias")
     if subs: out += ["", "## Subcategorias e estados", ""] + [f"- [{S.urls[u]['title']}]({S.BASE}{u})" for u in subs]
     out += ["", "## Confiança", ""] + [f"- [{S.urls[u]['title']}]({S.BASE}{u})" for u in ("/sobre/", "/expediente/", "/politica-editorial/", "/metodologia/", "/correcoes/", "/dados/") if u in S.urls]

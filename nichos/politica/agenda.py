@@ -58,6 +58,10 @@ def build(S):
                 ("Os horários são de Brasília?", "Sim, como publicados pelas fontes."), ("Como saber se a sessão foi realizada?", "Pela coluna Situação, atualizada a cada coleta."),
                 ("Onde fica a agenda de hoje?", 'Na <a href="/agenda/">página principal da agenda</a>.')]
         S.write(u, S.page(f"Agenda da semana {sw[-2:]}/{sw[:4]} | {S.CFG['site_name']}", f"{num(n)} compromissos de Câmara, Senado e Planalto de {data_br(ds[0])} a {data_br(ds[-1])}.", u, b, faqs=faqs, crumbs=[("Agenda", "/agenda/"), (f"Semana {sw[-2:]}/{sw[:4]}", u)]), familia="agenda", lastmod=col); urls.append(u)
+    from .dados_abertos import _csv
+    n = _csv(S.OUT / "dados/agenda-tres-poderes.csv", ["data", "hora", "poder", "casa_ou_cargo", "orgao", "tipo", "titulo", "situacao", "local", "url"],
+             [[d, e["hora"], e["poder"], e["casa"], e["orgao"], e["tipo"], e["titulo"], e.get("situacao", ""), e["local"], e["url"] if e["url"].startswith("http") else S.BASE + e["url"]] for d in dias for e in por[d]])
+    S.extra_sets = getattr(S, "extra_sets", []) + [("agenda-tres-poderes", "Agenda dos Três Poderes", "Sessões, reuniões de comissões e agenda oficial do presidente e do vice, por dia.", n, "APIs da Câmara e do Senado e agenda do Planalto", "https://dadosabertos.camara.leg.br/", "Eventos das APIs oficiais e agenda publicada pelo Planalto, sem participantes.", col)]
     prox = [d for d in dias if d >= hoje.isoformat()][:7]; rec = [d for d in dias if d < hoje.isoformat()][-7:][::-1]
     b = f'<section class="blk"><h1>Agenda dos Três Poderes</h1><p class="lead">Sessões do plenário, reuniões de comissões da Câmara e do Senado e a agenda oficial do presidente e do vice-presidente, por dia e por semana, a partir das fontes oficiais.</p>'
     b += "<h2>Próximos dias</h2>" + ("".join(f'<h3><a href="/agenda/{d}/">{E(ddesc(d)).capitalize()}</a></h3>{tab(S, por[d][:15])}' for d in prox) or "<p>Sem compromissos publicados para os próximos dias.</p>")
