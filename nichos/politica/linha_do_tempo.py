@@ -11,7 +11,7 @@ def build(S):
         u = f"/linha-do-tempo/{x['slug']}/"
         vv = [v for v in vs if v["titulo"] in x["props"]]
         ev = [(v["data"], "v", v) for v in vv] + [(str(d), "m", t) for d, t in x.get("marcos") or []]
-        ev.sort(key=lambda e: (e[0], e[1] == "m"))
+        ev.sort(key=lambda e: (e[0], e[1] == "m", e[2].get("hora", "") if e[1] == "v" else ""))
         anos = collections.Counter(e[0][:4] for e in ev)
         li = ""
         for d, k, o in ev:
