@@ -11,7 +11,7 @@ noindex_global: true
 aviso_topo: "Versão de prévia: em revisão, não indexada."
 publisher_logo: /static/logo.png
 tema: {cor: "#8A4B08", cor2: "#6E3B05", escuro: "#1B2430"}
-modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, cotas, emendas, executivo, presidencia, perguntas, explica, agenda, linha_do_tempo, quem_e_quem, calendario, checagem, dados_abertos, subcategorias]
+modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, cotas, emendas, executivo, presidencia, perguntas, explica, agenda, linha_do_tempo, quem_e_quem, calendario, checagem, mapas, dados_abertos, subcategorias]
 qualidade:
   min_faqs: 5                 # hubs, institucionais e glossário
   min_palavras_pseo: 300
@@ -39,6 +39,8 @@ editorias:
   - {slug: estados, nome: Estados e Municípios, curto: Estados, descricao: "Governos estaduais, assembleias, prefeituras e a relação federativa.", sub: [Governadores, Assembleias, Prefeituras, Pacto federativo]}
   - {slug: regulacao, nome: Regulação e Setores, curto: Regulação, descricao: "Saúde, energia, infraestrutura, agro, tecnologia, educação, segurança pública e meio ambiente na agenda pública.", sub: [Saúde, Energia, Infraestrutura, Agro, Tecnologia e IA, Educação, Segurança pública, Meio ambiente]}
   - {slug: internacional, nome: Internacional, descricao: "Diplomacia, acordos e a atuação do Brasil no exterior.", sub: [Diplomacia, Brasil no mundo]}
+# mapas e rankings por estado (nichos/politica/mapas.py): desligados até o fim do período eleitoral; ligar com ativo: true depois de liberar_em
+mapas: {ativo: false, liberar_em: 2026-10-27}
 menu:
   barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Votações, /votacoes/], [Cota, /cota/], [Emendas, /emendas/], [Executivo, /executivo/], [Glossário, /glossario/]]
   rotulo_dropdown: Dados
