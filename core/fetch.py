@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """[portal-core] Coleta notícias de feeds RSS (sem IA) e gera content/*.md com resumo curto e link para a fonte.
 Uso (na raiz do portal): python -m core.fetch [--max N] [--dry-run]"""
-import argparse, datetime as dt, html, re, socket, time, unicodedata, urllib.request
+import collections, argparse, datetime as dt, html, re, socket, time, unicodedata, urllib.request
 from pathlib import Path
 import io
 import feedparser, yaml
@@ -214,6 +214,26 @@ def migrar_cards(cfg=None):
     if IMG.exists(): reg.write_text("\n".join(sorted(feitos)) + "\n")
     return n
 
+def tok(t): return {w for w in norm(t).split() if len(w) > 3}
+def quase_igual(t, recentes, corte=0.5):
+    """Mesmo fato em outra fonte: Jaccard das palavras do título (>3 letras) acima do corte."""
+    a = tok(t)
+    return bool(a) and any((len(a & b) / len(a | b) >= corte and len(a & b) >= 3) or len(a & b) >= 5 for b in recentes if b)
+
+def hoje_por(cfg):
+    """Itens já publicados hoje (BRT) por fonte e por viés, para os limites diários de equilíbrio."""
+    vies = {fd["nome"]: fd.get("vies", "") for fd in cfg["feeds"]}; hoje = dt.datetime.now(BRT).date()
+    pf, pv, rec = collections.Counter(), collections.Counter(), []
+    lim = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=cfg.get("dedup_dias", 3))
+    for f in CONTENT.glob("*.md"):
+        fm = yaml.safe_load(f.read_text(encoding="utf-8").split("---", 2)[1]) or {}
+        d = fm.get("data"); d = d if isinstance(d, dt.datetime) else dt.datetime.fromisoformat(str(d)) if d else None
+        if not d: continue
+        if d.tzinfo is None: d = d.replace(tzinfo=BRT)
+        if d >= lim: rec.append(tok(fm.get("titulo", "")))
+        if d.astimezone(BRT).date() == hoje: pf[fm.get("fonte", "")] += 1; pv[vies.get(fm.get("fonte", ""), "")] += 1
+    return pf, pv, rec
+
 def existing():
     links, titles = set(), set()
     if REMOVED.exists(): links |= {l.strip() for l in REMOVED.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")}
@@ -237,7 +257,8 @@ def main():
     limit = a.max or cfg.get("max_por_execucao", 12); per = cfg.get("max_por_feed", 3)
     cutoff = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=cfg.get("max_idade_dias", 3))
     CONTENT.mkdir(exist_ok=True); links, titles = existing(); new = 0; erros = []; feeds_st = []
-    for fd in cfg["feeds"]:
+    pf, pv, recentes = hoje_por(cfg); lim_f = cfg.get("max_por_fonte_dia", 4); lim_v = cfg.get("max_por_vies_dia") or {}
+    for fd in sorted(cfg["feeds"], key=lambda f: -f.get("peso", 1)):  # maior peso primeiro: em fato repetido, fica a fonte de maior peso
         st_ = {"nome": fd["nome"], "url": fd["url"], "status": "ok", "itens": 0, "itens_com_imagem_no_feed": 0, "novas": 0, "descartadas_sem_foto": 0}; feeds_st.append(st_)
         try:
             raw = urllib.request.urlopen(urllib.request.Request(fd["url"], headers={"User-Agent": UA}), timeout=20).read()
@@ -250,6 +271,8 @@ def main():
         got = 0
         for e in d.entries:
             if got >= fd.get("max", per) or new >= limit: break
+            vz = fd.get("vies", "")
+            if pf[fd["nome"]] >= fd.get("max_dia", lim_f) or (vz in lim_v and pv[vz] >= lim_v[vz]): break  # equilíbrio: limite por fonte e por viés no dia
             link, title = e.get("link", "").strip(), clean(e.get("title", ""))
             src_name = fd["nome"]; gn = "news.google.com" in fd["url"]
             if gn:
@@ -259,6 +282,7 @@ def main():
                     title = re.sub(r"\s+-\s+" + re.escape(st) + r"\s*$", "", title)
             if len(title) < 25 or title.endswith("|"): continue
             if not link or not title or link in links or norm(title) in titles: continue
+            if quase_igual(title, recentes, cfg.get("dedup_corte", 0.5)): print(f"  = mesmo fato já publicado: {title[:70]} ({src_name})"); continue
             tp = e.get("published_parsed") or e.get("updated_parsed")
             when = dt.datetime(*tp[:6], tzinfo=dt.timezone.utc) if tp else dt.datetime.now(dt.timezone.utc)
             if when < cutoff: continue
@@ -271,19 +295,24 @@ def main():
             ed = fd.get("editoria") or classify(title + " " + summ)
             why = restrito(cfg, ed, title, summ) or restrito(cfg, "*", title, summ)
             if why: print(f"  x {title[:70]} ({src_name}): {why}"); continue
+            rn = cfg.get("restricao_nao_oficial") or {}
+            if fd.get("vies") != "oficial" and rn and dt.date.today().isoformat() <= rn.get("ate", ""):
+                tl = norm(title + " " + summ); hit = next((w for w in rn.get("bloqueia", []) if norm(w) in tl), None)
+                if hit: print(f"  x {title[:70]} ({src_name}): período eleitoral, fonte não oficial ({hit})"); continue
             when = when.astimezone(BRT).replace(microsecond=0)
             fn = CONTENT / f"{when:%Y-%m-%d}-{slugify(title)}.md"
             if fn.exists(): continue
             info = None if a.dry_run else imagem_materia(cfg, e, link, title, ed, src_name, when, fn.stem)  # licença+crédito confirmados -> foto; senão card próprio
             if not info and not a.dry_run:  # só notícias com foto própria da fonte
                 print(f"  - sem foto: {title[:60]}"); st_["descartadas_sem_foto"] += 1; continue
+            if a.dry_run: print(f"+ [{ed}] {title[:80]} ({src_name})"); links.add(link); titles.add(norm(title)); recentes.append(tok(title)); pf[fd["nome"]] += 1; pv[fd.get("vies", "")] += 1; got += 1; new += 1; continue
             body = (f"---\ntitulo: {q(title)}\ndata: {when.isoformat()}\neditoria: {ed}\nresumo: {q(resumo)}\n"
                     f"{img_fm(info, src_name)}\nfonte: {q(src_name)}\nlink: {q(link)}\ngerado_por: fetch.py\n---\n"
                     f"{resumo}\n\n**[Leia na íntegra em {src_name} →]({link})**\n\n"
                     f"<small>{_F.get("aviso_resumo", "Resumo automático a partir do feed público de {f}. Os direitos do conteúdo original pertencem à fonte.").format(f=src_name)}</small>\n")
             print(f"+ [{ed}] {title[:80]} ({src_name})")
             if not a.dry_run: fn.write_text(body, encoding="utf-8")
-            links.add(link); titles.add(norm(title)); got += 1; new += 1; st_["novas"] += 1
+            links.add(link); titles.add(norm(title)); recentes.append(tok(title)); pf[fd["nome"]] += 1; pv[fd.get("vies", "")] += 1; got += 1; new += 1; st_["novas"] += 1
     print(f"{new} matéria(s) nova(s).")
     if not a.dry_run:
         import json, os

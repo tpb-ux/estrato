@@ -1,17 +1,60 @@
-# Só fontes oficiais ou de licença aberta (decisão de 12/10/2026). Testadas do box em 12/10/2026; retestar da VPS antes do lançamento.
+# 12/10/2026: só fontes oficiais. 14/10/2026: Tercio mandou acrescentar 35 feeds (oficiais, mainstream, esquerda, direita e regionais), testados do box. Testadas do box em 12/10/2026; retestar da VPS antes do lançamento.
 # Fora: Planalto (og:image é o logo genérico), TSE e STJ (403), CNJ (feed sem itens), portais privados (direitos reservados).
-max_por_execucao: 20
-max_por_feed: 4
+max_por_execucao: 40
+max_por_feed: 3
+# Equilíbrio (14/10/2026): limite por fonte e por viés no dia; deduplicação entre fontes pelo título (Jaccard >= dedup_corte em dedup_dias).
+# Viés declarado: oficial, mainstream, esquerda, direita, regional. Esquerda e direita têm o mesmo teto diário.
+max_por_fonte_dia: 4
+max_por_vies_dia: {esquerda: 6, direita: 6, mainstream: 14, regional: 6}
+dedup_dias: 3
+dedup_corte: 0.3   # e pelo menos 3 palavras em comum (ou 5+ palavras em comum)
 max_idade_dias: 3
 editoria_padrao: congresso
 aviso_resumo: "Resumo automático a partir do feed público de {f}, com crédito e link para o original."
 feeds:
-  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/ultimas-noticias", confiavel: true, max: 6}
-  - {nome: Agência Senado, url: "https://www12.senado.leg.br/noticias/rss", confiavel: true, max: 6}
-  - {nome: STF, url: "https://noticias.stf.jus.br/feed/", confiavel: true, editoria: justica}
-  - {nome: TCU, url: "https://portal.tcu.gov.br/rss/noticias.xml", confiavel: true, editoria: justica}
-  - {nome: Agência Brasil, url: "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml", confiavel: true}
-  - {nome: Agência Brasil, url: "https://agenciabrasil.ebc.com.br/rss/justica/feed.xml", confiavel: true, editoria: justica}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/ultimas-noticias", confiavel: true, max: 6, vies: oficial, peso: 3}
+  - {nome: Agência Senado, url: "https://www12.senado.leg.br/noticias/rss", confiavel: true, max: 6, vies: oficial, peso: 3}
+  - {nome: STF, url: "https://noticias.stf.jus.br/feed/", confiavel: true, editoria: justica, vies: oficial, peso: 3}
+  - {nome: TCU, url: "https://portal.tcu.gov.br/rss/noticias.xml", confiavel: true, editoria: justica, vies: oficial, peso: 3}
+  - {nome: Agência Brasil, url: "https://agenciabrasil.ebc.com.br/rss/politica/feed.xml", confiavel: true, vies: oficial, peso: 3}
+  - {nome: Agência Brasil, url: "https://agenciabrasil.ebc.com.br/rss/justica/feed.xml", confiavel: true, editoria: justica, vies: oficial, peso: 3}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/ELEICOES", editoria: eleicoes, vies: oficial, peso: 3, confiavel: true}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/POLITICA", editoria: congresso, vies: oficial, peso: 3, confiavel: true}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/ADMINISTRACAO-PUBLICA", editoria: governo, vies: oficial, peso: 3, confiavel: true}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/DIREITO-E-JUSTICA", editoria: justica, vies: oficial, peso: 3, confiavel: true}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/DIREITOS-HUMANOS", editoria: regulacao, vies: oficial, peso: 2, confiavel: true}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/ECONOMIA", editoria: economia, vies: oficial, peso: 3, confiavel: true}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/SEGURANCA", editoria: regulacao, vies: oficial, peso: 2, confiavel: true}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/CIDADES", editoria: estados, vies: oficial, peso: 2, confiavel: true}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/COMUNICACAO", editoria: regulacao, vies: oficial, peso: 2, confiavel: true}
+  - {nome: Agência Câmara, url: "https://www.camara.leg.br/noticias/rss/dinamico/MEIO-AMBIENTE", editoria: regulacao, vies: oficial, peso: 2, confiavel: true}
+  - {nome: Câmara Municipal de São Paulo, url: "https://www.saopaulo.sp.leg.br/feed/", editoria: estados, vies: oficial, peso: 2, confiavel: true}
+  - {nome: g1 Política, url: "https://g1.globo.com/rss/g1/politica/", vies: mainstream, peso: 2, max: 2}
+  - {nome: g1 Mundo, url: "https://g1.globo.com/rss/g1/mundo/", editoria: internacional, vies: mainstream, peso: 1, max: 2}
+  - {nome: Folha de S.Paulo, url: "https://feeds.folha.uol.com.br/poder/rss091.xml", vies: mainstream, peso: 2, max: 2}
+  - {nome: Folha Mundo, url: "https://feeds.folha.uol.com.br/mundo/rss091.xml", editoria: internacional, vies: mainstream, peso: 1, max: 2}
+  - {nome: Poder360, url: "https://www.poder360.com.br/feed/", vies: mainstream, peso: 2, max: 2}
+  - {nome: CNN Brasil, url: "https://admin.cnnbrasil.com.br/feed/", vies: mainstream, peso: 1, max: 2}
+  - {nome: Congresso em Foco, url: "https://www.congressoemfoco.com.br/feed/", editoria: congresso, vies: mainstream, peso: 2, max: 2}
+  - {nome: JOTA, url: "https://www.jota.info/feed/", editoria: justica, vies: mainstream, peso: 2, max: 2}
+  - {nome: Conjur, url: "https://www.conjur.com.br/feed/", editoria: justica, vies: mainstream, peso: 2, max: 2}
+  - {nome: Veja, url: "https://veja.abril.com.br/politica/feed/", vies: mainstream, peso: 1, max: 2}
+  - {nome: Correio Braziliense, url: "https://www.correiobraziliense.com.br/rss/noticia/politica/rss.xml", vies: mainstream, peso: 1, max: 2}
+  - {nome: RFI Brasil, url: "https://www.rfi.fr/br/rss", editoria: internacional, vies: mainstream, peso: 1, max: 2}
+  - {nome: CartaCapital, url: "https://www.cartacapital.com.br/politica/feed/", vies: esquerda, peso: 1, max: 2}
+  - {nome: Brasil de Fato, url: "https://www.brasildefato.com.br/feed/", vies: esquerda, peso: 1, max: 2}
+  - {nome: Brasil 247, url: "https://www.brasil247.com/feed/", vies: esquerda, peso: 1, max: 2}
+  - {nome: Jornal GGN, url: "https://jornalggn.com.br/categoria/politica/feed/", vies: esquerda, peso: 1, max: 2}
+  - {nome: Pragmatismo Político, url: "https://www.pragmatismopolitico.com.br/feed", vies: esquerda, peso: 1, max: 2}
+  - {nome: Agência Pública, url: "https://apublica.org/feed/", vies: esquerda, peso: 1, max: 2}
+  - {nome: O Antagonista, url: "https://oantagonista.com.br/brasil/feed/", vies: direita, peso: 1, max: 2}
+  - {nome: Gazeta do Povo, url: "https://www.gazetadopovo.com.br/feed/rss/republica.xml", vies: direita, peso: 1, max: 2}
+  - {nome: Sul21, url: "https://sul21.com.br/feed/", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: Bahia Notícias, url: "https://www.bahianoticias.com.br/rss.xml", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: Varela Notícias, url: "https://varelanet.com.br/politica/rss.xml", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: Foco PE, url: "https://focope.com.br/feed/", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: Blog do Jamildo, url: "https://jamildo.com/feed/", editoria: estados, vies: regional, peso: 1, max: 2}
+# Fora (14/10/2026): Agência Brasil Internacional (sem foto própria), Senado /noticias/RSS (duplica /noticias/rss), Viomundo (403 no box: testar na VPS).
 palavras_editoria:
   congresso: [câmara, senado, deputad, senador, plenário, comissão, cpi, cpmi, proposta, projeto de lei, pec, votação, relator, congresso]
   governo: [ministr, presidente da república, planalto, governo federal, decreto, orçamento, emenda parlamentar, servidor, lula, esplanada]
@@ -44,3 +87,6 @@ licencas_imagem:
     padrao: '([A-ZÀ-Ý][A-Za-zÀ-ÿ.'' ]{2,60}?)\s*/\s*Agência Senado'
     credito: "{autor}/Agência Senado"
     url: "https://www12.senado.leg.br/noticias/politica-de-uso"  # "reprodução de matérias e fotografias é livre ... citação da Agência Senado e do autor"
+# Fontes não oficiais (mainstream, esquerda, direita, regional) no período eleitoral: bloqueio adicional por termos de campanha,
+# para não publicar cobertura de campanha de veículos com linha editorial (equilíbrio). Remover depois de 26/10/2026.
+restricao_nao_oficial: {ate: "2026-10-26", bloqueia: [flávio, lula diz, lula promete, lula anuncia, candidat, campanha, empate técnico, segundo turno, 2º turno, debate, apoia lula, apoio a, pesquisa, eleitor, voto, comitê, palanque, tarcísio, nikolas, bolsonarist, petista, eleger, reeleição, eleição, extrema direita, extrema-direita, censura, partidariz]}
