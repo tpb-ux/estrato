@@ -129,3 +129,4 @@ nav.ed a,nav.ed .dd{flex:0 0 auto}nav.ed a.xtra{display:none}
 .edw:hover .sm,.edw:focus-within .sm{display:grid}.edw .sm a{text-transform:none;font-size:.88rem;font-weight:600;padding:7px 10px;white-space:nowrap}.edw .sm a:hover{background:var(--g)}
 @media(max-width:860px){.edw{display:contents}.edw .sm,.edw:hover .sm,.edw:focus-within .sm{display:none}}
 .cols{columns:3 200px;padding-left:18px}.cols li{break-inside:avoid;padding:2px 0}
+.diag{margin:16px 0}

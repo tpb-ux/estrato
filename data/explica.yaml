@@ -1,0 +1,206 @@
+# /explica/<slug>/: "Como funciona". base: só dispositivos conferidos no texto oficial (planalto.gov.br). votacoes: siglas de proposições para listar votações nominais ligadas.
+- slug: como-nasce-uma-lei
+  titulo: Como nasce uma lei federal
+  intro: "Uma lei ordinária federal começa com a apresentação de um projeto, passa por comissões e pelo plenário das duas Casas do Congresso e só vale depois da sanção presidencial e da publicação no Diário Oficial da União. O caminho muda conforme a origem do projeto e o regime de tramitação."
+  passos: ["Apresentação do projeto por parlamentar, comissão, presidente da República, STF, tribunais superiores, procurador-geral da República ou cidadãos (iniciativa popular).", "Análise nas comissões temáticas e na Comissão de Constituição e Justiça da Casa onde o projeto começou.", "Votação no plenário, quando o projeto não é aprovado de forma conclusiva nas comissões.", "Envio à outra Casa, que revisa o texto; se houver mudança, ele volta à Casa de origem.", "Envio ao presidente da República, que sanciona ou veta, no todo ou em parte, em até 15 dias úteis.", "Promulgação e publicação no Diário Oficial da União; a lei passa a valer na data nela indicada."]
+  base: ["Constituição Federal, arts. 61, 64, 65 e 66", "Regimento Interno da Câmara dos Deputados", "Regimento Interno do Senado Federal"]
+  glossario: [projeto-de-lei, tramitacao, poder-conclusivo, casa-revisora, sancao, veto]
+- slug: como-funciona-uma-pec
+  titulo: Como funciona uma proposta de emenda à Constituição
+  intro: "A Constituição só pode ser mudada por emenda, com um rito mais duro que o das leis: a proposta precisa de três quintos dos votos em dois turnos em cada Casa e não passa por sanção nem veto do presidente da República."
+  passos: ["Apresentação por, no mínimo, um terço dos deputados ou dos senadores, pelo presidente da República ou por mais da metade das assembleias legislativas.", "Exame de admissibilidade na Comissão de Constituição e Justiça.", "Na Câmara, análise do mérito por uma comissão especial.", "Votação em dois turnos no plenário, com aprovação por três quintos dos membros (308 deputados e 49 senadores).", "Repetição do rito na outra Casa; mudanças de mérito exigem nova votação na Casa de origem.", "Promulgação pelas Mesas da Câmara e do Senado em sessão do Congresso."]
+  base: ["Constituição Federal, art. 60"]
+  glossario: [pec, ccj, comissao-especial, maioria-qualificada, turno-de-votacao]
+  votacoes: [PEC 45/2019, PEC 66/2023]
+- slug: como-funciona-uma-medida-provisoria
+  titulo: Como funciona uma medida provisória
+  intro: "A medida provisória é editada pelo presidente da República em caso de relevância e urgência e tem força de lei desde a publicação. Para continuar valendo, precisa ser aprovada pelo Congresso dentro do prazo constitucional."
+  passos: ["Edição e publicação da MP no Diário Oficial da União, com efeito imediato.", "Análise por uma comissão mista de deputados e senadores.", "Votação no plenário da Câmara e, depois, no do Senado.", "Se o Congresso muda o texto, ele vira projeto de lei de conversão e vai à sanção.", "Sem votação, a MP perde a validade depois de 60 dias prorrogáveis por mais 60.", "Passados 45 dias da publicação, a MP tranca a pauta da Casa em que estiver."]
+  base: ["Constituição Federal, art. 62"]
+  glossario: [medida-provisoria, comissao-mista, trancamento-de-pauta]
+  votacoes: [MPV 1185/2023, MPV 1154/2023]
+- slug: como-funciona-o-veto
+  titulo: Como funciona o veto presidencial
+  intro: "Ao receber um projeto aprovado, o presidente da República pode sancionar ou vetar trechos ou o texto inteiro por inconstitucionalidade ou por contrariar o interesse público. O Congresso decide depois se mantém ou derruba o veto."
+  passos: ["Recebimento do projeto aprovado pelo Congresso.", "Prazo de 15 dias úteis para sancionar ou vetar; o silêncio equivale a sanção.", "Comunicação dos motivos do veto ao presidente do Senado em 48 horas.", "Análise do veto em sessão conjunta do Congresso em até 30 dias.", "Derrubada exige maioria absoluta dos deputados e dos senadores (257 e 41 votos).", "Com o veto derrubado, o trecho é promulgado e passa a valer."]
+  base: ["Constituição Federal, art. 66"]
+  glossario: [veto, sancao, sessao-conjunta, maioria-absoluta]
+- slug: como-funciona-uma-cpi
+  titulo: Como funciona uma CPI
+  intro: "A comissão parlamentar de inquérito investiga fato determinado por prazo certo, com poderes de investigação próprios das autoridades judiciais. Ao final, envia suas conclusões ao Ministério Público e a outros órgãos."
+  passos: ["Coleta de assinaturas de, no mínimo, um terço dos membros da Casa ou do Congresso, no caso de CPI mista.", "Leitura do requerimento e indicação dos membros pelos líderes partidários.", "Eleição do presidente e designação do relator.", "Depoimentos, quebras de sigilo e requisição de documentos aprovadas pelo colegiado.", "Votação do relatório final dentro do prazo.", "Envio das conclusões ao Ministério Público para eventual responsabilização."]
+  base: ["Constituição Federal, art. 58, § 3º", "Lei nº 1.579/1952"]
+  glossario: [cpi, relator, ministerio-publico]
+- slug: como-funciona-o-orcamento
+  titulo: Como funciona o Orçamento da União
+  intro: "O Orçamento federal é feito por três leis de iniciativa do presidente da República e votadas pelo Congresso: o Plano Plurianual, a Lei de Diretrizes Orçamentárias e a Lei Orçamentária Anual. Elas definem prioridades, metas e o gasto de cada ano."
+  passos: ["O Executivo envia o projeto de LDO ao Congresso, com metas e prioridades do ano seguinte.", "A Comissão Mista de Planos, Orçamentos Públicos e Fiscalização analisa e emenda o projeto.", "O Executivo envia o projeto de Lei Orçamentária Anual com a estimativa de receitas e a fixação de despesas.", "Deputados, senadores, bancadas e comissões apresentam emendas.", "O Congresso vota o Orçamento em sessão conjunta e o envia à sanção.", "Durante o ano, o governo executa, bloqueia ou contingencia despesas conforme a arrecadação e as regras fiscais."]
+  base: ["Constituição Federal, arts. 165 e 166", "Lei Complementar nº 101/2000 (Lei de Responsabilidade Fiscal)"]
+  glossario: [ppa, ldo, lei-orcamentaria-anual, comissao-mista-de-orcamento, contingenciamento]
+- slug: como-funcionam-as-emendas-parlamentares
+  titulo: Como funcionam as emendas parlamentares
+  intro: "Emendas parlamentares são a parte do Orçamento indicada por deputados, senadores, bancadas estaduais e comissões. O dinheiro vai para obras, serviços e entidades nos estados e municípios, e parte das emendas tem execução obrigatória."
+  passos: ["O parlamentar ou o colegiado apresenta a emenda ao projeto de Lei Orçamentária Anual.", "A Comissão Mista de Orçamento aprova as emendas no relatório final.", "Com o Orçamento sancionado, o autor indica o beneficiário e o objeto.", "O ministério responsável empenha o valor, reservando o dinheiro.", "O pagamento é feito ao favorecido, diretamente ou por convênio.", "O Portal da Transparência publica empenho e pagamento por autor e por favorecido."]
+  base: ["Constituição Federal, arts. 166 e 166-A", "Lei Complementar nº 210/2024"]
+  glossario: [emenda-parlamentar, emendas-individuais, emendas-de-bancada, emendas-pix, comissao-mista-de-orcamento]
+  votacoes: [PLP 175/2024]
+- slug: como-funciona-o-arcabouco-fiscal
+  titulo: Como funciona o arcabouço fiscal
+  intro: "O arcabouço fiscal é a regra de controle das contas federais criada em 2023. Ele limita o crescimento real da despesa a uma fração do crescimento da receita e fixa metas de resultado primário com margem de tolerância."
+  passos: ["A LDO fixa a meta de resultado primário do ano, com intervalo de tolerância.", "O limite de despesas cresce, acima da inflação, a uma parte do aumento real da receita, com piso e teto de crescimento.", "A cada dois meses, o governo publica relatório de avaliação de receitas e despesas.", "Se a receita fica abaixo do previsto, o governo contingencia despesas.", "Descumprida a meta, o limite de crescimento das despesas do ano seguinte fica menor.", "O Congresso pode alterar a regra por lei complementar."]
+  base: ["Lei Complementar nº 200/2023", "Lei Complementar nº 101/2000"]
+  glossario: [arcabouco-fiscal, meta-fiscal, contingenciamento, lei-de-responsabilidade-fiscal]
+  votacoes: [PLP 93/2023, PLP 210/2024]
+- slug: como-funciona-a-reforma-tributaria
+  titulo: Como funciona a reforma tributária do consumo
+  intro: "A reforma tributária aprovada em 2023 troca cinco tributos sobre o consumo por um modelo de IVA dual: a Contribuição sobre Bens e Serviços, federal, e o Imposto sobre Bens e Serviços, de estados e municípios, com transição gradual."
+  passos: ["A Emenda Constitucional 132 define o novo sistema e os princípios do IVA dual.", "Leis complementares regulamentam alíquotas, regimes específicos e o Imposto Seletivo.", "Um comitê gestor reúne estados e municípios para administrar o IBS.", "Período de testes com alíquotas reduzidas antes da cobrança plena.", "Redução progressiva do ICMS e do ISS ao longo da transição.", "Extinção de PIS, Cofins e IPI na parte substituída pela CBS e pelo Imposto Seletivo."]
+  base: ["Emenda Constitucional nº 132/2023", "Lei Complementar nº 214/2025"]
+  glossario: [pec, projeto-de-lei-complementar]
+  votacoes: [PEC 45/2019, PLP 68/2024, PLP 108/2024]
+- slug: como-o-stf-julga
+  titulo: Como o STF julga uma ação
+  intro: "O Supremo Tribunal Federal decide em sessões presenciais do plenário e das turmas e também no plenário virtual, em que os ministros registram votos por sistema eletrônico durante um período definido."
+  passos: ["A ação chega ao tribunal e é distribuída a um relator.", "O relator pode decidir sozinho em casos urgentes ou previstos no regimento.", "O caso entra na pauta do plenário presencial ou do plenário virtual.", "Os ministros votam; um pedido de vista suspende o julgamento.", "Um pedido de destaque leva o caso do plenário virtual para o presencial.", "O resultado é proclamado e o acórdão é publicado."]
+  base: ["Constituição Federal, arts. 101 e 102", "Regimento Interno do STF"]
+  glossario: [stf, decisao-monocratica, plenario-virtual, pedido-de-vista, acordao]
+- slug: como-funciona-o-controle-de-constitucionalidade
+  titulo: Como funciona o controle de constitucionalidade no STF
+  intro: "Leis e atos normativos podem ser questionados diretamente no STF por meio de ações como a ação direta de inconstitucionalidade e a arguição de descumprimento de preceito fundamental. A decisão vale para todos."
+  passos: ["Um legitimado, como o presidente da República, partido com representação no Congresso ou entidade de classe nacional, propõe a ação.", "O relator pede informações aos órgãos que editaram a norma.", "A Advocacia-Geral da União e a Procuradoria-Geral da República se manifestam.", "O relator pode levar ao plenário pedido de medida cautelar.", "O plenário julga o mérito.", "A decisão tem eficácia contra todos e efeito vinculante."]
+  base: ["Constituição Federal, arts. 102 e 103", "Lei nº 9.868/1999", "Lei nº 9.882/1999"]
+  glossario: [adi, adpf, stf, agu]
+- slug: como-funciona-a-sumula-vinculante
+  titulo: Como funciona a súmula vinculante
+  intro: "A súmula vinculante é um enunciado aprovado pelo STF que obriga os demais órgãos do Judiciário e a administração pública. Serve para encerrar controvérsias repetidas sobre a interpretação da Constituição."
+  passos: ["Reiteradas decisões do STF sobre a mesma matéria constitucional.", "Proposta de edição por ministro ou por legitimado.", "Manifestação do procurador-geral da República.", "Aprovação por dois terços dos ministros do STF.", "Publicação na imprensa oficial.", "Descumprimento pode ser levado ao STF por reclamação."]
+  base: ["Constituição Federal, art. 103-A", "Lei nº 11.417/2006"]
+  glossario: [sumula-vinculante, stf]
+- slug: como-funciona-a-sabatina
+  titulo: Como funciona a sabatina no Senado
+  intro: "Indicações do presidente da República para cargos como ministro do STF, procurador-geral da República, diretores do Banco Central e de agências reguladoras precisam ser aprovadas pelo Senado depois de uma arguição pública."
+  passos: ["Envio da mensagem presidencial com a indicação ao Senado.", "Designação de relator na comissão competente.", "Arguição pública do indicado na comissão.", "Votação secreta na comissão.", "Votação secreta no plenário do Senado.", "Nomeação pelo presidente da República após a aprovação."]
+  base: ["Constituição Federal, art. 52, III"]
+  glossario: [sabatina, stf, procurador-geral-da-republica]
+- slug: como-funciona-o-impeachment
+  titulo: Como funciona o impeachment do presidente
+  intro: "O impeachment é o processo por crime de responsabilidade contra o presidente da República. A Câmara autoriza a abertura e o Senado julga, sob a presidência do presidente do STF."
+  passos: ["Qualquer cidadão pode apresentar denúncia à Câmara dos Deputados.", "O presidente da Câmara decide se a recebe.", "Comissão especial analisa e dá parecer.", "O plenário da Câmara autoriza a abertura por dois terços dos deputados.", "O Senado instaura o processo e o presidente é afastado por até 180 dias.", "Condenação no Senado exige dois terços dos senadores."]
+  base: ["Constituição Federal, arts. 51, 52, 85 e 86", "Lei nº 1.079/1950"]
+  glossario: [presidente-da-republica, comissao-especial, maioria-qualificada]
+- slug: como-funciona-a-eleicao-para-presidente
+  titulo: Como funciona a eleição para presidente
+  intro: "O presidente e o vice são eleitos juntos pelo voto direto. É eleito no primeiro turno quem obtiver a maioria absoluta dos votos válidos; se ninguém chegar a isso, os dois mais votados disputam o segundo turno."
+  passos: ["Os partidos escolhem candidatos em convenções.", "Registro das candidaturas na Justiça Eleitoral.", "Campanha e propaganda nos prazos legais.", "Primeiro turno no primeiro domingo de outubro.", "Segundo turno no último domingo de outubro, se necessário.", "Diplomação pela Justiça Eleitoral e posse em janeiro."]
+  base: ["Constituição Federal, arts. 77 e 82", "Lei nº 9.504/1997"]
+  glossario: [segundo-turno, registro-de-candidatura, diplomacao]
+- slug: como-funciona-a-eleicao-para-deputado
+  titulo: Como funciona a eleição para deputado
+  intro: "Deputados federais, estaduais e distritais são eleitos pelo sistema proporcional: as cadeiras são divididas entre partidos e federações conforme a votação total de cada um, e depois preenchidas pelos candidatos mais votados da lista."
+  passos: ["Soma dos votos válidos de cada partido ou federação, nominais e de legenda.", "Cálculo do quociente eleitoral: votos válidos divididos pelo número de vagas.", "Cálculo do quociente partidário de cada legenda.", "Distribuição das vagas iniciais aos candidatos com votação mínima exigida.", "Distribuição das sobras pela regra das maiores médias.", "Diplomação dos eleitos pela Justiça Eleitoral."]
+  base: ["Constituição Federal, art. 45", "Código Eleitoral (Lei nº 4.737/1965), arts. 106 a 109"]
+  glossario: [sistema-proporcional, quociente-eleitoral, quociente-partidario, sobras-eleitorais]
+- slug: como-funciona-a-ficha-limpa
+  titulo: Como funciona a Lei da Ficha Limpa
+  intro: "A Lei da Ficha Limpa ampliou os casos de inelegibilidade previstos em lei complementar, incluindo condenações por órgão colegiado, mesmo sem trânsito em julgado, por crimes como corrupção e lavagem de dinheiro."
+  passos: ["O candidato pede registro na Justiça Eleitoral.", "Partidos, coligações, candidatos ou o Ministério Público podem impugnar o registro.", "A Justiça Eleitoral verifica as hipóteses de inelegibilidade.", "O juiz eleitoral ou o tribunal decide sobre o registro.", "Cabe recurso aos tribunais regionais e ao TSE.", "Registro negado impede a diplomação."]
+  base: ["Lei Complementar nº 64/1990", "Lei Complementar nº 135/2010"]
+  glossario: [ficha-limpa, inelegibilidade, registro-de-candidatura, tse]
+- slug: como-funciona-o-fundo-eleitoral
+  titulo: Como funciona o fundo eleitoral
+  intro: "O Fundo Especial de Financiamento de Campanha é dinheiro público definido no Orçamento e distribuído aos partidos em anos de eleição, segundo critérios legais ligados ao tamanho das bancadas e ao desempenho eleitoral."
+  passos: ["O valor do fundo é definido na Lei Orçamentária Anual.", "O TSE calcula a cota de cada partido conforme a lei.", "Cada partido aprova critérios internos de distribuição entre candidatos.", "Os recursos são repassados às contas de campanha.", "Candidatos e partidos prestam contas à Justiça Eleitoral.", "Sobras devem ser devolvidas ao Tesouro."]
+  base: ["Lei nº 9.504/1997, arts. 16-C e 16-D"]
+  glossario: [fundo-eleitoral, fundo-partidario, prestacao-de-contas-eleitoral]
+- slug: como-funcionam-as-federacoes-partidarias
+  titulo: Como funcionam as federações partidárias
+  intro: "Federação partidária é a união de dois ou mais partidos que passam a atuar como uma só legenda nas eleições e no Parlamento por, no mínimo, quatro anos, em todo o país."
+  passos: ["Partidos aprovam a federação em suas instâncias.", "Pedido de registro no TSE com estatuto e programa comuns.", "Registro deferido antes do prazo das convenções.", "A federação lança candidaturas como se fosse um só partido.", "No Parlamento, atua como bancada única.", "Quem sai antes de quatro anos sofre sanções, como a perda de acesso ao fundo partidário."]
+  base: ["Lei nº 9.096/1995, art. 11-A", "Lei nº 14.208/2021"]
+  glossario: [federacao-partidaria, fundo-partidario, bancada]
+- slug: como-funciona-a-clausula-de-desempenho
+  titulo: Como funciona a cláusula de desempenho
+  intro: "A cláusula de desempenho condiciona o acesso dos partidos ao fundo partidário e à propaganda gratuita no rádio e na TV a um mínimo de votos ou de deputados federais eleitos, com exigência crescente até 2030."
+  passos: ["Apuração dos votos válidos para a Câmara dos Deputados.", "Verificação do percentual mínimo de votos distribuídos em um terço dos estados.", "Ou verificação do número mínimo de deputados eleitos em um terço dos estados.", "Partidos que cumprem mantêm fundo partidário e tempo de propaganda.", "Os que não cumprem perdem esses recursos até a eleição seguinte.", "Eleitos por partidos que não cumpriram podem mudar de legenda sem perder o mandato."]
+  base: ["Constituição Federal, art. 17, § 3º", "Emenda Constitucional nº 97/2017"]
+  glossario: [clausula-de-desempenho, fundo-partidario]
+- slug: como-funciona-a-urna-eletronica
+  titulo: Como funciona a votação na urna eletrônica
+  intro: "No dia da eleição, o eleitor se identifica na seção, vota na urna eletrônica cargo a cargo e confirma cada voto. Ao final, a urna imprime o boletim de urna e os dados seguem para a totalização na Justiça Eleitoral."
+  passos: ["Identificação do eleitor pelo mesário, com documento e, quando cadastrada, biometria.", "Digitação do número do candidato ou do partido para cada cargo.", "Conferência da foto e do nome e confirmação do voto.", "Encerramento da votação às 17h no horário de Brasília.", "Impressão e afixação do boletim de urna na seção.", "Transmissão dos resultados para a totalização."]
+  base: ["Lei nº 9.504/1997, arts. 59 a 62"]
+  glossario: [urna-eletronica, tse]
+- slug: como-funcionam-as-agencias-reguladoras
+  titulo: Como funcionam as agências reguladoras
+  intro: "As agências reguladoras federais são autarquias especiais que regulam e fiscalizam setores como energia, telecomunicações, saúde suplementar e transportes. Seus diretores têm mandato fixo e passam por sabatina no Senado."
+  passos: ["O presidente da República indica os diretores.", "O Senado sabatina e aprova os nomes.", "A agência abre consulta pública sobre propostas de norma.", "A diretoria colegiada aprova resoluções.", "A agência fiscaliza empresas e aplica sanções.", "O Congresso e o TCU acompanham a atuação."]
+  base: ["Lei nº 13.848/2019"]
+  glossario: [agencia-reguladora, sabatina, tcu]
+- slug: como-funciona-o-copom
+  titulo: Como o Banco Central define a taxa Selic
+  intro: "A taxa básica de juros é definida pelo Comitê de Política Monetária do Banco Central, formado pelo presidente e pelos diretores da instituição, em reuniões regulares ao longo do ano, para levar a inflação à meta."
+  passos: ["O Conselho Monetário Nacional define a meta de inflação.", "O Copom se reúne a cada cerca de 45 dias.", "Os diretores analisam inflação, atividade e expectativas.", "O comitê decide a taxa Selic e divulga comunicado.", "A ata da reunião sai na semana seguinte.", "Se a inflação ficar fora do intervalo de tolerância por seis meses seguidos, o presidente do Banco Central explica os motivos em carta pública."]
+  base: ["Lei Complementar nº 179/2021"]
+  glossario: [banco-central]
+- slug: como-funciona-o-tcu
+  titulo: Como funciona o Tribunal de Contas da União
+  intro: "O TCU é o órgão de controle externo que auxilia o Congresso na fiscalização do dinheiro federal. Ele julga contas de gestores, emite parecer sobre as contas do presidente e pode aplicar multas e determinar correções."
+  passos: ["Auditorias e fiscalizações em órgãos e programas federais.", "Relator conduz o processo e ouve os responsáveis.", "Julgamento pelo plenário ou por uma das câmaras.", "Parecer prévio sobre as contas anuais do presidente da República.", "Julgamento das contas do presidente pelo Congresso.", "Envio de casos ao Ministério Público quando há indício de crime."]
+  base: ["Constituição Federal, arts. 70 a 73", "Lei nº 8.443/1992"]
+  glossario: [tcu]
+- slug: como-funciona-o-fundo-de-participacao
+  titulo: Como funcionam os fundos de participação
+  intro: "Os fundos de participação dos estados e dos municípios repassam parte da arrecadação federal do Imposto de Renda e do IPI a governos estaduais e prefeituras, por critérios definidos em lei complementar."
+  passos: ["A União arrecada o Imposto de Renda e o IPI.", "Uma parcela fixada na Constituição forma o FPE e o FPM.", "O TCU calcula os coeficientes de cada ente.", "O Tesouro Nacional faz os repasses a cada dez dias.", "Estados e municípios usam o dinheiro livremente, respeitados os mínimos de saúde e educação.", "Os valores são publicados pelo Tesouro."]
+  base: ["Constituição Federal, art. 159", "Lei Complementar nº 62/1989"]
+  glossario: [fundos-de-participacao, federalismo, tcu]
+- slug: como-funciona-a-lei-de-acesso-a-informacao
+  titulo: Como pedir informação pública pela LAI
+  intro: "A Lei de Acesso à Informação permite que qualquer pessoa peça dados a órgãos públicos sem precisar explicar o motivo. O órgão tem prazo para responder e a negativa precisa ser justificada, com direito a recurso."
+  passos: ["Identificar o órgão que tem a informação.", "Fazer o pedido pelo sistema eletrônico do órgão, como o Fala.BR no governo federal.", "Aguardar a resposta em até 20 dias, prorrogáveis por mais 10.", "Em caso de negativa, recorrer à autoridade superior.", "No governo federal, recorrer depois à CGU.", "Última instância: Comissão Mista de Reavaliação de Informações."]
+  base: ["Lei nº 12.527/2011"]
+  glossario: [lei-de-acesso-a-informacao, cgu]
+- slug: como-funciona-a-sessao-legislativa
+  titulo: Como funciona o ano legislativo
+  intro: "O Congresso Nacional se reúne em sessão legislativa ordinária de 2 de fevereiro a 17 de julho e de 1º de agosto a 22 de dezembro. A legislatura dura quatro anos e coincide com o mandato dos deputados."
+  passos: ["Abertura da sessão legislativa em 2 de fevereiro.", "Eleição das Mesas no início do primeiro e do terceiro ano da legislatura.", "Trabalhos até 17 de julho, com aprovação da LDO como condição para o recesso.", "Retomada em 1º de agosto.", "Encerramento em 22 de dezembro.", "Convocação extraordinária possível no recesso."]
+  base: ["Constituição Federal, art. 57"]
+  glossario: [mesa-diretora, ldo]
+- slug: como-funciona-a-urgencia
+  titulo: Como funciona o regime de urgência
+  intro: "O regime de urgência acelera a tramitação de um projeto, dispensando prazos e formalidades. Pode ser aprovado em plenário a pedido dos líderes ou solicitado pelo presidente da República para projetos de sua iniciativa."
+  passos: ["Líderes apresentam requerimento de urgência.", "O plenário vota o requerimento.", "Aprovado, o projeto pode ir direto ao plenário com pareceres dados ali.", "Na urgência constitucional, cada Casa tem 45 dias para votar.", "Esgotado o prazo, o projeto tranca a pauta.", "O presidente pode retirar o pedido de urgência."]
+  base: ["Constituição Federal, art. 64, §§ 1º e 2º", "Regimento Interno da Câmara dos Deputados, arts. 153 a 155"]
+  glossario: [regime-de-urgencia, trancamento-de-pauta, colegio-de-lideres]
+- slug: como-funciona-a-votacao-nominal
+  titulo: Como funciona a votação nominal no plenário
+  intro: "Na votação nominal, cada parlamentar registra seu voto no painel eletrônico e o resultado mostra como votou cada um. Ela é obrigatória em alguns casos, como PECs e leis complementares, e pode ser pedida pelos líderes."
+  passos: ["O presidente anuncia a matéria e o tipo de votação.", "Líderes orientam as bancadas.", "Os parlamentares registram Sim, Não ou Abstenção no painel.", "O presidente encerra a votação.", "O painel mostra o placar e os votos individuais.", "O resultado é publicado nos dados abertos da Casa."]
+  base: ["Regimento Interno da Câmara dos Deputados", "Regimento Interno do Senado Federal"]
+  glossario: [votacao-nominal, votacao-simbolica, quorum, colegio-de-lideres]
+- slug: como-funciona-a-lei-complementar
+  titulo: Como funciona uma lei complementar
+  intro: "A lei complementar trata de temas que a Constituição reserva a ela, como normas gerais de finanças públicas e direito tributário. A diferença principal em relação à lei ordinária é o quórum: precisa de maioria absoluta."
+  passos: ["A Constituição indica quando um tema exige lei complementar.", "Apresentação do projeto de lei complementar.", "Análise nas comissões.", "Votação nominal em plenário com maioria absoluta: 257 deputados e 41 senadores.", "Revisão pela outra Casa.", "Sanção ou veto e publicação."]
+  base: ["Constituição Federal, art. 69"]
+  glossario: [projeto-de-lei-complementar, maioria-absoluta, votacao-nominal]
+  votacoes: [PLP 93/2023, PLP 68/2024, PLP 177/2023]
+- slug: como-funciona-o-decreto
+  titulo: Como funciona um decreto presidencial
+  intro: "O decreto é o ato do presidente da República que regulamenta leis para sua fiel execução ou organiza a administração federal nos casos permitidos pela Constituição. Não pode criar obrigações que a lei não prevê."
+  passos: ["O ministério interessado prepara a minuta.", "A Casa Civil analisa a legalidade e o mérito.", "O presidente assina o decreto.", "Publicação no Diário Oficial da União.", "O decreto passa a valer na data indicada.", "O Congresso pode sustar atos que exorbitem o poder regulamentar."]
+  base: ["Constituição Federal, arts. 49, V, e 84, IV e VI"]
+  glossario: [decreto, casa-civil, presidente-da-republica]
+- slug: como-funciona-a-intervencao-federal
+  titulo: Como funciona a intervenção federal
+  intro: "A intervenção federal é medida excepcional em que a União assume temporariamente parte da gestão de um estado ou do Distrito Federal, nos casos previstos na Constituição, como grave comprometimento da ordem pública."
+  passos: ["Ocorrência de hipótese prevista na Constituição.", "Decreto do presidente da República com amplitude, prazo e interventor.", "Envio do decreto ao Congresso em 24 horas.", "Votação do decreto pelo Congresso.", "Atuação do interventor no prazo fixado.", "Fim da intervenção e retorno das autoridades afastadas."]
+  base: ["Constituição Federal, arts. 34 a 36"]
+  glossario: [intervencao-federal, federalismo]
+- slug: como-funciona-a-transferencia-especial
+  titulo: Como funcionam as transferências especiais (emendas Pix)
+  intro: "Transferências especiais são emendas individuais repassadas diretamente ao caixa de estados e municípios, sem convênio prévio. Desde 2024, regras do STF e da Lei Complementar 210 exigem plano de trabalho e mais transparência."
+  passos: ["O parlamentar indica a emenda na modalidade de transferência especial.", "O ente beneficiado registra o plano de trabalho.", "A União repassa o dinheiro à conta do ente.", "O recurso passa a pertencer ao ente beneficiado.", "O ente aplica o dinheiro e presta contas.", "Os dados ficam no Portal da Transparência e no Transferegov."]
+  base: ["Constituição Federal, art. 166-A", "Emenda Constitucional nº 105/2019", "Lei Complementar nº 210/2024"]
+  glossario: [emendas-pix, transferencias-voluntarias, emenda-parlamentar]
+  votacoes: [PLP 175/2024]
