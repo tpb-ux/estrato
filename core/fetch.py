@@ -25,7 +25,7 @@ def slugify(s): return norm(s).replace(" ", "-")[:70].strip("-")
 def classify(text):
     t = (text or "").lower(); best, score = DEFAULT_ED, 0
     for ed, words in KW.items():
-        sc = sum(t.count(w) for w in words)
+        sc = sum(t.count(w.rstrip("*")) for w in words)  # "*" = prefixo (substring já cobre)
         if sc > score: best, score = ed, sc
     return best
 
@@ -51,6 +51,15 @@ def blocked(cfg, src, link, title, summ, trusted=False):
     sc = score(title, summ)
     if sc < cfg.get("nota_minima", 3): return f"nota {sc} < {cfg.get('nota_minima', 3)}"
     return None
+
+def opiniao(cfg, link, title):
+    """Filtro anti-opinião para fontes não oficiais: URL de coluna/artigo/análise ou título de opinião (só fatos)."""
+    o = cfg.get("filtro_opiniao") or {}
+    l = (link or "").lower(); t = (title or "").strip()
+    u = next((x for x in o.get("url", []) if x.lower() in l), None)
+    if u: return f"opinião/coluna (url: {u})"
+    r = next((x for x in o.get("titulo", []) if re.search(x, t, re.I)), None)
+    return f"opinião/coluna (título: {r})" if r else None
 
 def restrito(cfg, ed, title, summ):
     """Restrição temporária por editoria (ex.: período eleitoral): até a data, só passa item com termo exigido no título/resumo."""
@@ -295,6 +304,9 @@ def main():
             ed = fd.get("editoria") or classify(title + " " + summ)
             why = restrito(cfg, ed, title, summ) or restrito(cfg, "*", title, summ)
             if why: print(f"  x {title[:70]} ({src_name}): {why}"); continue
+            if fd.get("vies") != "oficial":
+                why = opiniao(cfg, link, title)
+                if why: print(f"  x {title[:70]} ({src_name}): {why}"); continue
             rn = cfg.get("restricao_nao_oficial") or {}
             if fd.get("vies") != "oficial" and rn and dt.date.today().isoformat() <= rn.get("ate", ""):
                 tl = norm(title + " " + summ); hit = next((w for w in rn.get("bloqueia", []) if norm(w) in tl), None)

@@ -2,7 +2,7 @@
  "formato": "saude-portal/1",
  "portal": "Estrato",
  "url": "https://estrato.com.br",
- "gerado_em": "2026-10-12T17:24:45+00:00",
+ "gerado_em": "2026-10-14T20:59:55+00:00",
  "materias": {
   "total": 20,
   "ultimas_24h": 0,
@@ -14,7 +14,7 @@
    "url": "https://estrato.com.br/congresso/2026-10-09-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos/",
    "fonte": "Agência Câmara",
    "publicada_em": "2026-10-09T19:15:00-03:00",
-   "idade_horas": 67.2
+   "idade_horas": 118.7
   }
  },
  "feeds": {
@@ -107,18 +107,18 @@
     "paginas": 541,
     "avaliadas": 540,
     "corte": 0.15,
-    "texto_proprio_p10": 0.225,
+    "texto_proprio_p10": 0.229,
     "texto_proprio_mediana": 0.285,
-    "texto_proprio_p90": 0.391,
+    "texto_proprio_p90": 0.387,
     "abaixo_do_corte": 0
    },
    "senadores": {
     "paginas": 81,
     "avaliadas": 80,
     "corte": 0.15,
-    "texto_proprio_p10": 0.207,
-    "texto_proprio_mediana": 0.239,
-    "texto_proprio_p90": 0.272,
+    "texto_proprio_p10": 0.212,
+    "texto_proprio_mediana": 0.242,
+    "texto_proprio_p90": 0.273,
     "abaixo_do_corte": 0
    },
    "partidos": {
@@ -138,15 +138,96 @@
     "texto_proprio_mediana": 0.221,
     "texto_proprio_p90": 0.437,
     "abaixo_do_corte": 105
+   },
+   "cotas": {
+    "paginas": 2167,
+    "avaliadas": 2106,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.27,
+    "texto_proprio_mediana": 0.32,
+    "texto_proprio_p90": 0.503,
+    "abaixo_do_corte": 0
+   },
+   "emendas": {
+    "paginas": 6492,
+    "avaliadas": 6468,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.227,
+    "texto_proprio_mediana": 0.298,
+    "texto_proprio_p90": 0.44,
+    "abaixo_do_corte": 2
+   },
+   "executivo": {
+    "paginas": 119,
+    "avaliadas": 117,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.559,
+    "texto_proprio_mediana": 0.704,
+    "texto_proprio_p90": 0.845,
+    "abaixo_do_corte": 0
+   },
+   "perguntas": {
+    "paginas": 84,
+    "avaliadas": 80,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.141,
+    "texto_proprio_mediana": 0.276,
+    "texto_proprio_p90": 0.527,
+    "abaixo_do_corte": 15
+   },
+   "explica": {
+    "paginas": 33,
+    "avaliadas": 33,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.699,
+    "texto_proprio_mediana": 0.742,
+    "texto_proprio_p90": 0.778,
+    "abaixo_do_corte": 0
+   },
+   "agenda": {
+    "paginas": 327,
+    "avaliadas": 133,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.316,
+    "texto_proprio_mediana": 0.447,
+    "texto_proprio_p90": 0.71,
+    "abaixo_do_corte": 0
+   },
+   "linha_do_tempo": {
+    "paginas": 10,
+    "avaliadas": 10,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.223,
+    "texto_proprio_mediana": 0.292,
+    "texto_proprio_p90": 0.446,
+    "abaixo_do_corte": 0
+   },
+   "subcategorias": {
+    "paginas": 72,
+    "avaliadas": 14,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.494,
+    "texto_proprio_mediana": 0.598,
+    "texto_proprio_p90": 0.801,
+    "abaixo_do_corte": 0
    }
   },
-  "noindex_por_unicidade": 105,
+  "noindex_por_unicidade": 122,
   "similaridade_jaccard5": {
    "glossario": 0.035,
-   "deputados": 0.436,
-   "senadores": 0.379,
+   "deputados": 0.441,
+   "senadores": 0.383,
    "partidos": 0.358,
-   "votacoes": 0.227
+   "votacoes": 0.227,
+   "cotas": 0.184,
+   "emendas": 0.38,
+   "executivo": 0.058,
+   "perguntas": 0.299,
+   "explica": 0.105,
+   "agenda": 0.135,
+   "linha_do_tempo": 0.348,
+   "quem_e_quem": 0.005,
+   "subcategorias": 0.194
   },
   "faq_pseo": {
    "pseo_paginas": 594,
@@ -156,11 +237,11 @@
   "rede_links_pct": {
    "modalnews.com.br": 0.0
   },
-  "ondas_noindex": 0
+  "ondas_noindex": 10599
  },
  "site": {
-  "paginas_indexaveis": 2042,
-  "paginas_total": 2171,
+  "paginas_indexaveis": 541,
+  "paginas_total": 11528,
   "noindex_global": true,
   "links_internos_quebrados": 0,
   "build": "local"

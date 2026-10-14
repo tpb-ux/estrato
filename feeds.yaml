@@ -63,7 +63,7 @@ palavras_editoria:
   economia: [imposto, tributár, reforma tributária, fiscal, arrecadação, banco central, juros, inflação, pib, receita federal]
   estados: [governador, prefeit, assembleia legislativa, município, estado de, câmara municipal]
   regulacao: [saúde, sus, energia, anvisa, ans, aneel, educação, segurança pública, meio ambiente, agro, tecnologia, inteligência artificial, infraestrutura]
-  internacional: [itamaraty, diplomac*, embaixad*, onu, mercosul, acordo internacional, relações exteriores, chanceler]
+  internacional: [itamaraty, diplomac*, embaixad*, chancelaria, colômbia, venezuela, argentina, eua, estados unidos, trump, israel, jerusalém, gaza, china, rússia, ucrânia, europa, onu, mercosul, acordo internacional, relações exteriores, chanceler]
 palavras_relevancia: [política, poder, governo, lei, norma]
 nota_minima: 3
 # Restrições eleitorais (até o fim do 2º turno e por política editorial): sem pesquisas de intenção de voto.
@@ -73,7 +73,7 @@ bloqueio_fontes: []
 # em qualquer editoria ("*"), itens de agenda/ato de campanha são bloqueados. Remover/ajustar depois de 26/10/2026.
 restricao_editoria:
   eleicoes: {ate: "2026-10-26", exige: [tse, tre, justiça eleitoral, calendário eleitoral, urna, totalização, retotalização, diplomação, resolução, eleitorado, seção eleitoral, biometria, mesário]}
-  "*": {ate: "2026-10-26", exige: [""], bloqueia: [ato pela, reeleição, comício, carreata, palanque, campanha de, campanha do, campanha da, propaganda eleitoral, apoio a lula, apoio a flávio, reunido com prefeitos, pede voto, pedido de voto]}
+  "*": {ate: "2026-10-26", exige: [""], bloqueia: [ato pela, reeleição, comício, carreata, palanque, campanha de, campanha do, campanha da, propaganda eleitoral, apoio a lula, apoio a flávio, reunido com prefeitos, pede voto, pedido de voto, recebe apoio, apoios, bolsonaristas, petistas, ato no, ato em]}
 # Fotos das fontes: decisão editorial (12/10/2026) = foto original da fonte em WebP com crédito e link. As entradas abaixo
 # só refinam o crédito (fotógrafo no formato do licenciante) quando a licença foi confirmada; nas demais o crédito é a fonte.
 # *Agência Brasil: reprodução livre com crédito, mas o banco Foto Agência restringe uso comercial e exclui fotos de
@@ -89,7 +89,12 @@ licencas_imagem:
     url: "https://www12.senado.leg.br/noticias/politica-de-uso"  # "reprodução de matérias e fotografias é livre ... citação da Agência Senado e do autor"
 # Fontes não oficiais (mainstream, esquerda, direita, regional) no período eleitoral: bloqueio adicional por termos de campanha,
 # para não publicar cobertura de campanha de veículos com linha editorial (equilíbrio). Remover depois de 26/10/2026.
-restricao_nao_oficial: {ate: "2026-10-26", bloqueia: [flávio, lula diz, lula promete, lula anuncia, candidat, campanha, empate técnico, segundo turno, 2º turno, debate, apoia lula, apoio a, pesquisa, eleitor, voto, comitê, palanque, tarcísio, nikolas, bolsonarist, petista, eleger, reeleição, eleição, extrema direita, extrema-direita, censura, partidariz]}
+# Anti-opinião (15/10/2026, revisão da 1ª coleta): fontes não oficiais só entram com notícia factual. URL de coluna/artigo
+# e títulos de opinião (pergunta, "Análise:", AO VIVO, convocação) ficam fora. Vale sempre, não só no período eleitoral.
+filtro_opiniao:
+  url: [/opiniao/, /opinion/, /colunas/, /coluna/, /colunistas/, /columnists/, /artigos/, /artigo/, /blogs/, /blog/, /analise/, /editorial/, /ponto-de-vista/, /debate/, /entrevista/]
+  titulo: ['\?', ',\s+por\s+[A-ZÀ-Ú]', '^\s*(an[aá]lise|opini[aã]o|artigo|editorial|coluna|cr[oô]nica|entrevista|v[ií]deo|podcast|ao vivo)\b', '\bao vivo\b', '^\s*(hoje|agora)\b.*\b(vai ter que|precisa|deve)\b', '\bo bode\b', '\bconstitucionalismo\b', '#\d+\s*$']
+restricao_nao_oficial: {ate: "2026-10-26", bloqueia: [flávio, lula diz, lula promete, lula anuncia, candidat, campanha, empate técnico, segundo turno, 2º turno, debate, apoia lula, apoio a, pesquisa, eleitor, voto, comitê, palanque, tarcísio, nikolas, bolsonarist, petista, eleger, reeleição, eleição, extrema direita, extrema-direita, censura, partidariz, lula, bolsonaro, pró-, manifestantes, protesto, ato em defesa, campo progressista, de que lado, esquerda, direita, oposição, governista, aliados, militância, exército de, urna, favela, recordes]}
 
 # Fase 1 (subcategorias): regras de classificação por palavra-chave. Chave <editoria>/<subcategoria>; casa no título+resumo,
 # sem acento, palavra inteira (termine com * para prefixo). Feeds também podem levar `sub: [slug]` para entrar direto. Página: data/subcategorias.yaml.
