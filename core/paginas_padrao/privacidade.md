@@ -5,11 +5,12 @@ faqs:
   - {p: "O {{cfg.site_name}} coleta meus dados?", r: "O site é estático, sem cadastro, comentários ou cookies de rastreamento. O servidor registra logs técnicos de acesso por segurança."}
   - {p: "O site usa cookies?", r: "Não usa cookies de publicidade ou rastreamento. Se isso mudar, esta política será atualizada antes."}
   - {p: "Por que aparecem dados de agentes públicos?", r: "Dados de agentes públicos no exercício da função são públicos por lei e vêm das bases oficiais. Não publicamos CPF nem dados sensíveis."}
-  - {p: "Como exercer meus direitos da LGPD?", r: "Pelos canais da página de contato, indicando que se trata de pedido sobre dados pessoais."}
+  - {p: "Como exercer meus direitos da LGPD?", r: "Pelo e-mail {{cfg.empresa.email}}, indicando que se trata de pedido sobre dados pessoais. O encarregado é {{cfg.empresa.encarregado_lgpd}}."}
   - {p: "Quem é o controlador dos dados?", r: "{{cfg.empresa.razao_social}}, CNPJ {{cfg.empresa.cnpj}}."}
 ---
 - **Controlador:** {{cfg.empresa.razao_social}}, CNPJ {{cfg.empresa.cnpj}}
 - **Encarregado (LGPD):** {{cfg.empresa.encarregado_lgpd}}
+- **Canal do titular:** {{cfg.empresa.email}}
 - **Canal:** [contato](/contato/)
 
 O site não tem cadastro, comentários, formulários próprios nem cookies de rastreamento. Logs técnicos do servidor (IP, data, página) são mantidos por segurança e por prazo limitado.

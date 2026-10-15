@@ -15,6 +15,7 @@ faqs:
 | **CNPJ** | {{cfg.empresa.cnpj}} |
 | **Endereço** | {{cfg.empresa.endereco.logradouro}}, {{cfg.empresa.endereco.bairro}}, {{cfg.empresa.endereco.cidade}}-{{cfg.empresa.endereco.uf}}, CEP {{cfg.empresa.endereco.cep}} |
 | **Responsável editorial** | {{cfg.responsavel_editorial}} |
+| **Encarregado (LGPD)** | {{cfg.empresa.encarregado_lgpd}} |
 | **E-mail** | {{cfg.empresa.email}} |
 
 Canais: [contato](/contato/), [correções](/correcoes/), [direito de resposta](/direito-de-resposta/), [privacidade](/privacidade/).
