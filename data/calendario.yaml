@@ -11,5 +11,5 @@ eleitoral:
     - [2027-01-08, "Fim do prazo para justificar a ausência no eventual 2º turno"]
     - [2027-02-01, "Posse dos deputados federais e senadores eleitos e início da 58ª legislatura (Constituição, art. 57, § 4º)"]
 legislativo:
-  fonte: [Constituição Federal, art. 57, "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"]
+  fonte: ["Constituição Federal, art. 57", "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"]
   regra: "A sessão legislativa ordinária vai de 2 de fevereiro a 17 de julho e de 1º de agosto a 22 de dezembro. Quando a data cai em sábado, domingo ou feriado, a reunião passa para o primeiro dia útil seguinte (art. 57, § 1º)."

@@ -124,7 +124,11 @@ def linkcheck(S):
         src = "/" + f.relative_to(S.OUT).as_posix().replace("index.html", "")
         for h in HREF.findall(f.read_text(encoding="utf-8")):
             if h.startswith(S.BASE): h = h[len(S.BASE):] or "/"
-            elif h.startswith("http") or h.startswith("//") or not h.startswith("/"): continue
+            elif h.startswith(("mailto:", "tel:", "javascript:", "data:")): continue
+            elif not h.startswith("/"):
+                if not h.startswith(("http", "//")):  # href relativo sem "/" (ex.: href="art. 57") é erro, não pode ser ignorado
+                    n, s0 = bad.get(h, (0, src)); bad[h] = (n + 1, s0)
+                continue
             if S.PREFIX and h.startswith(S.PREFIX + "/"): h = h[len(S.PREFIX):]
             t = S.OUT / h.lstrip("/")
             if (t / "index.html").exists() or t.is_file() or h in RUNTIME: continue
@@ -265,6 +269,7 @@ def main(root):
     if S.errors:
         for e in S.errors[:40]: print("ERRO:", e)
     if broken or S.errors: sys.exit(f"ERRO: {len(broken)} destinos quebrados, {len(S.errors)} erros de qualidade")
+    S.n_quebrados = len(broken)
     indexnow.diff(S)
     saude.build(S, posts)
     fam = {}
