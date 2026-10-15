@@ -17,6 +17,28 @@ def words(h):
 def fit(t, n):
     return t if len(t) <= n else t[:n - 1].rsplit(" ", 1)[0].rstrip(",;:-–") + "…"
 
+_STOP = {"de", "da", "do", "das", "dos", "e", "em", "a", "o", "as", "os", "para", "com", "que", "no", "na", "nos", "nas", "por", "ao", "à"}
+
+def fit_clean(t, n, minimo=0):
+    """Corta em fronteira natural (vírgula, dois-pontos, travessão, ponto) sem deixar conectivo pendurado; só usa '…' se não houver fronteira."""
+    if len(t) <= n: return t
+    head = t[:n]
+    cuts = [m.start() for m in re.finditer(r"(?:,|;|:| –| -|\.)\s", head + " ") if m.start() >= minimo]
+    if cuts: return head[:cuts[-1]].rstrip(",;:-– ")
+    w = t[:n - 1].rsplit(" ", 1)[0].split(" ")
+    while len(w) > 1 and w[-1].lower().strip(",;:") in _STOP: w.pop()
+    return " ".join(w).rstrip(",;:-–") + "…"
+
+def fit_title(title, site, n=65):
+    """Título final: base + ' | Marca', nunca cortado no separador nem sem a marca. Aceita modelos antigos que já trazem '| Marca'."""
+    parts = [x.strip() for x in title.split(" | ")]
+    if len(parts) > 1 and parts[-1] == site: parts.pop()
+    suf = f" | {site}"
+    while len(parts) > 1 and len(" | ".join(parts)) + len(suf) > n: parts.pop(-1 if len(parts) > 2 else 1)  # descarta o segmento intermediário/de seção
+    base = " | ".join(parts)
+    if len(base) + len(suf) > n: base = fit_clean(base, n - len(suf), minimo=25)
+    return base + suf
+
 class QualityError(SystemExit): pass
 
 class Site:
@@ -99,7 +121,7 @@ class Site:
             if j.get("@type") in ("Article", "NewsArticle") and not j.get("image"): j["image"] = og_img or self.BASE + "/static/og-default.png"
             graph.append(j)
         self._last = {"faqs": len(faqs or []), "title": title, "pseo": pseo}
-        title, desc = fit(title, 65), fit(desc, 160)
+        title, desc = fit_title(title, c["site_name"], 65), (desc if len(desc) <= 160 else fit_clean(desc, 160, minimo=80))
         canon = self.BASE + path; img = og_img or self.BASE + "/static/og-default.png"
         rb = "noindex,nofollow" if self.NOINDEX else (robots or INDEX_ROBOTS)
         vf = c.get("verificacao") or {}
