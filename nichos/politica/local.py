@@ -27,14 +27,14 @@ def tse(S):
     idx = {(S.mun["M"][c]["uf"], slugify(S.mun["M"][c]["n"])): c for c in S.mun["M"]}
     por_uf = collections.defaultdict(dict)
     for c, e in S.mun["M"].items(): por_uf[e["uf"]][slugify(e["n"])] = c
-    out = {}
+    out = {}; t2c = {}
     for t, x in d["m"].items():
         if x["uf"] not in UF: continue
         k = (x["uf"], slugify(x["n"])); c = idx.get(k)
         if not c:
             q = difflib.get_close_matches(slugify(x["n"]), list(por_uf[x["uf"]]), n=1, cutoff=0.85); c = por_uf[x["uf"]][q[0]] if q else None
-        if c and c not in out: out[c] = (x, d["locais"].get(t))
-    _T["d"] = (out, d.get("base") or d.get("gerado")); return _T["d"]
+        if c and c not in out: out[c] = (x, d["locais"].get(t)); t2c[t] = c
+    _T["t2c"] = t2c; _T["d"] = (out, d.get("base") or d.get("gerado")); return _T["d"]
 
 
 def mediana(v): v = [x for x in v if x is not None]; return statistics.median(v) if v else None

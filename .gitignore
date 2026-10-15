@@ -7,3 +7,4 @@ alerta.md
 data/indexnow_hashes.next.json
 data/indexnow_pendentes.txt
 venv/
+data/tse/prefeitos.json.gz

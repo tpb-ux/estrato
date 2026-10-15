@@ -74,3 +74,10 @@ Onda 1 (+7 dias, se Search Console sem erro): `familias_noindex` libera deputado
 Onda 2 (+14 dias): cota parlamentar, emendas, executivo (viagens/cartão), agenda.
 Onda 3 (+21 dias): `mapas.ativo: true` e rankings por estado; patrimônio TSE só depois de revisão humana.
 Cada onda = um commit no GitHub; a VPS pega no ciclo seguinte. Critério para avançar: cobertura sem picos de "Rastreada, não indexada" e build sem links quebrados.
+
+## 8. Novas famílias locais, Mapa da Mídia e flags (15/10/2026)
+- **Build:** ~5 min e vários GB em `public/` (66,7 mil páginas); precisa de ~3 GB de RAM livre e disco folgado. Rodar fora do ciclo de 12 e 42 min (o ciclo leve não deve disparar build completo ao mesmo tempo).
+- **Famílias novas (todas em `familias_noindex`; só hubs e metodologias indexáveis):** `prefeituras`, `verbas`, `representantes`, `eleitorado`, `perguntas_local` (5.570 cada), `bairros` (17.474 em 895 municípios), `midia` (105) e `prefeitos` (desligada). Cada uma sai da lista em onda própria (uma por vez, 2 a 3 semanas), conforme o comentário "onda 8" do `config.yaml`.
+- **Datasets (rodados por `ops/ciclo.sh`):** `datasets_bairros.py` (IBGE, só se faltar), `datasets_tse.py` (TSE, refaz com > 25 dias), `datasets_midia.py` (Wikipédia, refaz com > 7 dias), `datasets_prefeitos.py` (só roda com a flag ligada).
+- **Flags:** `prefeitos: {ativo: false, liberar_em: 2026-10-27}` (prefeito e vereadores de 2024; ligar só depois de 26/10; `data/tse/prefeitos.json.gz` fica fora do git) e `midia: {vies_ativo: false, liberar_em: 2026-10-27}` (viés, confiança e histórico; só liga depois da revisão humana e jurídica da `/midia/metodologia/`, que está noindex em rascunho).
+- **Fontes que bloqueiam o box (testar da VPS):** IBGE Cidades, Portal da Transparência, TREs, vários TCEs, Receita/CNPJ.
