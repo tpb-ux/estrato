@@ -246,6 +246,8 @@ def main(root):
         mod = importlib.import_module(m if "." in m else f"nichos.{S.nicho}.{m}")
         S.modulos[m] = mod.build(S) or {}
     institucional(S)
+    from . import relacionados as _rel
+    _rel.aplicar(S, posts)
     autores.paginas(S, AUT)
     an = [p for p in posts if p.get("tipo") == "analise"]
     if an:
