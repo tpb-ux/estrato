@@ -139,7 +139,8 @@ class Site:
             graph.append(j)
         self._last = {"faqs": len(faqs or []), "title": title, "pseo": pseo}
         title, desc = fit_title(title, c["site_name"], 65), (desc if len(desc) <= 160 else fit_clean(desc, 160, minimo=80))
-        canon = self.BASE + path; img = og_img or self.BASE + "/static/og-default.png"
+        seg = path.strip("/").split("/")[0]
+        canon = self.BASE + path; img = og_img or (f"{self.BASE}/static/og/{seg}.png" if seg in getattr(self, "og_ok", ()) else self.BASE + "/static/og-default.png")
         rb = "noindex,nofollow" if self.NOINDEX else (robots or INDEX_ROBOTS)
         vf = c.get("verificacao") or {}
         meta = f'<meta name="robots" content="{rb}">' if rb else ""

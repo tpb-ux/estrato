@@ -49,6 +49,7 @@ prefeitos: {ativo: false, liberar_em: 2026-10-27}   # prefeito e vereadores (TSE
 links_lancamento:
   midia: {menu: [["Mapa da Mídia", /midia/]], rodape_coluna: Dados, rodape: [["Mapa da Mídia", /midia/]]}
   mapas: {menu: [["Mapas e rankings", /mapas/]], rodape_coluna: Dados, rodape: [["Mapas e rankings", /mapas/]]}
+og_secoes: {deputados: Deputados federais, senadores: Senadores, partidos: Partidos, votacoes: Votações nominais, proposicoes: Proposições legislativas, comissoes: Comissões e CPIs, frentes: Frentes parlamentares, cota: Cota parlamentar, emendas: Emendas parlamentares, executivo: Executivo federal, financas: Finanças dos estados e da União, municipios: Municípios, prefeitura: Prefeituras, verbas-federais: Verbas federais, representantes: Quem representa você no Congresso, eleitorado: Eleitorado, perguntas: Perguntas e respostas, bairros: Bairros, midia: Mapa da Mídia, glossario: Glossário político, explica: Como funciona, agenda: Agenda dos Três Poderes, calendario: Calendário eleitoral e legislativo, mapas: Mapas e rankings, linha-do-tempo: Linhas do tempo, quem-e-quem: Quem é quem, checagem: Checagem}   # imagem OG por seção (core/og.py)
 llms_areas: [/perguntas/, /explica/, /agenda/, /linha-do-tempo/, /quem-e-quem/, /calendario/, /checagem/metodologia/]
 menu:
   barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Votações, /votacoes/], [Cota, /cota/], [Emendas, /emendas/], [Executivo, /executivo/], [Glossário, /glossario/]]

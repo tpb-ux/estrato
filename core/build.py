@@ -205,6 +205,8 @@ def main(root):
     if (S.OUT / "static/favicon.ico").exists(): shutil.copy(S.OUT / "static/favicon.ico", S.OUT / "favicon.ico")
     if S.CFG.get("cname") and not S.PREFIX: (S.OUT / "CNAME").write_text(S.CFG["cname"].strip() + "\n")
     S.posts = posts
+    from . import og as _og
+    S.og_ok = _og.gerar(S)  # OG por seção (páginas sem imagem própria)
     # autolink do glossário (core/autolink.py): carregado antes de qualquer página ser gravada
     al = S.CFG.get("autolink") or {}
     if al.get("ativo"):
