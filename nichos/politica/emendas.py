@@ -141,7 +141,7 @@ def build(S):
         faqs = [(f"Quanto os municípios {PREP[uf]} {UF[uf]} receberam em emendas?", f"{brl(tot)} desde 2023, somando {num(len(ks))} municípios."), ("De onde vêm os dados?", "Do download em lote de emendas parlamentares do Portal da Transparência, mantido pela CGU."),
                 ("O valor inclui recursos para o governo estadual?", "Inclui favorecidos sediados na capital, como órgãos e fundos estaduais, porque o município é o da sede do favorecido."),
                 ("A tabela é um ranking?", "Não. Os municípios estão em ordem alfabética."), ("Com que frequência os dados são atualizados?", "Diariamente, quando a CGU publica um novo arquivo.")]
-        S.write(u, S.page(f"Emendas parlamentares nos municípios {PREP[uf]} {UF[uf]}", f"Quanto cada município {PREP[uf]} {UF[uf]} recebeu em emendas parlamentares desde 2023: {brl0(tot)} no total.", u, body, faqs=faqs,
+        S.write(u, S.page(f"Emendas nos municípios {PREP[uf]} {UF[uf]} | {S.CFG['site_name']}", f"Quanto cada município {PREP[uf]} {UF[uf]} recebeu em emendas parlamentares desde 2023: {brl0(tot)} no total.", u, body, faqs=faqs,
                             crumbs=[("Emendas", "/emendas/"), (UF[uf], u)]), familia="paginas", lastmod=col)
         urls.append(u)
     # ---------- hub, metodologia, CSV ----------

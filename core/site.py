@@ -36,7 +36,9 @@ def fit_title(title, site, n=65):
     suf = f" | {site}"
     while len(parts) > 1 and len(" | ".join(parts)) + len(suf) > n: parts.pop(-1 if len(parts) > 2 else 1)  # descarta o segmento intermediário/de seção
     base = " | ".join(parts)
-    if len(base) + len(suf) > n: base = fit_clean(base, n - len(suf), minimo=25)
+    if len(base) + len(suf) > n:
+        if len(base) <= n: return base  # título completo e distinto vale mais que a marca (o buscador reaplica a marca); nunca cortar o que distingue a página
+        base = fit_clean(base, n - len(suf), minimo=25)
     return base + suf
 
 class QualityError(SystemExit): pass
@@ -97,7 +99,7 @@ class Site:
         org["masthead"] = self.BASE + "/expediente/"
         if emp.get("email") or emp.get("formulario_url"):
             org["contactPoint"] = {"@type": "ContactPoint", "contactType": "editorial", "availableLanguage": "pt-BR", **({"email": emp["email"]} if emp.get("email") else {}), **({"url": emp["formulario_url"]} if emp.get("formulario_url") else {})}
-        if c.get("responsavel_editorial"): org["employee"] = {"@type": "Person", "name": c["responsavel_editorial"], "jobTitle": "Responsável editorial"}   # só renderiza se preenchido
+        if c.get("responsavel_editorial"): org["employee"] = {"@type": "Person", "name": c["responsavel_editorial"]}   # só renderiza se preenchido
         if emp.get("email"): org["email"] = emp["email"]
         if any(emp.get("redes") or []): org["sameAs"] = [r for r in emp["redes"] if r]
         return [org, {"@type": "WebSite", "@id": self.BASE + "/#site", "name": c["site_name"], "url": self.BASE + "/", "inLanguage": c.get("language", "pt-BR"), "publisher": {"@id": self.BASE + "/#org"},
@@ -161,7 +163,7 @@ document.addEventListener('keydown',function(e){{if(e.key==='Escape'&&!d.hidden)
 var a=document.querySelector('nav.ed a.on,nav.ed a.pill');if(a&&a.scrollIntoView&&innerWidth<860)a.scrollIntoView({{inline:'center',block:'nearest'}});
 document.addEventListener('click',function(e){{var x=document.querySelector('details.dd[open]');if(x&&!x.contains(e.target))x.open=false}})}})();</script>
 <main class="wrap" id="conteudo">{body}</main><footer><div class="wrap fgrid"><div><p class="fbrand">{E(c['site_name'])}</p><p>{E(c['tagline'])}</p></div>{cols}</div>
-<div class="wrap fbot">© {dt.date.today().year} {E(c['site_name'])}{(' · ' + E((c.get('empresa') or {}).get('razao_social', ''))) if (c.get('empresa') or {}).get('razao_social') else ''}</div></footer></body></html>"""
+<div class="wrap fbot">© {dt.date.today().year} {E(c['site_name'])}{(' · ' + E((c.get('empresa') or {}).get('razao_social', ''))) if (c.get('empresa') or {}).get('razao_social') else ''}{(' · <a href="mailto:' + E(c['empresa']['email']) + '">' + E(c['empresa']['email']) + '</a>') if (c.get('empresa') or {}).get('email') else ''}</div></footer></body></html>"""
 
     def write(self, path, txt, *, idx=True, familia="paginas", lastmod=None, image=None, faq_min=None):
         """Grava a página e registra a URL. idx=False => noindex,follow (fora de sitemap/busca)."""
