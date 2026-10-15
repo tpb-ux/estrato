@@ -1,6 +1,6 @@
 """Financas publicas de estados, Uniao e municipios (SICONFI/Tesouro, DCA) com dados do IBGE (Censo 2022 e PIB) e emendas federais recebidas.
 Dados: data/siconfi/siconfi.json.gz (tools/datasets_siconfi.py), data/ibge/ibge.json.gz (tools/datasets_ibge.py), data/emendas.
-Paginas: /estados/ (hub), /estados/<uf>/ e /estados/uniao/ (familia `estados`), /municipios/ (hub), /municipios/<uf>/ (hub), /municipios/<uf>/<slug>/ (familia `municipios`), /municipios/metodologia/.
+Paginas: /financas/ (hub), /financas/<uf>/ e /financas/uniao/ (familia `estados`), /municipios/ (hub), /municipios/<uf>/ (hub), /municipios/<uf>/<slug>/ (familia `municipios`), /municipios/metodologia/.
 Hubs indexaveis; paginas de cada ente em noindex ate a onda propria. Listas em ordem alfabetica, sem ranking, sem patrimonio e sem dados de campanha."""
 import collections, csv, gzip, json, statistics
 from core.site import E, slugify
@@ -41,6 +41,9 @@ def var(a, b):
     if not a or not b: return ""
     v = 100 * (a - b) / b
     return ("+" if v >= 0 else "−") + f"{abs(v):.1f}".replace(".", ",") + "%"
+
+
+def n1(v): return f"{v:,.1f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 
 def fmt_pc(v): return "R$ " + f"{v:,.0f}".replace(",", ".")
@@ -143,8 +146,8 @@ def build(S):
                 body += f'<p class="snippet"><strong>{E(nome)} ({uf})</strong> tinha <strong>{num(int(pop))} habitantes</strong> no Censo 2022. As contas anuais do município não constam com receitas e despesas completas na base do Tesouro Nacional na compilação do Estrato.</p>'
             body += h
             ind = [["Código IBGE", c], ["População (Censo 2022)", num(int(pop))]]
-            if ibm.get("area"): ind.append(["Área", f'{ibm["area"]:,.1f} km²'.replace(",", "X").replace(".", ",").replace("X", ".")])
-            if ibm.get("dens"): ind.append(["Densidade demográfica", f'{ibm["dens"]:,.1f} hab./km²'.replace(",", "X").replace(".", ",").replace("X", ".")])
+            if ibm.get("area"): ind.append(["Área", n1(ibm["area"]) + " km²"])
+            if ibm.get("dens"): ind.append(["Densidade demográfica", n1(ibm["dens"]) + " hab./km²"])
             if ibm.get("pib"): ind.append([f'PIB a preços correntes ({ib.get("pib_ano")})', brl0(ibm["pib"])]); ind.append(["PIB por habitante", fmt_pc(ibm["pib"] / pop) if pop else "—"])
             if e["cap"]: ind.append(["Capital estadual", "Sim"])
             body += "<h2>População e economia</h2>" + S.table(["Indicador", "Valor"], ind)
@@ -154,7 +157,7 @@ def build(S):
             else:
                 body += f'<h2>Emendas parlamentares federais</h2><p>Não há pagamentos de emendas parlamentares a favorecidos identificados com sede em {E(nome)} na compilação do Estrato (desde 2023). Veja o <a href="/emendas/municipios/{uf.lower()}/">painel de emendas {PREP[uf]} {UF[uf]}</a>.</p>'
             viz = L[max(0, i - 5):i] + L[i + 1:i + 6]
-            body += f'<h2>Outros municípios {PREP[uf]} {UF[uf]}</h2><p>Vizinhos na lista alfabética: ' + ", ".join(f'<a href="{URL[x]}">{E(M[x]["n"])}</a>' for x in viz) + f'. Veja todos em <a href="/municipios/{uf.lower()}/">municípios {PREP[uf]} {UF[uf]}</a>, os <a href="/estados/{uf.lower()}/">dados do estado</a> e os <a href="/deputados/uf/{uf.lower()}/">deputados federais eleitos</a>.</p>'
+            body += f'<h2>Outros municípios {PREP[uf]} {UF[uf]}</h2><p>Vizinhos na lista alfabética: ' + ", ".join(f'<a href="{URL[x]}">{E(M[x]["n"])}</a>' for x in viz) + f'. Veja todos em <a href="/municipios/{uf.lower()}/">municípios {PREP[uf]} {UF[uf]}</a>, os <a href="/financas/{uf.lower()}/">dados do estado</a> e os <a href="/deputados/uf/{uf.lower()}/">deputados federais eleitos</a>.</p>'
             body += f'<p class="src">Fontes oficiais: {FONTE_T} (Declaração de Contas Anuais, anexos I-C e I-E, exercícios 2023 e 2024) e {FONTE_I} (Censo 2022 e PIB dos municípios). Compilação em {data_br(col)}. Valores nominais, como declarados pelo município. Veja a <a href="/municipios/metodologia/">metodologia</a>.</p></article>'
             if a and d.get("rec"):
                 fa = [(f"Quantos habitantes tem {nome}?", f"{num(int(pop))} habitantes, segundo o Censo 2022 do IBGE."),
@@ -178,7 +181,7 @@ def build(S):
         body = (f'<section class="blk"><h1>Municípios {PREP[uf]} {UF[uf]}: população, receitas e despesas</h1><p class="snippet">{UF[uf]} tem <strong>{num(len(L))} municípios</strong> e <strong>{num(int(totpop[uf]))} habitantes</strong> pelo Censo 2022. '
                 f'{num(com)} deles têm receitas e despesas declaradas ao Tesouro Nacional' + (f'; a mediana de receita é de {fmt_pc(mr)} por habitante.' if mr else ".") + '</p>'
                 + S.table(["Município", "Habitantes", "Receita", "Despesa empenhada"], rows, "Em ordem alfabética; não é ranking") +
-                f'<p>Veja também os <a href="/estados/{uf.lower()}/">dados do estado {PREP[uf]} {UF[uf]}</a>, as <a href="/emendas/municipios/{uf.lower()}/">emendas por município</a> e os <a href="/deputados/uf/{uf.lower()}/">deputados federais {PREP[uf]} {UF[uf]}</a>.</p>'
+                f'<p>Veja também os <a href="/financas/{uf.lower()}/">dados do estado {PREP[uf]} {UF[uf]}</a>, as <a href="/emendas/municipios/{uf.lower()}/">emendas por município</a> e os <a href="/deputados/uf/{uf.lower()}/">deputados federais {PREP[uf]} {UF[uf]}</a>.</p>'
                 f'<p class="src">Fontes: {FONTE_T} e {FONTE_I}. Compilação em {data_br(col)}. <a href="/municipios/metodologia/">Metodologia</a>.</p></section>')
         fa = [(f"Quantos municípios tem {UF[uf]}?", f"{num(len(L))} municípios, segundo o IBGE."), (f"Quantos habitantes {PREP[uf]} {UF[uf]} vivem nos municípios listados?", f"{num(int(totpop[uf]))} pelo Censo 2022."),
               ("A lista é um ranking?", "Não. Os municípios aparecem em ordem alfabética, e os valores não medem a qualidade da gestão."), ("O que são receita e despesa empenhada?", "Receita é o que o município arrecadou ou recebeu no ano; despesa empenhada é o valor reservado no orçamento para pagar um gasto."),
@@ -191,7 +194,7 @@ def build(S):
     rows = [[f'<a href="/municipios/{uf.lower()}/">{UF[uf]}</a>', num(len(por_uf[uf])), num(int(totpop[uf]))] for uf in sorted(por_uf, key=lambda k: slugify(UF[k]))]
     body = (f'<section class="blk"><h1>Municípios do Brasil: população, receitas e despesas</h1><p class="snippet">Dados oficiais de <strong>{num(tot)} municípios</strong>: população do Censo 2022, PIB, receitas e despesas declaradas ao Tesouro Nacional e emendas federais recebidas. {num(cobertos)} municípios têm contas declaradas na base.</p>'
             + S.table(["Estado", "Municípios", "Habitantes (Censo 2022)"], rows, "Em ordem alfabética") +
-            '<p>Cada município tem uma página própria com tabelas de receitas e despesas por função, indicadores e links para emendas e bancada do estado. Veja a <a href="/municipios/metodologia/">metodologia</a> e os <a href="/estados/">dados dos estados e da União</a>.</p>'
+            '<p>Cada município tem uma página própria com tabelas de receitas e despesas por função, indicadores e links para emendas e bancada do estado. Veja a <a href="/municipios/metodologia/">metodologia</a> e os <a href="/financas/">dados dos estados e da União</a>.</p>'
             f'<p class="src">Fontes: {FONTE_T} e {FONTE_I}. Compilação em {data_br(col)}.</p></section>')
     fa = [("Quais municípios estão no Estrato?", f"Os {num(tot)} municípios brasileiros, agrupados por estado."), ("De onde vêm os números?", "Da Declaração de Contas Anuais enviada pelos municípios ao Tesouro Nacional e do Censo 2022 e das contas regionais do IBGE."),
           ("As páginas comparam ou classificam prefeituras?", "Não. As listas são alfabéticas e as páginas descrevem apenas os números de cada município."), ("Os valores estão corrigidos pela inflação?", "Não. São valores nominais, como declarados."),
@@ -207,7 +210,7 @@ def build(S):
     est_rows = []
     for uf in sorted(UF, key=lambda k: slugify(UF[k])):
         if uf not in UFS: continue
-        c, e = UFS[uf]; a, d = ult(e); ibu = ib["uf"].get(c, {}); pop = ibu.get("pop") or e["pop"] or 0; u = f"/estados/{uf.lower()}/"
+        c, e = UFS[uf]; a, d = ult(e); ibu = ib["uf"].get(c, {}); pop = ibu.get("pop") or e["pop"] or 0; u = f"/financas/{uf.lower()}/"
         h, pack = bloco_ente(S, e, UF[uf], pop, ibu); nm = UF[uf]
         body = f'<article class="post"><h1>{E(nm)}: receitas, despesas, bancada e indicadores do estado</h1>'
         if a and d.get("rec") and d.get("desp"):
@@ -225,24 +228,24 @@ def build(S):
         body += f'<h2>Bancada federal</h2><p>{E(nm)} elege {len(dd)} deputados federais e {len(sens[uf])} senadores. Veja a lista completa em <a href="/deputados/uf/{uf.lower()}/">deputados federais {PREP[uf]} {E(nm)}</a>.</p>'
         body += S.table(["Partido", "Deputados federais"], [[f'<a href="/partidos/{slugify(p)}/">{E(p)}</a>', str(n)] for p, n in sorted(pp.items())], "Composição da bancada na Câmara, em ordem alfabética")
         if sens[uf]: body += "<p>Senadores: " + ", ".join(f'<a href="{x["url"]}">{E(x["nome"])}</a> ({E(x["partido"])})' for x in sorted(sens[uf], key=lambda x: slugify(x["nome"]))) + ".</p>"
-        body += f'<h2>Municípios</h2><p>Os {num(len(por_uf[uf]))} municípios {PREP[uf]} {E(nm)} têm página própria com receitas, despesas e indicadores: <a href="/municipios/{uf.lower()}/">municípios {PREP[uf]} {E(nm)}</a>. Veja também as <a href="/emendas/municipios/{uf.lower()}/">emendas parlamentares por município</a>.</p>'
+        body += f'<h2>Municípios</h2><p>Os {num(len(por_uf[uf]))} municípios {PREP[uf]} {E(nm)} têm página própria com receitas, despesas e indicadores: <a href="/municipios/{uf.lower()}/">municípios {PREP[uf]} {E(nm)}</a>. Veja também as <a href="/emendas/municipios/{uf.lower()}/">emendas parlamentares por município</a> e as <a href="/estados/{uf.lower()}/">notícias {PREP[uf]} {E(nm)}</a>.</p>'
         body += f'<p class="src">Fontes oficiais: {FONTE_T} (DCA, anexos I-C e I-E), {FONTE_I} (Censo 2022 e PIB), Câmara e Senado (bancada). Compilação em {data_br(col)}. <a href="/municipios/metodologia/">Metodologia</a>.</p></article>'
         fa = [(f"Quanto o governo {PREP[uf]} {nm} arrecadou em {a}?", f"As receitas brutas realizadas somaram {brl(d['rec'])} (exceto intraorçamentárias)." if d.get("rec") else "O Tesouro não traz esse dado na compilação."),
               (f"Quantos habitantes tem {nm}?", f"{num(int(pop))}, segundo o Censo 2022."), (f"Quantos deputados e senadores {nm} elege?", f"{len(dd)} deputados federais e {len(sens[uf])} senadores."),
               ("O que significa despesa empenhada?", "É o valor reservado no orçamento para um gasto, antes da liquidação e do pagamento."), ("Os valores estão corrigidos pela inflação?", "Não, são valores nominais declarados ao Tesouro."), ("De onde vêm os dados?", "Do SICONFI (Tesouro Nacional), do IBGE, da Câmara e do Senado.")]
         S.write(u, S.page(f"{nm}: receitas, despesas, bancada e indicadores do estado | {site}", f"{nm}: {num(int(pop))} habitantes" + (f", receita de {brl0(d['rec'])} e despesa de {brl0(d['desp'])} em {a}." if d.get("rec") and d.get("desp") else ".") + " Bancada federal, municípios e emendas.", u, body, faqs=fa,
-                            crumbs=[("Estados", "/estados/"), (nm, u)], jsonld={"@type": "AdministrativeArea", "name": nm, "url": S.BASE + u, "identifier": c}), familia="estados", lastmod=col); urls.append(u)
+                            crumbs=[("Estados e União", "/financas/"), (nm, u)], jsonld={"@type": "AdministrativeArea", "name": nm, "url": S.BASE + u, "identifier": c}), familia="financas", lastmod=col); urls.append(u)
         est_rows.append([f'<a href="{u}">{E(nm)}</a>', num(int(pop)), brl0(d["rec"]) if d.get("rec") else "—", brl0(d["desp"]) if d.get("desp") else "—"])
     if UN:
-        c, e = UN; a, d = ult(e); u = "/estados/uniao/"; h, pack = bloco_ente(S, e, "União", 0, {})
+        c, e = UN; a, d = ult(e); u = "/financas/uniao/"; h, pack = bloco_ente(S, e, "União", 0, {})
         body = f'<article class="post"><h1>União: receitas e despesas do governo federal</h1>'
         if a and d.get("rec"): body += f'<p class="snippet">A União registrou <strong>{brl0(d["rec"])}</strong> em receitas brutas realizadas' + (f' e <strong>{brl0(d["desp"])}</strong> em despesas empenhadas' if d.get("desp") else "") + f' em {a}, segundo a Declaração de Contas Anuais enviada ao Tesouro Nacional.</p>'
         else: body += "<p class=\"snippet\">A União declara suas contas anuais ao Tesouro Nacional por meio do SICONFI.</p>"
-        body += h + f'<p>Veja como os recursos federais chegam aos estados e municípios em <a href="/emendas/">emendas parlamentares</a>, <a href="/executivo/">Poder Executivo</a> e <a href="/estados/">dados dos estados</a>.</p>'
+        body += h + f'<p>Veja como os recursos federais chegam aos estados e municípios em <a href="/emendas/">emendas parlamentares</a>, <a href="/executivo/">Poder Executivo</a> e <a href="/financas/">dados dos estados</a>.</p>'
         body += f'<p class="src">Fonte oficial: {FONTE_T} (DCA, anexos I-C e I-E). Compilação em {data_br(col)}. <a href="/municipios/metodologia/">Metodologia</a>.</p></article>'
         fa = [("Quanto a União arrecadou?", f"{brl(d['rec'])} em receitas brutas realizadas em {a}." if d.get("rec") else "O dado não consta na compilação."), ("O que é a DCA?", "A Declaração de Contas Anuais reúne os balanços que cada ente envia ao Tesouro Nacional."),
-              ("Os valores estão corrigidos pela inflação?", "Não, são nominais."), ("O que é despesa empenhada?", "É o valor reservado no orçamento para um gasto, antes da liquidação e do pagamento."), ("Onde estão os dados dos estados?", "Em /estados/, com uma página por estado.")]
-        S.write(u, S.page(f"União: receitas e despesas do governo federal | {site}", f"Receitas e despesas da União em {a}, declaradas ao Tesouro Nacional, por categoria e função de governo." if a else "Receitas e despesas da União declaradas ao Tesouro Nacional.", u, body, faqs=fa, crumbs=[("Estados", "/estados/"), ("União", u)]), familia="estados", lastmod=col); urls.append(u)
+              ("Os valores estão corrigidos pela inflação?", "Não, são nominais."), ("O que é despesa empenhada?", "É o valor reservado no orçamento para um gasto, antes da liquidação e do pagamento."), ("Onde estão os dados dos estados?", "Em /financas/, com uma página por estado.")]
+        S.write(u, S.page(f"União: receitas e despesas do governo federal | {site}", f"Receitas e despesas da União em {a}, declaradas ao Tesouro Nacional, por categoria e função de governo." if a else "Receitas e despesas da União declaradas ao Tesouro Nacional.", u, body, faqs=fa, crumbs=[("Estados e União", "/financas/"), ("União", u)]), familia="financas", lastmod=col); urls.append(u)
         est_rows.append([f'<a href="{u}">União</a>', "—", brl0(d["rec"]) if d.get("rec") else "—", brl0(d["desp"]) if d.get("desp") else "—"])
     body = ('<section class="blk"><h1>Estados e União: receitas, despesas e bancada</h1><p class="snippet">Dados oficiais dos 26 estados, do Distrito Federal e da União: receitas e despesas declaradas ao Tesouro Nacional, população e PIB do IBGE e bancada federal na Câmara e no Senado.</p>'
             + S.table(["Ente", "Habitantes", "Receita", "Despesa empenhada"], est_rows, "Em ordem alfabética; não é ranking") +
@@ -250,7 +253,7 @@ def build(S):
             f'<p class="src">Fontes: {FONTE_T} e {FONTE_I}. Compilação em {data_br(col)}.</p></section>')
     fa = [("Quais entes aparecem aqui?", "Os 26 estados, o Distrito Federal e a União."), ("A tabela é um ranking?", "Não. Os entes estão em ordem alfabética e os números não medem a qualidade da gestão."), ("De onde vêm as receitas e despesas?", "Da Declaração de Contas Anuais enviada ao Tesouro Nacional."),
           ("Por que a receita de um estado é maior que a de outro?", "Porque estados diferem em população, economia e transferências recebidas; a tabela só informa os valores."), ("Os valores são atuais?", f"São do último exercício declarado, compilado em {data_br(col)}. O Estrato atualiza a coleta uma vez por mês."), ("Onde baixo os dados?", "Em /dados/financas-entes.csv.")]
-    S.write("/estados/", S.page(f"Estados e União: receitas, despesas e bancada | {site}", "Receitas e despesas dos estados, do DF e da União declaradas ao Tesouro Nacional, com população, PIB e bancada federal de cada estado.", "/estados/", body, faqs=fa, crumbs=[("Estados", "/estados/")]), familia="paginas", lastmod=col); urls.append("/estados/")
+    S.write("/financas/", S.page(f"Estados e União: receitas, despesas e bancada | {site}", "Receitas e despesas dos estados, do DF e da União declaradas ao Tesouro Nacional, com população, PIB e bancada federal de cada estado.", "/financas/", body, faqs=fa, crumbs=[("Estados e União", "/financas/")]), familia="paginas", lastmod=col); urls.append("/financas/")
     # ---------- metodologia ----------
     body = ('<section class="blk"><h1>Metodologia: finanças de estados e municípios</h1><p class="snippet">Como o Estrato monta as páginas de estados, União e municípios: fontes, conceitos, limites e atualização.</p>'
             f'<h2>Fontes</h2><ul><li>Receitas e despesas: {FONTE_T}, Declaração de Contas Anuais (DCA), anexo I-C (receitas orçamentárias) e anexo I-E (despesas por função), exercícios {", ".join(str(a) for a in sc["anos"])}.</li>'
