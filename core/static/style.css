@@ -132,3 +132,5 @@ nav.ed a,nav.ed .dd{flex:0 0 auto}nav.ed a.xtra{display:none}
 .diag{margin:16px 0}
 .tline{list-style:none;padding:0 0 0 18px;border-left:3px solid var(--b);margin:18px 0}.tline .tm{position:relative;padding:0 0 16px 14px}.tline .tm:before{content:"";position:absolute;left:-26px;top:5px;width:13px;height:13px;border-radius:50%;background:#1f4e79}
 .tline .marco:before{background:var(--a)}.tline time{display:block;font-size:.8rem;font-weight:700;color:var(--m)}.tline span{display:block;font-size:.9rem;overflow-wrap:anywhere}
+.mm-aviso{border-left:4px solid #1f4e79;background:var(--g);padding:10px 14px;margin:18px 0;font-size:.92rem;border-radius:4px}.mm-rev{border-color:#b45309;background:#fff7ed}
+.mm-svg{width:100%;height:auto;margin:14px 0;border:1px solid var(--b);border-radius:6px;background:#fff}.mm-svg a:hover rect{opacity:.3}.mm-leg{font-size:.82rem;color:var(--m)}
