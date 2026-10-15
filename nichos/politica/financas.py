@@ -178,9 +178,9 @@ def build(S):
             else:
                 fa = [(f"Quantos habitantes tem {nome}?", f"{num(int(pop))} habitantes, segundo o Censo 2022 do IBGE."), ("Por que não há receitas e despesas?", "O Tesouro Nacional não tem, na compilação do Estrato, a declaração anual completa do município."),
                       ("De onde vêm os dados desta página?", "Do Tesouro Nacional (SICONFI) e do IBGE.")]
-            ld = {"@type": "City", "name": nome, "url": S.BASE + u, "containedInPlace": {"@type": "AdministrativeArea", "name": UF[uf]}, "identifier": c}
+            ld = {"@type": "City", "@id": S.BASE + u + "#city", "name": nome, "url": S.BASE + u, "containedInPlace": {"@type": "AdministrativeArea", "name": UF[uf]}, "identifier": c}
             desc = f"{nome} ({uf}): {num(int(pop))} habitantes" + (f", receita de {brl0(d['rec'])} e despesa de {brl0(d['desp'])} em {a}. Dados do Tesouro e do IBGE." if a and d.get("rec") and d.get("desp") else ". Dados do IBGE e do Tesouro Nacional.")
-            S.write(u, S.page(f"{nome} ({uf}): receitas, despesas e dados do município | {site}", desc, u, body, faqs=fa, crumbs=[("Municípios", "/municipios/"), (UF[uf], f"/municipios/{uf.lower()}/"), (nome, u)], jsonld=ld), familia=fams, lastmod=col); urls.append(u)
+            S.write(u, S.page(f"Indicadores de {nome} ({uf}): população, PIB e área | {site}", desc, u, body, faqs=fa, crumbs=[("Municípios", "/municipios/"), (UF[uf], f"/municipios/{uf.lower()}/"), (nome, u)], jsonld=ld), familia=fams, lastmod=col); urls.append(u)
     # ---------- hubs por UF (municipios) ----------
     totpop = {uf: sum(POP[c] for c in L) for uf, L in por_uf.items()}
     for uf, L in por_uf.items():

@@ -87,7 +87,14 @@ def build(S):
     def viz_pref(L, i): return ", ".join(f'<a href="/prefeitura/{x_["uf"].lower()}/{URL[x].rstrip("/").rsplit("/", 1)[1]}/">{E(x_["n"])}</a>' for x in L[max(0, i - 4):i] + L[i + 1:i + 5] for x_ in [M[x]])
     def ib_slug(c): return slugify(M[c]["n"])
     ibge_link = lambda c: f'<a href="https://cidades.ibge.gov.br/brasil/{M[c]["uf"].lower()}/{ib_slug(c)}/panorama" target="_blank" rel="noopener nofollow">IBGE Cidades</a>'
-    ld_city = lambda c, u: {"@type": "City", "name": M[c]["n"], "url": S.BASE + u, "containedInPlace": {"@type": "AdministrativeArea", "name": UF[M[c]["uf"]]}, "identifier": c}
+    def ld_city(c, u):
+        """Uma única entidade City por município (@id na página do município); cada página-irmã é um WebPage que fala dela (about)."""
+        cid = S.BASE + URL[c] + "#city"
+        city = {"@type": "City", "@id": cid, "name": M[c]["n"], "url": S.BASE + URL[c], "containedInPlace": {"@type": "AdministrativeArea", "name": UF[M[c]["uf"]]}, "identifier": c}
+        pag = {"@type": "WebPage", "@id": S.BASE + u + "#pagina", "url": S.BASE + u, "about": {"@id": cid}, "isPartOf": {"@id": S.BASE + "/#site"}}
+        out = [city, pag]
+        if u.startswith("/prefeitura/"): out.append({"@type": "GovernmentOrganization", "@id": S.BASE + u + "#prefeitura", "name": f"Prefeitura de {M[c]['n']}", "areaServed": {"@id": cid}, "url": S.BASE + u})
+        return out
     # senadores e deputados por UF
     deps_uf = collections.defaultdict(list); sens_uf = collections.defaultdict(list)
     for d in S.parl["deps"]: deps_uf[d["uf"]].append(d)
