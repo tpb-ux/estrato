@@ -81,7 +81,7 @@ class Site:
         """Regra de FAQ: em páginas pSEO (prefixos em qualidade.faq_pseo) ficam no máximo N perguntas, só as que
         trazem dado da própria página (número na resposta). Hubs listados em faq_pseo.hubs mantêm o FAQ completo."""
         q = (self.CFG.get("qualidade") or {}).get("faq_pseo") or {}
-        if not faqs or path.count("/") < 3 or not path.startswith(tuple(q.get("prefixos", []))) or path.startswith(tuple(q.get("hubs", []))): return faqs, False
+        if not faqs or path.count("/") < 3 or not path.startswith(tuple(q.get("prefixos", []))) or path.startswith(tuple(q.get("hubs", []))) or path in (q.get("hubs_exatos") or []): return faqs, False
         keep = [(a, b) for a, b in faqs if re.search(r"\d", re.sub(r"<[^>]+>", "", b))][: q.get("max", 3)]
         st = self.faq_stats; st["pseo_paginas"] += 1; st["pseo_faqs"] += len(keep); st["pseo_removidas"] += len(faqs) - len(keep)
         return keep, True

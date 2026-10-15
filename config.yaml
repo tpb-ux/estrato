@@ -11,12 +11,12 @@ noindex_global: true
 aviso_topo: "Versão de prévia: em revisão, não indexada."
 publisher_logo: /static/logo.png
 tema: {cor: "#8A4B08", cor2: "#6E3B05", escuro: "#1B2430"}
-modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, proposicoes, cotas, emendas, executivo, presidencia, perguntas, explica, agenda, linha_do_tempo, quem_e_quem, calendario, checagem, mapas, dados_abertos, subcategorias]
+modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, proposicoes, colegiados, cotas, emendas, executivo, presidencia, perguntas, explica, agenda, linha_do_tempo, quem_e_quem, calendario, checagem, mapas, dados_abertos, subcategorias]
 qualidade:
   min_faqs: 5                 # hubs, institucionais e glossário
   min_palavras_pseo: 300
   corte_unicidade: 0.15       # fração mínima de texto próprio (5-gramas raros na família) para uma pSEO ficar indexável
-  faq_pseo: {prefixos: [/deputados/, /senadores/, /proposicoes/], max: 3, hubs: [/deputados/uf/, /deputados/cota-parlamentar/, /proposicoes/tema/, /proposicoes/tipo/, /proposicoes/metodologia/]}   # partidos são hubs dos seus parlamentares: FAQ completo
+  faq_pseo: {prefixos: [/deputados/, /senadores/, /proposicoes/, /comissoes/, /frentes/], max: 3, hubs_exatos: [/comissoes/camara/, /comissoes/senado/, /comissoes/cpis/], hubs: [/deputados/uf/, /deputados/cota-parlamentar/, /proposicoes/tema/, /proposicoes/tipo/, /proposicoes/metodologia/, /comissoes/metodologia/]}   # partidos são hubs dos seus parlamentares: FAQ completo
 # Lançamento em ondas (vale quando noindex_global for desligado). Plano:
 #   onda 1 (lançamento): institucionais, editorias, glossário, partidos, hubs de deputados/senadores, deputados por UF e cota parlamentar
 #   onda 2 (+2 a 3 semanas, se o Search Console mostrar a onda 1 indexada): tirar "senadores" da lista
@@ -26,8 +26,8 @@ qualidade:
 #   onda 6 (+2 a 3 semanas): tirar "emendas" da lista (emendas por autor e por município; hubs ficam indexáveis)
 #   onda 7 (+2 a 3 semanas): tirar "executivo" da lista (viagens de ministros, órgãos, Presidência; hubs ficam indexáveis)
 indexacao:
-  familias_noindex: [deputados, senadores, votacoes, proposicoes, cotas, emendas, executivo]   # votacoes: páginas de cada votação e listas anuais (hub /votacoes/ e metodologia ficam indexáveis)
-  excecoes: [/deputados/, /senadores/, /deputados/cota-parlamentar/, "/deputados/uf/*"]
+  familias_noindex: [deputados, senadores, votacoes, proposicoes, comissoes, frentes, cotas, emendas, executivo]   # votacoes: páginas de cada votação e listas anuais (hub /votacoes/ e metodologia ficam indexáveis)
+  excecoes: [/deputados/, /senadores/, /deputados/cota-parlamentar/, "/deputados/uf/*", /proposicoes/, /proposicoes/tema/, /proposicoes/metodologia/, /comissoes/, /comissoes/camara/, /comissoes/senado/, /comissoes/cpis/, /comissoes/metodologia/, /frentes/]
 # Regra anti-rede: portais da mesma empresa não se linkam no layout nem em massa.
 rede_dominios: [modalnews.com.br]
 editorias:
@@ -45,10 +45,10 @@ llms_areas: [/perguntas/, /explica/, /agenda/, /linha-do-tempo/, /quem-e-quem/, 
 menu:
   barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Votações, /votacoes/], [Cota, /cota/], [Emendas, /emendas/], [Executivo, /executivo/], [Glossário, /glossario/]]
   rotulo_dropdown: Dados
-  referencia: [[Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Deputados por estado, /deputados/#uf], [Perguntas e respostas, /perguntas/], [Como funciona, /explica/], [Proposições legislativas, /proposicoes/], [Agenda dos Três Poderes, /agenda/], [Linhas do tempo, /linha-do-tempo/], [Quem é quem, /quem-e-quem/], [Calendário, /calendario/], [Dados abertos, /dados/], [Buscar, /busca/]]
+  referencia: [[Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Deputados por estado, /deputados/#uf], [Perguntas e respostas, /perguntas/], [Como funciona, /explica/], [Proposições legislativas, /proposicoes/], [Comissões e CPIs, /comissoes/], [Frentes parlamentares, /frentes/], [Agenda dos Três Poderes, /agenda/], [Linhas do tempo, /linha-do-tempo/], [Quem é quem, /quem-e-quem/], [Calendário, /calendario/], [Dados abertos, /dados/], [Buscar, /busca/]]
 rodape:
   - {titulo: Editorias, links: [[Congresso, /congresso/], [Governo, /governo/], [Justiça, /justica/], [Eleições, /eleicoes/], [Economia e Tributos, /economia/], [Estados e Municípios, /estados/], [Regulação e Setores, /regulacao/], [Internacional, /internacional/]]}
-  - {titulo: Dados, links: [[Deputados federais, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Glossário político, /glossario/], [Placar de votações, /votacoes/], [Proposições, /proposicoes/], [Perguntas e respostas, /perguntas/], [Como funciona, /explica/], [Agenda dos Três Poderes, /agenda/], [Linhas do tempo, /linha-do-tempo/], [Quem é quem, /quem-e-quem/], [Calendário, /calendario/], [Dados abertos (CSV), /dados/], [Buscar, /busca/]]}
+  - {titulo: Dados, links: [[Deputados federais, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Cota parlamentar, /cota/], [Emendas parlamentares, /emendas/], [Viagens e cartão do Executivo, /executivo/], [Glossário político, /glossario/], [Placar de votações, /votacoes/], [Proposições, /proposicoes/], [Comissões e CPIs, /comissoes/], [Frentes parlamentares, /frentes/], [Perguntas e respostas, /perguntas/], [Como funciona, /explica/], [Agenda dos Três Poderes, /agenda/], [Linhas do tempo, /linha-do-tempo/], [Quem é quem, /quem-e-quem/], [Calendário, /calendario/], [Dados abertos (CSV), /dados/], [Buscar, /busca/]]}
   - {titulo: Institucional, links: [[Sobre, /sobre/], [Expediente, /expediente/], [Política editorial, /politica-editorial/], [Metodologia, /metodologia/], [Metodologia de checagem, /checagem/metodologia/], [Correções, /correcoes/], [Direito de resposta, /direito-de-resposta/], [Contato, /contato/], [Termos, /termos/], [Privacidade, /privacidade/], [RSS, /rss.xml]]}
 home_faqs:
   - {p: "O que é o Estrato?", r: "Um portal sobre os Três Poderes que reúne dados oficiais abertos, como os da Câmara e do Senado, e resumos de fontes públicas com link para a íntegra."}
@@ -70,4 +70,4 @@ verificacao: {google: "", bing: ""}
 indexnow_key: "c0f3a1e9b7d24e6f8a5b2c9d1e7f4a30"
 llms_intro: "Portal apartidário em português sobre os Três Poderes do Brasil. Páginas de dados usam APIs oficiais (Câmara dos Deputados, Senado Federal) com fonte e data de coleta; notícias são resumos de agências oficiais com link para a fonte e não são indexadas."
 # Autolink do glossário (core/autolink.py): 1ª ocorrência de cada termo vira link para o verbete, até `maximo` por página.
-autolink: {ativo: true, maximo: 10, familias: [artigos, glossario, deputados, senadores, partidos, analises, votacoes, proposicoes, cotas, emendas, executivo], editorias: true}
+autolink: {ativo: true, maximo: 10, familias: [artigos, glossario, deputados, senadores, partidos, analises, votacoes, proposicoes, comissoes, frentes, cotas, emendas, executivo], editorias: true}

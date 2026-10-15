@@ -1,7 +1,7 @@
 """Deputados federais e senadores em exercício + hub de cota parlamentar (CEAP). Dados: APIs de Dados Abertos da Câmara e do Senado."""
 import json, statistics as st
 from core.site import E, slugify
-from . import votacoes as _vot, cotas as _cot, emendas as _em, proposicoes as _prop
+from . import votacoes as _vot, cotas as _cot, emendas as _em, proposicoes as _prop, colegiados as _colg
 from .dados import brl as _brl
 def _emd(S, nome):
     r = _em.link_parl(S, nome)
@@ -67,7 +67,7 @@ def build(S):
                      + S.table(["Mês", "Valor"], [[MESES[int(m)].capitalize(), f'<span class="ndata">{brl(v)}</span>'] for m, v in c["por_mes"].items()], f"Despesas por mês, {ano}"))
             dif = c["total"] - medu
             body += f'<p>Em relação à mediana dos deputados {PREP[uf]} {UF[uf]} ({brl(medu)}), o total declarado está {brl(abs(dif))} {"acima" if dif >= 0 else "abaixo"}. O teto da cota varia por estado; veja a <a href="/deputados/cota-parlamentar/">comparação de todos os deputados</a>.</p>'
-        body += _cot.link_parl(S, "camara", d["id"], d["slug"], d["nome"]) + _emd(S, d["nome"]) + _vot.bloco_parlamentar(S, "camara", d["id"], d["nome"]) + _prop.bloco_parlamentar(S, d["id"])
+        body += _cot.link_parl(S, "camara", d["id"], d["slug"], d["nome"]) + _emd(S, d["nome"]) + _vot.bloco_parlamentar(S, "camara", d["id"], d["nome"]) + _prop.bloco_parlamentar(S, d["id"]) + _colg.bloco_deputado(S, d["id"])
         if d["orgaos"]:
             body += f'<h2>Comissões e órgãos ({len(d["orgaos"])})</h2>' + S.table(["Órgão", "Sigla", "Cargo"], [[E(o["nome"] or ""), E(o["sigla"] or ""), E(o["cargo"] or "")] for o in d["orgaos"]])
         viz = [x for x in part if x["uf"] == uf and x is not d][:8] or [x for x in pares if x is not d][:8]
@@ -158,7 +158,7 @@ def build(S):
                 + "".join(f"<tr><th scope=\"row\">{k}</th><td>{v}</td></tr>" for k, v in info) + "</tbody></table></div></div>"
                 + ('<p class="src">Foto oficial: Agência Senado (<a href="https://www12.senado.leg.br/noticias/politica-de-uso" target="_blank" rel="noopener">reprodução livre com crédito</a>).</p>' if (S.ROOT / f"static/img/parl/sen-{x['id']}.webp").exists() else "")
                 + f'<p>{UF[uf]} é representado no Senado por {len(sby[uf])} senadores em exercício. O {E(x["partido"])} tem {sp0.get(x["partido"], 0)} dos {len(sens)} senadores em exercício e {sum(1 for d in deps if d["partido"] == x["partido"])} dos {len(deps)} deputados federais, segundo as bases oficiais.</p>'
-                + _cot.link_parl(S, "senado", x["id"], x["slug"], x["nome"]) + _emd(S, x["nome"]) + _vot.bloco_parlamentar(S, "senado", int(x["id"]), x["nome"])
+                + _cot.link_parl(S, "senado", x["id"], x["slug"], x["nome"]) + _emd(S, x["nome"]) + _vot.bloco_parlamentar(S, "senado", int(x["id"]), x["nome"]) + _colg.bloco_senador(S, x["id"])
                 + "<h2>Como funciona o mandato</h2><p>O mandato de senador dura oito anos, o equivalente a duas legislaturas. O Senado é renovado de forma alternada, por um terço e dois terços das cadeiras, a cada quatro anos. Cada estado tem três senadores, e cada senador é eleito com dois suplentes.</p>"
                 + (f'<h2>Comissões e grupos ({len(x["comissoes"])})</h2>' + S.table(["Colegiado", "Sigla", "Participação"], [[E(c["nome"] or ""), E(c["sigla"] or ""), E(c["cargo"] or "")] for c in x["comissoes"]]) if x["comissoes"] else "")
                 + f'<h2>Outros senadores {PREP[uf]} {UF[uf]}</h2>{plist(S, colegas, "sen")}<h2>Deputados federais {PREP[uf]} {UF[uf]}</h2><p><a href="/deputados/uf/{uf.lower()}/">Veja os {len(by_uf.get(uf, []))} deputados federais {PREP[uf]} {UF[uf]}</a>.</p>'
