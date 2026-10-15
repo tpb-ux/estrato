@@ -197,7 +197,7 @@ def build(S):
         faqs = [(f"Quanto {nome} recebeu da cota parlamentar desde 2023?", f"{brl(g['tot'])} em despesas declaradas por {num(nparl)} parlamentares."), (f"Qual é o CNPJ de {nome}?", f"{fmt_cnpj(princ)}" + (f", além de {len(cl_) - 1} outro(s) estabelecimento(s) com a mesma raiz" if len(cl_) > 1 else "") + ", como registrado nos documentos da cota.")] + faqs_x + \
                [(f"Em que ano o valor foi maior?", f"Em {am[0]}, com {brl(am[1])}."), ("O pagamento indica irregularidade?", "Não. A página reproduz despesas declaradas e reembolsadas pelas casas legislativas, sem juízo sobre elas.")]
         S.write(u, S.page(f"{nome} (CNPJ {fmt_cnpj(princ)}): pagamentos da cota parlamentar", f"{nome} recebeu {brl0(g['tot'])} em despesas da cota parlamentar desde 2023, de {nparl} parlamentares. Valores por ano, categoria e parlamentar.", u, body, faqs=faqs[:7],
-                            crumbs=[("Cota parlamentar", "/cota/"), ("Fornecedores", "/cota/#fornecedores"), (nome, u)],
+                            crumbs=[("Cota parlamentar", "/cota/"), ("Fornecedores", "/cota/fornecedores/"), (nome, u)],
                             jsonld={"@type": "Organization", "name": nome, "taxID": fmt_cnpj(princ), "url": S.BASE + u}), familia=fam, lastmod=col)
         urls.append(u)
     # ---------- hub, metodologia, CSV ----------
@@ -213,6 +213,14 @@ def build(S):
     fs = sorted(pag_forn, key=lambda k: -FO[k]["tot"])[:30]
     blocos += f'<h2 id="fornecedores">Fornecedores pessoa jurídica</h2><p>{num(len(pag_forn))} empresas (agrupadas pela raiz do CNPJ, que reúne matriz e filiais) têm página própria (ao menos {MIN_FORN_PARL} parlamentares atendidos, ou {brl0(MIN_FORN_TOT)} recebidos de pelo menos 3 parlamentares, desde 2023). As 30 de maior valor somado:</p>' + \
               S.table(["Fornecedor", "CNPJ", "Total desde 2023"], [[f'<a href="/cota/fornecedores/{k}/">{E(nome_forn(FO[k]["nome"]))}</a>', fmt_cnpj(max(FO[k]["cnpjs"], key=FO[k]["cnpjs"].get)), brl(FO[k]["tot"])] for k in fs])
+    # hub com TODOS os fornecedores PJ com página (alcançabilidade: sem ele as páginas de fornecedor ficam órfãs); ordem alfabética, sem ranking
+    fa_ = sorted(pag_forn, key=lambda k: slugify(nome_forn(FO[k]["nome"])))
+    S.write("/cota/fornecedores/", S.page("Fornecedores da cota parlamentar: lista de empresas", f"{num(len(fa_))} empresas fornecedoras da cota parlamentar (CEAP e CEAPS) com página própria, em ordem alfabética, com CNPJ e total recebido desde 2023.", "/cota/fornecedores/",
+        f'<section class="blk"><h1>Fornecedores pessoa jurídica da cota parlamentar</h1><p class="snippet">{num(len(fa_))} empresas, agrupadas pela raiz do CNPJ, têm página própria por terem atendido ao menos {MIN_FORN_PARL} parlamentares desde 2023. A lista está em ordem alfabética e não é ranking.</p>'
+        + S.table(["Fornecedor", "CNPJ", "Total desde 2023"], [[f'<a href="/cota/fornecedores/{k}/">{E(nome_forn(FO[k]["nome"]))}</a>', fmt_cnpj(max(FO[k]["cnpjs"], key=FO[k]["cnpjs"].get)), brl(FO[k]["tot"])] for k in fa_], "Fornecedores PJ em ordem alfabética")
+        + '<p>Voltar à <a href="/cota/">cota parlamentar</a>. Fornecedores pessoa física não são exibidos; veja a <a href="/cota/metodologia/">metodologia</a>.</p></section>',
+        crumbs=[("Cota parlamentar", "/cota/"), ("Fornecedores", "/cota/fornecedores/")]), familia="paginas", lastmod=col, idx=False, faq_min=0); urls.append("/cota/fornecedores/")
+    blocos += f'<p>Veja a <a href="/cota/fornecedores/">lista completa das {num(len(fa_))} empresas fornecedoras</a>, em ordem alfabética.</p>'
     tc = {casa: sum(M[casa][a]["tot"] for a in M[casa]) for casa in CASA}
     body = (f'<section class="blk"><h1>Cota parlamentar: gastos de deputados e senadores desde 2023</h1><p class="snippet">Deputados federais declararam <strong>{brl(tc["camara"])}</strong> em despesas da CEAP e senadores, <strong>{brl(tc["senado"])}</strong> da CEAPS, de janeiro de 2023 até {MESES[ult_mes["camara"]]} de {ult["camara"]}. '
             f'Cada {"deputado e senador em exercício"} tem uma página com gastos por ano, mês, categoria e fornecedor, comparados à média da casa.</p>{blocos}'

@@ -57,6 +57,14 @@ class Site:
         # noindex global (pré-lançamento/prévia): env PORTAL_NOINDEX=1 ou config noindex_global: true
         ev = os.environ.get("PORTAL_NOINDEX", "")
         self.NOINDEX = ev == "1" or (ev != "0" and bool(c.get("noindex_global")))  # PORTAL_NOINDEX=0 força desligado (testes)
+        # links só do lançamento (alcançabilidade de /midia/ e /mapas/): entram no menu "Dados" e no rodapé quando noindex_global é desligado
+        # (mapas: só com mapas.ativo e data liberada). Pré-lançamento as seções ficam sem links de entrada, de propósito.
+        lc = c.get("links_lancamento") or {}; hoje_ = dt.date.today().isoformat(); mp = c.get("mapas") or {}
+        for grupo in (["midia"] if not self.NOINDEX else []) + (["mapas"] if not self.NOINDEX and mp.get("ativo") and hoje_ >= str(mp.get("liberar_em", "9999")) else []):
+            g = lc.get(grupo) or {}
+            (c.setdefault("menu", {}).setdefault("referencia", [])).extend(g.get("menu") or [])
+            for col in c.get("rodape", []):
+                if col.get("titulo") == g.get("rodape_coluna"): col["links"].extend(g.get("rodape") or [])
         self.urls = {}       # path -> dict(idx, familia, lastmod, image, title, desc)
         self.thin, self.errors, self.ondas = set(), [], set()
         self.faq_stats = {"pseo_paginas": 0, "pseo_faqs": 0, "pseo_removidas": 0}

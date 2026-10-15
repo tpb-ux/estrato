@@ -128,7 +128,7 @@ def build(S):
         votadas = sum(1 for p in L if p["id"] in por_vot); norma = sum(1 for p in L if "norma jur" in p["sit"].lower())
         body = (f'<section class="blk"><h1>{E(tn)} ({t}) na Câmara: proposições relevantes</h1><p class="snippet">O Estrato acompanha <strong>{num(len(L))} {E(tn.lower())}</strong> ({t}) de maior alcance na Câmara dos Deputados, '
                 f'{votadas} delas com votação nominal no plenário e {norma} transformadas em norma jurídica. {E(expl)}</p>'
-                + S.table(["Apresentada em", "Proposição", "Ementa", "Situação"], [linha(p) for p in L[:300]], f"{t}: da mais recente para a mais antiga" + (f" (300 de {num(len(L))})" if len(L) > 300 else ""))
+                + S.table(["Apresentada em", "Proposição", "Ementa", "Situação"], [linha(p) for p in L[:1000]], f"{t}: da mais recente para a mais antiga" + (f" (1.000 de {num(len(L))})" if len(L) > 1000 else ""))
                 + "<h2>Distribuição por ano de apresentação</h2>" + S.table(["Ano", "Proposições na seleção"], [[str(a), str(n)] for a, n in sorted(porano.items(), reverse=True)])
                 + f'<p>Veja os <a href="/proposicoes/">demais tipos</a>, os <a href="/proposicoes/tema/">temas</a> e a <a href="/proposicoes/metodologia/">metodologia da seleção</a>.</p><p class="src">Fonte: arquivos em lote da Câmara. Compilação de {data_br(col)}.</p></section>')
         faqs = [(f"Quantas {tn.lower()}s o Estrato acompanha?", f"{num(len(L))} proposições do tipo {t} apresentadas desde 2023 ou votadas no plenário desde 2023, segundo a compilação de {data_br(col)}."),

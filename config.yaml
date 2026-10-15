@@ -45,6 +45,10 @@ editorias:
 mapas: {ativo: false, liberar_em: 2026-10-27}
 midia: {vies_ativo: false, liberar_em: 2026-10-27}   # Mapa da Mídia: viés/confiança/histórico desligados até liberar_em (e só se vies_ativo: true); metodologia em revisão humana/jurídica
 prefeitos: {ativo: false, liberar_em: 2026-10-27}   # prefeito e vereadores (TSE 2024): gerador desligado até depois de 26/10/2026
+# Links que só entram no menu/rodapé no lançamento (noindex_global: false); mapas também exige mapas.ativo e data. Decisão de menu x rodapé do /midia/ é do Tercio: ajustar aqui.
+links_lancamento:
+  midia: {menu: [["Mapa da Mídia", /midia/]], rodape_coluna: Dados, rodape: [["Mapa da Mídia", /midia/]]}
+  mapas: {menu: [["Mapas e rankings", /mapas/]], rodape_coluna: Dados, rodape: [["Mapas e rankings", /mapas/]]}
 llms_areas: [/perguntas/, /explica/, /agenda/, /linha-do-tempo/, /quem-e-quem/, /calendario/, /checagem/metodologia/]
 menu:
   barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Votações, /votacoes/], [Cota, /cota/], [Emendas, /emendas/], [Executivo, /executivo/], [Glossário, /glossario/]]
