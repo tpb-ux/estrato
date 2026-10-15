@@ -94,6 +94,10 @@ class Site:
             en = emp.get("endereco") or {}
             org.update(legalName=emp["razao_social"], taxID=emp.get("cnpj"), address={"@type": "PostalAddress", "streetAddress": en.get("logradouro"), "addressLocality": en.get("cidade"),
                        "addressRegion": en.get("uf"), "postalCode": en.get("cep"), "addressCountry": "BR"})
+        org["masthead"] = self.BASE + "/expediente/"
+        if emp.get("email") or emp.get("formulario_url"):
+            org["contactPoint"] = {"@type": "ContactPoint", "contactType": "editorial", "availableLanguage": "pt-BR", **({"email": emp["email"]} if emp.get("email") else {}), **({"url": emp["formulario_url"]} if emp.get("formulario_url") else {})}
+        if c.get("responsavel_editorial"): org["employee"] = {"@type": "Person", "name": c["responsavel_editorial"], "jobTitle": "Responsável editorial"}   # só renderiza se preenchido
         if emp.get("email"): org["email"] = emp["email"]
         if any(emp.get("redes") or []): org["sameAs"] = [r for r in emp["redes"] if r]
         return [org, {"@type": "WebSite", "@id": self.BASE + "/#site", "name": c["site_name"], "url": self.BASE + "/", "inLanguage": c.get("language", "pt-BR"), "publisher": {"@id": self.BASE + "/#org"},
@@ -115,7 +119,8 @@ class Site:
         if crumbs is not None:
             ch, cl = self.crumbs(crumbs); body = ch + body; graph.append(cl)
         if faqs:
-            body += f'<section class="faqs"><h2>Perguntas frequentes</h2>{self.faq_html(faqs)}</section>'; graph.append(self.faq_ld(faqs))
+            body += f'<section class="faqs"><h2>Perguntas frequentes</h2>{self.faq_html(faqs)}</section>'
+            if path not in ((c.get("qualidade") or {}).get("faq_sem_schema") or []): graph.append(self.faq_ld(faqs))  # páginas jurídicas: FAQ visível, sem FAQPage
         for j in (jsonld if isinstance(jsonld, list) else [jsonld] if jsonld else []):
             j = {k: v for k, v in j.items() if k != "@context"}
             if j.get("@type") in ("Article", "NewsArticle") and not j.get("image"): j["image"] = og_img or self.BASE + "/static/og-default.png"

@@ -1,7 +1,7 @@
 """/perguntas/: perguntas e respostas curtas calculadas a partir dos dados oficiais já coletados pelo Estrato
 (Câmara e Senado Dados Abertos, Portal da Transparência). Nenhum valor é digitado à mão: tudo sai dos JSON em data/
 e muda sozinho a cada coleta. Cada página: resposta direta de 40 a 60 palavras, explicação, fonte com data, pergunta
-relacionada, schema QAPage e 5 FAQs. Período eleitoral: listas em ordem alfabética, sem ranking.
+relacionada, schema WebPage + FAQPage (5 FAQs). Período eleitoral: listas em ordem alfabética, sem ranking.
 """
 import collections
 from core.site import E, slugify
@@ -102,8 +102,8 @@ def build(S):
                 ("Os números podem mudar?", "Sim. Licenças, posse de suplentes, trocas de partido e novos pagamentos registrados pela CGU alteram os totais na coleta seguinte."),
                 (f"Qual pergunta relacionada vale ler?", f'<a href="{rel["url"]}">{E(rel["q"])}</a>'),
                 ("Encontrei um erro. Como aviso?", 'Pela página de <a href="/correcoes/">correções</a>. A correção é registrada com data.')]
-        ld = {"@type": "QAPage", "mainEntity": {"@type": "Question", "name": x["q"], "answerCount": 1, "dateCreated": cd,
-              "acceptedAnswer": {"@type": "Answer", "text": x["resp"], "dateCreated": cd, "url": S.BASE + u, "author": {"@id": S.BASE + "/#org"}}}}
+        # QAPage é para perguntas respondidas por usuários; aqui a resposta é editorial: WebPage datada + FAQPage (gerado por page() a partir de faqs)
+        ld = {"@type": "WebPage", "name": x["q"], "url": S.BASE + u, "dateModified": cd, "description": x["resp"], "isPartOf": {"@id": S.BASE + "/#site"}, "publisher": {"@id": S.BASE + "/#org"}}
         S.write(u, S.page(f"{x['q']} | {S.CFG['site_name']}", x["resp"], u, body, faqs=faqs, crumbs=[("Perguntas", "/perguntas/"), (x["q"], u)], jsonld=ld), familia="perguntas", lastmod=cd); urls.append(u)
     hub = '<section class="blk"><h1>Perguntas e respostas sobre os Três Poderes</h1><p class="lead">Respostas curtas e verificáveis, calculadas a partir dos dados oficiais da Câmara dos Deputados, do Senado Federal e do Portal da Transparência. Cada resposta traz a fonte e a data da coleta e muda sozinha quando os dados mudam.</p>'
     for g, xs in grupos.items(): hub += f"<h2>{E(g)}</h2><ul>" + "".join(f'<li><a href="{x["url"]}">{E(x["q"])}</a></li>' for x in xs) + "</ul>"
