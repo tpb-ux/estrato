@@ -135,7 +135,7 @@ def build(S):
                 (f"Como tramita uma {tn.lower()}?", E(expl) or "Segue o rito do Regimento Interno da Câmara."), (f"Quantas {t} tiveram votação nominal?", f"{votadas} das {num(len(L))} têm ao menos uma votação nominal de plenário compilada."),
                 (f"Quantas {t} viraram norma jurídica?", f"{norma} estão com a situação “Transformado em Norma Jurídica”."), (f"Qual é a situação mais comum?", ", ".join(f"{E(s)} ({n})" for s, n in sit) + "."),
                 ("Por que nem toda proposição está na lista?", "O Estrato seleciona as de maior alcance: PEC, medidas provisórias, projetos de conversão, projetos em urgência, aprovados ou votados nominalmente. A seleção está descrita na metodologia.")]
-        S.write(u, S.page(f"{tn} ({t}) na Câmara: lista e situação | {S.CFG['site_name']}", f"Proposições do tipo {tn} ({t}) na Câmara desde 2023: {num(len(L))} no recorte relevante, com ementa, situação e votações, da mais recente à mais antiga.", u, body, faqs=faqs,
+        S.write(u, S.page(f"{tn} ({t}) na Câmara: lista e situação | {S.CFG['site_name']}", f"{num(len(L))} proposições do tipo {t.upper()} no recorte relevante da Câmara desde 2023, com ementa, situação e votações, da mais recente à mais antiga.", u, body, faqs=faqs,
                           crumbs=[("Proposições", "/proposicoes/"), (t, u)], jsonld=S.itemlist([(p["nome"], p["url"]) for p in L[:50]])), familia="paginas", lastmod=col)
         urls.append(u)
     # ---------------- temas: hub, tema, tema x ano ----------------
