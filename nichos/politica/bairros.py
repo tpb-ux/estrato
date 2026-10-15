@@ -90,16 +90,18 @@ def build(S):
     # ---------- hubs por municipio ----------
     for c, L in por_m.items():
         e = M[c]; uf = e["uf"]; mn = e["n"]; sl = SLM(c); u = f"/bairros/{uf.lower()}/{sl}/"; pop_m = int(m["POP"][c]); tp = sum(b["p"] for b in L)
+        ag_i = [sum((b["i"] or [0] * 11)[j] for b in L) for j in range(11)]
         rows = [[f'<a href="{u}{b["s"]}/">{E(b["nt"])}</a>', num(b["p"]), num(int(b["d"] or 0)), n1(b["p"] / b["a"]) if b.get("a") else "—"] for b in L]
         body = (f'<section class="blk"><h1>Bairros de {E(mn)} ({uf}): população e domicílios do Censo 2022</h1><p class="snippet">O IBGE delimitou <strong>{num(len(L))} bairros</strong> em <a href="{URL[c]}">{E(mn)}</a>, que somam {num(tp)} moradores, ou {pct(tp, pop_m)} da população do município no Censo 2022.</p>'
-                + S.table(["Bairro", "Moradores", "Domicílios", "Densidade (hab./km²)"], rows, "Em ordem alfabética; não é ranking") +
+                + S.table(["Bairro", "Moradores", "Domicílios", "Densidade (hab./km²)"], rows, "Em ordem alfabética; não é ranking")
+                + (f'<h2>Idade dos moradores dos bairros de {E(mn)}</h2><p>Soma das faixas etárias de todos os bairros delimitados pelo IBGE em {E(mn)}, no Censo 2022.</p>' + S.table(["Faixa etária (anos)", "Moradores", "Parcela dos moradores"], [[FX[j], num(v), pct(v, sum(ag_i))] for j, v in enumerate(ag_i)], "Censo 2022, IBGE") if sum(ag_i) > 0 else "") +
                 f'<p>Veja também a <a href="/prefeitura/{uf.lower()}/{sl}/">Prefeitura de {E(mn)}</a>, as <a href="/verbas-federais/{uf.lower()}/{sl}/">emendas e verbas federais</a> e os <a href="/bairros/{uf.lower()}/">bairros {PREP[uf]} {E(UF[uf])}</a>.</p>'
                 f'<p class="src">Fonte oficial: {FONTE}. Compilação em {data_br(col)}.</p></section>')
         maxb = max(L, key=lambda b: b["p"])
         fa = [(f"Quantos bairros tem {mn}?", f"O IBGE delimitou {num(len(L))} bairros em {mn} para o Censo 2022."), (f"Quantos moradores vivem nos bairros de {mn}?", f"{num(tp)}, ou {pct(tp, pop_m)} da população do município."), ("A lista é um ranking?", "Não. Os bairros estão em ordem alfabética."),
               (f"Qual o bairro mais populoso de {mn}?", f"{E(maxb['n'])}, com {num(maxb['p'])} moradores no Censo 2022. A informação é descritiva e não classifica bairros."), ("De onde vêm os dados?", "Dos agregados por bairro do Censo 2022 do IBGE."), ("Os limites coincidem com os da prefeitura?", "Nem sempre: seguem a delimitação do IBGE para o Censo.")]
         S.write(u, S.page(f"Bairros de {mn} ({uf}): moradores e domicílios no Censo 2022 | {site}", f"Lista dos {num(len(L))} bairros de {mn} ({uf}) com moradores, domicílios e densidade do Censo 2022 do IBGE.", u, body, faqs=fa, crumbs=[("Bairros", "/bairros/"), (UF[uf], f"/bairros/{uf.lower()}/"), (mn, u)],
-                          jsonld={"@type": "ItemList", "name": f"Bairros de {mn}", "itemListElement": [{"@type": "ListItem", "position": k + 1, "url": S.BASE + u + b["s"] + "/", "name": b["n"]} for k, b in enumerate(L[:50])]}), familia="paginas", lastmod=col); urls.append(u)
+                          jsonld={"@type": "ItemList", "name": f"Bairros de {mn}", "itemListElement": [{"@type": "ListItem", "position": k + 1, "url": S.BASE + u + b["s"] + "/", "name": b["n"]} for k, b in enumerate(L[:50])]}), familia="paginas", lastmod=col, minw=True); urls.append(u)  # hub fino (< min_palavras_pseo) fica noindex
     # ---------- hubs por UF ----------
     for uf, Cs in por_uf.items():
         Cs.sort(key=lambda c: (slugify(M[c]["n"]), c)); u = f"/bairros/{uf.lower()}/"; nb = sum(len(por_m[c]) for c in Cs)

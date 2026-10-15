@@ -167,12 +167,12 @@ document.addEventListener('click',function(e){{var x=document.querySelector('det
 <main class="wrap" id="conteudo">{body}</main><footer><div class="wrap fgrid"><div><p class="fbrand">{E(c['site_name'])}</p><p>{E(c['tagline'])}</p></div>{cols}</div>
 <div class="wrap fbot">© {dt.date.today().year} {E(c['site_name'])}{(' · ' + E((c.get('empresa') or {}).get('razao_social', ''))) if (c.get('empresa') or {}).get('razao_social') else ''}{(' · <a href="mailto:' + E(c['empresa']['email']) + '">' + E(c['empresa']['email']) + '</a>') if (c.get('empresa') or {}).get('email') else ''}</div></footer></body></html>"""
 
-    def write(self, path, txt, *, idx=True, familia="paginas", lastmod=None, image=None, faq_min=None):
+    def write(self, path, txt, *, idx=True, familia="paginas", lastmod=None, image=None, faq_min=None, minw=False):
         """Grava a página e registra a URL. idx=False => noindex,follow (fora de sitemap/busca)."""
         if path in self.urls: self.errors.append(f"URL duplicada: {path}")
         q = self.CFG.get("qualidade") or {}
         minw = q.get("min_palavras_pseo", 300)
-        if idx and familia not in ("paginas", "artigos") and words(txt.split("<main", 1)[-1].split("</main>")[0]) < minw:
+        if idx and (minw or familia not in ("paginas", "artigos")) and words(txt.split("<main", 1)[-1].split("</main>")[0]) < minw:
             idx = False; self.thin.add(path)
         ind = self.CFG.get("indexacao") or {}
         exc = ind.get("excecoes") or []
