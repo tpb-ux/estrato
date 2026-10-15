@@ -179,6 +179,7 @@ document.addEventListener('click',function(e){{var x=document.querySelector('det
         f = self.OUT / path.lstrip("/"); f = f / "index.html" if path.endswith("/") else f
         al = getattr(self, "autolink", None)
         if al and (familia in self.autolink_familias or path in self.autolink_paths): txt, _n = al.aplicar(txt, path)
+        self.urls[path]["h"] = hashlib.sha1(re.sub(r"\d{2}/\d{2}/\d{4}", "", txt.split("<main", 1)[-1].split("</main>")[0]).encode()).hexdigest()[:16]  # lastmod real (ver core/build.lastmods)
         if self.PREFIX: txt = re.sub(r'(href|src|action)="/(?!/)', lambda m: f'{m.group(1)}="{self.PREFIX}/', txt)
         f.parent.mkdir(parents=True, exist_ok=True); f.write_text(txt, encoding="utf-8")
 

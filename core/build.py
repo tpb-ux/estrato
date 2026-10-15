@@ -79,6 +79,22 @@ def busca(S):
     b = f'<section class="blk"><h1>Buscar</h1><form role="search" action="/busca/"><label for="bq" class="sr-only">Buscar</label><input id="bq" name="q" type="search" placeholder="Nome, partido, termo..." class="bq"></form><ul id="br" class="res"></ul></section>{js}'
     S.write("/busca/", S.page(f"Buscar | {S.CFG['site_name']}", f"Busca interna do {S.CFG['site_name']}.", "/busca/", b, robots="noindex,follow"), idx=False)
 
+def lastmods(S):
+    """lastmod real: só muda quando o conteúdo do <main> muda (hash, datas dd/mm/aaaa ignoradas). Estado em data/lastmod.json (fora do git).
+    Primeira vez que a página aparece: data própria do módulo (ex.: data da votação) ou o dia do build; depois, só avança quando o hash muda."""
+    f = S.ROOT / "data/lastmod.json"
+    try: old = json.loads(f.read_text()) if f.exists() else {}
+    except ValueError: old = {}
+    hoje = dt.date.today().isoformat(); new = {}; mudou = 0
+    for u, m in S.urls.items():
+        h = m.get("h"); o = old.get(u)
+        if o and o[0] == h: lm = o[1]
+        else:
+            lm = hoje if o else (m["lastmod"] or hoje); mudou += bool(o)
+        new[u] = [h, lm]; m["lastmod"] = lm
+    f.write_text(json.dumps(new, separators=(",", ":")), encoding="utf-8")
+    print(f"lastmod: {len(new)} página(s), {mudou} com conteúdo alterado desde o build anterior")
+
 def sitemaps(S, posts):
     fams = {}
     for u, m in S.urls.items():
@@ -257,6 +273,7 @@ def main(root):
     S.errors += erros_rede
     S.qualidade.update(faq_pseo=dict(S.faq_stats), rede_links_pct=pct_rede, ondas_noindex=len(S.ondas))
     quality(S)
+    lastmods(S)
     files = sitemaps(S, posts); llms(S)
     broken = linkcheck(S)
     for u, (n, src) in sorted(broken.items(), key=lambda x: -x[1][0])[:30]: print(f"LINK QUEBRADO {u} ({n}x, ex.: {src})")
