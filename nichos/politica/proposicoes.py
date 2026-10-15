@@ -115,7 +115,7 @@ def build(S):
                 ("Onde conferir a tramitação completa?", "Na ficha de tramitação da Câmara dos Deputados, com link nesta página.")]
         ld = {"@type": "Legislation", "name": f"{tn} {p['n']}/{p['a']}", "description": _curto(p["e"], 300), "legislationType": tn, "legislationIdentifier": f"{p['t']} {p['n']}/{p['a']}", "datePublished": p["d"], "inLanguage": "pt-BR",
               "url": S.BASE + p["url"], "legislationJurisdiction": "BR", "isBasedOn": f"https://dadosabertos.camara.leg.br/api/v2/proposicoes/{p['id']}"}
-        S.write(p["url"], S.page(f"{p['nome']}: {_curto(p['e'], 70)}", f"{tn} {p['n']}/{p['a']}: {_curto(p['e'], 90)} Situação: {_sit(p)}. Autoria, temas, votações no plenário e ficha de tramitação.", p["url"], body, faqs=faqs,
+        S.write(p["url"], S.page(f"{p['nome']}: {_curto(p['e'], 200)}", f"{tn} {p['n']}/{p['a']}: {_curto(p['e'], 90)} Situação: {_sit(p)}. Autoria, temas, votações no plenário e ficha de tramitação.", p["url"], body, faqs=faqs,
                                  crumbs=[("Proposições", "/proposicoes/"), (tn, f"/proposicoes/tipo/{p['t'].lower()}/"), (p["nome"], p["url"])], jsonld=ld), familia=fam, lastmod=p["dst"] or p["d"])
         urls.append(p["url"])
     # ---------------- hubs por tipo ----------------

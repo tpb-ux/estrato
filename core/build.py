@@ -157,6 +157,7 @@ def quality(S):
         if not m["idx"]: continue
         if m["title"] in seen: S.errors.append(f"título duplicado: {u} = {seen[m['title']]}")
         seen[m["title"]] = u
+        if m["title"].endswith("…") or m["title"].rstrip().endswith("|"): S.errors.append(f"{u}: título truncado ({m['title']})")
         if not (50 <= len(m["desc"]) <= 165): S.errors.append(f"{u}: descrição com {len(m['desc'])} caracteres (50–165)")
 
 def unicidade(S):

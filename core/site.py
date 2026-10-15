@@ -23,7 +23,7 @@ def fit_clean(t, n, minimo=0):
     """Corta em fronteira natural (vírgula, dois-pontos, travessão, ponto) sem deixar conectivo pendurado; só usa '…' se não houver fronteira."""
     if len(t) <= n: return t
     head = t[:n]
-    cuts = [m.start() for m in re.finditer(r"(?:,|;|:| –| -|\.)\s", head + " ") if m.start() >= minimo]
+    cuts = [m.start() for m in re.finditer(r"(?:,|;|:| –| -|\.)\s|\s(?:e|ou)\s", head + " ") if m.start() >= minimo]
     if cuts: return head[:cuts[-1]].rstrip(",;:-– ")
     w = t[:n - 1].rsplit(" ", 1)[0].split(" ")
     while len(w) > 1 and w[-1].lower().strip(",;:") in _STOP: w.pop()
@@ -37,8 +37,10 @@ def fit_title(title, site, n=65):
     while len(parts) > 1 and len(" | ".join(parts)) + len(suf) > n: parts.pop(-1 if len(parts) > 2 else 1)  # descarta o segmento intermediário/de seção
     base = " | ".join(parts)
     if len(base) + len(suf) > n:
+        c = fit_clean(base, n - len(suf), minimo=25)
+        if not c.endswith("…") and len(c) >= 0.75 * len(base): return c + suf  # corte em fronteira natural que preserva o essencial, com marca
         if len(base) <= n: return base  # título completo e distinto vale mais que a marca (o buscador reaplica a marca); nunca cortar o que distingue a página
-        base = fit_clean(base, n - len(suf), minimo=25)
+        base = c
     return base + suf
 
 class QualityError(SystemExit): pass
