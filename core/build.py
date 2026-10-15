@@ -247,7 +247,7 @@ def main(root):
         S.modulos[m] = mod.build(S) or {}
     institucional(S)
     from . import relacionados as _rel
-    _rel.aplicar(S, posts)
+    _rel.aplicar(S, posts); _rel.resolver_pendentes(S)
     autores.paginas(S, AUT)
     an = [p for p in posts if p.get("tipo") == "analise"]
     if an:

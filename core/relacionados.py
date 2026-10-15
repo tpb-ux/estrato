@@ -35,3 +35,15 @@ def aplicar(S, posts):
         bloco = '<section class="rel"><h2>Dados relacionados</h2><ul>' + "".join(f'<li><a href="{pre}{u}">{E(t)}</a></li>' for u, t in lk) + "</ul></section>"
         h = f.read_text(encoding="utf-8"); h = h.replace("</article>", bloco + "</article>", 1); f.write_text(h, encoding="utf-8")
     print(f"Notícias: {com} de {len([p for p in posts if p.get('tipo') != 'analise'])} com bloco 'Dados relacionados' ({total} links para páginas de dados)")
+
+
+def resolver_pendentes(S):
+    """Troca @@MUN@@ pelo link do município quando a página existe; remove o marcador caso contrário."""
+    n = 0
+    for u, (alvo, nome) in getattr(S, "mun_pend", {}).items():
+        f = S.OUT / u.strip("/") / "index.html"
+        if not f.exists(): continue
+        ok = alvo in S.urls; n += ok
+        rep = f'o <a href="{S.PREFIX}{alvo}">perfil de {E(nome)}</a>, ' if ok else ""
+        f.write_text(f.read_text(encoding="utf-8").replace("@@MUN@@", rep), encoding="utf-8")
+    print(f"Emendas por município: {n} link(s) de volta ao perfil do município")
