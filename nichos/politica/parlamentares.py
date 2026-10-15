@@ -1,7 +1,7 @@
 """Deputados federais e senadores em exercício + hub de cota parlamentar (CEAP). Dados: APIs de Dados Abertos da Câmara e do Senado."""
 import json, statistics as st
 from core.site import E, slugify
-from . import votacoes as _vot, cotas as _cot, emendas as _em
+from . import votacoes as _vot, cotas as _cot, emendas as _em, proposicoes as _prop
 from .dados import brl as _brl
 def _emd(S, nome):
     r = _em.link_parl(S, nome)
@@ -67,7 +67,7 @@ def build(S):
                      + S.table(["Mês", "Valor"], [[MESES[int(m)].capitalize(), f'<span class="ndata">{brl(v)}</span>'] for m, v in c["por_mes"].items()], f"Despesas por mês, {ano}"))
             dif = c["total"] - medu
             body += f'<p>Em relação à mediana dos deputados {PREP[uf]} {UF[uf]} ({brl(medu)}), o total declarado está {brl(abs(dif))} {"acima" if dif >= 0 else "abaixo"}. O teto da cota varia por estado; veja a <a href="/deputados/cota-parlamentar/">comparação de todos os deputados</a>.</p>'
-        body += _cot.link_parl(S, "camara", d["id"], d["slug"], d["nome"]) + _emd(S, d["nome"]) + _vot.bloco_parlamentar(S, "camara", d["id"], d["nome"])
+        body += _cot.link_parl(S, "camara", d["id"], d["slug"], d["nome"]) + _emd(S, d["nome"]) + _vot.bloco_parlamentar(S, "camara", d["id"], d["nome"]) + _prop.bloco_parlamentar(S, d["id"])
         if d["orgaos"]:
             body += f'<h2>Comissões e órgãos ({len(d["orgaos"])})</h2>' + S.table(["Órgão", "Sigla", "Cargo"], [[E(o["nome"] or ""), E(o["sigla"] or ""), E(o["cargo"] or "")] for o in d["orgaos"]])
         viz = [x for x in part if x["uf"] == uf and x is not d][:8] or [x for x in pares if x is not d][:8]

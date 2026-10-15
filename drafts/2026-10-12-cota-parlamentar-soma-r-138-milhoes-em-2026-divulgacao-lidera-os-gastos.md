@@ -3,6 +3,10 @@
 # Para publicar: preencher autor e revisado_por (slugs de data/autores.yaml, com nome preenchido),
 # resolver as marcas [[REVISÃO]], trocar status para "aprovado" e mover para content/.
 # Período eleitoral: o texto só usa agregados oficiais e não cita nomes, partidos nem candidaturas.
+# Revisao 15/10/2026: percentuais por categoria conferem com data/cotas (37,4%; 24,5%; 17,8%; 12,8%; 2,8%).
+# DIVERGENCIA a resolver antes de publicar: o total deste texto (R$ 138,0 mi; 575 parlamentares) vem do CSV bruto de 12/10; a base do site
+# (data/cotas/camara.json.gz, coletada em 12/10 18:58 UTC) soma R$ 137,2 mi e 563 parlamentares. Refazer os numeros com a base do site e republicar no mesmo dia.
+# Antes de publicar: autor, revisado_por, resolver todas as [[REVISAO]] e a divergencia acima; manter so agregados (sem nomes de partidos ou candidatos).
 titulo: "Cota parlamentar soma R$ 138 milhões em 2026, e divulgação lidera os gastos"
 data: 2026-10-12T12:00:00-03:00
 editoria: congresso
@@ -29,6 +33,8 @@ Cinco categorias concentram 95% do gasto:
 O deputado em exercício que fica no meio da lista (a mediana) lançou R$ 265,8 mil no ano.
 
 ## Gasto mês a mês
+
+[[REVISÃO: totais de 575 parlamentares e R$ 138,0 mi divergem da base do site (563 e R$ 137,2 mi); alinhar.]]
 
 Os lançamentos subiram de R$ 17,1 milhões em janeiro para R$ 23,4 milhões em maio e caíram a partir de junho: R$ 12,6 milhões em junho, R$ 11,0 milhões em julho, R$ 8,6 milhões em agosto e R$ 5,0 milhões em setembro. Outubro ainda está incompleto (R$ 0,3 milhão).
 
