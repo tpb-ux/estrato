@@ -31,11 +31,13 @@ def classify(text):
 
 LOGI = sorted({w for ws in KW.values() for w in ws} | set(_F.get("palavras_relevancia", [])))
 
+def _tem(w, t): return re.search(r"(?<!\w)" + re.escape(w.rstrip("*")), t) is not None  # inicio de palavra ("lei" nao casa com "leito")
+
 def score(title, summ):
     t, s = (title or "").lower(), (summ or "").lower()
-    return sum(3 for w in LOGI if w in t) + sum(1 for w in LOGI if w in s)
+    return sum(3 for w in LOGI if _tem(w, t)) + sum(1 for w in LOGI if _tem(w, s))
 
-def blocked(cfg, src, link, title, summ, trusted=False):
+def blocked(cfg, src, link, title, summ, trusted=False, vies=None):
     hay_src = f"{src} {link}".lower(); txt = f"{title} {summ}".lower()
     for b in cfg.get("bloqueio_fontes", []):
         if b.lower() in hay_src: return f"fonte bloqueada ({b})"
@@ -47,19 +49,47 @@ def blocked(cfg, src, link, title, summ, trusted=False):
             ctx = cfg.get("excecoes_contexto", {}).get(b)
             if ctx and any(c.lower() in txt for c in ctx): continue  # ex.: concessionária de rodovia/pedágio
             return f"palavra bloqueada ({b})"
+    # Regionais: so entra o que for politica/gestao publica (sem crime, acidente, servico e variedades locais).
+    if vies == "regional":
+        tl = title.lower(); b = next((w for w in cfg.get("bloqueio_regional", []) if _tem(w, tl)), None)
+        if b: return f"regional fora do escopo politico ({b})"
     if trusted: return None
-    sc = score(title, summ)
-    if sc < cfg.get("nota_minima", 3): return f"nota {sc} < {cfg.get('nota_minima', 3)}"
+    sc = score(title, summ); minimo = (cfg.get("nota_minima_vies") or {}).get(vies, cfg.get("nota_minima", 3))
+    if sc < minimo: return f"nota {sc} < {minimo}"
     return None
 
-def opiniao(cfg, link, title):
-    """Filtro anti-opinião para fontes não oficiais: URL de coluna/artigo/análise ou título de opinião (só fatos)."""
+def _sem_aspas(t):
+    """Remove trechos entre aspas (citações) para testar a pontuação do título em si."""
+    return re.sub(r"[“\"‘'][^”\"’']*[”\"’']", " ", t)
+
+def opiniao(cfg, link, title, vies=None):
+    """Filtro anti-opinião para fontes não oficiais: URL de coluna/artigo/análise ou título de opinião (só fatos).
+    `url_permitidas`: colunas/blogs de notícia (ex.: Painel e Brasília Hoje, da Folha; blogs de apuração do g1) passam
+    no teste de URL, mas ainda passam pelos testes de título. Pergunta no título só barra se não for explicativa."""
     o = cfg.get("filtro_opiniao") or {}
     l = (link or "").lower(); t = (title or "").strip()
-    u = next((x for x in o.get("url", []) if x.lower() in l), None)
+    perm = any(x.lower() in l for x in o.get("url_permitidas", []))
+    u = None if perm else next((x for x in o.get("url", []) if x.lower() in l), None)
     if u: return f"opinião/coluna (url: {u})"
-    r = next((x for x in o.get("titulo", []) if re.search(x, t, re.I)), None)
-    return f"opinião/coluna (título: {r})" if r else None
+    for x in o.get("titulo", []):
+        tt = _sem_aspas(t) if x == "\\?" else t   # '?' dentro de citação não conta
+        if re.search(x, tt, re.I):
+            if x == "\\?" and re.search(o.get("pergunta_explicativa", "$^"), t, re.I): continue
+            return f"opinião/coluna (título: {x})"
+    if vies in ("esquerda", "direita"):  # veiculos de linha editorial: titulo-citacao ("entrevista") e tom de analise
+        r = next((x for x in o.get("titulo_partidario", []) if re.search(x, t, re.I)), None)
+        if r: return f"opini\u00e3o/coluna (t\u00edtulo em ve\u00edculo de linha editorial: {r})"
+    if perm:
+        r = next((x for x in o.get("titulo_url_permitida", []) if re.search(x, t, re.I)), None)
+        if r: return f"opinião/coluna (título em coluna: {r})"
+    return None
+
+def eleitoral_nao_oficial(cfg, title, summ):
+    """Periodo eleitoral: fontes nao oficiais nao publicam itens com termos de campanha/disputa (inicio de palavra, sem acento)."""
+    rn = cfg.get("restricao_nao_oficial") or {}
+    if not rn or dt.date.today().isoformat() > rn.get("ate", ""): return None
+    tl = norm(title + " " + summ)
+    return next((w for w in rn.get("bloqueia", []) if re.search(r"(?<![a-z0-9])" + re.escape(norm(w)), tl)), None)
 
 def restrito(cfg, ed, title, summ):
     """Restrição temporária por editoria (ex.: período eleitoral): até a data, só passa item com termo exigido no título/resumo."""
@@ -71,13 +101,13 @@ def restrito(cfg, ed, title, summ):
 
 def revisar(cfg, remove=False):
     """Reaplica os filtros nas matérias já publicadas pelo coletor."""
-    n = 0; trusted = {fd["nome"] for fd in cfg["feeds"] if fd.get("confiavel")}
+    n = 0; trusted = {fd["nome"] for fd in cfg["feeds"] if fd.get("confiavel")}; vies_de = {fd["nome"]: fd.get("vies") for fd in cfg["feeds"]}
     for f in sorted(CONTENT.glob("*.md")):
         fm = yaml.safe_load(f.read_text(encoding="utf-8").split("---", 2)[1]) or {}
         if fm.get("gerado_por") != "fetch.py": continue
         img = str(fm.get("imagem", ""))
         why = None if img.startswith("/static/img/") and not img.startswith("/static/img/editoria/") and (ROOT / img.lstrip("/")).exists() else "sem foto própria"
-        why = why or blocked(cfg, fm.get("fonte", ""), fm.get("link", ""), fm.get("titulo", ""), fm.get("resumo", ""), fm.get("fonte") in trusted)
+        why = why or blocked(cfg, fm.get("fonte", ""), fm.get("link", ""), fm.get("titulo", ""), fm.get("resumo", ""), fm.get("fonte") in trusted, vies_de.get(fm.get("fonte", "")))
         why = why or restrito(cfg, fm.get("editoria"), fm.get("titulo", ""), fm.get("resumo", "")) or restrito(cfg, "*", fm.get("titulo", ""), fm.get("resumo", ""))
         if why:
             n += 1; print(f"- {f.name}: {why}")
@@ -298,19 +328,18 @@ def main():
             summ = "" if gn else clean(e.get("summary", ""))
             if len(summ) < 40 or norm(summ).startswith(norm(title)[:40]):
                 summ = f"{title}. Notícia publicada por {src_name}."
-            why = blocked(cfg, src_name, link, title, "" if summ.startswith(title) else summ, fd.get("confiavel", False))
+            why = blocked(cfg, src_name, link, title, "" if summ.startswith(title) else summ, fd.get("confiavel", False), fd.get("vies"))
             if why: print(f"  x {title[:70]} ({src_name}): {why}"); continue
             resumo = short(summ)
             ed = fd.get("editoria") or classify(title + " " + summ)
             why = restrito(cfg, ed, title, summ) or restrito(cfg, "*", title, summ)
             if why: print(f"  x {title[:70]} ({src_name}): {why}"); continue
             if fd.get("vies") != "oficial":
-                why = opiniao(cfg, link, title)
+                why = opiniao(cfg, link, title, fd.get("vies"))
                 if why: print(f"  x {title[:70]} ({src_name}): {why}"); continue
-            rn = cfg.get("restricao_nao_oficial") or {}
-            if fd.get("vies") != "oficial" and rn and dt.date.today().isoformat() <= rn.get("ate", ""):
-                tl = norm(title + " " + summ); hit = next((w for w in rn.get("bloqueia", []) if norm(w) in tl), None)
-                if hit: print(f"  x {title[:70]} ({src_name}): período eleitoral, fonte não oficial ({hit})"); continue
+            if fd.get("vies") != "oficial":
+                hit = eleitoral_nao_oficial(cfg, title, summ)
+                if hit: print(f"  x {title[:70]} ({src_name}): periodo eleitoral, fonte nao oficial ({hit})"); continue
             when = when.astimezone(BRT).replace(microsecond=0)
             fn = CONTENT / f"{when:%Y-%m-%d}-{slugify(title)}.md"
             if fn.exists(): continue

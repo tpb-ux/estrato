@@ -49,11 +49,17 @@ feeds:
   - {nome: Agência Pública, url: "https://apublica.org/feed/", vies: esquerda, peso: 1, max: 2}
   - {nome: O Antagonista, url: "https://oantagonista.com.br/brasil/feed/", vies: direita, peso: 1, max: 2}
   - {nome: Gazeta do Povo, url: "https://www.gazetadopovo.com.br/feed/rss/republica.xml", vies: direita, peso: 1, max: 2}
-  - {nome: Sul21, url: "https://sul21.com.br/feed/", editoria: estados, vies: regional, peso: 1, max: 2}
   - {nome: Bahia Notícias, url: "https://www.bahianoticias.com.br/rss.xml", editoria: estados, vies: regional, peso: 1, max: 2}
-  - {nome: Varela Notícias, url: "https://varelanet.com.br/politica/rss.xml", editoria: estados, vies: regional, peso: 1, max: 2}
   - {nome: Foco PE, url: "https://focope.com.br/feed/", editoria: estados, vies: regional, peso: 1, max: 2}
   - {nome: Blog do Jamildo, url: "https://jamildo.com/feed/", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: Agência Minas, url: "https://www.agenciaminas.mg.gov.br/rss", confiavel: true, editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: A Tarde, url: "https://atarde.com.br/rss", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: NSC Total, url: "https://www.nsctotal.com.br/rss", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: A Gazeta ES, url: "https://www.agazeta.com.br/rss", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: Jornal Opção, url: "https://www.jornalopcao.com.br/feed/", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: g1 Rio Grande do Sul, url: "https://g1.globo.com/rss/g1/rs/rio-grande-do-sul/", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: g1 Pará, url: "https://g1.globo.com/rss/g1/pa/para/", editoria: estados, vies: regional, peso: 1, max: 2}
+  - {nome: g1 Amazonas, url: "https://g1.globo.com/rss/g1/am/amazonas/", editoria: estados, vies: regional, peso: 1, max: 2}
 # Fora (14/10/2026): Agência Brasil Internacional (sem foto própria), Senado /noticias/RSS (duplica /noticias/rss), Viomundo (403 no box: testar na VPS).
 palavras_editoria:
   congresso: [câmara, senado, deputad, senador, plenário, comissão, cpi, cpmi, proposta, projeto de lei, pec, votação, relator, congresso]
@@ -66,6 +72,9 @@ palavras_editoria:
   internacional: [itamaraty, diplomac*, embaixad*, chancelaria, colômbia, venezuela, argentina, eua, estados unidos, trump, israel, jerusalém, gaza, china, rússia, ucrânia, europa, onu, mercosul, acordo internacional, relações exteriores, chanceler]
 palavras_relevancia: [política, poder, governo, lei, norma]
 nota_minima: 3
+# 15/10/2026: regionais so entram com mais sinal politico (2 termos no titulo) e sem crime/acidente/variedades locais.
+nota_minima_vies: {regional: 6}
+bloqueio_regional: [polícia, pm, preso, presa, presos, prende, prisão, assassin*, homicídio, feminicídio, estupro, tráfico, sequestro, incêndio, acidente, capota, atropel*, resgatado, golpista, golpistas, golpe, morto, morta, mortos, mortes, círio, show, festival, filme, futebol, jogo, jogos, treino, corinthians, flamengo, netflix, fiat, simpatia*, vacinação, câncer, saúde das, desmatamento, queimada*, fumaça, enquete]
 # Restrições eleitorais (até o fim do 2º turno e por política editorial): sem pesquisas de intenção de voto.
 bloqueio_palavras: [pesquisa eleitoral, intenção de voto, intenções de voto, datafolha, quaest, atlasintel, ipec, paraná pesquisas, real time big data, futebol, novela, horóscopo, celebridade, loteria, mega-sena]
 bloqueio_fontes: []
@@ -92,9 +101,16 @@ licencas_imagem:
 # Anti-opinião (15/10/2026, revisão da 1ª coleta): fontes não oficiais só entram com notícia factual. URL de coluna/artigo
 # e títulos de opinião (pergunta, "Análise:", AO VIVO, convocação) ficam fora. Vale sempre, não só no período eleitoral.
 filtro_opiniao:
-  url: [/opiniao/, /opinion/, /colunas/, /coluna/, /colunistas/, /columnists/, /artigos/, /artigo/, /blogs/, /blog/, /analise/, /editorial/, /ponto-de-vista/, /debate/, /entrevista/]
-  titulo: ['\?', ',\s+por\s+[A-ZÀ-Ú]', '^\s*(an[aá]lise|opini[aã]o|artigo|editorial|coluna|cr[oô]nica|entrevista|v[ií]deo|podcast|ao vivo)\b', '\bao vivo\b', '^\s*(hoje|agora)\b.*\b(vai ter que|precisa|deve)\b', '\bo bode\b', '\bconstitucionalismo\b', '#\d+\s*$']
-restricao_nao_oficial: {ate: "2026-10-26", bloqueia: [flávio, lula diz, lula promete, lula anuncia, candidat, campanha, empate técnico, segundo turno, 2º turno, debate, apoia lula, apoio a, pesquisa, eleitor, voto, comitê, palanque, tarcísio, nikolas, bolsonarist, petista, eleger, reeleição, eleição, extrema direita, extrema-direita, censura, partidariz, lula, bolsonaro, pró-, manifestantes, protesto, ato em defesa, campo progressista, de que lado, esquerda, direita, oposição, governista, aliados, militância, exército de, urna, favela, recordes]}
+  url: [/opiniao/, /opinion/, /colunas/, /coluna/, /colunista/, /colunistas/, /columnists/, /artigos/, /artigo/, /blogs/, /blog/, /analise/, /editorial/, /ponto-de-vista/, /debate/, /entrevista/]
+  # 15/10/2026 (afrouxamento): colunas/blogs de NOTICIA (apuracao, nao opiniao) passam no teste de URL; o teste de titulo continua valendo.
+  url_permitidas: [/colunas/painel/, /blogs/brasilia-hoje/, /blogs/novo-em-folha/, /politica/blog/andreia-sadi/, /politica/blog/valdo-cruz/, /politica/blog/camila-bomfim/, /politica/blog/gabriela-biller/]
+  # Em coluna permitida, titulo com tom opinativo/avaliativo continua barrado.
+  titulo_url_permitida: ['\b(deveria|precisa|precisam|risco|ameaça|erro|absurdo|vergonha|fracasso|farsa|hipocrisia)\b', '\b(contrapesos|democracia correm)\b']
+  # '?' no titulo barra (pergunta retorica), exceto servico/explicacao ("Entenda", "Como consultar...", "Quando comeca...").
+  pergunta_explicativa: '\b(entenda|saiba|veja|confira|compare|o que (muda|acontece|[eé]|s[aã]o)|como (consultar|funciona|[eé]|s[aã]o|votar|saber|pedir)|quando (come[cç]a|termina|acaba|[eé]|ser[aá])|quais|qual a diferen[cç]a|quem pode)\b'
+  titulo_partidario: ['^\s*[\u2018\u201c"]', '\bo que explica\b', '^\s*por que\b', '\bpara onde vamos\b', '\bn\u00e3o \u00e9 abstra\u00e7\u00e3o\b']
+  titulo: ['\?', ',\s+por\s+[A-ZÀ-Ú]', '^\s*(an[aá]lise|opini[aã]o|artigo|editorial|coluna|cr[oô]nica|entrevista)\s*[:|\-]', '^\s*(podcast)\b', '\bao vivo\b', '^\s*(hoje|agora)\b.*\b(vai ter que|precisa|deve)\b', '\bo bode\b', '\bconstitucionalismo\b', '#\d+\s*$']
+restricao_nao_oficial: {ate: "2026-10-26", bloqueia: [flávio, lula diz, lula promete, lula anuncia, candidat, campanha, empate técnico, no segundo turno, do segundo turno, de segundo turno, de 2º turno, o 2º turno, ao segundo turno, o segundo turno, no 2º turno, do 2º turno, ao 2º turno, segundo turno da eleição, segundo turno das eleições, debate, apoia lula, apoio a, pesquisa, eleitor, votos válidos, voto útil, voto em lula, voto em flávio, comitê, palanque, tarcísio, nikolas, bolsonarist, petista, eleger, reeleição, eleição, extrema direita, extrema-direita, censura, partidariz, lula, bolsonaro, pró-lula, pró-bolsonaro, pró-governo, manifestantes, protesto, ato em defesa, campo progressista, de que lado, esquerda, direita, oposição, governista, aliados, militância, exército de, urna, favela, recordes]}
 
 # Fase 1 (subcategorias): regras de classificação por palavra-chave. Chave <editoria>/<subcategoria>; casa no título+resumo,
 # sem acento, palavra inteira (termine com * para prefixo). Feeds também podem levar `sub: [slug]` para entrar direto. Página: data/subcategorias.yaml.
