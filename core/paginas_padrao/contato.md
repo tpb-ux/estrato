@@ -10,6 +10,7 @@ faqs:
   - {p: "Como exercer direitos da LGPD?", r: "Pelos canais desta página, indicando que se trata de pedido sobre dados pessoais. Veja também a política de privacidade."}
 ---
 - **E-mail:** {{cfg.empresa.email}}
+- **Encarregado (LGPD):** {{cfg.empresa.encarregado_lgpd}}, pelo mesmo e-mail
 - **Formulário:** {{cfg.empresa.formulario_url}}
 - **Endereço:** {{cfg.empresa.razao_social}}, {{cfg.empresa.endereco.logradouro}}, {{cfg.empresa.endereco.cidade}}-{{cfg.empresa.endereco.uf}}, CEP {{cfg.empresa.endereco.cep}}
 

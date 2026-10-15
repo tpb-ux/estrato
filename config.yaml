@@ -65,7 +65,7 @@ home_faqs:
   - {p: "De onde vêm as notícias?", r: "Das agências oficiais, como Agência Câmara, Agência Senado, Agência Brasil, STF e TCU. Cada resumo leva crédito e link para o original."}
   - {p: "Com que frequência o site é atualizado?", r: "As notícias são coletadas a cada 30 minutos e os dados oficiais uma vez por dia."}
   - {p: "O Estrato publica pesquisas eleitorais?", r: "Não. O portal não publica pesquisas de intenção de voto nem conteúdo de campanha."}
-# Responsável editorial e e-mail informados pelo Tercio em 15/10/2026. Campos vazios (encarregado_lgpd, formulario_url, redes) não renderizam nada. Não inventar cargo nem outros dados pessoais.
+# Responsável editorial e e-mail informados pelo Tercio em 15/10/2026. Encarregado LGPD informado pelo Tercio em 15/10/2026 (só nome; canal = e-mail da redação). Campos vazios (formulario_url, redes) não renderizam nada. Não inventar cargo nem outros dados pessoais.
 responsavel_editorial: "Bruno Marquesan"
 empresa:
   razao_social: Patini Brasil Serviços Publicidade e Propaganda
@@ -73,7 +73,7 @@ empresa:
   endereco: {logradouro: "Av. Pacaembu, 1088", bairro: Pacaembu, cidade: São Paulo, uf: SP, cep: 01234-000}
   email: "redacao@estrato.com.br"
   formulario_url: ""
-  encarregado_lgpd: ""
+  encarregado_lgpd: "Anderson Lorenço"
   redes: []
 verificacao: {google: "", bing: ""}
 indexnow_key: "c0f3a1e9b7d24e6f8a5b2c9d1e7f4a30"

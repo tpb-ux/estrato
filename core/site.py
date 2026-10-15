@@ -109,6 +109,9 @@ class Site:
         org["masthead"] = self.BASE + "/expediente/"
         if emp.get("email") or emp.get("formulario_url"):
             org["contactPoint"] = {"@type": "ContactPoint", "contactType": "editorial", "availableLanguage": "pt-BR", **({"email": emp["email"]} if emp.get("email") else {}), **({"url": emp["formulario_url"]} if emp.get("formulario_url") else {})}
+        if emp.get("encarregado_lgpd") and emp.get("email"):
+            cp = org.get("contactPoint"); cp = [cp] if isinstance(cp, dict) else (cp or [])
+            org["contactPoint"] = cp + [{"@type": "ContactPoint", "contactType": "data protection", "name": emp["encarregado_lgpd"], "email": emp["email"], "availableLanguage": "pt-BR"}]
         if c.get("responsavel_editorial"): org["employee"] = {"@type": "Person", "name": c["responsavel_editorial"]}   # só renderiza se preenchido
         if emp.get("email"): org["email"] = emp["email"]
         if any(emp.get("redes") or []): org["sameAs"] = [r for r in emp["redes"] if r]
