@@ -123,7 +123,7 @@ def build(S):
         if m["pf"]: body += f'<p>Pagamentos a pessoas físicas, empresários individuais ou favorecidos sem identificação somam {brl(m["pf"])} e aparecem só neste total.</p>'
         li = "".join(f'<li>{alink(c)} <small>{brl(v)}</small></li>' for c, v in aus)
         body += f'<h2>Autores das emendas (ordem alfabética)</h2><ul class="nlist">{li}</ul>'
-        body += f'<p class="src">Fonte oficial: {fonte}. O município é o da sede do favorecido informado pela CGU. Compilação em {data_br(col)}. Veja <a href="/emendas/municipios/{uf.lower()}/">todos os municípios {PREP[uf]} {UF[uf]}</a> e a <a href="/emendas/metodologia/">metodologia</a>.</p></article>'
+        body += f'<p class="src">Fonte oficial: {fonte}. O município é o da sede do favorecido informado pela CGU. Compilação em {data_br(col)}. Veja o <a href="/municipios/{uf.lower()}/{u.rstrip('/').rsplit('/', 1)[1]}/">perfil de {E(nome)}</a>, <a href="/emendas/municipios/{uf.lower()}/">todos os municípios {PREP[uf]} {UF[uf]}</a> e a <a href="/emendas/metodologia/">metodologia</a>.</p></article>'
         ym = max(m["anos"].items(), key=lambda x: x[1]); tp = max(m["tipos"].items(), key=lambda x: x[1]); nat = max(m["nat"].items(), key=lambda x: x[1])
         faqs = [(f"Quanto {nome} recebeu em emendas parlamentares desde 2023?", f"{brl(tot)} em pagamentos a favorecidos sediados no município."),
                 (f"Quantos parlamentares ou bancadas destinaram emendas a {nome}?", f"{num(len(m['autores']))} autores tiveram pagamentos a favorecidos do município desde 2023."),
