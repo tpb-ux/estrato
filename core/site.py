@@ -177,7 +177,7 @@ document.addEventListener('keydown',function(e){{if(e.key==='Escape'&&!d.hidden)
 var a=document.querySelector('nav.ed a.on,nav.ed a.pill');if(a&&a.scrollIntoView&&innerWidth<860)a.scrollIntoView({{inline:'center',block:'nearest'}});
 document.addEventListener('click',function(e){{var x=document.querySelector('details.dd[open]');if(x&&!x.contains(e.target))x.open=false}})}})();</script>
 <main class="wrap" id="conteudo">{body}</main><footer><div class="wrap fgrid"><div><p class="fbrand">{E(c['site_name'])}</p><p>{E(c['tagline'])}</p></div>{cols}</div>
-<div class="wrap fbot">© {dt.date.today().year} {E(c['site_name'])}{(' · ' + E((c.get('empresa') or {}).get('razao_social', ''))) if (c.get('empresa') or {}).get('razao_social') else ''}{(' · <a href="mailto:' + E(c['empresa']['email']) + '">' + E(c['empresa']['email']) + '</a>') if (c.get('empresa') or {}).get('email') else ''}</div></footer></body></html>"""
+<div class="wrap fbot">© {dt.date.today().year} {E(c['site_name'])}{(' · ' + E((c.get('empresa') or {}).get('razao_social', ''))) if (c.get('empresa') or {}).get('razao_social') else ''}{(' · <a href="mailto:' + E(c['empresa']['email']) + '">' + E(c['empresa']['email']) + '</a>') if (c.get('empresa') or {}).get('email') else ''}{(' · <a href="' + E(c['empresa']['instagram']) + '" rel="me noopener" target="_blank">Instagram</a>') if (c.get('empresa') or {}).get('instagram') else ''}</div></footer></body></html>"""
 
     def write(self, path, txt, *, idx=True, familia="paginas", lastmod=None, image=None, faq_min=None, minw=False):
         """Grava a página e registra a URL. idx=False => noindex,follow (fora de sitemap/busca)."""

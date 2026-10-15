@@ -74,7 +74,8 @@ empresa:
   email: "redacao@estrato.com.br"
   formulario_url: ""
   encarregado_lgpd: "Anderson Lorenço"
-  redes: []
+  instagram: &ig "https://www.instagram.com/agenciaestrato/"  # mesmo perfil da agência, decisão do Tercio (15/10/2026); só link, sem embed/integração
+  redes: [*ig]
 verificacao: {google: "", bing: ""}
 indexnow_key: "c0f3a1e9b7d24e6f8a5b2c9d1e7f4a30"
 llms_intro: "Portal apartidário em português sobre os Três Poderes do Brasil. Páginas de dados usam APIs oficiais (Câmara dos Deputados, Senado Federal) com fonte e data de coleta; notícias são resumos de agências oficiais com link para a fonte e não são indexadas."
