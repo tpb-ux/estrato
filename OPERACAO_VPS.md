@@ -36,40 +36,54 @@ Mandar a saída de `/tmp/estrato_teste_fontes.txt` (do box todas deram 403, exce
 (Defasado do Modal News, que roda em 7,37, para não disputar CPU.)
 
 ## 5. nginx: /etc/nginx/sites-available/estrato.com.br
+**Atenção (auditoria 15/10):** `add_header` dentro de um `location` descarta os `add_header` do nível `server`, por isso o modelo antigo repetia `X-Robots-Tag` em 3 pontos (server, `/static/`, `\.(html|xml|json|txt)`). Para não esquecer nenhum no lançamento, o noindex agora vem de **um único snippet** incluído nos 3 pontos. No lançamento basta esvaziá-lo (item 7).
+```bash
+sudo tee /etc/nginx/snippets/estrato-robots.conf >/dev/null <<'EOF'
+# PRÉ-LANÇAMENTO: noindex por cabeçalho. No lançamento deixar este arquivo SÓ com comentário (sem add_header).
+add_header X-Robots-Tag "noindex, nofollow" always;
+EOF
+sudo tee /etc/nginx/snippets/estrato-seguranca.conf >/dev/null <<'EOF'
+add_header X-Content-Type-Options nosniff always;
+EOF
+```
 ```nginx
+# www -> apex. Antes do certbot o destino é http ($scheme); o certbot --nginx (com -d dos dois nomes) cria o bloco 443 e o redirect passa a ir para https.
 server {
   listen 80; listen [::]:80;
-  server_name estrato.com.br www.estrato.com.br;
+  server_name www.estrato.com.br;
+  return 301 $scheme://estrato.com.br$request_uri;
+}
+server {
+  listen 80; listen [::]:80;
+  server_name estrato.com.br;
   root /opt/portais/estrato/public;
   index index.html;
-  if ($host = www.estrato.com.br) { return 301 https://estrato.com.br$request_uri; }
+  include snippets/estrato-robots.conf;          # (1) server
+  include snippets/estrato-seguranca.conf;
+  gzip on; gzip_vary on; gzip_types text/css application/javascript application/json application/xml text/xml text/plain image/svg+xml;
   location / { try_files $uri $uri/ $uri.html =404; }
   error_page 404 /404.html;
-  location /static/ { expires 30d; add_header Cache-Control "public, max-age=2592000"; }
-  location ~* \.(html|xml|json|txt)$ { add_header Cache-Control "no-cache"; add_header X-Robots-Tag "noindex, nofollow" always; }
-  gzip on; gzip_types text/css application/javascript application/json application/xml text/xml text/plain image/svg+xml;
-  add_header X-Content-Type-Options nosniff;
-  # PRÉ-LANÇAMENTO (remover só no lançamento):
-  add_header X-Robots-Tag "noindex, nofollow" always;
+  location /static/ { expires 30d; add_header Cache-Control "public, max-age=2592000"; include snippets/estrato-robots.conf; include snippets/estrato-seguranca.conf; }   # (2) static
+  location ~* \.(html|xml|json|txt)$ { add_header Cache-Control "no-cache"; include snippets/estrato-robots.conf; include snippets/estrato-seguranca.conf; }                # (3) html/xml/json/txt
 }
 ```
 ```bash
 sudo ln -s /etc/nginx/sites-available/estrato.com.br /etc/nginx/sites-enabled/ && sudo nginx -t && sudo systemctl reload nginx
-curl -sI -H 'Host: estrato.com.br' http://127.0.0.1/ | grep -i 'x-robots'     # noindex, nofollow
+for u in / /sitemap.xml /llms.txt /static/og-default.png; do echo -n "$u: "; curl -sI -H 'Host: estrato.com.br' http://127.0.0.1$u | grep -i 'x-robots' || echo vazio; done   # pré-lançamento: 4x "noindex, nofollow"
 ```
-Pode já emitir o certificado depois do DNS (item 6); o noindex continua.
+Depois do certbot, conferir que o bloco 443 criado também inclui os snippets nos 3 pontos e que `curl -sI https://www.estrato.com.br/` devolve `301` com `Location: https://estrato.com.br/...`.
 
 ## 6. Checklist do DNS de estrato.com.br (registro.br, conta do Tercio)
 - [ ] Registro `A` `@` → `2.25.69.172`; `A` `www` → `2.25.69.172` (ou `CNAME www` → `estrato.com.br`); TTL 3600.
 - [ ] Remover registros antigos `A`/`AAAA`/`CNAME` de `@` e `www` (ex.: GitHub Pages 185.199.x). Sem IPv6 na VPS, não criar `AAAA`.
 - [ ] Manter MX/TXT existentes (e-mail).
 - [ ] Conferir: `dig +short estrato.com.br` e `dig +short www.estrato.com.br` = 2.25.69.172.
-- [ ] `sudo certbot --nginx -d estrato.com.br -d www.estrato.com.br` e `curl -sI https://estrato.com.br/` (200 + X-Robots-Tag noindex).
+- [ ] `sudo certbot --nginx -d estrato.com.br -d www.estrato.com.br` e `curl -sI https://estrato.com.br/` (200 + X-Robots-Tag noindex) e `curl -sI https://www.estrato.com.br/` (301 para `https://estrato.com.br/`).
 - [ ] Antes do DNS testar com `curl --noproxy '*' --resolve estrato.com.br:443:2.25.69.172 https://estrato.com.br/` (lição do Modal News).
 DNS pode ser apontado antes de 26/10 só se o Tercio autorizar; o site continua noindex.
 
 ## 7. Lançamento e ondas de indexação (a partir de 27/10/2026, com aval do Tercio)
-Onda 0 (27/10): `config.yaml` `noindex_global: false`, remover `aviso_topo`; tirar `X-Robots-Tag` do nginx; liberar IndexNow; `restricao_editoria` e `restricao_nao_oficial` no `feeds.yaml` expiram sozinhas em 26/10 (revisar). Indexáveis: home, editorias, notícias, glossário, perguntas, explica, linha do tempo, calendário, quem é quem, institucionais. Search Console + Bing, enviar `/sitemap.xml`.
+Onda 0 (27/10): `config.yaml` `noindex_global: false`, remover `aviso_topo`; **tirar os TRÊS pontos do `X-Robots-Tag`** (server, `/static/`, `html|xml|json|txt`): esvaziar `/etc/nginx/snippets/estrato-robots.conf` (deixar só o comentário), `nginx -t && systemctl reload nginx` e validar `for u in / /sitemap.xml /robots.txt /llms.txt /rss.xml /static/og-default.png; do curl -sI https://estrato.com.br$u | grep -i x-robots; done` (esperado: nenhuma linha); liberar IndexNow; `restricao_editoria` e `restricao_nao_oficial` no `feeds.yaml` expiram sozinhas em 26/10 (revisar). Indexáveis: home, editorias, notícias, glossário, perguntas, explica, linha do tempo, calendário, quem é quem, institucionais. Search Console + Bing, enviar `/sitemap.xml`.
 Onda 1 (+7 dias, se Search Console sem erro): `familias_noindex` libera deputados, senadores, partidos e votações.
 Onda 2 (+14 dias): cota parlamentar, emendas, executivo (viagens/cartão), agenda.
 Onda 3 (+21 dias): `mapas.ativo: true` e rankings por estado; patrimônio TSE só depois de revisão humana.
