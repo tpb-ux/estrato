@@ -192,6 +192,7 @@ document.addEventListener('click',function(e){{var x=document.querySelector('det
         if meta.get("pseo") and faq_min is None: faq_min = 0  # pSEO: 0 a 3 FAQs com dado
         if idx and meta.get("faqs", 0) < (faq_min if faq_min is not None else q.get("min_faqs", 5)):
             self.errors.append(f"{path}: indexável com {meta.get('faqs', 0)} FAQs (mínimo {q.get('min_faqs', 5)})")
+        if lastmod and '"Dataset"' in txt: txt = self._dataset_modified(txt, str(lastmod)[:10])
         t = re.search(r"<title>(.*?)</title>", txt, re.S); d = re.search(r'<meta name="description" content="(.*?)"', txt)
         self.urls[path] = {"idx": idx, "familia": familia, "lastmod": lastmod, "image": image, "title": html.unescape(t.group(1)) if t else "", "desc": html.unescape(d.group(1)) if d else ""}
         f = self.OUT / path.lstrip("/"); f = f / "index.html" if path.endswith("/") else f
@@ -200,6 +201,20 @@ document.addEventListener('click',function(e){{var x=document.querySelector('det
         self.urls[path]["h"] = hashlib.sha1(re.sub(r"\d{2}/\d{2}/\d{4}", "", txt.split("<main", 1)[-1].split("</main>")[0]).encode()).hexdigest()[:16]  # lastmod real (ver core/build.lastmods)
         if self.PREFIX: txt = re.sub(r'(href|src|action)="/(?!/)', lambda m: f'{m.group(1)}="{self.PREFIX}/', txt)
         f.parent.mkdir(parents=True, exist_ok=True); f.write_text(txt, encoding="utf-8")
+
+    @staticmethod
+    def _dataset_modified(txt, data):
+        """Datasets sem dateModified ganham a data de coleta/atualização da página (lastmod do módulo)."""
+        m = re.search(r'(<script type="application/ld\+json">)(.*?)(</script>)', txt, re.S)
+        if not m: return txt
+        try: ld = json.loads(m.group(2).replace("<\\/", "</"))
+        except ValueError: return txt
+        mud = False
+        for n in ld.get("@graph", []):
+            if isinstance(n, dict) and n.get("@type") == "Dataset" and not n.get("dateModified"): n["dateModified"] = data; mud = True
+        if not mud: return txt
+        novo = json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")
+        return txt[:m.start(2)] + novo + txt[m.end(2):]
 
     def indexaveis(self, familia=None):
         return [u for u, m in self.urls.items() if m["idx"] and (familia is None or m["familia"] == familia)]
