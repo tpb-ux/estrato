@@ -87,7 +87,14 @@ def build(S):
     def viz_pref(L, i): return ", ".join(f'<a href="/prefeitura/{x_["uf"].lower()}/{URL[x].rstrip("/").rsplit("/", 1)[1]}/">{E(x_["n"])}</a>' for x in L[max(0, i - 4):i] + L[i + 1:i + 5] for x_ in [M[x]])
     def ib_slug(c): return slugify(M[c]["n"])
     ibge_link = lambda c: f'<a href="https://cidades.ibge.gov.br/brasil/{M[c]["uf"].lower()}/{ib_slug(c)}/panorama" target="_blank" rel="noopener nofollow">IBGE Cidades</a>'
-    ld_city = lambda c, u: {"@type": "City", "name": M[c]["n"], "url": S.BASE + u, "containedInPlace": {"@type": "AdministrativeArea", "name": UF[M[c]["uf"]]}, "identifier": c}
+    def ld_city(c, u):
+        """Uma única entidade City por município (@id na página do município); cada página-irmã é um WebPage que fala dela (about)."""
+        cid = S.BASE + URL[c] + "#city"
+        city = {"@type": "City", "@id": cid, "name": M[c]["n"], "url": S.BASE + URL[c], "containedInPlace": {"@type": "AdministrativeArea", "name": UF[M[c]["uf"]]}, "identifier": c}
+        pag = {"@type": "WebPage", "@id": S.BASE + u + "#pagina", "url": S.BASE + u, "about": {"@id": cid}, "isPartOf": {"@id": S.BASE + "/#site"}}
+        out = [city, pag]
+        if u.startswith("/prefeitura/"): out.append({"@type": "GovernmentOrganization", "@id": S.BASE + u + "#prefeitura", "name": f"Prefeitura de {M[c]['n']}", "areaServed": {"@id": cid}, "url": S.BASE + u})
+        return out
     # senadores e deputados por UF
     deps_uf = collections.defaultdict(list); sens_uf = collections.defaultdict(list)
     for d in S.parl["deps"]: deps_uf[d["uf"]].append(d)
@@ -230,7 +237,7 @@ def build(S):
                 if ps: body += (f"<h2>Parlamentares em exercício que enviaram emendas a {E(nome)}</h2><p>{num(len(ps))} dos {num(len(em['autores']))} autores de emendas pagas ao município são deputados ou senadores em exercício. Em ordem alfabética:</p>" + S.table(["Parlamentar", "UF", "Pago ao município desde 2023"], [[plink(p).split(" <small>")[0], p["uf"], brl0(v)] for p, v in ps[:40]]))
                 else: body += f"<h2>Emendas ao município</h2><p>Os autores das emendas pagas a {E(nome)} não incluem parlamentares atualmente em exercício identificados pelo nome.</p>"
             else: body += f"<h2>Emendas ao município</h2><p>Não há pagamentos de emendas parlamentares a favorecidos sediados em {E(nome)} na compilação do Estrato.</p>"
-            body += (f'<h2>Veja também</h2><ul><li><a href="/representantes/{uf.lower()}/">Bancada completa {PREP[uf]} {E(UF[uf])} no Congresso</a>, com presença e cota parlamentar</li><li><a href="/verbas-federais/{uf.lower()}/{sl}/">Emendas e verbas federais em {E(nome)}</a></li>'
+            body += (f'<h2>Veja também</h2><ul><li><a href="{URL[c]}">{E(nome)}: população, receitas e indicadores</a></li><li><a href="/representantes/{uf.lower()}/">Bancada completa {PREP[uf]} {E(UF[uf])} no Congresso</a>, com presença e cota parlamentar</li><li><a href="/verbas-federais/{uf.lower()}/{sl}/">Emendas e verbas federais em {E(nome)}</a></li>'
                      f'<li><a href="/prefeitura/{uf.lower()}/{sl}/">Prefeitura de {E(nome)}</a></li><li><a href="/deputados/uf/{uf.lower()}/">Deputados federais {PREP[uf]} {E(UF[uf])}</a></li></ul>')
             body += f'<p class="src">Fontes oficiais: Câmara dos Deputados e Senado Federal (dados abertos), {FONTE_EM}. Compilação em {data_br(col)}. A lista não é ranking e não indica preferência de voto.</p></article>'
             fa = [(f"Quem são os senadores que representam {nome}?", ", ".join(E(x["nome"]) for x in ss) + f". Cada estado elege três senadores."), (f"Quantos deputados federais representam {nome}?", f"{num(len(dd))}, a bancada inteira {PREP[uf]} {UF[uf]}, porque a eleição de deputado federal é estadual."),

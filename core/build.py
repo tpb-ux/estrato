@@ -79,6 +79,22 @@ def busca(S):
     b = f'<section class="blk"><h1>Buscar</h1><form role="search" action="/busca/"><label for="bq" class="sr-only">Buscar</label><input id="bq" name="q" type="search" placeholder="Nome, partido, termo..." class="bq"></form><ul id="br" class="res"></ul></section>{js}'
     S.write("/busca/", S.page(f"Buscar | {S.CFG['site_name']}", f"Busca interna do {S.CFG['site_name']}.", "/busca/", b, robots="noindex,follow"), idx=False)
 
+def lastmods(S):
+    """lastmod real: só muda quando o conteúdo do <main> muda (hash, datas dd/mm/aaaa ignoradas). Estado em data/lastmod.json (fora do git).
+    Primeira vez que a página aparece: data própria do módulo (ex.: data da votação) ou o dia do build; depois, só avança quando o hash muda."""
+    f = S.ROOT / "data/lastmod.json"
+    try: old = json.loads(f.read_text()) if f.exists() else {}
+    except ValueError: old = {}
+    hoje = dt.date.today().isoformat(); new = {}; mudou = 0
+    for u, m in S.urls.items():
+        h = m.get("h"); o = old.get(u)
+        if o and o[0] == h: lm = o[1]
+        else:
+            lm = hoje if o else (m["lastmod"] or hoje); mudou += bool(o)
+        new[u] = [h, lm]; m["lastmod"] = lm
+    f.write_text(json.dumps(new, separators=(",", ":")), encoding="utf-8")
+    print(f"lastmod: {len(new)} página(s), {mudou} com conteúdo alterado desde o build anterior")
+
 def sitemaps(S, posts):
     fams = {}
     for u, m in S.urls.items():
@@ -124,7 +140,11 @@ def linkcheck(S):
         src = "/" + f.relative_to(S.OUT).as_posix().replace("index.html", "")
         for h in HREF.findall(f.read_text(encoding="utf-8")):
             if h.startswith(S.BASE): h = h[len(S.BASE):] or "/"
-            elif h.startswith("http") or h.startswith("//") or not h.startswith("/"): continue
+            elif h.startswith(("mailto:", "tel:", "javascript:", "data:")): continue
+            elif not h.startswith("/"):
+                if not h.startswith(("http", "//")):  # href relativo sem "/" (ex.: href="art. 57") é erro, não pode ser ignorado
+                    n, s0 = bad.get(h, (0, src)); bad[h] = (n + 1, s0)
+                continue
             if S.PREFIX and h.startswith(S.PREFIX + "/"): h = h[len(S.PREFIX):]
             t = S.OUT / h.lstrip("/")
             if (t / "index.html").exists() or t.is_file() or h in RUNTIME: continue
@@ -137,6 +157,7 @@ def quality(S):
         if not m["idx"]: continue
         if m["title"] in seen: S.errors.append(f"título duplicado: {u} = {seen[m['title']]}")
         seen[m["title"]] = u
+        if m["title"].endswith("…") or m["title"].rstrip().endswith("|"): S.errors.append(f"{u}: título truncado ({m['title']})")
         if not (50 <= len(m["desc"]) <= 165): S.errors.append(f"{u}: descrição com {len(m['desc'])} caracteres (50–165)")
 
 def unicidade(S):
@@ -184,6 +205,8 @@ def main(root):
     if (S.OUT / "static/favicon.ico").exists(): shutil.copy(S.OUT / "static/favicon.ico", S.OUT / "favicon.ico")
     if S.CFG.get("cname") and not S.PREFIX: (S.OUT / "CNAME").write_text(S.CFG["cname"].strip() + "\n")
     S.posts = posts
+    from . import og as _og
+    S.og_ok = _og.gerar(S)  # OG por seção (páginas sem imagem própria)
     # autolink do glossário (core/autolink.py): carregado antes de qualquer página ser gravada
     al = S.CFG.get("autolink") or {}
     if al.get("ativo"):
@@ -223,6 +246,8 @@ def main(root):
         mod = importlib.import_module(m if "." in m else f"nichos.{S.nicho}.{m}")
         S.modulos[m] = mod.build(S) or {}
     institucional(S)
+    from . import relacionados as _rel
+    _rel.aplicar(S, posts); _rel.resolver_pendentes(S)
     autores.paginas(S, AUT)
     an = [p for p in posts if p.get("tipo") == "analise"]
     if an:
@@ -253,6 +278,7 @@ def main(root):
     S.errors += erros_rede
     S.qualidade.update(faq_pseo=dict(S.faq_stats), rede_links_pct=pct_rede, ondas_noindex=len(S.ondas))
     quality(S)
+    lastmods(S)
     files = sitemaps(S, posts); llms(S)
     broken = linkcheck(S)
     for u, (n, src) in sorted(broken.items(), key=lambda x: -x[1][0])[:30]: print(f"LINK QUEBRADO {u} ({n}x, ex.: {src})")
@@ -265,6 +291,7 @@ def main(root):
     if S.errors:
         for e in S.errors[:40]: print("ERRO:", e)
     if broken or S.errors: sys.exit(f"ERRO: {len(broken)} destinos quebrados, {len(S.errors)} erros de qualidade")
+    S.n_quebrados = len(broken)
     indexnow.diff(S)
     saude.build(S, posts)
     fam = {}

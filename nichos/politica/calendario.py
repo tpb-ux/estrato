@@ -22,7 +22,7 @@ def build(S):
     ses = [(d, e) for d, es in por.items() for e in es if d >= hoje.isoformat() and e["poder"] == "Legislativo" and ("Plenário" in (e["orgao"] or "") or e.get("orgao") == "PLEN" or "Sessão" in (e["tipo"] or ""))]
     for d, e in sorted(ses, key=lambda x: (x[0], x[1]["hora"]))[:40]: ev.append((d, "Plenário", f'{e["casa"]}: {e["titulo"] or e["tipo"]} {("às " + e["hora"]) if e["hora"] else ""}'.strip(), e["url"]))
     ev.sort(); fut = [x for x in ev if x[0] >= hoje.isoformat()]; pas = [x for x in ev if x[0] < hoje.isoformat()]
-    def tab(xs): return S.table(["Data", "Tipo", "Evento"], [[f'{data_br(d)} <small>{DSEM[dt.date.fromisoformat(d).weekday()]}</small>', E(k), f'<a href="{u}"{" target=_blank rel=noopener" if u.startswith("http") else ""}>{E(t)}</a>'] for d, k, t, u in xs])
+    def tab(xs): return S.table(["Data", "Tipo", "Evento"], [[f'{data_br(d)} <small>{DSEM[dt.date.fromisoformat(d).weekday()]}</small>', E(k), (f'<a href="{u}"{" target=_blank rel=noopener" if u.startswith("http") else ""}>{E(t)}</a>' if str(u).startswith(("http", "/")) else E(t))] for d, k, t, u in xs])
     prox = fut[0] if fut else None
     b = (f'<article class="post"><h1>Calendário legislativo e eleitoral</h1><p class="snippet">Datas oficiais do Congresso Nacional e das Eleições 2026: sessão legislativa, sessões plenárias já marcadas, turnos de votação, diplomação e posse dos eleitos. '
          + (f'Próxima data: {data_br(prox[0])}, {E(prox[2])}.' if prox else "") + "</p>"

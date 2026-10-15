@@ -17,7 +17,7 @@ def build(S, posts):
         "coleta": {"ultima_execucao": col.get("hora"), "evento": col.get("evento"), "run_id": col.get("run_id"), "novas_na_ultima": col.get("novas"),
                    "ultima_execucao_automatica_ok": max(auto) if auto else None, "ultima_execucao_agendada_ok": ult.get("cron") or ult.get("schedule"), "por_evento": ult},
         "qualidade": getattr(S, "qualidade", None),
-        "site": {"paginas_indexaveis": len(S.indexaveis()), "paginas_total": len(S.urls), "noindex_global": S.NOINDEX, "links_internos_quebrados": 0, "build": os.environ.get("GITHUB_RUN_ID") or os.environ.get("PORTAL_EVENTO") or "local"}}
+        "site": {"paginas_indexaveis": len(S.indexaveis()), "paginas_total": len(S.urls), "noindex_global": S.NOINDEX, "links_internos_quebrados": getattr(S, "n_quebrados", 0), "build": os.environ.get("GITHUB_RUN_ID") or os.environ.get("PORTAL_EVENTO") or "local"}}
     t = json.dumps(data, ensure_ascii=False, indent=1)
     (S.OUT / "saude.json").write_text(t, encoding="utf-8"); (S.ROOT / "data").mkdir(exist_ok=True); (S.ROOT / "data/saude.json").write_text(t, encoding="utf-8")
     return data

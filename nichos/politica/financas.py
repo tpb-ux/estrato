@@ -124,6 +124,8 @@ def build(S):
     cobertos = sum(1 for c in M if UD[c][0])
     fams = "municipios"
     S.mun = {"sc": sc, "ib": ib, "M": M, "URL": URL, "slug": slug, "por_uf": por_uf, "POP": POP, "UD": UD, "med": med, "col": col, "ED": ED, "UFS": UFS, "UN": UN, "em_idx": em_idx}  # usado por local.py, bairros.py, eleitorado
+    try: COM_BAIRROS = {b["m"] for b in json.loads(gzip.decompress((S.ROOT / "data/bairros/bairros.json.gz").read_bytes()))["b"]}  # municípios com página de bairros (hub existe)
+    except OSError: COM_BAIRROS = set()
     # ---------- paginas de municipios ----------
     for uf, L in por_uf.items():
         for i, c in enumerate(L):
@@ -157,6 +159,12 @@ def build(S):
                 body += f'<h2>Emendas parlamentares federais</h2><p>Órgãos e entidades sediados em {E(nome)} receberam {brl(ee[0])} em pagamentos de emendas ao Orçamento da União desde 2023, de {num(ee[1])} autores.' + (f' Veja os detalhes em <a href="{ee[2]}">emendas parlamentares em {E(nome)}</a>.' if ee[2] else "") + "</p>"
             else:
                 body += f'<h2>Emendas parlamentares federais</h2><p>Não há pagamentos de emendas parlamentares a favorecidos identificados com sede em {E(nome)} na compilação do Estrato (desde 2023). Veja o <a href="/emendas/municipios/{uf.lower()}/">painel de emendas {PREP[uf]} {UF[uf]}</a>.</p>'
+            sl_ = URL[c].rstrip("/").rsplit("/", 1)[1]; ul_ = uf.lower()
+            irm = [(f"/prefeitura/{ul_}/{sl_}/", f"Orçamento da prefeitura de {nome}"), (f"/verbas-federais/{ul_}/{sl_}/", f"Emendas e verbas federais em {nome}"),
+                   (f"/representantes/{ul_}/{sl_}/", f"Quem representa {nome} no Congresso"), (f"/eleitorado/{ul_}/{sl_}/", f"Eleitorado e locais de votação em {nome}"),
+                   (f"/perguntas/local/{ul_}/{sl_}/", f"Perguntas e respostas sobre {nome}")]
+            if c in COM_BAIRROS: irm.append((f"/bairros/{ul_}/{sl_}/", f"Bairros de {nome}"))
+            body += f'<h2>Mais sobre {E(nome)}</h2><ul>' + "".join(f'<li><a href="{a_}">{E(t_)}</a></li>' for a_, t_ in irm) + '</ul>'
             viz = L[max(0, i - 5):i] + L[i + 1:i + 6]
             body += f'<h2>Outros municípios {PREP[uf]} {UF[uf]}</h2><p>Vizinhos na lista alfabética: ' + ", ".join(f'<a href="{URL[x]}">{E(M[x]["n"])}</a>' for x in viz) + f'. Veja todos em <a href="/municipios/{uf.lower()}/">municípios {PREP[uf]} {UF[uf]}</a>, os <a href="/financas/{uf.lower()}/">dados do estado</a> e os <a href="/deputados/uf/{uf.lower()}/">deputados federais eleitos</a>.</p>'
             body += f'<p class="src">Fontes oficiais: {FONTE_T} (Declaração de Contas Anuais, anexos I-C e I-E, exercícios 2023 e 2024) e {FONTE_I} (Censo 2022 e PIB dos municípios). Compilação em {data_br(col)}. Valores nominais, como declarados pelo município. Veja a <a href="/municipios/metodologia/">metodologia</a>.</p></article>'
@@ -170,9 +178,9 @@ def build(S):
             else:
                 fa = [(f"Quantos habitantes tem {nome}?", f"{num(int(pop))} habitantes, segundo o Censo 2022 do IBGE."), ("Por que não há receitas e despesas?", "O Tesouro Nacional não tem, na compilação do Estrato, a declaração anual completa do município."),
                       ("De onde vêm os dados desta página?", "Do Tesouro Nacional (SICONFI) e do IBGE.")]
-            ld = {"@type": "City", "name": nome, "url": S.BASE + u, "containedInPlace": {"@type": "AdministrativeArea", "name": UF[uf]}, "identifier": c}
+            ld = {"@type": "City", "@id": S.BASE + u + "#city", "name": nome, "url": S.BASE + u, "containedInPlace": {"@type": "AdministrativeArea", "name": UF[uf]}, "identifier": c}
             desc = f"{nome} ({uf}): {num(int(pop))} habitantes" + (f", receita de {brl0(d['rec'])} e despesa de {brl0(d['desp'])} em {a}. Dados do Tesouro e do IBGE." if a and d.get("rec") and d.get("desp") else ". Dados do IBGE e do Tesouro Nacional.")
-            S.write(u, S.page(f"{nome} ({uf}): receitas, despesas e dados do município | {site}", desc, u, body, faqs=fa, crumbs=[("Municípios", "/municipios/"), (UF[uf], f"/municipios/{uf.lower()}/"), (nome, u)], jsonld=ld), familia=fams, lastmod=col); urls.append(u)
+            S.write(u, S.page(f"Indicadores de {nome} ({uf}): população, PIB e área | {site}", desc, u, body, faqs=fa, crumbs=[("Municípios", "/municipios/"), (UF[uf], f"/municipios/{uf.lower()}/"), (nome, u)], jsonld=ld), familia=fams, lastmod=col); urls.append(u)
     # ---------- hubs por UF (municipios) ----------
     totpop = {uf: sum(POP[c] for c in L) for uf, L in por_uf.items()}
     for uf, L in por_uf.items():

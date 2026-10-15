@@ -17,6 +17,32 @@ def words(h):
 def fit(t, n):
     return t if len(t) <= n else t[:n - 1].rsplit(" ", 1)[0].rstrip(",;:-–") + "…"
 
+_STOP = {"de", "da", "do", "das", "dos", "e", "em", "a", "o", "as", "os", "para", "com", "que", "no", "na", "nos", "nas", "por", "ao", "à"}
+
+def fit_clean(t, n, minimo=0):
+    """Corta em fronteira natural (vírgula, dois-pontos, travessão, ponto) sem deixar conectivo pendurado; só usa '…' se não houver fronteira."""
+    if len(t) <= n: return t
+    head = t[:n]
+    cuts = [m.start() for m in re.finditer(r"(?:,|;|:| –| -|\.)\s|\s(?:e|ou)\s", head + " ") if m.start() >= minimo]
+    if cuts: return head[:cuts[-1]].rstrip(",;:-– ")
+    w = t[:n - 1].rsplit(" ", 1)[0].split(" ")
+    while len(w) > 1 and w[-1].lower().strip(",;:") in _STOP: w.pop()
+    return " ".join(w).rstrip(",;:-–") + "…"
+
+def fit_title(title, site, n=65):
+    """Título final: base + ' | Marca', nunca cortado no separador nem sem a marca. Aceita modelos antigos que já trazem '| Marca'."""
+    parts = [x.strip() for x in title.split(" | ")]
+    if len(parts) > 1 and parts[-1] == site: parts.pop()
+    suf = f" | {site}"
+    while len(parts) > 1 and len(" | ".join(parts)) + len(suf) > n: parts.pop(-1 if len(parts) > 2 else 1)  # descarta o segmento intermediário/de seção
+    base = " | ".join(parts)
+    if len(base) + len(suf) > n:
+        c = fit_clean(base, n - len(suf), minimo=25)
+        if not c.endswith("…") and len(c) >= 0.75 * len(base): return c + suf  # corte em fronteira natural que preserva o essencial, com marca
+        if len(base) <= n: return base  # título completo e distinto vale mais que a marca (o buscador reaplica a marca); nunca cortar o que distingue a página
+        base = c
+    return base + suf
+
 class QualityError(SystemExit): pass
 
 class Site:
@@ -31,6 +57,14 @@ class Site:
         # noindex global (pré-lançamento/prévia): env PORTAL_NOINDEX=1 ou config noindex_global: true
         ev = os.environ.get("PORTAL_NOINDEX", "")
         self.NOINDEX = ev == "1" or (ev != "0" and bool(c.get("noindex_global")))  # PORTAL_NOINDEX=0 força desligado (testes)
+        # links só do lançamento (alcançabilidade de /midia/ e /mapas/): entram no menu "Dados" e no rodapé quando noindex_global é desligado
+        # (mapas: só com mapas.ativo e data liberada). Pré-lançamento as seções ficam sem links de entrada, de propósito.
+        lc = c.get("links_lancamento") or {}; hoje_ = dt.date.today().isoformat(); mp = c.get("mapas") or {}
+        for grupo in (["midia"] if not self.NOINDEX else []) + (["mapas"] if not self.NOINDEX and mp.get("ativo") and hoje_ >= str(mp.get("liberar_em", "9999")) else []):
+            g = lc.get(grupo) or {}
+            (c.setdefault("menu", {}).setdefault("referencia", [])).extend(g.get("menu") or [])
+            for col in c.get("rodape", []):
+                if col.get("titulo") == g.get("rodape_coluna"): col["links"].extend(g.get("rodape") or [])
         self.urls = {}       # path -> dict(idx, familia, lastmod, image, title, desc)
         self.thin, self.errors, self.ondas = set(), [], set()
         self.faq_stats = {"pseo_paginas": 0, "pseo_faqs": 0, "pseo_removidas": 0}
@@ -72,6 +106,10 @@ class Site:
             en = emp.get("endereco") or {}
             org.update(legalName=emp["razao_social"], taxID=emp.get("cnpj"), address={"@type": "PostalAddress", "streetAddress": en.get("logradouro"), "addressLocality": en.get("cidade"),
                        "addressRegion": en.get("uf"), "postalCode": en.get("cep"), "addressCountry": "BR"})
+        org["masthead"] = self.BASE + "/expediente/"
+        if emp.get("email") or emp.get("formulario_url"):
+            org["contactPoint"] = {"@type": "ContactPoint", "contactType": "editorial", "availableLanguage": "pt-BR", **({"email": emp["email"]} if emp.get("email") else {}), **({"url": emp["formulario_url"]} if emp.get("formulario_url") else {})}
+        if c.get("responsavel_editorial"): org["employee"] = {"@type": "Person", "name": c["responsavel_editorial"]}   # só renderiza se preenchido
         if emp.get("email"): org["email"] = emp["email"]
         if any(emp.get("redes") or []): org["sameAs"] = [r for r in emp["redes"] if r]
         return [org, {"@type": "WebSite", "@id": self.BASE + "/#site", "name": c["site_name"], "url": self.BASE + "/", "inLanguage": c.get("language", "pt-BR"), "publisher": {"@id": self.BASE + "/#org"},
@@ -93,14 +131,16 @@ class Site:
         if crumbs is not None:
             ch, cl = self.crumbs(crumbs); body = ch + body; graph.append(cl)
         if faqs:
-            body += f'<section class="faqs"><h2>Perguntas frequentes</h2>{self.faq_html(faqs)}</section>'; graph.append(self.faq_ld(faqs))
+            body += f'<section class="faqs"><h2>Perguntas frequentes</h2>{self.faq_html(faqs)}</section>'
+            if path not in ((c.get("qualidade") or {}).get("faq_sem_schema") or []): graph.append(self.faq_ld(faqs))  # páginas jurídicas: FAQ visível, sem FAQPage
         for j in (jsonld if isinstance(jsonld, list) else [jsonld] if jsonld else []):
             j = {k: v for k, v in j.items() if k != "@context"}
             if j.get("@type") in ("Article", "NewsArticle") and not j.get("image"): j["image"] = og_img or self.BASE + "/static/og-default.png"
             graph.append(j)
         self._last = {"faqs": len(faqs or []), "title": title, "pseo": pseo}
-        title, desc = fit(title, 65), fit(desc, 160)
-        canon = self.BASE + path; img = og_img or self.BASE + "/static/og-default.png"
+        title, desc = fit_title(title, c["site_name"], 65), (desc if len(desc) <= 160 else fit_clean(desc, 160, minimo=80))
+        seg = path.strip("/").split("/")[0]
+        canon = self.BASE + path; img = og_img or (f"{self.BASE}/static/og/{seg}.png" if seg in getattr(self, "og_ok", ()) else self.BASE + "/static/og-default.png")
         rb = "noindex,nofollow" if self.NOINDEX else (robots or INDEX_ROBOTS)
         vf = c.get("verificacao") or {}
         meta = f'<meta name="robots" content="{rb}">' if rb else ""
@@ -134,14 +174,14 @@ document.addEventListener('keydown',function(e){{if(e.key==='Escape'&&!d.hidden)
 var a=document.querySelector('nav.ed a.on,nav.ed a.pill');if(a&&a.scrollIntoView&&innerWidth<860)a.scrollIntoView({{inline:'center',block:'nearest'}});
 document.addEventListener('click',function(e){{var x=document.querySelector('details.dd[open]');if(x&&!x.contains(e.target))x.open=false}})}})();</script>
 <main class="wrap" id="conteudo">{body}</main><footer><div class="wrap fgrid"><div><p class="fbrand">{E(c['site_name'])}</p><p>{E(c['tagline'])}</p></div>{cols}</div>
-<div class="wrap fbot">© {dt.date.today().year} {E(c['site_name'])}{(' · ' + E((c.get('empresa') or {}).get('razao_social', ''))) if (c.get('empresa') or {}).get('razao_social') else ''}</div></footer></body></html>"""
+<div class="wrap fbot">© {dt.date.today().year} {E(c['site_name'])}{(' · ' + E((c.get('empresa') or {}).get('razao_social', ''))) if (c.get('empresa') or {}).get('razao_social') else ''}{(' · <a href="mailto:' + E(c['empresa']['email']) + '">' + E(c['empresa']['email']) + '</a>') if (c.get('empresa') or {}).get('email') else ''}</div></footer></body></html>"""
 
-    def write(self, path, txt, *, idx=True, familia="paginas", lastmod=None, image=None, faq_min=None):
+    def write(self, path, txt, *, idx=True, familia="paginas", lastmod=None, image=None, faq_min=None, minw=False):
         """Grava a página e registra a URL. idx=False => noindex,follow (fora de sitemap/busca)."""
         if path in self.urls: self.errors.append(f"URL duplicada: {path}")
         q = self.CFG.get("qualidade") or {}
         minw = q.get("min_palavras_pseo", 300)
-        if idx and familia not in ("paginas", "artigos") and words(txt.split("<main", 1)[-1].split("</main>")[0]) < minw:
+        if idx and (minw or familia not in ("paginas", "artigos")) and words(txt.split("<main", 1)[-1].split("</main>")[0]) < minw:
             idx = False; self.thin.add(path)
         ind = self.CFG.get("indexacao") or {}
         exc = ind.get("excecoes") or []
@@ -152,13 +192,29 @@ document.addEventListener('click',function(e){{var x=document.querySelector('det
         if meta.get("pseo") and faq_min is None: faq_min = 0  # pSEO: 0 a 3 FAQs com dado
         if idx and meta.get("faqs", 0) < (faq_min if faq_min is not None else q.get("min_faqs", 5)):
             self.errors.append(f"{path}: indexável com {meta.get('faqs', 0)} FAQs (mínimo {q.get('min_faqs', 5)})")
+        if lastmod and '"Dataset"' in txt: txt = self._dataset_modified(txt, str(lastmod)[:10])
         t = re.search(r"<title>(.*?)</title>", txt, re.S); d = re.search(r'<meta name="description" content="(.*?)"', txt)
         self.urls[path] = {"idx": idx, "familia": familia, "lastmod": lastmod, "image": image, "title": html.unescape(t.group(1)) if t else "", "desc": html.unescape(d.group(1)) if d else ""}
         f = self.OUT / path.lstrip("/"); f = f / "index.html" if path.endswith("/") else f
         al = getattr(self, "autolink", None)
         if al and (familia in self.autolink_familias or path in self.autolink_paths): txt, _n = al.aplicar(txt, path)
+        self.urls[path]["h"] = hashlib.sha1(re.sub(r"\d{2}/\d{2}/\d{4}", "", txt.split("<main", 1)[-1].split("</main>")[0]).encode()).hexdigest()[:16]  # lastmod real (ver core/build.lastmods)
         if self.PREFIX: txt = re.sub(r'(href|src|action)="/(?!/)', lambda m: f'{m.group(1)}="{self.PREFIX}/', txt)
         f.parent.mkdir(parents=True, exist_ok=True); f.write_text(txt, encoding="utf-8")
+
+    @staticmethod
+    def _dataset_modified(txt, data):
+        """Datasets sem dateModified ganham a data de coleta/atualização da página (lastmod do módulo)."""
+        m = re.search(r'(<script type="application/ld\+json">)(.*?)(</script>)', txt, re.S)
+        if not m: return txt
+        try: ld = json.loads(m.group(2).replace("<\\/", "</"))
+        except ValueError: return txt
+        mud = False
+        for n in ld.get("@graph", []):
+            if isinstance(n, dict) and n.get("@type") == "Dataset" and not n.get("dateModified"): n["dateModified"] = data; mud = True
+        if not mud: return txt
+        novo = json.dumps(ld, ensure_ascii=False).replace("</", "<\\/")
+        return txt[:m.start(2)] + novo + txt[m.end(2):]
 
     def indexaveis(self, familia=None):
         return [u for u, m in self.urls.items() if m["idx"] and (familia is None or m["familia"] == familia)]

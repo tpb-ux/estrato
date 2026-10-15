@@ -16,6 +16,7 @@ qualidade:
   min_faqs: 5                 # hubs, institucionais e glossário
   min_palavras_pseo: 300
   corte_unicidade: 0.15       # fração mínima de texto próprio (5-gramas raros na família) para uma pSEO ficar indexável
+  faq_sem_schema: [/termos/, /privacidade/, /contato/, /correcoes/]   # FAQ visível, mas sem FAQPage (rich result só vale para governo/saúde; ganho é só AEO nas páginas de dados)
   faq_pseo: {prefixos: [/deputados/, /senadores/, /proposicoes/, /comissoes/, /frentes/, /municipios/, /financas/], max: 3, hubs_exatos: [/municipios/, /financas/, /municipios/ac/, /municipios/al/, /municipios/ap/, /municipios/am/, /municipios/ba/, /municipios/ce/, /municipios/df/, /municipios/es/, /municipios/go/, /municipios/ma/, /municipios/mt/, /municipios/ms/, /municipios/mg/, /municipios/pa/, /municipios/pb/, /municipios/pr/, /municipios/pe/, /municipios/pi/, /municipios/rj/, /municipios/rn/, /municipios/rs/, /municipios/ro/, /municipios/rr/, /municipios/sc/, /municipios/sp/, /municipios/se/, /municipios/to/, /comissoes/camara/, /comissoes/senado/, /comissoes/cpis/], hubs: [/municipios/metodologia/, /deputados/uf/, /deputados/cota-parlamentar/, /proposicoes/tema/, /proposicoes/tipo/, /proposicoes/metodologia/, /comissoes/metodologia/]}   # partidos são hubs dos seus parlamentares: FAQ completo
 # Lançamento em ondas (vale quando noindex_global for desligado). Plano:
 #   onda 1 (lançamento): institucionais, editorias, glossário, partidos, hubs de deputados/senadores, deputados por UF e cota parlamentar
@@ -44,6 +45,11 @@ editorias:
 mapas: {ativo: false, liberar_em: 2026-10-27}
 midia: {vies_ativo: false, liberar_em: 2026-10-27}   # Mapa da Mídia: viés/confiança/histórico desligados até liberar_em (e só se vies_ativo: true); metodologia em revisão humana/jurídica
 prefeitos: {ativo: false, liberar_em: 2026-10-27}   # prefeito e vereadores (TSE 2024): gerador desligado até depois de 26/10/2026
+# Links que só entram no menu/rodapé no lançamento (noindex_global: false); mapas também exige mapas.ativo e data. Decisão de menu x rodapé do /midia/ é do Tercio: ajustar aqui.
+links_lancamento:
+  midia: {menu: [["Mapa da Mídia", /midia/]], rodape_coluna: Dados, rodape: [["Mapa da Mídia", /midia/]]}
+  mapas: {menu: [["Mapas e rankings", /mapas/]], rodape_coluna: Dados, rodape: [["Mapas e rankings", /mapas/]]}
+og_secoes: {deputados: Deputados federais, senadores: Senadores, partidos: Partidos, votacoes: Votações nominais, proposicoes: Proposições legislativas, comissoes: Comissões e CPIs, frentes: Frentes parlamentares, cota: Cota parlamentar, emendas: Emendas parlamentares, executivo: Executivo federal, financas: Finanças dos estados e da União, municipios: Municípios, prefeitura: Prefeituras, verbas-federais: Verbas federais, representantes: Quem representa você no Congresso, eleitorado: Eleitorado, perguntas: Perguntas e respostas, bairros: Bairros, midia: Mapa da Mídia, glossario: Glossário político, explica: Como funciona, agenda: Agenda dos Três Poderes, calendario: Calendário eleitoral e legislativo, mapas: Mapas e rankings, linha-do-tempo: Linhas do tempo, quem-e-quem: Quem é quem, checagem: Checagem}   # imagem OG por seção (core/og.py)
 llms_areas: [/perguntas/, /explica/, /agenda/, /linha-do-tempo/, /quem-e-quem/, /calendario/, /checagem/metodologia/]
 menu:
   barra: [[Deputados, /deputados/], [Senadores, /senadores/], [Partidos, /partidos/], [Votações, /votacoes/], [Cota, /cota/], [Emendas, /emendas/], [Executivo, /executivo/], [Glossário, /glossario/]]
@@ -59,13 +65,13 @@ home_faqs:
   - {p: "De onde vêm as notícias?", r: "Das agências oficiais, como Agência Câmara, Agência Senado, Agência Brasil, STF e TCU. Cada resumo leva crédito e link para o original."}
   - {p: "Com que frequência o site é atualizado?", r: "As notícias são coletadas a cada 30 minutos e os dados oficiais uma vez por dia."}
   - {p: "O Estrato publica pesquisas eleitorais?", r: "Não. O portal não publica pesquisas de intenção de voto nem conteúdo de campanha."}
-# Responsável pelo conteúdo: deixar vazio até o Tercio indicar (linhas com campo vazio ficam ocultas)
-responsavel_editorial: ""
+# Responsável editorial e e-mail informados pelo Tercio em 15/10/2026. Campos vazios (encarregado_lgpd, formulario_url, redes) não renderizam nada. Não inventar cargo nem outros dados pessoais.
+responsavel_editorial: "Bruno Marquesan"
 empresa:
   razao_social: Patini Brasil Serviços Publicidade e Propaganda
   cnpj: 53.816.326/0001-58
   endereco: {logradouro: "Av. Pacaembu, 1088", bairro: Pacaembu, cidade: São Paulo, uf: SP, cep: 01234-000}
-  email: ""
+  email: "redacao@estrato.com.br"
   formulario_url: ""
   encarregado_lgpd: ""
   redes: []
