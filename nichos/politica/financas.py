@@ -123,6 +123,7 @@ def build(S):
         med[uf] = (_fl(r), _fl(d_))
     cobertos = sum(1 for c in M if UD[c][0])
     fams = "municipios"
+    S.mun = {"sc": sc, "ib": ib, "M": M, "URL": URL, "slug": slug, "por_uf": por_uf, "POP": POP, "UD": UD, "med": med, "col": col, "ED": ED, "UFS": UFS, "UN": UN, "em_idx": em_idx}  # usado por local.py, bairros.py, eleitorado
     # ---------- paginas de municipios ----------
     for uf, L in por_uf.items():
         for i, c in enumerate(L):

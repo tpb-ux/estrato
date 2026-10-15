@@ -2,7 +2,7 @@
  "formato": "saude-portal/1",
  "portal": "Estrato",
  "url": "https://estrato.com.br",
- "gerado_em": "2026-10-15T03:47:34+00:00",
+ "gerado_em": "2026-10-15T13:50:04+00:00",
  "materias": {
   "total": 20,
   "ultimas_24h": 0,
@@ -14,7 +14,7 @@
    "url": "https://estrato.com.br/congresso/2026-10-09-projeto-pune-empresas-que-atrasarem-pagamento-de-medicos/",
    "fonte": "Agência Câmara",
    "publicada_em": "2026-10-09T19:15:00-03:00",
-   "idade_horas": 125.5
+   "idade_horas": 135.6
   }
  },
  "feeds": {
@@ -247,17 +247,71 @@
     "texto_proprio_p90": 0.446,
     "abaixo_do_corte": 0
    },
+   "prefeituras": {
+    "paginas": 5570,
+    "avaliadas": 5561,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.155,
+    "texto_proprio_mediana": 0.193,
+    "texto_proprio_p90": 0.232,
+    "abaixo_do_corte": 386
+   },
+   "verbas": {
+    "paginas": 5570,
+    "avaliadas": 5554,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.241,
+    "texto_proprio_mediana": 0.3,
+    "texto_proprio_p90": 0.397,
+    "abaixo_do_corte": 0
+   },
+   "representantes": {
+    "paginas": 5570,
+    "avaliadas": 2130,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.405,
+    "texto_proprio_mediana": 0.545,
+    "texto_proprio_p90": 0.628,
+    "abaixo_do_corte": 0
+   },
+   "eleitorado": {
+    "paginas": 5570,
+    "avaliadas": 5567,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.143,
+    "texto_proprio_mediana": 0.169,
+    "texto_proprio_p90": 0.212,
+    "abaixo_do_corte": 1932
+   },
+   "perguntas_local": {
+    "paginas": 5570,
+    "avaliadas": 5566,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.223,
+    "texto_proprio_mediana": 0.276,
+    "texto_proprio_p90": 0.335,
+    "abaixo_do_corte": 0
+   },
+   "bairros": {
+    "paginas": 17474,
+    "avaliadas": 17474,
+    "corte": 0.15,
+    "texto_proprio_p10": 0.273,
+    "texto_proprio_mediana": 0.296,
+    "texto_proprio_p90": 0.329,
+    "abaixo_do_corte": 0
+   },
    "subcategorias": {
     "paginas": 72,
-    "avaliadas": 14,
+    "avaliadas": 30,
     "corte": 0.15,
-    "texto_proprio_p10": 0.494,
-    "texto_proprio_mediana": 0.598,
-    "texto_proprio_p90": 0.801,
+    "texto_proprio_p10": 0.381,
+    "texto_proprio_mediana": 0.426,
+    "texto_proprio_p90": 0.592,
     "abaixo_do_corte": 0
    }
   },
-  "noindex_por_unicidade": 1216,
+  "noindex_por_unicidade": 3534,
   "similaridade_jaccard5": {
    "glossario": 0.035,
    "deputados": 0.347,
@@ -277,21 +331,27 @@
    "agenda": 0.135,
    "linha_do_tempo": 0.348,
    "quem_e_quem": 0.005,
-   "subcategorias": 0.194
+   "prefeituras": 0.599,
+   "verbas": 0.499,
+   "representantes": 0.274,
+   "eleitorado": 0.572,
+   "perguntas_local": 0.552,
+   "bairros": 0.54,
+   "subcategorias": 0.3
   },
   "faq_pseo": {
-   "pseo_paginas": 9070,
-   "pseo_faqs": 27076,
-   "pseo_removidas": 26722
+   "pseo_paginas": 48825,
+   "pseo_faqs": 140701,
+   "pseo_removidas": 111693
   },
   "rede_links_pct": {
    "modalnews.com.br": 0.0
   },
-  "ondas_noindex": 19092
+  "ondas_noindex": 60944
  },
  "site": {
-  "paginas_indexaveis": 627,
-  "paginas_total": 20209,
+  "paginas_indexaveis": 1705,
+  "paginas_total": 66595,
   "noindex_global": true,
   "links_internos_quebrados": 0,
   "build": "local"

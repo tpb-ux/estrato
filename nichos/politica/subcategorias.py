@@ -87,12 +87,13 @@ def build(S):
                  f'<h2>Deputados federais {pr} {E(nome)}</h2>{lis(dep)}<p><a href="/deputados/uf/{uf.lower()}/">Bancada {pr} {E(nome)} na Câmara</a></p>'
                  f'<h2>Senadores {pr} {E(nome)}</h2>{lis(sen)}'
                  f'<h2>Emendas parlamentares</h2><p>{brl(em)} pagos desde 2023 a favorecidos sediados em {num(nm)} municípios. <a href="/emendas/municipios/{uf.lower()}/">Ver por município</a>. Fonte: Portal da Transparência (CGU), compilação em {data_br((meta.get("coletado_em") or "")[:10])}.</p>'
-                 f'<h2>Entenda</h2><div class="chips small">' + "".join(f'<a class="chip" href="/glossario/{g}/">{E(TN[g])}</a>' for g in ("federalismo", "assembleia-legislativa", "fundos-de-participacao", "transferencias-voluntarias") if g in TN) + "</div></section>")
+                 f'<h2>Entenda</h2><div class="chips small">' + "".join(f'<a class="chip" href="/glossario/{g}/">{E(TN[g])}</a>' for g in ("federalismo", "assembleia-legislativa", "fundos-de-participacao", "transferencias-voluntarias") if g in TN) + "</div>" + getattr(S, "estado_extra", {}).get(uf, ("", []))[0] + "</section>")
             faqs = [(f"Quantos deputados federais {pr} {nome} há?", f"{num(len(dep))} em exercício na última coleta da Câmara dos Deputados. A lista acima está em ordem alfabética."),
                     (f"Quem são os senadores {pr} {nome}?", (", ".join(E(x["nome"]) for x in sen) or "Sem dados na coleta") + f". Cada estado elege três senadores."),
                     (f"Quanto {ar.strip().capitalize() + ' ' if ar else ''}{nome} recebeu em emendas parlamentares?", f"{brl(em)} em pagamentos a favorecidos sediados em {num(nm)} municípios {pr} {nome} desde 2023, segundo o Portal da Transparência."),
                     (f"Quais notícias aparecem na página {pr} {nome}?", f"Matérias de qualquer editoria que citam {E(nome)} no título ou no resumo. Hoje são {num(len(ps))}."),
                     (f"Onde ver dados por município {pr} {nome}?", f'Na página de <a href="/emendas/municipios/{uf.lower()}/">emendas por município</a>, com valores por ano, tipo e autor.')]
+            faqs += getattr(S, "estado_extra", {}).get(uf, ("", []))[1]
             ld = {"@type": "CollectionPage", "name": f"{nome} ({uf})", "url": S.BASE + u, "description": intro, "isPartOf": {"@id": S.BASE + "/#site"},
                   "about": {"@type": "State", "name": nome, "containedInPlace": {"@type": "Country", "name": "Brasil"}}, "mainEntity": S.itemlist([(p["titulo"], p["url"]) for p in ps])}
             S.write(u, S.page(f"{nome} ({uf}): notícias, bancada e emendas | {S.CFG['site_name']}", intro, u, b, faqs=faqs, crumbs=[("Estados e Municípios", "/estados/"), (nome, u)], jsonld=ld),

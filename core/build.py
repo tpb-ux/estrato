@@ -140,21 +140,26 @@ def quality(S):
         if not (50 <= len(m["desc"]) <= 165): S.errors.append(f"{u}: descrição com {len(m['desc'])} caracteres (50–165)")
 
 def unicidade(S):
-    """Páginas pSEO (famílias fora de paginas/artigos, profundidade >= 2) com pouco texto próprio saem do índice."""
-    qc = S.CFG.get("qualidade") or {}; fams = {}; cand = set()
+    """Páginas pSEO (famílias fora de paginas/artigos, profundidade >= 2) com pouco texto próprio saem do índice.
+    Uma família por vez (memória: só o HTML da maior família fica carregado)."""
+    qc = S.CFG.get("qualidade") or {}; por_fam = {}; cand = set()
     for u, m in S.urls.items():
         if m["familia"] in ("paginas", "artigos", "analises") or u.count("/") < 3: continue
-        f = S.OUT / u.lstrip("/") / "index.html"
-        if not f.exists(): continue
-        fams.setdefault(m["familia"], {})[u] = f.read_text(encoding="utf-8")
+        if not (S.OUT / u.lstrip("/") / "index.html").exists(): continue
+        por_fam.setdefault(m["familia"], []).append(u)
         if m["idx"] or u in S.ondas: cand.add(u)  # páginas retidas por onda também são medidas
-    stats, abaixo = Q.unicidade(fams, corte=qc.get("corte_unicidade", 0.15), cortes=qc.get("cortes_unicidade"), avaliar=cand)
+    stats, abaixo, sim = {}, {}, {}
+    for fam, us in por_fam.items():
+        fams = {fam: {u: (S.OUT / u.lstrip("/") / "index.html").read_text(encoding="utf-8") for u in us}}
+        st, ab = Q.unicidade(fams, corte=qc.get("corte_unicidade", 0.15), cortes=qc.get("cortes_unicidade"), avaliar=cand)
+        stats.update(st); abaixo.update(ab)
+        sim.update(Q.similaridade({fam: {u: h for u, h in fams[fam].items() if u in cand and u not in ab}}))
+        del fams
     for u in abaixo:
         if u not in S.ondas: S.thin.add(u)
         S.urls[u]["idx"] = False
         if not S.NOINDEX:
             f = S.OUT / u.lstrip("/") / "index.html"; f.write_text(Q.set_robots(f.read_text(encoding="utf-8"), "noindex,follow"), encoding="utf-8")
-    sim = Q.similaridade({k: {u: h for u, h in v.items() if u in cand and u not in abaixo} for k, v in fams.items()})
     return {"unicidade": stats, "noindex_por_unicidade": len(abaixo), "similaridade_jaccard5": sim}
 
 def main(root):

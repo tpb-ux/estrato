@@ -11,7 +11,7 @@ noindex_global: true
 aviso_topo: "Versão de prévia: em revisão, não indexada."
 publisher_logo: /static/logo.png
 tema: {cor: "#8A4B08", cor2: "#6E3B05", escuro: "#1B2430"}
-modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, proposicoes, colegiados, cotas, emendas, executivo, financas, presidencia, perguntas, explica, agenda, linha_do_tempo, quem_e_quem, calendario, checagem, mapas, dados_abertos, subcategorias]
+modulos: [core.modulos.glossario, parlamentares, partidos, votacoes, proposicoes, colegiados, cotas, emendas, executivo, financas, presidencia, perguntas, explica, agenda, linha_do_tempo, quem_e_quem, calendario, checagem, mapas, local, bairros, prefeitos, midia, dados_abertos, subcategorias]
 qualidade:
   min_faqs: 5                 # hubs, institucionais e glossário
   min_palavras_pseo: 300
@@ -24,9 +24,10 @@ qualidade:
 #   onda 4 (+2 a 3 semanas): tirar "votacoes" da lista (páginas de cada votação e listas anuais)
 #   onda 5 (+2 a 3 semanas): tirar "cotas" da lista (cota por parlamentar, categoria e fornecedor; hub /cota/ e metodologia ficam indexáveis)
 #   onda 6 (+2 a 3 semanas): tirar "emendas" da lista (emendas por autor e por município; hubs ficam indexáveis)
+#   onda 8 (+2 a 3 semanas, uma de cada vez): prefeituras, verbas, representantes, eleitorado, perguntas_local; depois bairros (so as paginas que passarem no corte de unicidade); prefeitos so apos liberar a flag
 #   onda 7 (+2 a 3 semanas): tirar "executivo" da lista (viagens de ministros, órgãos, Presidência; hubs ficam indexáveis)
 indexacao:
-  familias_noindex: [deputados, senadores, votacoes, proposicoes, comissoes, frentes, cotas, emendas, executivo, financas, municipios]   # votacoes: páginas de cada votação e listas anuais (hub /votacoes/ e metodologia ficam indexáveis)
+  familias_noindex: [deputados, senadores, votacoes, proposicoes, comissoes, frentes, cotas, emendas, executivo, financas, municipios, prefeituras, verbas, representantes, eleitorado, perguntas_local, bairros, prefeitos, midia]   # votacoes: páginas de cada votação e listas anuais (hub /votacoes/ e metodologia ficam indexáveis)
   excecoes: [/deputados/, /senadores/, /deputados/cota-parlamentar/, "/deputados/uf/*", /proposicoes/, /proposicoes/tema/, /proposicoes/metodologia/, /comissoes/, /comissoes/camara/, /comissoes/senado/, /comissoes/cpis/, /comissoes/metodologia/, /frentes/]
 # Regra anti-rede: portais da mesma empresa não se linkam no layout nem em massa.
 rede_dominios: [modalnews.com.br]

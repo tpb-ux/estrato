@@ -1,0 +1,214 @@
+# Mapa da Mídia: base factual. Cada afirmação tem fonte (artigo da Wikipédia em português) e um trecho que a ferramenta tools/datasets_midia.py procura no texto da fonte.
+# Trecho encontrado => "verificado em <data>"; senão => "não verificado". Só fatos documentados, verbos neutros. Campos de viés/confiança ficam desligados (config midia.vies_ativo).
+# tipo: veiculo | grupo | pessoa. in_feeds: veículo cujo feed está no feeds.yaml do Estrato.
+entidades:
+  # ---- pessoas e famílias ----
+  marinho: {tipo: pessoa, nome: Família Marinho}
+  frias: {tipo: pessoa, nome: Luiz Frias}
+  mesquita: {tipo: pessoa, nome: Família Mesquita}
+  macedo: {tipo: pessoa, nome: Edir Macedo}
+  saad: {tipo: pessoa, nome: Família Saad}
+  menin: {tipo: pessoa, nome: Rubens Menin}
+  dallevo: {tipo: pessoa, nome: Amilcare Dallevo Jr.}
+  marcelo-de-carvalho: {tipo: pessoa, nome: Marcelo de Carvalho}
+  silvio-santos: {tipo: pessoa, nome: Silvio Santos}
+  antonio-augusto-de-carvalho: {tipo: pessoa, nome: Antônio Augusto Amaral de Carvalho}
+  fabio-carvalho: {tipo: pessoa, nome: Fábio Carvalho}
+  fernando-rodrigues: {tipo: pessoa, nome: Fernando Rodrigues}
+  mariangela-gallucci: {tipo: pessoa, nome: Mariângela Gallucci}
+  frederico-trajano: {tipo: pessoa, nome: Frederico Trajano}
+  carlos-sanchez: {tipo: pessoa, nome: Carlos Sanchez}
+  cunha-pereira: {tipo: pessoa, nome: Família Cunha Pereira}
+  paes-mendonca: {tipo: pessoa, nome: João Carlos Paes Mendonça}
+  sirotsky: {tipo: pessoa, nome: Eduardo Sirotsky Melzer}
+  zahran: {tipo: pessoa, nome: Família Zahran}
+  omidyar: {tipo: pessoa, nome: Pierre Omidyar}
+  sylvio-costa: {tipo: pessoa, nome: Sylvio Costa}
+  eduardo-moreira: {tipo: pessoa, nome: Eduardo Moreira}
+  # ---- grupos e empresas ----
+  grupo-globo: {tipo: grupo, nome: Grupo Globo, setor: "Conglomerado de mídia"}
+  grupo-folha: {tipo: grupo, nome: Grupo Folha, setor: "Conglomerado de mídia"}
+  grupo-uol: {tipo: grupo, nome: Grupo UOL PagSeguro, setor: "Internet e serviços financeiros"}
+  grupo-estado: {tipo: grupo, nome: Grupo Estado, setor: "Conglomerado de mídia"}
+  grupo-record: {tipo: grupo, nome: Grupo Record, setor: "Conglomerado de mídia"}
+  grupo-bandeirantes: {tipo: grupo, nome: Grupo Bandeirantes de Comunicação, setor: "Conglomerado de mídia"}
+  grupo-silvio-santos: {tipo: grupo, nome: Grupo Silvio Santos, setor: "Conglomerado empresarial com mídia"}
+  grupo-jovem-pan: {tipo: grupo, nome: Grupo Jovem Pan, setor: "Rádio e televisão"}
+  redetv-ltda: {tipo: grupo, nome: TV Ômega Ltda. (RedeTV!), setor: "Televisão"}
+  novus-midia: {tipo: grupo, nome: Novus Mídia, setor: "Televisão e mídia digital"}
+  btg-pactual: {tipo: grupo, nome: BTG Pactual, setor: "Banco de investimento"}
+  valongo: {tipo: grupo, nome: Editora e Comércio Valongo, setor: "Editora"}
+  grupo-abril: {tipo: grupo, nome: Grupo Abril, setor: "Editora"}
+  empiricus: {tipo: grupo, nome: Empiricus, setor: "Publicações e análises financeiras"}
+  grpcom: {tipo: grupo, nome: Grupo Paranaense de Comunicação (GRPCom), setor: "Conglomerado de mídia"}
+  diarios-associados: {tipo: grupo, nome: Diários Associados, setor: "Conglomerado de mídia"}
+  grupo-rbs: {tipo: grupo, nome: Grupo RBS, setor: "Conglomerado de mídia"}
+  nsc: {tipo: grupo, nome: NSC Comunicação, setor: "Conglomerado de mídia"}
+  grupo-a-tarde: {tipo: grupo, nome: Grupo A TARDE, setor: "Jornal"}
+  telefonica: {tipo: grupo, nome: Telefónica, setor: "Telecomunicações"}
+  oi: {tipo: grupo, nome: Oi, setor: "Telecomunicações"}
+  ebc: {tipo: grupo, nome: Empresa Brasil de Comunicação (EBC), setor: "Empresa pública federal de comunicação"}
+  fundacao-padre-anchieta: {tipo: grupo, nome: Fundação Padre Anchieta, setor: "Fundação pública de comunicação"}
+  grupo-zahran: {tipo: grupo, nome: Grupo Zahran, setor: "Conglomerado empresarial com mídia"}
+  copa-energia: {tipo: grupo, nome: Copa Energia (Copagaz), setor: "Gás liquefeito de petróleo"}
+  rede-matogrossense: {tipo: grupo, nome: Rede Matogrossense de Comunicação, setor: "Televisão"}
+  sistema-jc: {tipo: grupo, nome: Sistema Jornal do Commercio de Comunicação, setor: "Conglomerado de mídia"}
+  instituto-artigo-220: {tipo: grupo, nome: Instituto Artigo 220, setor: "Associação civil sem fins lucrativos"}
+  icl: {tipo: grupo, nome: Instituto Conhecimento Liberta (ICL), setor: "Associação com mídia"}
+  # ---- veículos ----
+  tv-globo: {tipo: veiculo, nome: TV Globo, formato: Televisão}
+  g1: {tipo: veiculo, nome: g1, formato: Portal, in_feeds: true}
+  globonews: {tipo: veiculo, nome: GloboNews, formato: Televisão}
+  o-globo: {tipo: veiculo, nome: O Globo, formato: Jornal}
+  valor: {tipo: veiculo, nome: Valor Econômico, formato: Jornal}
+  folha: {tipo: veiculo, nome: Folha de S.Paulo, formato: Jornal, in_feeds: true}
+  uol: {tipo: veiculo, nome: UOL, formato: Portal}
+  estadao: {tipo: veiculo, nome: O Estado de S. Paulo, formato: Jornal}
+  record: {tipo: veiculo, nome: Record, formato: Televisão}
+  r7: {tipo: veiculo, nome: R7, formato: Portal}
+  correio-do-povo: {tipo: veiculo, nome: Correio do Povo, formato: Jornal}
+  folha-universal: {tipo: veiculo, nome: Folha Universal, formato: Jornal}
+  sbt: {tipo: veiculo, nome: SBT, formato: Televisão}
+  band: {tipo: veiculo, nome: Band, formato: Televisão}
+  redetv: {tipo: veiculo, nome: RedeTV!, formato: Televisão}
+  jovem-pan: {tipo: veiculo, nome: Jovem Pan, formato: Rádio e televisão}
+  cnn-brasil: {tipo: veiculo, nome: CNN Brasil, formato: Televisão, in_feeds: true}
+  exame: {tipo: veiculo, nome: Exame, formato: Revista}
+  veja: {tipo: veiculo, nome: Veja, formato: Revista, in_feeds: true}
+  istoe: {tipo: veiculo, nome: IstoÉ, formato: Revista}
+  cartacapital: {tipo: veiculo, nome: CartaCapital, formato: Revista, in_feeds: true}
+  piaui: {tipo: veiculo, nome: piauí, formato: Revista}
+  oeste: {tipo: veiculo, nome: Revista Oeste, formato: Revista}
+  poder360: {tipo: veiculo, nome: Poder360, formato: Portal, in_feeds: true}
+  jota: {tipo: veiculo, nome: JOTA, formato: Portal, in_feeds: true}
+  metropoles: {tipo: veiculo, nome: Metrópoles, formato: Portal}
+  brasil-247: {tipo: veiculo, nome: Brasil 247, formato: Portal, in_feeds: true}
+  jornal-ggn: {tipo: veiculo, nome: Jornal GGN, formato: Portal, in_feeds: true}
+  brasil-de-fato: {tipo: veiculo, nome: Brasil de Fato, formato: Portal e jornal, in_feeds: true}
+  agencia-publica: {tipo: veiculo, nome: Agência Pública, formato: Agência de jornalismo, in_feeds: true}
+  congresso-em-foco: {tipo: veiculo, nome: Congresso em Foco, formato: Portal, in_feeds: true}
+  conjur: {tipo: veiculo, nome: Consultor Jurídico (ConJur), formato: Revista eletrônica, in_feeds: true}
+  antagonista: {tipo: veiculo, nome: O Antagonista, formato: Portal, in_feeds: true}
+  gazeta-do-povo: {tipo: veiculo, nome: Gazeta do Povo, formato: Jornal, in_feeds: true}
+  correio-braziliense: {tipo: veiculo, nome: Correio Braziliense, formato: Jornal, in_feeds: true}
+  a-tarde: {tipo: veiculo, nome: A Tarde, formato: Jornal, in_feeds: true}
+  zero-hora: {tipo: veiculo, nome: Zero Hora, formato: Jornal}
+  nsc-total: {tipo: veiculo, nome: NSC Total, formato: Portal, in_feeds: true}
+  a-gazeta-es: {tipo: veiculo, nome: A Gazeta (ES), formato: Portal, in_feeds: true}
+  jornal-opcao: {tipo: veiculo, nome: Jornal Opção, formato: Jornal e portal, in_feeds: true}
+  bahia-noticias: {tipo: veiculo, nome: Bahia Notícias, formato: Portal, in_feeds: true}
+  jornal-do-commercio: {tipo: veiculo, nome: Jornal do Commercio (PE), formato: Jornal}
+  diario-de-pernambuco: {tipo: veiculo, nome: Diario de Pernambuco, formato: Jornal}
+  terra: {tipo: veiculo, nome: Terra, formato: Portal}
+  ig: {tipo: veiculo, nome: iG, formato: Portal}
+  agencia-brasil: {tipo: veiculo, nome: Agência Brasil, formato: Agência pública de notícias, in_feeds: true}
+  tv-cultura: {tipo: veiculo, nome: TV Cultura, formato: Televisão}
+  rfi-brasil: {tipo: veiculo, nome: RFI Brasil, formato: Rádio e portal, in_feeds: true}
+  nexo: {tipo: veiculo, nome: Nexo Jornal, formato: Portal}
+  intercept-brasil: {tipo: veiculo, nome: The Intercept Brasil, formato: Portal}
+  brasil-paralelo: {tipo: veiculo, nome: Brasil Paralelo, formato: Produtora e portal}
+  icl-noticias: {tipo: veiculo, nome: ICL Notícias, formato: Portal e canal digital}
+  midia-ninja: {tipo: veiculo, nome: Mídia Ninja, formato: Coletivo de mídia}
+  pragmatismo: {tipo: veiculo, nome: Pragmatismo Político, formato: Portal, in_feeds: true}
+afirmacoes:
+  # Grupo Globo
+  - {s: grupo-globo, r: "pertence a", o: marinho, t: "O Grupo Globo tem como proprietária a Família Marinho.", w: Grupo Globo, q: "proprietario = Família Marinho"}
+  - {s: grupo-globo, r: "foi fundado por", o: null, t: "O grupo teve como fundador Irineu Marinho.", w: Grupo Globo, q: "fundador = Irineu Marinho"}
+  - {s: grupo-globo, r: "reúne", o: null, t: "Reúne as empresas subsidiárias Globo, Editora Globo, Sistema Globo de Rádio e Globo Ventures e mantém a Fundação Roberto Marinho.", w: Grupo Globo, q: "Contendo as seguintes empresas subsidiárias: Globo, Editora Globo, Sistema Globo de Rádio e Globo Ventures"}
+  - {s: tv-globo, r: "pertence a", o: grupo-globo, t: "A TV Globo tem como proprietário o Grupo Globo.", w: TV Globo, q: "proprietário = Grupo Globo"}
+  - {s: g1, r: "pertence a", o: grupo-globo, t: "O g1 consta como de propriedade da Globo, do Grupo Globo.", w: G1, q: "proprietário = Globo"}
+  - {s: globonews, r: "pertence a", o: grupo-globo, t: "A GloboNews tem como proprietário o Grupo Globo.", w: GloboNews, q: "proprietário = Grupo Globo"}
+  - {s: o-globo, r: "pertence a", o: grupo-globo, t: "O Globo tem como proprietário o Grupo Globo e pertence à Editora Globo.", w: O Globo, q: "proprietário = Grupo Globo"}
+  - {s: valor, r: "pertence a", o: grupo-globo, t: "Desde a compra da participação do Grupo Folha, anunciada em 13 de setembro de 2016, o Grupo Globo é a única empresa que mantém o Valor Econômico.", w: Valor Econômico, q: "A mudança societária fez com que o Grupo Globo se tornasse a única empresa que mantém a publicação"}
+  # Grupo Folha / UOL
+  - {s: folha, r: "pertence a", o: grupo-folha, t: "A Folha de S.Paulo tem como proprietário o Grupo Folha.", w: Folha de S.Paulo, q: "proprietário = Grupo Folha"}
+  - {s: grupo-folha, r: "é presidido por", o: frias, t: "O Grupo Folha tem como presidente Luiz Frias.", w: Grupo Folha, q: "presidente = Luiz Frias"}
+  - {s: grupo-folha, r: "foi fundado por", o: null, t: "O grupo teve como fundador Octávio Frias de Oliveira.", w: Grupo Folha, q: "fundador = Octávio Frias de Oliveira"}
+  - {s: grupo-folha, r: "deteve participação em", o: valor, t: "Entre maio de 2000 e setembro de 2016, o Grupo Folha teve participação de 50% no Valor Econômico, em parceria com o Grupo Globo.", w: Grupo Folha, q: "Entre maio de 2000 e setembro de 2016, teve participação de 50% no Valor Econômico"}
+  - {s: grupo-uol, r: "é controlado por", o: frias, t: "O Grupo UOL PagSeguro é controlado pela OFL S.A., holding controlada por Luiz Frias, com participação minoritária em ações preferenciais da Empresa Folha da Manhã S.A.", w: UOL, q: "controlado pela OFL S.A."}
+  - {s: uol, r: "pertence a", o: grupo-uol, t: "O UOL foi fundado por Luiz Frias em abril de 1996 e integra o Grupo UOL PagSeguro.", w: UOL, q: "O UOL foi fundado por Luiz Frias em abril de 1996"}
+  # Grupo Estado
+  - {s: grupo-estado, r: "é controlado por", o: mesquita, t: "O Grupo Estado foi fundado e é controlado pela família Mesquita.", w: Grupo Estado, q: "O grupo foi fundado e é controlado pela família Mesquita"}
+  - {s: estadao, r: "pertence a", o: grupo-estado, t: "O Estado de S. Paulo tem como proprietário o Grupo Estado.", w: O Estado de S. Paulo, q: "proprietário = Grupo Estado"}
+  # Grupo Record
+  - {s: grupo-record, r: "é controlado por", o: macedo, t: "O Grupo Record tem como proprietários Edir Macedo (90%) e Ester Bezerra (10%).", w: Grupo Record, q: "Edir Macedo (90%)"}
+  - {s: record, r: "pertence a", o: grupo-record, t: "A Record tem como proprietário o Grupo Record.", w: Record (rede de televisão), q: "proprietário = Grupo Record"}
+  - {s: r7, r: "pertence a", o: grupo-record, t: "O R7 tem como proprietário o Grupo Record.", w: R7, q: "proprietário = Grupo Record"}
+  - {s: correio-do-povo, r: "pertence a", o: grupo-record, t: "O Correio do Povo pertence ao Grupo Record e tem Edir Macedo como proprietário.", w: Correio do Povo, q: "pertence a = Grupo Record"}
+  - {s: folha-universal, r: "é editada por", o: null, t: "A Folha Universal tem como proprietária a Igreja Universal do Reino de Deus.", w: Folha Universal, q: "proprietário = Igreja Universal"}
+  # SBT
+  - {s: sbt, r: "pertence a", o: grupo-silvio-santos, t: "O SBT tem como proprietário o Grupo Silvio Santos.", w: SBT, q: "proprietário = Grupo Silvio Santos"}
+  - {s: sbt, r: "é operado por", o: null, t: "A empresa-mãe do SBT é a TVSBT Canal 4 de São Paulo S.A.", w: SBT, q: "TVSBT Canal 4 de São Paulo S.A."}
+  - {s: grupo-silvio-santos, r: "teve como fundador", o: silvio-santos, t: "Em 1959 Silvio Santos tornou-se sócio de Manoel de Nóbrega no Baú da Felicidade, o que deu origem ao Grupo Silvio Santos.", w: Silvio Santos, q: "dando origem ao que viria a ser o Grupo Silvio Santos"}
+  # Band
+  - {s: band, r: "pertence a", o: grupo-bandeirantes, t: "A Band tem como proprietário o Grupo Bandeirantes de Comunicação.", w: Band, q: "proprietário = Grupo Bandeirantes de Comunicação"}
+  - {s: grupo-bandeirantes, r: "pertence a", o: saad, t: "O Grupo Bandeirantes de Comunicação tem como proprietária a Família Saad.", w: Grupo Bandeirantes de Comunicação, q: "proprietário = Família Saad"}
+  # RedeTV
+  - {s: redetv, r: "pertence a", o: redetv-ltda, t: "A empresa-mãe da RedeTV! é a TV Ômega Ltda.", w: RedeTV!, q: "empresa_mãe = TV Ômega Ltda."}
+  - {s: redetv-ltda, r: "tem como sócio", o: dallevo, t: "Amilcare Dallevo Jr. consta como proprietário da RedeTV! desde 1999.", w: RedeTV!, q: "Amilcare Dallevo Jr."}
+  - {s: redetv-ltda, r: "teve como sócio", o: marcelo-de-carvalho, t: "Marcelo de Carvalho consta como proprietário da RedeTV! de 1999 a 2025.", w: RedeTV!, q: "Marcelo de Carvalho"}
+  # Jovem Pan
+  - {s: jovem-pan, r: "pertence a", o: grupo-jovem-pan, t: "A Jovem Pan pertence ao Grupo Jovem Pan.", w: Jovem Pan, q: "pertence a = Grupo Jovem Pan"}
+  - {s: grupo-jovem-pan, r: "tem como dono", o: antonio-augusto-de-carvalho, t: "O dono da Jovem Pan consta como Antônio Augusto Amaral de Carvalho.", w: Jovem Pan, q: "dono = Antônio Augusto Amaral de Carvalho"}
+  # CNN Brasil
+  - {s: cnn-brasil, r: "pertence a", o: novus-midia, t: "A CNN Brasil pertence à Novus Mídia, empresa fundada por Rubens Menin e Douglas Tavolaro, e opera por licenciamento de marca com a CNN dos Estados Unidos.", w: CNN Brasil, q: "pertence à Novus Mídia, empresa fundada pelo co-fundador da MRV Engenharia Rubens Menin e pelo ex-diretor de jornalismo da Record Douglas Tavolaro"}
+  - {s: novus-midia, r: "é controlada por", o: menin, t: "Rubens Menin, cofundador da MRV Engenharia, consta como proprietário da CNN Brasil.", w: CNN Brasil, q: "proprietário = Rubens Menin"}
+  - {s: novus-midia, r: "adquiriu participação de", o: menin, t: "Em 25 de março de 2021, Douglas Tavolaro deixou a presidência do canal e vendeu a sua participação para a família Menin.", w: CNN Brasil, q: "vende a sua participação para a família Menin"}
+  # Exame / BTG / Abril
+  - {s: exame, r: "pertence a", o: valongo, t: "A Exame pertence à Editora e Comércio Valongo, administrada pelo BTG Pactual Holding.", w: Exame (revista brasileira), q: "pertence a Editora e Comércio Valongo, que por sua vez é administrada pelo BTG Pactual Holding"}
+  - {s: valongo, r: "é administrada por", o: btg-pactual, t: "A Editora e Comércio Valongo é administrada pelo BTG Pactual Holding e arrematou a revista em 2019, por cerca de R$ 72 milhões, em leilão do plano de recuperação judicial do Grupo Abril.", w: Exame (revista brasileira), q: "arrematada pela Editora e Comercio Valongo, administrada pelo BTG Pactual Holding em 2019"}
+  - {s: btg-pactual, r: "atua como", o: null, t: "O BTG Pactual foi fundado em 1983 e tem sede no Rio de Janeiro e em São Paulo.", w: BTG Pactual, q: "O banco foi fundado em 1983"}
+  - {s: exame, r: "cobre", o: null, t: "A Exame é uma revista mensal especializada em economia, negócios, política e tecnologia.", w: Exame (revista brasileira), q: "especializada em economia, negócios, política e tecnologia"}
+  - {s: veja, r: "é editada por", o: grupo-abril, t: "A Veja é editada pela Editora Abril.", w: Veja, q: "editora = Editora Abril"}
+  - {s: grupo-abril, r: "é presidido por", o: fabio-carvalho, t: "A Editora Abril é presidida por Fábio Carvalho, chairman do Grupo Abril.", w: Editora Abril, q: "A companhia é presidida por Fábio Carvalho, chairman do Grupo Abril"}
+  - {s: grupo-abril, r: "foi vendido a", o: fabio-carvalho, t: "O Grupo Abril foi vendido como um todo, em 2018, ao empresário Fábio Carvalho.", w: Exame (revista brasileira), q: "já havia sido vendido como um todo, em 2018, para o empresário Fábio Carvalho"}
+  - {s: istoe, r: "é editada por", o: null, t: "A IstoÉ aparece como editada pela Editora Três de 1976 a 2025 e pela Entre Investimentos desde 2025.", w: IstoÉ, q: "Entre Investimentos (2025-Atualmente)"}
+  - {s: cartacapital, r: "é editada por", o: null, t: "A CartaCapital é editada pela Editora Basset.", w: CartaCapital, q: "editora = Editora Basset"}
+  - {s: cartacapital, r: "foi fundada por", o: null, t: "Foi fundada em agosto de 1994 pelo jornalista Mino Carta, pelo economista Luiz Gonzaga Belluzzo e por outros sócios.", w: CartaCapital, q: "Foi fundada em agosto de 1994 pelo jornalista ítalo-brasileiro Mino Carta"}
+  - {s: piaui, r: "é controlada por", o: instituto-artigo-220, t: "Desde outubro de 2021 a piauí é controlada pelo Instituto Artigo 220, associação civil sem fins lucrativos financiada por um fundo patrimonial.", w: Piauí (revista), q: "Desde outubro de 2021, a revista é controlada pelo Instituto Artigo 220"}
+  - {s: piaui, r: "pertence a", o: null, t: "A publicação pertence à Editora Alvinegra.", w: Piauí (revista), q: "A publicação pertence à Editora Alvinegra"}
+  - {s: oeste, r: "foi fundada por", o: null, t: "A Revista Oeste foi fundada em 27 de março de 2020 pelos jornalistas Jairo Leal, Augusto Nunes e José Roberto Guzzo.", w: Revista Oeste, q: "foi fundada em 27 de março de 2020 pelos jornalistas Jairo Leal, Augusto Nunes e José Roberto Guzzo"}
+  # Poder360, JOTA e digitais
+  - {s: poder360, r: "tem como sócio", o: fernando-rodrigues, t: "Fernando Rodrigues consta com 37,5% do Poder360.", w: Poder360, q: "Fernando Rodrigues (37,5%)"}
+  - {s: poder360, r: "tem como sócia", o: mariangela-gallucci, t: "Mariângela Gallucci consta com 37,5% do Poder360.", w: Poder360, q: "Mariângela Gallucci (37,5%)"}
+  - {s: poder360, r: "tem como sócio", o: frederico-trajano, t: "Frederico Trajano consta com 25% do Poder360.", w: Poder360, q: "Frederico Trajano (25%)"}
+  - {s: frederico-trajano, r: "ocupa o cargo de", o: null, t: "Frederico Trajano é CEO do Magazine Luiza (Magalu).", w: Frederico Trajano, q: "atualmente CEO do Magazine Luiza"}
+  - {s: jota, r: "foi fundado por", o: null, t: "O JOTA foi ao ar em setembro de 2014, fundado por Felipe Recondo e Felipe Seligman.", w: JOTA (site), q: "Felipe Recondo e Felipe Seligman"}
+  - {s: metropoles, r: "tem sede em", o: null, t: "O Metrópoles é um portal de notícias lançado em 8 de setembro de 2015, com sede em Brasília.", w: Metrópoles (portal), q: "lançado em 8 de setembro de 2015, com sede em Brasília"}
+  - {s: brasil-247, r: "foi fundado por", o: null, t: "O Brasil 247 foi fundado em março de 2011 pelo jornalista Leonardo Attuch, diretor-presidente do site.", w: Brasil 247, q: "Foi fundado em março de 2011 pelo jornalista Leonardo Attuch"}
+  - {s: brasil-de-fato, r: "é editado por", o: null, t: "O Brasil de Fato tem como proprietária a Sociedade Editorial Brasil de Fato.", w: Brasil de Fato, q: "proprietario = Sociedade Editorial Brasil de Fato"}
+  - {s: brasil-de-fato, r: "mantém vínculo com", o: null, t: "O Brasil de Fato é descrito como uma das publicações oficiais do Movimento dos Trabalhadores Rurais Sem Terra (MST) e do movimento Consulta Popular.", w: Brasil de Fato, q: "uma das publicações oficiais do Movimento dos Trabalhadores Rurais sem Terra(MST) e do movimento Consulta Popular"}
+  - {s: agencia-publica, r: "foi fundada por", o: null, t: "A Agência Pública, de jornalismo investigativo sem fins lucrativos, foi fundada em 2011 pelas repórteres Marina Amaral, Natalia Viana e Tatiana Merlino.", w: Agência Pública, q: "Foi fundada em 2011 pelas repórteres Marina Amaral, Natalia Viana e Tatiana Merlino"}
+  - {s: congresso-em-foco, r: "é financiado por", o: sylvio-costa, t: "O Congresso em Foco é financiado por uma empresa privada criada pelo jornalista Sylvio Costa, fundador e principal sócio.", w: Congresso em Foco, q: "financiado por uma empresa privada criada pelo jornalista Sylvio Costa, que é o fundador e principal sócio"}
+  - {s: conjur, r: "pertence a", o: null, t: "O Consultor Jurídico tem como proprietária a Dublê Editorial Ltda.", w: Consultor Jurídico, q: "proprietário = Dublê Editorial Ltda."}
+  - {s: antagonista, r: "tem como sócia", o: empiricus, t: "Em março de 2016, 50% d'O Antagonista foi comprado pela Empiricus Research, por 5 milhões de reais.", w: O Antagonista, q: "50% do Antagonista foi comprado pela empresa de publicações financeiras Empiricus Research"}
+  - {s: empiricus, r: "publica", o: null, t: "A Empiricus atua com publicações financeiras; em 2018 criou o portal Seu Dinheiro e em 2019 comprou participação no Money Times.", w: Empiricus, q: "Em 2018, o grupo cria o portal de notícias Seu Dinheiro e, em 2019, compra uma participação no portal de notícias Money Times"}
+  - {s: empiricus, r: "tem sociedade com", o: null, t: "Em 2020 a Empiricus e a gestora de investimentos Vitreo se uniram de forma societária no grupo Universa.", w: Empiricus, q: "Em 2020 a Empiricus e a gestora de investimentos Vitreo se unem de forma societária no grupo Universa"}
+  - {s: nexo, r: "foi fundado por", o: null, t: "O Nexo Jornal foi fundado por Paula Miraglia, Renata Rizzi e Conrado Corsalette em abril de 2015.", w: Nexo Jornal, q: "foi fundado por Paula Miraglia, Renata Rizzi e Conrado Corsalette em abril de 2015"}
+  - {s: intercept-brasil, r: "é financiado por", o: omidyar, t: "The Intercept, organização da qual o Intercept Brasil faz parte, foi criada e financiada por Pierre Omidyar, fundador do eBay.", w: The Intercept, q: "criada e financiada por Pierre Omidyar"}
+  - {s: brasil-paralelo, r: "pertence a", o: null, t: "O Brasil Paralelo tem como proprietários Lucas Ferrugem, Henrique Viana e Filipe Valerim.", w: Brasil Paralelo, q: "proprietario = Lucas Ferrugem, Henrique Viana, Filipe Valerim"}
+  - {s: icl-noticias, r: "pertence a", o: icl, t: "O ICL Notícias pertence ao Instituto Conhecimento Liberta e foi fundado pelo empresário Eduardo Moreira.", w: ICL Notícias, q: "Pertence ao Instituto Conhecimento Liberta, tendo sido fundado pelo empresário e ex-banqueiro Eduardo Moreira"}
+  - {s: icl, r: "tem sócio", o: eduardo-moreira, t: "Em julho de 2024, Felipe Neto foi anunciado como novo sócio do ICL, ao lado dos fundadores Eduardo Moreira e Rafael Donatiello.", w: ICL Notícias, q: "Felipe Neto foi anunciado como novo sócio do portal"}
+  - {s: midia-ninja, r: "foi fundada por", o: null, t: "Os jornalistas Bruno Torturra e Debora Pill são considerados os fundadores da Mídia Ninja.", w: Mídia Ninja, q: "Bruno Torturra e Debora Pill são considerados os fundadores da Mídia Ninja"}
+  # regionais e demais grupos
+  - {s: gazeta-do-povo, r: "pertence a", o: grpcom, t: "A Gazeta do Povo tem como proprietário o Grupo Paranaense de Comunicação.", w: Gazeta do Povo, q: "proprietário = Grupo Paranaense de Comunicação"}
+  - {s: grpcom, r: "é controlado por", o: cunha-pereira, t: "O Grupo Paranaense de Comunicação tem como proprietária a família Cunha Pereira.", w: Grupo Paranaense de Comunicação, q: "proprietário = família Cunha Pereira"}
+  - {s: correio-braziliense, r: "pertence a", o: diarios-associados, t: "O Correio Braziliense pertence aos Diários Associados.", w: Correio Braziliense, q: "pertencente aos Diários Associados"}
+  - {s: diarios-associados, r: "tem como proprietário", o: null, t: "Os Diários Associados têm como proprietário o Condomínio Acionário das Emissoras e Diários Associados.", w: Diários Associados, q: "proprietário = Condomínio Acionário das Emissoras e Diários Associados"}
+  - {s: a-tarde, r: "pertence a", o: grupo-a-tarde, t: "A Tarde tem como proprietário o Grupo A TARDE e foi fundado por Ernesto Simões Filho.", w: A Tarde, q: "proprietário = Grupo A TARDE"}
+  - {s: zero-hora, r: "pertence a", o: grupo-rbs, t: "A Zero Hora foi fundada em 1964 por Ary Carvalho e é controlada pelo Grupo RBS.", w: Zero Hora, q: "controlado pelo Grupo RBS"}
+  - {s: grupo-rbs, r: "é controlado por", o: sirotsky, t: "Eduardo Sirotsky Melzer consta como proprietário da Zero Hora, que pertence ao Grupo RBS.", w: Zero Hora, q: "proprietário = Eduardo Sirotsky Melzer"}
+  - {s: nsc-total, r: "pertence a", o: nsc, t: "A NSC Comunicação, holding Grupo NC, foi criada em 2017 com a transição, para o Grupo NC, de veículos que pertenciam ao Grupo RBS em Santa Catarina.", w: NSC Comunicação, q: "com o fim do processo de transição dos antigos veículos de comunicação pertencentes ao Grupo RBS para o Grupo NC em Santa Catarina"}
+  - {s: nsc, r: "tem como proprietário", o: carlos-sanchez, t: "Carlos Sanchez consta como proprietário da NSC Comunicação.", w: NSC Comunicação, q: "proprietario = Carlos Sanchez"}
+  - {s: jornal-do-commercio, r: "pertence a", o: sistema-jc, t: "O Jornal do Commercio pertence ao Sistema Jornal do Commercio de Comunicação.", w: Jornal do Commercio (Recife), q: "pertence a = Sistema Jornal do Commercio de Comunicação"}
+  - {s: sistema-jc, r: "tem como proprietário", o: paes-mendonca, t: "João Carlos Paes Mendonça consta como proprietário do Jornal do Commercio.", w: Jornal do Commercio (Recife), q: "proprietário = João Carlos Paes Mendonça"}
+  - {s: diario-de-pernambuco, r: "pertence a", o: diarios-associados, t: "O Diario de Pernambuco pertence ao Grupo Diario de Pernambuco (78%) e aos Diários Associados (22%).", w: Diario de Pernambuco, q: "Diários Associados (22%)"}
+  - {s: terra, r: "pertence a", o: telefonica, t: "O Terra é uma empresa de internet pertencente ao grupo espanhol Telefónica.", w: Terra (empresa), q: "pertencente ao grupo espanhol Telefónica"}
+  - {s: ig, r: "foi adquirido por", o: oi, t: "Em 2010, o iG foi adquirido pela Oi, após a venda da Brasil Telecom.", w: IG, q: "Em 2010, o iG foi adquirido pela Oi"}
+  - {s: agencia-brasil, r: "pertence a", o: ebc, t: "A Agência Brasil integra a Empresa Brasil de Comunicação (EBC), empresa pública federal criada em 24 de outubro de 2007.", w: Empresa Brasil de Comunicação, q: "empresa pública federal"}
+  - {s: tv-cultura, r: "pertence a", o: fundacao-padre-anchieta, t: "A TV Cultura pertence ao Governo do Estado de São Paulo, sob a manutenção da Fundação Padre Anchieta.", w: TV Cultura, q: "Pertencente ao Governo do Estado de São Paulo, sob a manutenção da Fundação Padre Anchieta"}
+  - {s: rfi-brasil, r: "pertence a", o: null, t: "A RFI é uma rádio pública francesa de emissão ao estrangeiro.", w: Rádio França Internacional, q: "é uma rádio pública francesa de emissão ao estrangeiro"}
+  - {s: copa-energia, r: "pertence a", o: grupo-zahran, t: "A Copagaz pertence ao Grupo Zahran, também proprietário da Rede Matogrossense de Comunicação, afiliada à Rede Globo.", w: Copagaz, q: "pertence ao Grupo Zahran, também proprietário da Rede Matogrossense de Comunicação, afiliada a Rede Globo"}
+  - {s: grupo-zahran, r: "é controlado por", o: zahran, t: "A Copagaz foi fundada em 1955, em Campo Grande, pelo empresário Ueze Elias Zahran, primeira empresa do Grupo Zahran.", w: Copagaz, q: "Fundada pelo empresário Ueze Elias Zahran, em 1955"}
+  - {s: grupo-zahran, r: "é proprietário de", o: rede-matogrossense, t: "O Grupo Zahran é também proprietário da Rede Matogrossense de Comunicação, afiliada à Rede Globo.", w: Copagaz, q: "também proprietário da Rede Matogrossense de Comunicação"}
+  - {s: copa-energia, r: "foi formada por", o: null, t: "A marca Copagaz pertence à Copa Energia, fundada em 2021 após a fusão com a Liquigás; a família Zahran, a Itaúsa e a Nacional Gás anunciaram a compra da Liquigás, antes da Petrobras.", w: Copagaz, q: "A marca pertence a Copa Energia, fundada em 2021 após a fusão com a Liquigás"}

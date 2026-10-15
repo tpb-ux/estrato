@@ -1,0 +1,824 @@
+{
+ "gerado": "2026-10-15",
+ "fontes": {
+  "Grupo Globo": {
+   "titulo": "Grupo Globo",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Grupo_Globo",
+   "perm": null
+  },
+  "TV Globo": {
+   "titulo": "TV Globo",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/TV_Globo",
+   "perm": null
+  },
+  "G1": {
+   "titulo": "G1",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/G1",
+   "perm": null
+  },
+  "GloboNews": {
+   "titulo": "GloboNews",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/GloboNews",
+   "perm": null
+  },
+  "O Globo": {
+   "titulo": "O Globo",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/O_Globo",
+   "perm": null
+  },
+  "Valor Econômico": {
+   "titulo": "Valor Econômico",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Valor_Econ%C3%B4mico",
+   "perm": null
+  },
+  "Folha de S.Paulo": {
+   "titulo": "Folha de S.Paulo",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Folha_de_S.Paulo",
+   "perm": null
+  },
+  "Grupo Folha": {
+   "titulo": "Grupo Folha",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Grupo_Folha",
+   "perm": null
+  },
+  "UOL": {
+   "titulo": "UOL",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/UOL",
+   "perm": null
+  },
+  "Grupo Estado": {
+   "titulo": "Grupo Estado",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Grupo_Estado",
+   "perm": null
+  },
+  "O Estado de S. Paulo": {
+   "titulo": "O Estado de S. Paulo",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/O_Estado_de_S._Paulo",
+   "perm": null
+  },
+  "Grupo Record": {
+   "titulo": "Grupo Record",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Grupo_Record",
+   "perm": null
+  },
+  "Record (rede de televisão)": {
+   "titulo": "Record (rede de televisão)",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Record_%28rede_de_televis%C3%A3o%29",
+   "perm": null
+  },
+  "R7": {
+   "titulo": "R7",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/R7",
+   "perm": null
+  },
+  "Correio do Povo": {
+   "titulo": "Correio do Povo",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Correio_do_Povo",
+   "perm": null
+  },
+  "Folha Universal": {
+   "titulo": "Folha Universal",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Folha_Universal",
+   "perm": null
+  },
+  "SBT": {
+   "titulo": "SBT",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/SBT",
+   "perm": null
+  },
+  "Silvio Santos": {
+   "titulo": "Silvio Santos",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Silvio_Santos",
+   "perm": null
+  },
+  "Band": {
+   "titulo": "Band",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Band",
+   "perm": null
+  },
+  "Grupo Bandeirantes de Comunicação": {
+   "titulo": "Grupo Bandeirantes de Comunicação",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Grupo_Bandeirantes_de_Comunica%C3%A7%C3%A3o",
+   "perm": null
+  },
+  "RedeTV!": {
+   "titulo": "RedeTV!",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/RedeTV%21",
+   "perm": null
+  },
+  "Jovem Pan": {
+   "titulo": "Jovem Pan",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Jovem_Pan",
+   "perm": null
+  },
+  "CNN Brasil": {
+   "titulo": "CNN Brasil",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/CNN_Brasil",
+   "perm": null
+  },
+  "Exame (revista brasileira)": {
+   "titulo": "Exame (revista brasileira)",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Exame_%28revista_brasileira%29",
+   "perm": null
+  },
+  "BTG Pactual": {
+   "titulo": "BTG Pactual",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/BTG_Pactual",
+   "perm": null
+  },
+  "Veja": {
+   "titulo": "Veja",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Veja",
+   "perm": null
+  },
+  "Editora Abril": {
+   "titulo": "Editora Abril",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Editora_Abril",
+   "perm": null
+  },
+  "IstoÉ": {
+   "titulo": "IstoÉ",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Isto%C3%89",
+   "perm": null
+  },
+  "CartaCapital": {
+   "titulo": "CartaCapital",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/CartaCapital",
+   "perm": null
+  },
+  "Piauí (revista)": {
+   "titulo": "Piauí (revista)",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Piau%C3%AD_%28revista%29",
+   "perm": null
+  },
+  "Revista Oeste": {
+   "titulo": "Revista Oeste",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Revista_Oeste",
+   "perm": null
+  },
+  "Poder360": {
+   "titulo": "Poder360",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Poder360",
+   "perm": null
+  },
+  "Frederico Trajano": {
+   "titulo": "Frederico Trajano",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Frederico_Trajano",
+   "perm": null
+  },
+  "JOTA (site)": {
+   "titulo": "JOTA (site)",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/JOTA_%28site%29",
+   "perm": null
+  },
+  "Metrópoles (portal)": {
+   "titulo": "Metrópoles (portal)",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Metr%C3%B3poles_%28portal%29",
+   "perm": null
+  },
+  "Brasil 247": {
+   "titulo": "Brasil 247",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Brasil_247",
+   "perm": null
+  },
+  "Brasil de Fato": {
+   "titulo": "Brasil de Fato",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Brasil_de_Fato",
+   "perm": null
+  },
+  "Agência Pública": {
+   "titulo": "Agência Pública",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Ag%C3%AAncia_P%C3%BAblica",
+   "perm": null
+  },
+  "Congresso em Foco": {
+   "titulo": "Congresso em Foco",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Congresso_em_Foco",
+   "perm": null
+  },
+  "Consultor Jurídico": {
+   "titulo": "Consultor Jurídico",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Consultor_Jur%C3%ADdico",
+   "perm": null
+  },
+  "O Antagonista": {
+   "titulo": "O Antagonista",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/O_Antagonista",
+   "perm": null
+  },
+  "Empiricus": {
+   "titulo": "Empiricus",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Empiricus",
+   "perm": null
+  },
+  "Nexo Jornal": {
+   "titulo": "Nexo Jornal",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Nexo_Jornal",
+   "perm": null
+  },
+  "The Intercept": {
+   "titulo": "The Intercept",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/The_Intercept",
+   "perm": null
+  },
+  "Brasil Paralelo": {
+   "titulo": "Brasil Paralelo",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Brasil_Paralelo",
+   "perm": null
+  },
+  "ICL Notícias": {
+   "titulo": "ICL Notícias",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/ICL_Not%C3%ADcias",
+   "perm": null
+  },
+  "Mídia Ninja": {
+   "titulo": "Mídia Ninja",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/M%C3%ADdia_Ninja",
+   "perm": null
+  },
+  "Gazeta do Povo": {
+   "titulo": "Gazeta do Povo",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Gazeta_do_Povo",
+   "perm": null
+  },
+  "Grupo Paranaense de Comunicação": {
+   "titulo": "Grupo Paranaense de Comunicação",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Grupo_Paranaense_de_Comunica%C3%A7%C3%A3o",
+   "perm": null
+  },
+  "Correio Braziliense": {
+   "titulo": "Correio Braziliense",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Correio_Braziliense",
+   "perm": null
+  },
+  "Diários Associados": {
+   "titulo": "Diários Associados",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Di%C3%A1rios_Associados",
+   "perm": null
+  },
+  "A Tarde": {
+   "titulo": "A Tarde",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/A_Tarde",
+   "perm": null
+  },
+  "Zero Hora": {
+   "titulo": "Zero Hora",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Zero_Hora",
+   "perm": null
+  },
+  "NSC Comunicação": {
+   "titulo": "NSC Comunicação",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/NSC_Comunica%C3%A7%C3%A3o",
+   "perm": null
+  },
+  "Jornal do Commercio (Recife)": {
+   "titulo": "Jornal do Commercio (Recife)",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Jornal_do_Commercio_%28Recife%29",
+   "perm": null
+  },
+  "Diario de Pernambuco": {
+   "titulo": "Diario de Pernambuco",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Diario_de_Pernambuco",
+   "perm": null
+  },
+  "Terra (empresa)": {
+   "titulo": "Terra (empresa)",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Terra_%28empresa%29",
+   "perm": null
+  },
+  "IG": {
+   "titulo": "IG",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/IG",
+   "perm": null
+  },
+  "Empresa Brasil de Comunicação": {
+   "titulo": "Empresa Brasil de Comunicação",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Empresa_Brasil_de_Comunica%C3%A7%C3%A3o",
+   "perm": null
+  },
+  "TV Cultura": {
+   "titulo": "TV Cultura",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/TV_Cultura",
+   "perm": null
+  },
+  "Rádio França Internacional": {
+   "titulo": "Rádio França Internacional",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/R%C3%A1dio_Fran%C3%A7a_Internacional",
+   "perm": null
+  },
+  "Copagaz": {
+   "titulo": "Copagaz",
+   "revid": null,
+   "url": "https://pt.wikipedia.org/wiki/Copagaz",
+   "perm": null
+  }
+ },
+ "afirmacoes": [
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  },
+  {
+   "ok": true,
+   "data": "2026-10-15",
+   "revid": null
+  }
+ ]
+}
