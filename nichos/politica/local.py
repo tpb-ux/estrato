@@ -324,17 +324,17 @@ def build(S):
         body = body.replace('<p class="src">', "<h2>Municípios " + nm_uf(uf) + "</h2><p>Escolha o município para ver os parlamentares naturais da cidade e os autores de emendas pagas a ela:</p>" + '<ul class="cols">' + "".join(f'<li><a href="/representantes/{uf.lower()}/{SL[c]}/">{E(M[c]["n"])}</a></li>' for c in por_uf[uf]) + '</ul><p class="src">', 1)
         S.write(u, S.page(f"Quem representa {nm_uf(uf)} no Congresso | {site}", f"Deputados federais e senadores {PREP[uf]} {UF[uf]}: partido, presença em votações nominais e cota parlamentar, em ordem alfabética.", u, body, faqs=fa, crumbs=[("Representantes", "/representantes/"), (UF[uf], u)]), familia="paginas", lastmod=col); urls.append(u); hubs.append(u)
     # =================== HUBS: nacional e por UF ===================
-    def hubs_familia(raiz, nome_fam, h1, snippet, descr, titulo_uf, h1_uf, snip_uf, desc_uf, faqs, faqs_uf, fonte, linkfn, extra_cols=None, hub_uf_tem_pagina=True):
+    def hubs_familia(raiz, nome_fam, h1, snippet, descr, titulo_uf, h1_uf, snip_uf, desc_uf, faqs, faqs_uf, fonte, linkfn, extra_cols=None, hub_uf_tem_pagina=True, familia="paginas"):
         for uf, L in por_uf.items():
             u = f"{raiz}{uf.lower()}/"; rows = [[f'<a href="{raiz}{uf.lower()}/{SL[c]}/">{E(M[c]["n"])}</a>', num(int(POP[c]))] for c in L]
             body = (f'<section class="blk"><h1>{h1_uf(uf)}</h1><p class="snippet">{snip_uf(uf, len(L))}</p>' + S.table(["Município", "Habitantes (Censo 2022)"], rows, "Em ordem alfabética; não é ranking") +
                     f'<p>Veja também <a href="{raiz}">todas as páginas desta série</a>, os <a href="/municipios/{uf.lower()}/">municípios {nm_uf(uf)}</a> e os <a href="/representantes/{uf.lower()}/">representantes {nm_uf(uf)} no Congresso</a>.</p><p class="src">{fonte} Compilação em {data_br(col)}.</p></section>')
-            S.write(u, S.page(titulo_uf(uf) + f" | {site}", desc_uf(uf), u, body, faqs=faqs_uf(uf), crumbs=[(nome_fam, raiz), (UF[uf], u)]), familia="paginas", lastmod=col); urls.append(u); hubs.append(u)
+            S.write(u, S.page(titulo_uf(uf) + f" | {site}", desc_uf(uf), u, body, faqs=faqs_uf(uf), crumbs=[(nome_fam, raiz), (UF[uf], u)]), familia=familia, lastmod=col); urls.append(u); hubs.append(u)
         tp = sum(len(L) for L in por_uf.values())
         rows = [[f'<a href="{raiz}{uf.lower()}/">{UF[uf]}</a>', num(len(por_uf[uf]))] for uf in sorted(por_uf, key=lambda k: slugify(UF[k]))]
         body = (f'<section class="blk"><h1>{h1}</h1><p class="snippet">{snippet(tp)}</p>' + S.table(["Estado", "Municípios"], rows, "Em ordem alfabética") +
                 f'<p class="src">{fonte} Compilação em {data_br(col)}. Veja a <a href="/municipios/metodologia/">metodologia</a>.</p></section>')
-        S.write(raiz, S.page(f"{nome_fam}: páginas de todos os municípios do Brasil | {site}", descr, raiz, body, faqs=faqs, crumbs=[(nome_fam, raiz)]), familia="paginas", lastmod=col); urls.append(raiz); hubs.append(raiz)
+        S.write(raiz, S.page(f"{nome_fam}: páginas de todos os municípios do Brasil | {site}", descr, raiz, body, faqs=faqs, crumbs=[(nome_fam, raiz)]), familia=familia, lastmod=col); urls.append(raiz); hubs.append(raiz)
     cm = lambda *x: list(x)
     hubs_familia("/prefeitura/", "Prefeituras", "Prefeituras do Brasil: orçamento, receitas e despesas", lambda n: f"Uma página para cada uma das <strong>{num(n)} prefeituras</strong> do país, com receitas, despesas por função, dependência de repasses e emendas recebidas, a partir das contas que cada prefeitura enviou ao Tesouro Nacional.",
                  "Orçamento, receitas, despesas por função e emendas recebidas de todas as prefeituras do Brasil, com dados do Tesouro Nacional e do IBGE.", lambda uf: f"Prefeituras {nm_uf(uf)}: orçamento e despesas",
@@ -364,7 +364,7 @@ def build(S):
                  lambda uf: f"Quanto recebe, quem manda dinheiro e quem representa cada município {nm_uf(uf)}: respostas com dados oficiais.",
                  [("Que perguntas são respondidas?", "Quanto o município recebe do governo federal, quem manda dinheiro, qual o orçamento, quantos habitantes e eleitores tem e quem o representa no Congresso."), ("De onde vêm as respostas?", "Do Tesouro Nacional, do IBGE, do Portal da Transparência, do TSE, da Câmara e do Senado."), ("As respostas são opinião?", "Não. São números oficiais com link para a página de dados."), ("Há ranking?", "Não."), ("Os dados são atuais?", "São atualizados uma vez por mês."), ("Posso sugerir uma pergunta?", 'Sim, pela página de <a href="/contato/">contato</a>.')],
                  lambda uf: [(f"Quantos municípios {PREP[uf]} {UF[uf]} têm página?", f"{num(len(por_uf[uf]))}."), ("A lista é ranking?", "Não, é alfabética."), ("De onde vêm os dados?", "De fontes oficiais, citadas em cada página."), ("As respostas mudam?", "Sim, quando os dados oficiais são atualizados."), ("Posso copiar os dados?", 'Sim, veja os <a href="/dados/">dados abertos</a>.'), ("E municípios sem dados?", "A resposta informa que o dado não consta na base.")],
-                 f"Fontes: {FONTE_T}, {FONTE_I}, {FONTE_EM}, {FONTE_TSE}.", None)
+                 f"Fontes: {FONTE_T}, {FONTE_I}, {FONTE_EM}, {FONTE_TSE}.", None, familia="perguntas_local")
     # hub nacional de representantes
     rows = [[f'<a href="/representantes/{uf.lower()}/">{UF[uf]}</a>', num(len(deps_uf[uf])), num(len(sens_uf[uf]))] for uf in sorted(UF, key=lambda k: slugify(UF[k]))]
     body = ('<section class="blk"><h1>Quem representa seu estado e seu município no Congresso</h1><p class="snippet">Deputados federais e senadores de cada estado, com partido, presença em votações nominais e cota parlamentar, e uma página para cada município com os parlamentares naturais da cidade e os autores de emendas pagas a ela.</p>'

@@ -183,8 +183,12 @@ document.addEventListener('click',function(e){{var x=document.querySelector('det
         """Grava a página e registra a URL. idx=False => noindex,follow (fora de sitemap/busca)."""
         if path in self.urls: self.errors.append(f"URL duplicada: {path}")
         q = self.CFG.get("qualidade") or {}
-        minw = q.get("min_palavras_pseo", 300)
-        if idx and (minw or familia not in ("paginas", "artigos")) and words(txt.split("<main", 1)[-1].split("</main>")[0]) < minw:
+        limite = int(q.get("min_palavras_pseo", 300) or 300)
+        isentos = set(q.get("minw_isentos") or ["/sobre/", "/expediente/", "/contato/", "/privacidade/", "/termos/", "/metodologia/", "/correcoes/", "/direito-de-resposta/", "/politica-editorial/", "/instablog/"])
+        for e in (self.CFG.get("editorias") or []):
+            isentos.add(f"/{e['slug']}/")
+        aplicar_minw = True if minw else path not in isentos  # minw=True força; isentos = institucionais e editorias (Link Flow)
+        if idx and aplicar_minw and words(txt.split("<main", 1)[-1].split("</main>")[0]) < limite:
             idx = False; self.thin.add(path)
         ind = self.CFG.get("indexacao") or {}
         exc = ind.get("excecoes") or []
