@@ -3,10 +3,10 @@ tagline: Os Três Poderes em dados
 descricao: "O Estrato acompanha o Congresso, o governo, a Justiça e as eleições com dados oficiais abertos e resumos de fontes públicas, sempre com link para a origem."
 home_titulo: "Estrato: Congresso, governo, Justiça e eleições em dados"
 language: pt-BR
-base_url: https://estrato.cc
-cname: estrato.cc
+base_url: https://estrato.com.br
+cname: estrato.com.br
 nicho: politica
-# Lançamento em estrato.cc (onda 1): noindex global DESLIGADO. Famílias fora da onda 1 seguem noindex por `indexacao.familias_noindex`.
+# Lançamento em estrato.com.br (onda 1): noindex global DESLIGADO. Famílias fora da onda 1 seguem noindex por `indexacao.familias_noindex`.
 # Para voltar ao noindex total (emergência): noindex_global: true. No servidor, esvaziar o snippet nginx de X-Robots-Tag só no momento do deploy (OPERACAO_VPS.md, seção 9).
 noindex_global: false
 publisher_logo: /static/logo.png

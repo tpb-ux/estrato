@@ -7,7 +7,7 @@ import json, pathlib, re, sys, time, urllib.parse, urllib.request
 import yaml
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = ROOT / "data/midia/base.yaml"; OUT = ROOT / "data/midia/verificacao.json"
-UA = {"User-Agent": "EstratoBot/1.0 (https://estrato.cc; mapa da midia; verificacao de fontes)"}
+UA = {"User-Agent": "EstratoBot/1.0 (https://estrato.com.br; mapa da midia; verificacao de fontes)"}
 def limpa(t):
     t = re.sub(r"<ref[^>]*?/>|<ref.*?</ref>", "", t, flags=re.S); t = re.sub(r"\{\{[^{}]*\}\}", "", t)
     t = re.sub(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]", r"\1", t); t = re.sub(r"'''?", "", t); t = re.sub(r"<[^>]+>", "", t); return re.sub(r"\s+", " ", t).strip()
