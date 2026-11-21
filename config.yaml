@@ -68,7 +68,7 @@ home_faqs:
 # Responsável editorial e e-mail informados pelo Tercio em 15/10/2026. Encarregado LGPD informado pelo Tercio em 15/10/2026 (só nome; canal = e-mail da redação). Campos vazios (formulario_url, redes) não renderizam nada. Não inventar cargo nem outros dados pessoais.
 responsavel_editorial: "Bruno Marquesan"
 empresa:
-  razao_social: Patini Brasil Serviços Publicidade e Propaganda
+  razao_social: Patini Brasil Serviços Ltda   # [VERIFICADO] BrasilAPI/Receita em 20/11/2026: PATINI BRASIL SERVICOS LTDA, CNPJ 53.816.326/0001-58, Av. Pacaembu 1088, CEP 01234-000; mesmo nome confirmado pelo Tercio
   cnpj: 53.816.326/0001-58
   endereco: {logradouro: "Av. Pacaembu, 1088", bairro: Pacaembu, cidade: São Paulo, uf: SP, cep: 01234-000}
   email: "redacao@estrato.com.br"
