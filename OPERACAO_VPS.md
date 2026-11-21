@@ -95,3 +95,38 @@ Cada onda = um commit no GitHub; a VPS pega no ciclo seguinte. Critério para av
 - **Datasets (rodados por `ops/ciclo.sh`):** `datasets_bairros.py` (IBGE, só se faltar), `datasets_tse.py` (TSE, refaz com > 25 dias), `datasets_midia.py` (Wikipédia, refaz com > 7 dias), `datasets_prefeitos.py` (só roda com a flag ligada).
 - **Flags:** `prefeitos: {ativo: false, liberar_em: 2026-10-27}` (prefeito e vereadores de 2024; ligar só depois de 26/10; `data/tse/prefeitos.json.gz` fica fora do git) e `midia: {vies_ativo: false, liberar_em: 2026-10-27}` (viés, confiança e histórico; só liga depois da revisão humana e jurídica da `/midia/metodologia/`, que está noindex em rascunho).
 - **Fontes que bloqueiam o box (testar da VPS):** IBGE Cidades, Portal da Transparência, TREs, vários TCEs, Receita/CNPJ.
+
+## 9. Lançamento em estrato.cc (onda 1) — passo a passo para o Chefe de gabinete
+Domínio oficial agora: **https://estrato.cc** (DNS na Hostinger, A 2.25.69.172, www = CNAME para o apex). `estrato.com.br` não é mais o canônico. A prévia `estrato.2-25-69-172.sslip.io` deve **continuar noindex** depois do lançamento.
+Ordem importa: o cabeçalho `X-Robots-Tag` é a ÚLTIMA trava; só sai depois de conferir o HTML novo.
+
+1. **Variável que trava tudo.** `PORTAL_NOINDEX=1` (em `portal.env`, `run.sh` ou crontab) força noindex mesmo com `noindex_global: false`. Conferir e remover/zerar:
+   `grep -rn NOINDEX /opt/portais/run.sh /opt/portais/estrato/portal.env /var/spool/cron/crontabs/portais 2>/dev/null` (esperado: nada, ou `PORTAL_NOINDEX=0`).
+2. **Ciclo parado.** Em 20/11 a prévia ainda mostrava `gerado_em 2026-11-01` (sem build há 20 dias). Antes do merge: `tail -50 /var/log/portais/estrato.log; crontab -l -u portais; df -h /; ls -la /opt/portais/estrato/.lock`. Corrigir e rodar `/opt/portais/run.sh estrato` à mão.
+3. **Merge do PR `lancamento-estrato-cc`** (somente com o OK do Tercio) e rodar `/opt/portais/run.sh estrato`.
+4. **Conferir o HTML novo (ainda com o cabeçalho noindex):**
+   ```bash
+   cd /opt/portais/estrato/public
+   grep -o '"noindex_global": *[a-z]*' saude.json        # false
+   grep -o 'rel="canonical" href="[^"]*"' index.html      # https://estrato.cc/
+   grep -c 'name="robots" content="noindex' index.html    # 0
+   head -5 robots.txt; grep -c 'estrato.com.br<' sitemap.xml  # robots com Allow; 0
+   grep -o '<loc>' sitemap-*.xml | wc -l                   # ~ 700 a 800 URLs
+   ```
+5. **nginx.** Criar um snippet só da prévia e esvaziar o do domínio oficial:
+   ```bash
+   sudo cp /etc/nginx/snippets/estrato-robots.conf /etc/nginx/snippets/estrato-robots-previa.conf   # mantém add_header X-Robots-Tag "noindex, nofollow" always;
+   # no server do sslip.io: trocar `include snippets/estrato-robots.conf` por `include snippets/estrato-robots-previa.conf` nos 3 pontos
+   # no server do www.estrato.cc: return 301 https://estrato.cc$request_uri;  (hoje o www responde 200)
+   printf '# LANCADO: sem X-Robots-Tag no dominio oficial. Prévia usa estrato-robots-previa.conf\n' | sudo tee /etc/nginx/snippets/estrato-robots.conf
+   sudo nginx -t && sudo systemctl reload nginx
+   ```
+6. **Validar:**
+   ```bash
+   for u in / /sitemap.xml /robots.txt /llms.txt /rss.xml /static/og-default.png; do echo -n "$u: "; curl -sI https://estrato.cc$u | grep -i x-robots || echo "(sem X-Robots-Tag, ok)"; done
+   curl -sI https://estrato.2-25-69-172.sslip.io/ | grep -i x-robots     # deve continuar noindex
+   curl -sI https://www.estrato.cc/ | head -3                           # 301 para https://estrato.cc/
+   curl -s https://estrato.cc/robots.txt | grep -i sitemap              # Sitemap: https://estrato.cc/sitemap.xml
+   ```
+7. **IndexNow** liga sozinho no ciclo seguinte (chave em `https://estrato.cc/c0f3a1e9b7d24e6f8a5b2c9d1e7f4a30.txt`). Search Console: criar a propriedade de domínio `estrato.cc` (TXT no DNS da Hostinger) e enviar `https://estrato.cc/sitemap.xml`. Bing Webmaster: importar do Search Console.
+8. **Ondas seguintes:** um commit por onda em `config.yaml` (`indexacao.familias_noindex`), 2 a 3 semanas entre elas, só se o Search Console mostrar a onda anterior indexada, sem pico de "Rastreada, não indexada".
