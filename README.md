@@ -1,4 +1,4 @@
-# Estrato (estrato.com.br)
+# Estrato (estrato.cc)
 
 Portal apartidário sobre os Três Poderes com dados oficiais abertos e resumos de agências públicas. Construído sobre o [portal-core](https://github.com/tpb-ux/portal-core) (cópia do núcleo em `core/`).
 

@@ -2,7 +2,7 @@
 Fontes públicas sem chave. Saída: data/agenda/tres_poderes.json (mescla por id; guarda ~120 dias). Uso: python tools/datasets_agenda3p.py [--dias-antes 7 --dias-depois 21]"""
 import argparse, datetime as dt, json, pathlib, sys, urllib.request
 R = pathlib.Path(__file__).resolve().parents[1]; OUT = R / "data/agenda/tres_poderes.json"
-UA = {"Accept": "application/json", "User-Agent": "Estrato/1.0 (+https://estrato.com.br)"}
+UA = {"Accept": "application/json", "User-Agent": "Estrato/1.0 (+https://estrato.cc)"}
 def get(u):
     with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=40) as r: return json.loads(r.read().decode("utf-8"))
 def lista(x): return x if isinstance(x, list) else [x] if x else []

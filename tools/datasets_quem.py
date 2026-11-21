@@ -2,7 +2,7 @@
 "Ministros e Ministras"). Fontes públicas sem chave. Saída: data/quem_e_quem.json. Se uma fonte falhar, mantém a versão anterior."""
 import datetime as dt, html, json, pathlib, re, sys, urllib.request
 R = pathlib.Path(__file__).resolve().parents[1]; OUT = R / "data/quem_e_quem.json"
-UA = {"User-Agent": "Mozilla/5.0 (compatible; Estrato/1.0; +https://estrato.com.br)"}
+UA = {"User-Agent": "Mozilla/5.0 (compatible; Estrato/1.0; +https://estrato.cc)"}
 F_STF = "https://cms.stf.jus.br/post-sobreostf/composicao-atual/"
 F_MIN = "https://www.gov.br/planalto/pt-br/conheca-a-presidencia/ministros-e-ministras"
 def get(u):

@@ -3,7 +3,7 @@ Idempotente, com cache em data/cache (gitignored). Uso: python tools/camara_sena
 import json, sys, time, urllib.request, concurrent.futures as cf, datetime as dt, hashlib
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent; C = ROOT / "data/cache"; C.mkdir(parents=True, exist_ok=True)
-UA = "Mozilla/5.0 (compatible; EstratoBot/1.0; +https://estrato.com.br)"
+UA = "Mozilla/5.0 (compatible; EstratoBot/1.0; +https://estrato.cc)"
 CAM = "https://dadosabertos.camara.leg.br/api/v2"; SEN = "https://legis.senado.leg.br/dadosabertos"
 
 def get(url, ttl_h=20):

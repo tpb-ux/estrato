@@ -3,8 +3,8 @@ tagline: Os Três Poderes em dados
 descricao: "O Estrato acompanha o Congresso, o governo, a Justiça e as eleições com dados oficiais abertos e resumos de fontes públicas, sempre com link para a origem."
 home_titulo: "Estrato: Congresso, governo, Justiça e eleições em dados"
 language: pt-BR
-base_url: https://estrato.com.br
-cname: estrato.com.br
+base_url: https://estrato.cc
+cname: estrato.cc
 nicho: politica
 # Pré-lançamento: noindex,nofollow em todas as páginas, robots Disallow e IndexNow desligado. Desligar só após 25/10/2026.
 noindex_global: true
