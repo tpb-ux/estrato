@@ -17,6 +17,6 @@ faqs:
 | **Responsável editorial** | {{cfg.responsavel_editorial}} |
 | **Encarregado (LGPD)** | {{cfg.empresa.encarregado_lgpd}} |
 | **E-mail** | {{cfg.empresa.email}} |
-| **Instagram** | [@agenciaestrato]({{cfg.empresa.instagram}}) |
+| **Instagram** | [@agenciaestrato]({{cfg.empresa.instagram}}) (lista no [Instablog](/instablog/)) |
 
 Canais: [contato](/contato/), [correções](/correcoes/), [direito de resposta](/direito-de-resposta/), [privacidade](/privacidade/).

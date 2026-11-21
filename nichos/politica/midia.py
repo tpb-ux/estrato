@@ -199,7 +199,7 @@ def build(S):
     fa = faq_comuns([("O que é o Mapa da Mídia do Estrato?", f"Uma base aberta de propriedade e vínculos de {num(nv)} veículos de comunicação, com fonte e data por afirmação, para o leitor saber quem está por trás de cada veículo."),
                      ("Quem manda em quem na mídia brasileira?", "O mapa mostra os vínculos documentados: por exemplo, o Grupo Globo, de propriedade da Família Marinho, e a Exame, que pertence à Editora e Comércio Valongo, administrada pelo BTG Pactual Holding. Cada vínculo tem sua fonte nas páginas dos veículos.")])
     ld = {"@type": "Dataset", "name": "Mapa da Mídia: propriedade e vínculos de veículos de comunicação", "url": S.BASE + "/midia/", "isAccessibleForFree": True, "inLanguage": "pt-BR", "dateModified": col}
-    S.write("/midia/", S.page(f"Mapa da Mídia: quem é dono de quem | {site}", f"Quem detém, controla e administra {nv} veículos de comunicação do Brasil, com fonte e data de verificação por afirmação. Só fatos documentados.", "/midia/", corpo, faqs=fa, crumbs=[("Mapa da Mídia", "/midia/")], jsonld=ld), familia="paginas", lastmod=col); urls.append("/midia/")
+    S.write("/midia/", S.page(f"Mapa da Mídia: quem é dono de quem | {site}", f"Quem detém, controla e administra {nv} veículos de comunicação do Brasil, com fonte e data de verificação por afirmação. Só fatos documentados.", "/midia/", corpo, faqs=fa, crumbs=[("Mapa da Mídia", "/midia/")], jsonld=ld), familia="midia", lastmod=col); urls.append("/midia/")
     # hubs por tipo
     for tp, (sl, rot) in TIPOS.items():
         L = sorted((k for k, e in EN.items() if e["tipo"] == tp), key=lambda k: EN[k]["nome"].lower()); rows = []
@@ -214,7 +214,7 @@ def build(S):
                  + S.table(head, rows, f"{rot}: dados verificados em {data_br(col)}") + aviso + '<p class="src"><a href="/midia/">Mapa da Mídia</a> · <a href="/midia/metodologia/">Metodologia (rascunho)</a>.</p></article>')
         fa = faq_comuns([(f"O que aparece na lista de {rot.lower()}?", f"{num(len(L))} entradas, com titular documentado e contagem de afirmações verificadas por entrada."),
                          ("A lista é completa?", "Não. A primeira base cobre os maiores veículos e os que o Estrato já lê nos feeds. Novos veículos entram conforme houver fonte verificável.")])
-        S.write(f"/midia/{sl}/", S.page(f"{rot} no Mapa da Mídia | {site}", f"{num(len(L))} {rot.lower()} do Mapa da Mídia do Estrato, com titular documentado, fonte e data de verificação. Dados abertos e sem juízo de valor.", f"/midia/{sl}/", corpo, faqs=fa, crumbs=[("Mapa da Mídia", "/midia/"), (rot, f"/midia/{sl}/")]), familia="paginas", lastmod=col); urls.append(f"/midia/{sl}/")
+        S.write(f"/midia/{sl}/", S.page(f"{rot} no Mapa da Mídia | {site}", f"{num(len(L))} {rot.lower()} do Mapa da Mídia do Estrato, com titular documentado, fonte e data de verificação. Dados abertos e sem juízo de valor.", f"/midia/{sl}/", corpo, faqs=fa, crumbs=[("Mapa da Mídia", "/midia/"), (rot, f"/midia/{sl}/")]), familia="midia", lastmod=col); urls.append(f"/midia/{sl}/")
     # metodologia (RASCUNHO)
     c = S.CFG.get("midia") or {}
     corpo = ('<article class="post"><h1>Mapa da Mídia: metodologia (rascunho em revisão)</h1>'
