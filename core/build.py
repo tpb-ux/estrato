@@ -206,7 +206,7 @@ def unicidade(S):
         if m["idx"] or u in S.ondas: cand.add(u)  # páginas retidas por onda também são medidas
     stats, abaixo, sim = {}, {}, {}
     for fam, us in por_fam.items():
-        fams = {fam: {u: (S.OUT / u.lstrip("/") / "index.html").read_text(encoding="utf-8") for u in us}}
+        fams = {fam: {u: Q.texto_main((S.OUT / u.lstrip("/") / "index.html").read_text(encoding="utf-8")) for u in us}}  # só o texto do <main> (as métricas só usam ele)
         st, ab = Q.unicidade(fams, corte=qc.get("corte_unicidade", 0.15), cortes=qc.get("cortes_unicidade"), avaliar=cand)
         stats.update(st); abaixo.update(ab)
         sim.update(Q.similaridade({fam: {u: h for u, h in fams[fam].items() if u in cand and u not in ab}}))
