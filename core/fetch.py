@@ -6,6 +6,7 @@ from pathlib import Path
 import io
 import feedparser, yaml
 from PIL import Image
+from .site import fm_split
 
 socket.setdefaulttimeout(20)
 ROOT = Path.cwd(); CONTENT = ROOT / "content"
@@ -103,7 +104,7 @@ def revisar(cfg, remove=False):
     """Reaplica os filtros nas matérias já publicadas pelo coletor."""
     n = 0; trusted = {fd["nome"] for fd in cfg["feeds"] if fd.get("confiavel")}; vies_de = {fd["nome"]: fd.get("vies") for fd in cfg["feeds"]}
     for f in sorted(CONTENT.glob("*.md")):
-        fm = yaml.safe_load(f.read_text(encoding="utf-8").split("---", 2)[1]) or {}
+        fm = yaml.safe_load(fm_split(f.read_text(encoding="utf-8"))[1]) or {}
         if fm.get("gerado_por") != "fetch.py": continue
         img = str(fm.get("imagem", ""))
         why = None if img.startswith("/static/img/") and not img.startswith("/static/img/editoria/") and (ROOT / img.lstrip("/")).exists() else "sem foto própria"
@@ -180,7 +181,7 @@ def img_fm(info, src_name):
 def migrar():
     """Converte matérias antigas (imagem remota/vazia) para WebP local ou imagem da editoria."""
     for f in sorted(CONTENT.glob("*.md")):
-        raw = f.read_text(encoding="utf-8"); _, fm_txt, body = raw.split("---", 2)
+        raw = f.read_text(encoding="utf-8"); _, fm_txt, body = fm_split(raw)
         fm = yaml.safe_load(fm_txt) or {}
         if str(fm.get("imagem", "")).startswith("/static/img/"): continue
         info = save_image(fm.get("imagem", ""), f.stem)
@@ -233,7 +234,7 @@ def migrar_cards(cfg=None):
     cfg = cfg or yaml.safe_load((ROOT / "feeds.yaml").read_text(encoding="utf-8")); n = 0
     lic = cfg.get("licencas_imagem") or {}
     for f in sorted(CONTENT.glob("*.md")):
-        raw = f.read_text(encoding="utf-8"); _, fm_txt, body = raw.split("---", 2); fm = yaml.safe_load(fm_txt) or {}
+        raw = f.read_text(encoding="utf-8"); _, fm_txt, body = fm_split(raw); fm = yaml.safe_load(fm_txt) or {}
         im = str(fm.get("imagem", ""))
         if fm.get("imagem_card") or fm.get("imagem_licenca") or not im.startswith("/static/img/") or im.startswith("/static/img/editoria/"): continue
         d = fm["data"] if isinstance(fm["data"], dt.datetime) else dt.datetime.fromisoformat(str(fm["data"]))
@@ -244,7 +245,7 @@ def migrar_cards(cfg=None):
         lines.insert(4, img_fm(info, fm.get("fonte", "")))
         f.write_text("---\n" + "\n".join(lines) + "\n---" + body, encoding="utf-8"); n += 1
     from core import cards
-    usados = {str((yaml.safe_load(f.read_text(encoding="utf-8").split("---", 2)[1]) or {}).get("imagem", "")).rsplit("/", 1)[-1] for f in CONTENT.glob("*.md")}
+    usados = {str((yaml.safe_load(fm_split(f.read_text(encoding="utf-8"))[1]) or {}).get("imagem", "")).rsplit("/", 1)[-1] for f in CONTENT.glob("*.md")}
     reg = IMG / ".cards"; feitos = set(reg.read_text().split()) if reg.exists() else set(); t = _C.get("tema") or {}
     for im in sorted(IMG.glob("*.webp")) if IMG.exists() else []:
         if im.name.endswith("-480.webp") or im.name in usados or im.name in feitos: continue
@@ -265,7 +266,7 @@ def hoje_por(cfg):
     pf, pv, rec = collections.Counter(), collections.Counter(), []
     lim = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=cfg.get("dedup_dias", 3))
     for f in CONTENT.glob("*.md"):
-        fm = yaml.safe_load(f.read_text(encoding="utf-8").split("---", 2)[1]) or {}
+        fm = yaml.safe_load(fm_split(f.read_text(encoding="utf-8"))[1]) or {}
         d = fm.get("data"); d = d if isinstance(d, dt.datetime) else dt.datetime.fromisoformat(str(d)) if d else None
         if not d: continue
         if d.tzinfo is None: d = d.replace(tzinfo=BRT)
@@ -277,7 +278,7 @@ def existing():
     links, titles = set(), set()
     if REMOVED.exists(): links |= {l.strip() for l in REMOVED.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")}
     for f in CONTENT.glob("*.md"):
-        fm = yaml.safe_load(f.read_text(encoding="utf-8").split("---", 2)[1]) or {}
+        fm = yaml.safe_load(fm_split(f.read_text(encoding="utf-8"))[1]) or {}
         if fm.get("link"): links.add(fm["link"])
         titles.add(norm(fm.get("titulo", "")))
     return links, titles

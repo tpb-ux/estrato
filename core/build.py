@@ -3,7 +3,7 @@ import datetime as dt, hashlib, html, importlib, json, re, shutil, sys
 from email.utils import format_datetime
 from pathlib import Path
 import markdown, yaml
-from .site import Site, E, slugify, fit
+from .site import Site, E, slugify, fit, fm_split
 from . import saude, indexnow, autores, qualidade as Q
 
 BRT = dt.timezone(dt.timedelta(hours=-3))
@@ -11,7 +11,7 @@ BRT = dt.timezone(dt.timedelta(hours=-3))
 def load_posts(S):
     posts = []
     for f in sorted((S.ROOT / "content").glob("*.md")):
-        _, fm, body = f.read_text(encoding="utf-8").split("---", 2)
+        _, fm, body = fm_split(f.read_text(encoding="utf-8"))
         m = yaml.safe_load(fm); d = m["data"]
         if isinstance(d, str): d = dt.datetime.fromisoformat(d)
         if not isinstance(d, dt.datetime): d = dt.datetime.combine(d, dt.time(8))
@@ -37,12 +37,20 @@ def sec(small, big, link=None, tag="h2"):
     t = f"<span>{E(small)}</span><strong>{E(big)}</strong>"
     return f'<{tag} class="st">{f"<a href={chr(34)}{link}{chr(34)}>{t}</a>" if link else t}</{tag}>'
 
+def mais_editoria(S, p, posts, n=5):
+    """Link Flow: bloco H2 de relacionados na notícia (mesma editoria, mais recentes) + volta ao hub da editoria."""
+    ed = S.EDS[p["editoria"]]
+    rel = [q for q in posts if q["editoria"] == p["editoria"] and q["url"] != p["url"] and q.get("tipo") != "analise"][:n]
+    lis = "".join(f'<li><a href="{q["url"]}">{E(q["titulo"])}</a> <small>{q["data"]:%d/%m/%Y}</small></li>' for q in rel)
+    return (f'<section class="rel"><h2>Mais em {E(ed["nome"])}</h2>' + (f"<ul>{lis}</ul>" if lis else "")
+            + f'<p><a href="/{p["editoria"]}/">Todas as notícias de {E(ed["nome"])}</a></p></section>')
+
 def faq_editoria(S, e, ps):
     c = S.CFG; fts = sorted({p.get("fonte") for p in ps if p.get("fonte")}) or [f["nome"] for f in yaml.safe_load((S.ROOT / "feeds.yaml").read_text())["feeds"]][:5]
     return [(f"O que a editoria {e['nome']} do {c['site_name']} cobre?", E(e.get("descricao", f"Notícias de {e['nome']}."))),
             (f"De onde vêm as notícias de {e['nome']}?", f"De fontes públicas com feed aberto, como {E(', '.join(fts[:5]))}. Cada resumo leva link e crédito para o texto original."),
             ("As notícias são escritas por inteligência artificial?", "Não. Os resumos são extraídos automaticamente do feed público da fonte, sem reescrita por IA, e sempre linkam para a íntegra."),
-            ("Com que frequência a página é atualizada?", "A coleta roda a cada 30 minutos. Só entram matérias com imagem própria da fonte e dentro dos filtros de relevância."),
+            ("Com que frequência a página é atualizada?", "A coleta automática roda a cada 30 minutos; a data e a hora de cada matéria aparecem no card, e o rodapé mostra a última atualização do site. Só entram matérias com imagem própria da fonte e dentro dos filtros de relevância."),
             ("Como pedir correção ou remoção de um conteúdo?", 'Pela página de <a href="/correcoes/">correções</a> ou de <a href="/contato/">contato</a>. Pedidos de direito de resposta seguem a <a href="/direito-de-resposta/">política própria</a>.')]
 
 def institucional(S):
@@ -57,7 +65,7 @@ def institucional(S):
             return str(v) if v not in (None, "") else "[[vazio]]"
         return re.sub(r"\{\{cfg\.([a-z_.]+)\}\}", rep, t)
     for f in [fs[k] for k in sorted(fs)]:
-        _, fm, body = ph(f.read_text(encoding="utf-8")).split("---", 2)
+        _, fm, body = fm_split(ph(f.read_text(encoding="utf-8")))
         m = yaml.safe_load(fm); slug = m.get("slug", f.stem); path = f"/{slug}/"
         body = "\n".join(l for l in body.split("\n") if "[[vazio]]" not in l)  # linhas com campo vazio somem
         h = f'<article class="post"><h1>{E(m["titulo"])}</h1>{markdown.markdown(body, extensions=["extra"])}<p class="upd">Atualizado em {m.get("atualizado", dt.date.today().isoformat())}</p></article>'
@@ -66,6 +74,33 @@ def institucional(S):
                              jsonld={"@type": m.get("schema", "WebPage"), "name": m["titulo"], "url": S.BASE + path}), idx=m.get("indexavel", True), faq_min=m.get("faq_min"))
         out.append(path)
     return out
+
+ROTULOS = {"camara": "Câmara", "senado": "Senado", "deputados": "Deputados", "senadores": "Senadores", "municipios": "Por município", "autor": "Por autor", "uf": "Por estado",
+           "orgaos": "Órgãos", "categoria": "Categorias", "fornecedores": "Fornecedores", "autoridades": "Autoridades", "semana": "Semanas"}
+
+def indices_de_diretorio(S):
+    """Link Flow: diretório com subpáginas e sem index.html dava 403 no nginx. Cada um ganha um índice simples (noindex,follow, fora do sitemap)
+    com trilha e links para as subpáginas."""
+    n = 0
+    for d in sorted(S.OUT.rglob("*"), key=lambda x: len(x.parts), reverse=True):
+        if not d.is_dir() or (d / "index.html").exists(): continue
+        rel = d.relative_to(S.OUT).as_posix()
+        if rel.split("/")[0] in ("static", "dados", "_midias") or rel.startswith((".", "_")): continue
+        path = f"/{rel}/"
+        filhos = sorted(u for u in S.urls if u.startswith(path) and u != path and u[len(path):].strip("/").count("/") == 0)
+        if not filhos: continue
+        segs = rel.split("/"); crumbs = []
+        for i in range(len(segs)):
+            u = "/" + "/".join(segs[:i + 1]) + "/"
+            nome = ((S.CFG.get("og_secoes") or {}).get(segs[i]) if i == 0 else None) or ROTULOS.get(segs[i]) or (S.urls[u]["title"].split(" | ")[0] if u in S.urls else segs[i].replace("-", " ").capitalize())
+            crumbs.append((nome, u))
+        pai = crumbs[-2][0] if len(crumbs) > 1 else S.CFG["site_name"]; nome = crumbs[-1][0]
+        h1 = f"{pai}: {nome}"
+        lis = "".join(f'<li><a href="{u}">{E(S.urls[u]["title"].split(" | ")[0] or u)}</a></li>' for u in filhos)
+        b = f'<section class="blk"><h1>{E(h1)}</h1><p class="lead">{len(filhos)} páginas nesta seção.</p><ul class="cols">{lis}</ul></section>'
+        S.write(path, S.page(f"{h1} | {S.CFG['site_name']}", f"Índice de {h1} no {S.CFG['site_name']}: {len(filhos)} páginas com dados oficiais.", path, b, crumbs=crumbs, robots="noindex,follow"), idx=False, familia="indices")
+        n += 1
+    if n: print(f"Índices de diretório: {n} (antes davam 403)")
 
 def busca(S):
     idx = [{"u": u, "t": m["title"], "d": m["desc"][:140]} for u, m in S.urls.items() if m["idx"]]
@@ -237,8 +272,11 @@ def main(root):
         cred = (f'<figcaption>Foto: ' + (f'<a href="{E(p["link"])}" target="_blank" rel="nofollow noopener">{E(p["imagem_credito"])}</a>' if p.get("link") else E(p["imagem_credito"])) + (f' (<a href="{E(p["imagem_licenca"])}" target="_blank" rel="noopener">licença</a>)' if p.get("imagem_licenca") else "") + '</figcaption>') if p.get("imagem_credito") else ""
         b = (f'<article class="post"><div class="kick"><a href="/{p["editoria"]}/">{E(S.EDS[p["editoria"]]["nome"])}</a></div><h1>{E(p["titulo"])}</h1>'
              f'<p class="meta">Publicado em <time datetime="{p["data"].isoformat()}">{p["data"]:%d/%m/%Y %H:%M}</time>{" · Fonte: " + E(p["fonte"]) if p.get("fonte") else ""}</p>'
-             f'<figure class="cover">{img(S, p, "(max-width: 800px) 100vw, 760px", True, "cover")}{cred}</figure>{p["html"]}</article>')
-        S.write(p["url"], S.page(p["titulo"], p.get("resumo", "") or p["titulo"], p["url"], b, og_img=S.BASE + p["imagem"], og_type="article", jsonld=ld, robots="noindex,follow"), idx=False, familia="artigos")
+             f'<figure class="cover">{img(S, p, "(max-width: 800px) 100vw, 760px", True, "cover")}{cred}</figure>{p["html"]}'
+             + '</article>' + mais_editoria(S, p, posts))
+        ed = S.EDS[p["editoria"]]
+        S.write(p["url"], S.page(p["titulo"], p.get("resumo", "") or p["titulo"], p["url"], b, og_img=S.BASE + p["imagem"], og_type="article", jsonld=ld, robots="noindex,follow",
+                                 crumbs=[(ed["nome"], f"/{p['editoria']}/"), (fit(p["titulo"], 60), p["url"])]), idx=False, familia="artigos")
     # módulos do nicho (antes da home, para a home poder linkar seus hubs)
     sys.path.insert(0, str(S.ROOT))
     S.modulos = {}
@@ -273,6 +311,7 @@ def main(root):
     nf = f'<section class="blk"><h1>Página não encontrada</h1><p>O endereço não existe ou foi movido. Use a <a href="/busca/">busca</a> ou volte ao <a href="/">início</a>.</p></section>'
     (S.OUT / "404.html").write_text(S.page(f"Página não encontrada | {S.CFG['site_name']}", "Página não encontrada.", "/404.html", nf, robots="noindex").replace('href="/', f'href="{S.PREFIX}/').replace('src="/', f'src="{S.PREFIX}/'), encoding="utf-8")
     if S.CFG.get("indexnow_key"): (S.OUT / f"{S.CFG['indexnow_key']}.txt").write_text(S.CFG["indexnow_key"])
+    indices_de_diretorio(S)
     S.qualidade = unicidade(S)
     erros_rede, pct_rede = Q.anti_rede(S.OUT, S.CFG.get("rede_dominios") or [])
     S.errors += erros_rede

@@ -107,6 +107,8 @@ def build(S):
         S.write(u, S.page(f"{x['q']} | {S.CFG['site_name']}", x["resp"], u, body, faqs=faqs, crumbs=[("Perguntas", "/perguntas/"), (x["q"], u)], jsonld=ld), familia="perguntas", lastmod=cd); urls.append(u)
     hub = '<section class="blk"><h1>Perguntas e respostas sobre os Três Poderes</h1><p class="lead">Respostas curtas e verificáveis, calculadas a partir dos dados oficiais da Câmara dos Deputados, do Senado Federal e do Portal da Transparência. Cada resposta traz a fonte e a data da coleta e muda sozinha quando os dados mudam.</p>'
     for g, xs in grupos.items(): hub += f"<h2>{E(g)}</h2><ul>" + "".join(f'<li><a href="{x["url"]}">{E(x["q"])}</a></li>' for x in xs) + "</ul>"
+    hub += ('<h2>Perguntas sobre o seu município</h2><p>Quanto cada cidade recebe do governo federal, qual o orçamento, quantos eleitores tem e quem a representa no Congresso: '
+            '<a href="/perguntas/local/">perguntas e respostas por estado e município</a>.</p>')
     hub += "</section>"
     hf = [("Como as respostas são feitas?", "Por código que lê os dados oficiais coletados pelo Estrato e calcula cada número. Nada é digitado à mão."),
           ("Quais fontes são usadas?", f"{F_CAM}; {F_SEN}; {F_EM}."),

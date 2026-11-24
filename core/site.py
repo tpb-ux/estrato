@@ -11,6 +11,12 @@ def slugify(s):
     s = unicodedata.normalize("NFKD", str(s)).encode("ascii", "ignore").decode().lower()
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 
+_FM = re.compile(r"^---[ \t]*$", re.M)
+
+def fm_split(txt):
+    """Separa front matter e corpo pelas linhas '---' (e não por qualquer '---' do texto: URLs de imagem podem conter '---')."""
+    return _FM.split(txt, 2)
+
 def words(h):
     return len(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b.*?</\1>", " ", h, flags=re.S)).split())
 
@@ -69,6 +75,7 @@ class Site:
         self.thin, self.errors, self.ondas = set(), [], set()
         self.faq_stats = {"pseo_paginas": 0, "pseo_faqs": 0, "pseo_removidas": 0}
         self.css_v = ""
+        self.build_ts = dt.datetime.now(dt.timezone(dt.timedelta(hours=-3)))  # rodapé: "Site atualizado em" (prova pública de que a coleta está rodando)
         self.nicho = c.get("nicho", "exemplo")
         sf = self.ROOT / "data/subcategorias.yaml"  # submenu de subcategorias no desktop (nichos/*/subcategorias.py)
         sd = yaml.safe_load(sf.read_text(encoding="utf-8")) if sf.exists() else {}
@@ -177,14 +184,17 @@ document.addEventListener('keydown',function(e){{if(e.key==='Escape'&&!d.hidden)
 var a=document.querySelector('nav.ed a.on,nav.ed a.pill');if(a&&a.scrollIntoView&&innerWidth<860)a.scrollIntoView({{inline:'center',block:'nearest'}});
 document.addEventListener('click',function(e){{var x=document.querySelector('details.dd[open]');if(x&&!x.contains(e.target))x.open=false}})}})();</script>
 <main class="wrap" id="conteudo">{body}</main><footer><div class="wrap fgrid"><div><p class="fbrand">{E(c['site_name'])}</p><p>{E(c['tagline'])}</p></div>{cols}</div>
-<div class="wrap fbot">© {dt.date.today().year} {E(c['site_name'])}{(' · ' + E((c.get('empresa') or {}).get('razao_social', ''))) if (c.get('empresa') or {}).get('razao_social') else ''}{(' · <a href="mailto:' + E(c['empresa']['email']) + '">' + E(c['empresa']['email']) + '</a>') if (c.get('empresa') or {}).get('email') else ''}{(' · <a href="' + E(c['empresa']['instagram']) + '" rel="me noopener" target="_blank">Instagram</a>') if (c.get('empresa') or {}).get('instagram') else ''}</div></footer></body></html>"""
+<div class="wrap fbot">© {dt.date.today().year} {E(c['site_name'])} · Site atualizado em <time datetime="{self.build_ts.isoformat(timespec='minutes')}">{self.build_ts:%d/%m/%Y %H:%M}</time> (Brasília){(' · ' + E((c.get('empresa') or {}).get('razao_social', ''))) if (c.get('empresa') or {}).get('razao_social') else ''}{(' · <a href="mailto:' + E(c['empresa']['email']) + '">' + E(c['empresa']['email']) + '</a>') if (c.get('empresa') or {}).get('email') else ''}{(' · <a href="' + E(c['empresa']['instagram']) + '" rel="me noopener" target="_blank">Instagram</a>') if (c.get('empresa') or {}).get('instagram') else ''}</div></footer></body></html>"""
 
     def write(self, path, txt, *, idx=True, familia="paginas", lastmod=None, image=None, faq_min=None, minw=False):
         """Grava a página e registra a URL. idx=False => noindex,follow (fora de sitemap/busca)."""
         if path in self.urls: self.errors.append(f"URL duplicada: {path}")
         q = self.CFG.get("qualidade") or {}
-        minw = q.get("min_palavras_pseo", 300)
-        if idx and (minw or familia not in ("paginas", "artigos")) and words(txt.split("<main", 1)[-1].split("</main>")[0]) < minw:
+        limite = int(q.get("min_palavras_pseo", 300) or 0)
+        # Link Flow: institucionais, editorias e hubs de pilar ficam fora do corte de palavras (entram no sitemap quando indexáveis)
+        isentos = set(q.get("minw_isentos") or ["/sobre/", "/expediente/", "/contato/", "/privacidade/", "/termos/", "/metodologia/", "/correcoes/", "/direito-de-resposta/", "/politica-editorial/", "/explica/"])
+        isentos |= {f"/{e['slug']}/" for e in (self.CFG.get("editorias") or [])}
+        if idx and limite and path not in isentos and words(txt.split("<main", 1)[-1].split("</main>")[0]) < limite:
             idx = False; self.thin.add(path)
         ind = self.CFG.get("indexacao") or {}
         exc = ind.get("excecoes") or []
