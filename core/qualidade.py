@@ -19,7 +19,7 @@ def texto_main(h):
 
 def shingles(h, n=5):
     w = re.findall(r"\w+|#", re.sub(r"\d[\d.,]*", "#", texto_main(h).lower()))
-    return {tuple(w[i:i + n]) for i in range(len(w) - n + 1)}
+    return {hash(tuple(w[i:i + n])) for i in range(len(w) - n + 1)}  # hash inteiro em vez da tupla: mesmo resultado, ~4x menos memória (build caía por OOM na VPS)
 
 def unicidade(paginas, corte=0.15, cortes=None, min_familia=10, avaliar=None):
     """paginas: {familia: {path: html}} com TODAS as páginas da família (a frequência dos trechos é medida

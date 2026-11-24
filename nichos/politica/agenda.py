@@ -58,6 +58,38 @@ def build(S):
                 ("Os horários são de Brasília?", "Sim, como publicados pelas fontes."), ("Como saber se a sessão foi realizada?", "Pela coluna Situação, atualizada a cada coleta."),
                 ("Onde fica a agenda de hoje?", 'Na <a href="/agenda/">página principal da agenda</a>.')]
         S.write(u, S.page(f"Agenda da semana {sw[-2:]}/{sw[:4]} | {S.CFG['site_name']}", f"{num(n)} compromissos de Câmara, Senado e Planalto de {data_br(ds[0])} a {data_br(ds[-1])}.", u, b, faqs=faqs, crumbs=[("Agenda", "/agenda/"), (f"Semana {sw[-2:]}/{sw[:4]}", u)]), familia="agenda", lastmod=col); urls.append(u)
+    # Link Flow: arquivo por ano e mês (profundidade máxima 3: menu -> /agenda/ -> ano ou mês -> dia)
+    MES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+    anos = collections.defaultdict(lambda: collections.defaultdict(list))
+    for d in dias: anos[d[:4]][d[5:7]].append(d)
+    for a, meses in sorted(anos.items()):
+        ua = f"/agenda/{a}/"; na = sum(len(por[d]) for ds in meses.values() for d in ds); nd = sum(len(ds) for ds in meses.values())
+        b = (f'<article class="post"><h1>Agenda dos Três Poderes em {a}</h1><p class="snippet">{num(na)} compromissos de Câmara, Senado e Planalto em {num(nd)} dias com agenda publicada em {a}, '
+             f'organizados por mês. Cada dia tem página própria com horário, local e situação, conforme as fontes oficiais.</p><div class="chips small">'
+             + "".join(f'<a class="chip" href="/agenda/{a}/{m}/">{MES[int(m) - 1]}</a>' for m in sorted(meses)) + "</div>")
+        for m, ds in sorted(meses.items()):
+            b += f'<h2><a href="/agenda/{a}/{m}/">{MES[int(m) - 1].capitalize()} de {a}</a></h2><ul class="cols">' + "".join(f'<li><a href="/agenda/{d}/">{E(ddesc(d))}</a>: {num(len(por[d]))} compromissos</li>' for d in ds) + "</ul>"
+        b += fonte + "</article>"
+        faqs = [(f"Quantos compromissos há na agenda de {a}?", f"{num(na)} em {num(nd)} dias com agenda publicada."),
+                ("Como a página está organizada?", "Por mês, com um link para cada dia e para o resumo mensal."),
+                ("De onde vêm os dados?", "Das APIs de dados abertos da Câmara e do Senado e da agenda oficial do Planalto."),
+                ("Os horários são de Brasília?", "Sim, como publicados pelas fontes."),
+                ("Onde fica a agenda de hoje?", 'Na <a href="/agenda/">página principal da agenda</a>.')]
+        S.write(ua, S.page(f"Agenda dos Três Poderes em {a} | {S.CFG['site_name']}", f"{num(na)} compromissos de Câmara, Senado e Planalto em {a}, por mês e por dia, com dados oficiais.", ua, b, faqs=faqs,
+                           crumbs=[("Agenda", "/agenda/"), (a, ua)]), familia="agenda", lastmod=col); urls.append(ua)
+        for m, ds in sorted(meses.items()):
+            um = f"/agenda/{a}/{m}/"; nm = sum(len(por[d]) for d in ds); rot = f"{MES[int(m) - 1]} de {a}"
+            b = (f'<article class="post"><h1>Agenda dos Três Poderes: {rot}</h1><p class="snippet">{num(nm)} compromissos de Câmara, Senado e Planalto em {num(len(ds))} dias de {rot} com agenda publicada.</p>'
+                 + "".join(f'<h2><a href="/agenda/{d}/">{E(ddesc(d)).capitalize()}</a></h2><p>{num(len(por[d]))} compromissos: ' + ", ".join(f"{num(n)} do {pd}" for pd, n in sorted(collections.Counter(e["poder"] for e in por[d]).items())) + "</p>" for d in ds)
+                 + "<h2>Semanas</h2><div class=\"chips small\">" + "".join(f'<a class="chip" href="/agenda/semana/{w}/">semana {w[-2:]}/{w[:4]}</a>' for w in sorted({"%d-S%02d" % dt.date.fromisoformat(d).isocalendar()[:2] for d in ds})) + "</div>"
+                 + f'<p><a href="/agenda/{a}/">Todos os meses de {a}</a></p>' + fonte + "</article>")
+            faqs = [(f"Quantos compromissos há em {rot}?", f"{num(nm)} em {num(len(ds))} dias."),
+                    ("Quais Poderes aparecem?", "Legislativo (Câmara, Senado e Congresso) e Executivo (presidente e vice)."),
+                    ("De onde vêm os dados?", "Das APIs de dados abertos da Câmara e do Senado e da agenda oficial do Planalto."),
+                    ("Os horários são de Brasília?", "Sim, como publicados pelas fontes."),
+                    ("Onde ver o ano inteiro?", f'Na <a href="/agenda/{a}/">agenda de {a}</a>.')]
+            S.write(um, S.page(f"Agenda dos Três Poderes: {rot} | {S.CFG['site_name']}", f"{num(nm)} compromissos de Câmara, Senado e Planalto em {rot}, dia a dia, com dados oficiais.", um, b, faqs=faqs,
+                               crumbs=[("Agenda", "/agenda/"), (a, f"/agenda/{a}/"), (rot.capitalize(), um)]), familia="agenda", lastmod=col); urls.append(um)
     from .dados_abertos import _csv
     n = _csv(S.OUT / "dados/agenda-tres-poderes.csv", ["data", "hora", "poder", "casa_ou_cargo", "orgao", "tipo", "titulo", "situacao", "local", "url"],
              [[d, e["hora"], e["poder"], e["casa"], e["orgao"], e["tipo"], e["titulo"], e.get("situacao", ""), e["local"], e["url"] if e["url"].startswith("http") else S.BASE + e["url"]] for d in dias for e in por[d]])
@@ -66,11 +98,12 @@ def build(S):
     b = f'<section class="blk"><h1>Agenda dos Três Poderes</h1><p class="lead">Sessões do plenário, reuniões de comissões da Câmara e do Senado e a agenda oficial do presidente e do vice-presidente, por dia e por semana, a partir das fontes oficiais.</p>'
     b += "<h2>Próximos dias</h2>" + ("".join(f'<h3><a href="/agenda/{d}/">{E(ddesc(d)).capitalize()}</a></h3>{tab(S, por[d][:15])}' for d in prox) or "<p>Sem compromissos publicados para os próximos dias.</p>")
     b += "<h2>Dias recentes</h2><ul>" + "".join(f'<li><a href="/agenda/{d}/">{E(ddesc(d))}</a>: {num(len(por[d]))} compromissos</li>' for d in rec) + "</ul>"
+    b += "<h2>Arquivo por ano e mês</h2>" + "".join(f'<h3><a href="/agenda/{a}/">{a}</a></h3><div class="chips small">' + "".join(f'<a class="chip" href="/agenda/{a}/{m}/">{MES[int(m) - 1]}</a>' for m in sorted(meses)) + "</div>" for a, meses in sorted(anos.items(), reverse=True))
     b += "<h2>Semanas</h2><div class=\"chips small\">" + "".join(f'<a class="chip" href="/agenda/semana/{w}/">{w[-2:]}/{w[:4]}</a>' for w in sorted(semanas, reverse=True)[:20]) + "</div>" + fonte + "</section>"
     hf = [("O que a agenda mostra?", "Sessões e reuniões da Câmara, do Senado e do Congresso e os compromissos oficiais do presidente e do vice."),
           ("Com que frequência é atualizada?", f"A cada coleta automática; a última foi em {data_br(col)}."),
           ("A agenda do presidente aparece antes do dia?", "Não. O Planalto publica a agenda no próprio dia; ela entra na coleta seguinte."),
           ("Por que o STF não aparece?", "O portal do STF recusa a coleta automática no momento."),
-          ("Quantos dias estão disponíveis?", f"{num(len(dias))} dias com compromissos, em {num(len(semanas))} semanas.")]
+          ("Quantos dias estão disponíveis?", f"{num(len(dias))} dias com compromissos, em {num(len(semanas))} semanas. Todos estão no arquivo por ano e mês.")]
     S.write("/agenda/", S.page(f"Agenda dos Três Poderes | {S.CFG['site_name']}", "Agenda diária e semanal de Câmara, Senado e Planalto, com dados oficiais.", "/agenda/", b, faqs=hf, crumbs=[("Agenda", "/agenda/")]), lastmod=col)
     return {"urls": urls}

@@ -1,7 +1,11 @@
 """Home genérica: destaque + laterais, blocos por editoria, atalhos de dados (config.menu.barra) e FAQ (config.home_faqs)."""
 from .site import E
 def build(S, posts, card, sec, img, extra_html=""):
-    c = S.CFG; body = f'<h1 class="sr-only">{E(c["site_name"])}: {E(c["tagline"])}</h1>'
+    c = S.CFG
+    # Link Flow: H1 visível e CTA editorial no topo e no fim da home (portal de dados: buscar, dados abertos, método, contato)
+    cta = c.get("home_cta") or [["Buscar no " + c["site_name"], "/busca/"], ["Dados abertos", "/dados/"], ["Como trabalhamos", "/metodologia/"], ["Fale com a redação", "/contato/"]]
+    chips = "".join(f'<a class="chip{" on" if i == 0 else ""}" href="{u}">{E(n)}</a>' for i, (n, u) in enumerate(cta))
+    body = f'<section class="hhead"><h1 class="hh1">{E(c["site_name"])}: {E(c["tagline"])}</h1><p class="lead">{E(c.get("descricao", ""))}</p><div class="chips">{chips}</div></section>'
     if posts:
         m = posts[0]; side = posts[1:5]
         body += (f'<div class="hero"><a class="hero-main" href="{m["url"]}"><div class="htxt"><div class="kick">Destaque <span>• {m["data"]:%d/%m/%Y}</span></div><h2>{E(m["titulo"])}</h2><p>{E(m.get("resumo", ""))}</p></div>'
@@ -13,6 +17,8 @@ def build(S, posts, card, sec, img, extra_html=""):
         if ps: body += f'<section class="blk">{sec("As últimas em", e["nome"], f"/{s}/")}<div class="grid">{"".join(card(p) for p in ps)}</div></section>'
     barra = (c.get("menu") or {}).get("barra", []) + (c.get("menu") or {}).get("referencia", [])
     if barra: body += '<section class="blk refbox"><h2 class="st"><span>Referência</span><strong>Dados e ferramentas</strong></h2><div class="chips">' + "".join(f'<a class="chip" href="{u}">{E(n)}</a>' for n, u in barra) + "</div></section>"
+    body += (f'<section class="blk cta-final"><h2 class="st"><span>Contato</span><strong>Fale com a redação</strong></h2><p>Encontrou um erro, quer pedir uma correção ou sugerir um dado para o {E(c["site_name"])} acompanhar? '
+             f'Escreva pela página de <a href="/contato/">contato</a> ou veja como pedir uma <a href="/correcoes/">correção</a>.</p><div class="chips">{chips}</div></section>')
     faqs = [(x["p"], x["r"]) for x in c.get("home_faqs", [])]
     S.write("/", S.page(c.get("home_titulo", f"{c['site_name']}: {c['tagline']}"), c.get("descricao", c["tagline"]), "/", body, faqs=faqs,
                         jsonld=S.itemlist([(p["titulo"], p["url"]) for p in posts[:20]])), lastmod=posts[0]["data"].date().isoformat() if posts else None)
